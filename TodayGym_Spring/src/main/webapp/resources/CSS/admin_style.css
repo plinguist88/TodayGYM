@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/******************************** admin area ******************************/
+
+.wrap {
+	background-color: #40BAD5;
+}
+
+.content-admin {
+	height: 2000px;
+}

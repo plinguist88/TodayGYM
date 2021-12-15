@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/******************************** footer area ******************************/
+
+.footer {
+	height: 300px;
+	background-color: #FCBF1E;
+	border: 1px solid red;
+	box-sizing: border-box;
+}

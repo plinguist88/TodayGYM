@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/******************************** order area ******************************/
+
+header {
+	position: sticky;
+	top: 0px;
+}
+
+.wrap {
+	background-color: #40BAD5;
+}
+
+.content-order {
+	height: 2000px;
+}

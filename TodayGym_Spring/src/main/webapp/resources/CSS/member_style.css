@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/******************************** member area ******************************/
+
+header {
+	position: sticky;
+	top: 0px;
+}
+
+.wrap {
+	background-color: #40BAD5;
+}
+
+.content-member {
+	height: 2000px;
+}

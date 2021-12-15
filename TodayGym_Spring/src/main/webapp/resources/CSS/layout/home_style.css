@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/******************************** home area ******************************/
+
+header {
+	position: sticky;
+	top: 0px;
+}
+
+.wrap {
+	background-color: #40BAD5;
+}
+
+.content-home {
+	height: 2000px;
+	border: 1px solid red;
+	box-sizing: border-box;
+}

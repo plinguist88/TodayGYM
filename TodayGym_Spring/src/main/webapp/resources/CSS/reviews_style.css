@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/******************************** reviews area ******************************/
+
+header {
+	position: sticky;
+	top: 0px;
+}
+
+.wrap {
+	background-color: #40BAD5;
+}
+
+.content-reviews {
+	height: 2000px;
+}
