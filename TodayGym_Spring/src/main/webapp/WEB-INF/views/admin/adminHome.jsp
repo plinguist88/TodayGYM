@@ -12,6 +12,7 @@
 <link type="text/css" rel="stylesheet"
 	href="resources/CSS/admin_style.css">
 <body>
+	빌어먹을 세상!!!
 	<div class="wrap">
 		<header>
 			<jsp:include page="../layout/header.jsp" />
