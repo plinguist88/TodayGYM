@@ -13,7 +13,7 @@ li {
 
 .header {
 	height: 200px;
-	background-color: #120136;
+	background-color: beige;
 }
 
 .header-top {
@@ -25,7 +25,7 @@ li {
 
 .header-bottom {
 	height: 100px;
-	background-color: #035AA6;
+	background-color: orange;
 	border: 1px solid red;
 	box-sizing: border-box;
 }
