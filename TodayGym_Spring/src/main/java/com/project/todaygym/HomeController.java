@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	//
+	
 	@GetMapping("/")
 	public String home() {
 		logger.info("home()");
