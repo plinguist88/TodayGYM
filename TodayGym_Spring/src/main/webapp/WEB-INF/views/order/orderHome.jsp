@@ -17,7 +17,7 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 		<section>
-			<div class="content-order"></div>
+			<div class="content-order">오더페이지 입니다.</div>
 		</section>
 		<footer>
 			<jsp:include page="../layout/footer.jsp" />
