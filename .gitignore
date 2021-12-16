@@ -6,7 +6,7 @@ mybatis-config.xml
 log4j.xml
 
 lecture
-/target/
+TodayGym_Spring/target/
 pom.properties
 .classpath
 MANIFEST.MF
