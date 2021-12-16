@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <link type="text/css" rel="stylesheet"
-	href="resources/CSS/layout/header_style.css">
+	href="resources/css/layout/header_style.css">
 <div class="header">
 	<div class="header-top">
 	Header-Top Area

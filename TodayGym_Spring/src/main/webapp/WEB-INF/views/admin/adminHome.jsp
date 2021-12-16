@@ -10,7 +10,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <link type="text/css" rel="stylesheet"
-	href="resources/CSS/admin_style.css">
+	href="resources/css/admin_style.css">
 <body>
 	<div class="wrap">
 		<header>

@@ -10,16 +10,14 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <link type="text/css" rel="stylesheet"
-	href="resources/CSS/buy_style.css">
+	href="resources/css/buy_style.css">
 <body>
 	<div class="wrap">
 		<header>
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 		<section>
-			<div class="content-buy">
-				구매메인페이지
-			</div>
+			<div class="content-buy"></div>
 		</section>
 		<footer>
 			<jsp:include page="../layout/footer.jsp" />

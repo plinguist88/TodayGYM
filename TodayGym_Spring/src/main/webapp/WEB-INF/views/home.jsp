@@ -5,19 +5,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>오늘의 짐! 오짐!</title>
+<title>Insert title here</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <link type="text/css" rel="stylesheet"
-	href="resources/CSS/layout/home_style.css">
+	href="resources/css/layout/home_style.css">
 <body>
 	<div class="wrap">
 		<header>
 			<jsp:include page="layout/header.jsp" />
 		</header>
 		<section>
-			<div class="content-home">Content Area</div>
+			<div class="content-home"></div>
 		</section>
 		<footer>
 			<jsp:include page="layout/footer.jsp" />

@@ -10,9 +10,8 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <link type="text/css" rel="stylesheet"
-	href="resources/CSS/spot_style.css">
+	href="resources/css/spot_style.css">
 <body>
-안녕하세요
 	<div class="wrap">
 		<header>
 			<jsp:include page="../layout/header.jsp" />
