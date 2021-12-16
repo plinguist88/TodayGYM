@@ -1,5 +1,5 @@
 package com.project.todaygym.dao;
 
 public class SpotDao {
-//이승현~~~~
+//오늘 점심 뭐 먹을까~?
 }
