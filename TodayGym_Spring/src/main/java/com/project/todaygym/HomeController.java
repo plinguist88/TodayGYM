@@ -16,5 +16,10 @@ public class HomeController {
 		
 		return "home";
 	}
-	
+	// 구매메인화면이동
+	@GetMapping("buyHome")
+	public String buyHome() {
+		logger.info("buyHome()");
+		return "buy/buyHome";
+	}
 } // class end
