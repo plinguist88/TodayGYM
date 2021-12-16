@@ -17,7 +17,9 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 		<section>
-			<div class="content-buy"></div>
+			<div class="content-buy">
+				구매메인페이지
+			</div>
 		</section>
 		<footer>
 			<jsp:include page="../layout/footer.jsp" />
