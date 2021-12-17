@@ -17,13 +17,32 @@
 		</header>
 		<section>
 			<div class="content-admin">
+			<!-- 사이드 바 메뉴 -->
+			<div class="admin-sidebar">
+					<ul>
+						<li>
+							<span class="admin-icon">icon</span>
+							<span class="admin-title">Home</span>
+						</li>
+						<li>
+							<span class="admin-icon">icon</span>
+							<span class="admin-title">Member</span>
+						</li>
+						<li>
+							<span class="admin-icon">icon</span>
+							<span class="admin-title">Ticket</span>
+						</li>
+						<li>
+							<span class="admin-icon">icon</span>
+							<span class="admin-title">Spot</span>
+						</li>
+					</ul>
+				</div>
 			<!-- 회원 관리 메인 -->
 				<div class="content-admin-data">
 					<!-- 회원 수 표시 -->
 					<div class="addata-total">
 						<div class="at-1">총 원</div>
-						<div class="at-2">남 성</div>
-						<div class="at-3">여 성</div>
 					</div>
 					<!-- 회원 목록 -->
 					<div class="addata-list">
@@ -35,8 +54,8 @@
 					</div>
 					<!-- 회원 검색 -->
 					<div class="addata-search">
-						<form action="">
-							<select>
+						<form action="AdminController">
+							<select class="addata-search-selbar">
 								<option vlaue="name">이 름</option>
 								<option vlaue="id">아 이 디</option>
 							</select>
