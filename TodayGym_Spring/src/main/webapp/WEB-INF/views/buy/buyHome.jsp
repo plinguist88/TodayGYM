@@ -9,9 +9,9 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-</head>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/buy_style.css">
+</head>
 <body>
 	<div class="wrap">
 		<header>

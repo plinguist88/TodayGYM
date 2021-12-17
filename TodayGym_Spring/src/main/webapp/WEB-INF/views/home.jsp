@@ -8,9 +8,9 @@
 <title>Insert title here</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/layout/home_style.css">
+</head>
 <body>
 	<div class="wrap">
 		<header>

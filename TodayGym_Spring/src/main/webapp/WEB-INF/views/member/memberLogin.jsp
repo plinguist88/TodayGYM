@@ -5,11 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
-
 <link type="text/css" rel="stylesheet"
 	href="resources/css/member_style.css">
-	
+</head>
 <body>
 	<div class="login">
 		<header>

@@ -8,9 +8,9 @@
 <title>Insert title here</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</head>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/reviews_style.css">
+</head>	
 <body>
    <%-- 박민영 테스트 입니다  --%>
    <%-- 아직 시작안했습니다 헤더랑 다하고 하려고합닏 --%>

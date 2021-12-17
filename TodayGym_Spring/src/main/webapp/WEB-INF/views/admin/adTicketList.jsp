@@ -15,9 +15,7 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 		<section>
-			<div class="content-admin">
-				
-			</div>
+			<div class="content-admin"></div>
 		</section>
 		<footer>
 			<jsp:include page="../layout/footer.jsp" />
