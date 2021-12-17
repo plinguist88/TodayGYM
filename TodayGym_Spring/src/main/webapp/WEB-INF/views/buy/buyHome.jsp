@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 </head>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/buy_style.css">
@@ -25,13 +25,36 @@
 				<h1>회원권 구매</h1>
 			</div>	
 			<ul class="buy_cate">
-				<li class="on"><a href="#" data-filter="*">모두보기</a></li>
-				<li><a href="#" data-filter=".health">헬스</a></li>
+				
+				<li class="on"><a href="#" data-filter=".health">헬스</a></li>
 				<li><a href="#" data-filter=".swim">수영</a></li>
 				<li><a href="#" data-filter=".climb">클라이밍</a></li>
 				<li><a href="#" data-filter=".cross">크로스핏</a></li>
 			</ul>
-			
+			<div class="buy_cate_sub">
+				<div class="buy_cate_sub health">
+					<div class="health_cate">
+					<a href="#"><img src="resources/img/buy/h1.png"></a>
+					<a href="#"><img src="resources/img/buy/h2.png"></a>
+					<a href="#"><img src="resources/img/buy/h3.png" style="height: 434.77px;"></a>
+					<a href="#"><img src="resources/img/buy/h4.png"></a>
+					</div>
+				</div>				
+				<div class="buy_cate_sub swim">
+					<div class="swim_cate">
+					<a href="#"><img src="resources/img/buy/s1.png"></a>
+					<a href="#"><img src="resources/img/buy/s2.png"></a>
+					<a href="#"><img src="resources/img/buy/s3.png"></a>
+					<a href="#"><img src="resources/img/buy/s4.png"></a>
+					</div>
+				</div>
+				<div class="buy_cate_sub climb">
+					<p>클라이밍구매권</p>
+				</div>
+				<div class="buy_cate_sub cross">
+					<p>크로스핏구매권</p>
+				</div>
+			</div>
 			
 			
 		</section>
@@ -40,4 +63,19 @@
 		</footer>
 	</div>
 </body>
+<script type="text/javascript">
+//회원권 구매 카테고리 구분
+$(document).ready( function() { 
+	$('.buy_cate_sub').isotope({ 
+		itemSelector: '.buy_cate_sub', 
+		}); 
+		
+	$('.buy_cate').on( 'click', 'li', function() { 
+		var filterValue = $(this).children().attr('data-filter'); 
+		$('.buy_cate_sub').isotope({ filter: filterValue }); 
+		$('.buy_cate li').removeClass('on'); 
+		$(this).addClass('on'); 
+		}); 
+	});
+</script>
 </html>
