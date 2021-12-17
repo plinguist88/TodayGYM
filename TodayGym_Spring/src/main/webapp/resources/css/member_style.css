@@ -14,3 +14,17 @@ header {
 .content-member {
 	height: 2000px;
 }
+
+.signForm {
+	position: absolute;
+	width: 25%;
+	padding-bottom: 3%;
+	padding-top: 0.5%;
+	background-color: #FFFFFF;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 15px;
+	box-shadow: 0px 0px 15px #adadad;
+}
