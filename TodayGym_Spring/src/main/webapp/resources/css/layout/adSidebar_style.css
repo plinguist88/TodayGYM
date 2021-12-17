@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+.adSidebar{
+	position: absolute;
+	top: 200px;
+	left: 20px;
+	
+	width: 200px;
+	height: 100vh;
+	
+	background: #4d4dff;
+	
+	border-radius: 10px;
+	border-left: 5px solid #4d4dff;
+	
+	box-sizing: initial;
+	
+	transition: width 0.5s;
+}
+
+.adSidebar ul{
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	width: 100%;
+	
+	padding-left: 5px;
+	padding-top: 30px;
+}
+
+.adSidebar ul li{
+	position: relative;
+	
+	width: 100%;
+	
+	list-style: none;
+	
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.adSidebar ul li.active{
+	background: #fff;
+}
+
+.adSidebar ul li a{
+	position: relative;
+	
+	display: flex;
+	
+	width: 100%;
+	
+	text-decoration: none;
+	
+	color: #fff;
+}
+
+.adSidebar ul li.active a{
+	color: #333;
+}
+
+.adSidebar ul li a .admin-icon{
+	position: relative;
+	display: block;
+	
+	min-width: 60px;
+	height: 60px;
+	line-height: 60px;
+	
+	text-align: center;
+}
+
+.adSidebar ul li a .admin-icon ion-icon{
+	font-size: 1.5em;
+}
+
+.adSidebar ul li a .admin-title{
+	position: relative;
+	display: block;
+	
+	padding-left: 10px;
+	height: 60px;
+	line-height: 60px;
+	
+	white-space: normal;
+}

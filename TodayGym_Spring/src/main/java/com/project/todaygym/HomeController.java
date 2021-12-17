@@ -23,4 +23,11 @@ public class HomeController {
 		logger.info("buyHome()");
 		return "buy/buyHome";
 	}
+	
+	// 관리자 메인으로 이동
+	@GetMapping("/adMainMove.ad")
+	public String adMainMove() {
+		logger.info("adMainMove()");
+		return "admin/adMain";
+	}
 } // class end

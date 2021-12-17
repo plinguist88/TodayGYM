@@ -16,26 +16,7 @@
 		</header>
 		<section>
 			<div class="content-admin">
-				<div class="admin-sidebar">
-					<ul>
-						<li>
-							<span class="admin-icon">icon</span>
-							<span class="admin-title">Home</span>
-						</li>
-						<li>
-							<span class="admin-icon">icon</span>
-							<span class="admin-title">Member</span>
-						</li>
-						<li>
-							<span class="admin-icon">icon</span>
-							<span class="admin-title">Ticket</span>
-						</li>
-						<li>
-							<span class="admin-icon">icon</span>
-							<span class="admin-title">Spot</span>
-						</li>
-					</ul>
-				</div>
+				
 			</div>
 		</section>
 		<footer>
