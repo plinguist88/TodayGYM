@@ -5,24 +5,24 @@
 <div class="adSidebar">
 	<ul>
 		<li class="list active">
-			<a>
+			<a href="*">
 				<span class="admin-icon">
 					<ion-icon name="pulse-outline" />
 				</span> 
 				<span class="admin-title">Home</span></a></li>
 		<li class="list">
-			<a>
+			<a href="*">
 				<span class="admin-icon">
 					<ion-icon name="people-outline">
 				</span>
 				<span class="admin-title">Member</span></a></li>
 		<li class="list">
-			<a>
+			<a href="*">
 				<span class="admin-icon">
 					<ion-icon name="id-card-outline" /></span>
 				<span class="admin-title">Ticket</span></a></li>
 		<li class="list">
-			<a>
+			<a href="*">
 				<span class="admin-icon">
 					<ion-icon name="flag-outline" />
 				</span>
