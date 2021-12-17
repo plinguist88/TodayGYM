@@ -26,7 +26,7 @@
 	width: 100%;
 	
 	padding-left: 5px;
-	padding-top: 30px;
+	padding-top: 60px;
 }
 
 .adSidebar ul li{
@@ -85,3 +85,46 @@
 	
 	white-space: normal;
 }
+
+.toggle{
+	position: relative;
+	display: block;
+	left: 30px;
+	
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	
+	text-align: center;
+	
+	background: #4d4dff;
+	
+	border-radius: 10px;
+	
+	cursor: pointer;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.toggle.active{
+	background: #4d4dff;
+}
+
+.toggle ion-icon{
+	position: absolute;
+	color: #fff;
+	font-size: 30px;
+}
+
+.toggle ion-icon.open,
+.toggle.active ion-icon.close{
+	display: block;
+}
+
+.toggle ion-icon.close,
+.toggle.active ion-icon.open{
+	display: none;
+}
+
