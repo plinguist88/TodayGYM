@@ -10,17 +10,31 @@ import com.project.todaygym.dto.OrderDto;
 @Service
 public class OrderService {
 	
+	/*
 	@Autowired
-	private OrderDao oDao;
+	private CartDao cDao;
+	
+	@Autowired
+	private MemberDao mDao;
+	*/
 	
 	private ModelAndView mv;
 	
-	//__________ 결제하기 실행
-	public ModelAndView payAct() {
-		
+	//__________ 결제 페이지
+	public ModelAndView getOrderAndInfo() {
 		mv = new ModelAndView();
 		
+		/*
+		CartDto mCart = cDao.memberSelect();
+		MemberDto  mAccount = mDao.memberSelect();
+		
+		mv.addObject("mAccount", mAccount);
+		mv.addObject("mClass", mClass);
+		*/
+		
+		mv.setViewName("order/orderHome");
+		
 		return mv;
-	} // bankCheck end
+	} // getMemberAndClass end
 	
 } // class end
