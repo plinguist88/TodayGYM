@@ -26,17 +26,17 @@
 						<div class="title-title">수강명</div>
 						<div class="title-price">가격</div>
 					</div>
-					<c:forEach var="olist" items="${cList}">
+					<c:forEach var="olist" items="">
 						<div class="order-list">
-							<div class="list-num">${olist.num}</div>
-							<div class="list-cate">${olist.title}</div>
-							<div class="list-title">${olist.cate}</div>
-							<div class="list-price">${olist.price}</div>
+							<div class="list-num">주문번호</div>
+							<div class="list-cate">카테고리</div>
+							<div class="list-title">수강명</div>
+							<div class="list-price">가격</div>
 						</div>
 					</c:forEach>
 					<div class="user-info">
-						<div class="user-name">${member.name}</div>
-						<div class="user-phone">${member.phone}</div>
+						<div class="user-name"></div>
+						<div class="user-phone"></div>
 					</div>
 				</div>
 				<div class="bank-form">

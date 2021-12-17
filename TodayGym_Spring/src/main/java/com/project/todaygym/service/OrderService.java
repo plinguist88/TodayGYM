@@ -16,28 +16,11 @@ public class OrderService {
 	private ModelAndView mv;
 	
 	//__________ 결제하기 실행
-	public ModelAndView bankCheck(OrderDto account) {
+	public ModelAndView payAct() {
 		
 		mv = new ModelAndView();
 		
-		String result = null;
-		
-		int BankDB = oDao.accountSelect("");
-		
-		if(BankDB == 1) {
-			
-			result = "true";
-			
-		} // if end
-		
-		else {
-			
-			result = "false";
-			
-		} // else end
-		
 		return mv;
-		
 	} // bankCheck end
 	
 } // class end
