@@ -10,7 +10,32 @@ header {
 .wrap {
 	background-color: #40BAD5;
 }
-
+a{
+	text-decoration: none;
+	color: black;
+	
+}
 .content-buy {
 	height: 2000px;
 }
+.buytitle{	
+	margin: 0 auto;
+	padding-top: 90px;
+}
+.buytitle h1{
+	text-align: center;
+}
+.buy_section .buy_cate {
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	margin: 45px 0 20px 0;
+}
+.buy_cate li{
+	padding: 5px 35px;
+}
+
+
+
+
+

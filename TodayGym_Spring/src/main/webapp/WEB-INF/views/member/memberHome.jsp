@@ -12,6 +12,7 @@
 <link type="text/css" rel="stylesheet"
 	href="resources/css/member_style.css">
 <body>
+테스트
 	<div class="wrap">
 		<header>
 			<jsp:include page="../layout/header.jsp" />
