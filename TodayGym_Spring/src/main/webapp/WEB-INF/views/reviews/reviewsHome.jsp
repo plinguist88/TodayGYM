@@ -12,6 +12,7 @@
 <link type="text/css" rel="stylesheet"
 	href="resources/css/reviews_style.css">
 <body>
+   <%-- 박민영 테스트 입니다  --%>
 	<div class="wrap">
 		<header>
 			<jsp:include page="../layout/header.jsp" />
