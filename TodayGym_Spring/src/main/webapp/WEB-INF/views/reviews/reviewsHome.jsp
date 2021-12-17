@@ -13,6 +13,7 @@
 	href="resources/css/reviews_style.css">
 <body>
    <%-- 박민영 테스트 입니다  --%>
+   <%-- 아직 시작안했습니다 헤더랑 다하고 하려고합닏 --%>
 	<div class="wrap">
 		<header>
 			<jsp:include page="../layout/header.jsp" />
