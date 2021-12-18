@@ -1,0 +1,57 @@
+@charset "UTF-8";
+html,body{
+    margin: 0;
+    padding: 0;
+}
+h1,p{
+    margin:0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+#main{ 
+    background:url("https://pixabay.com/get/g649e5adf04fd1accc5b4b3082661a5cbf421fd80262866568ffb2bda3f1a1bf13ed70cc0a5404bd82895a76c193b91c2f40f3ea52febd7466bc2286ef95d16d23ee12b9567e3e5417908f1c61dc0d32c_1920.jpg") no-repeat;
+    background-size: cover;
+    background-position:center center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Questrial', sans-serif;
+}
+#contents{
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width: 100%;
+    color:white;
+    text-align: center;
+}
+#contents h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+    margin-bottom: 16px;
+}
+#contents p{
+    font-size: 23px;
+    margin-bottom: 16px;
+}
+#contents a{
+    display: inline-block;
+    border:2px solid white;
+    border-radius: 20px;
+    padding:10px 20px;
+    font-size: 17px;
+    font-weight: bold; 
+}
+
+
+@media(max-width:769px){
+    #contents h1{
+        font-size: 50px;
+    }
+    #contents p{
+        font-size: 20px;
+}
+    #contents a{
+        font-size: 14px;
+    }
