@@ -2,20 +2,19 @@
 
 .adSidebar{
 	position: absolute;
-	top: 200px;
-	left: 20px;
+	top: 83px;
 	
-	width: 200px;
+	width: 60px;
 	height: 100vh;
 	
 	background: #4d4dff;
 	
-	border-radius: 10px;
-	border-left: 5px solid #4d4dff;
-	
-	box-sizing: initial;
-	
 	transition: width 0.5s;
+	overflow-x: hidden;
+}
+
+.adSidebar.active{
+	width: 200px;
 }
 
 .adSidebar ul{
@@ -25,7 +24,9 @@
 	
 	width: 100%;
 	
-	padding-left: 5px;
+	margin: 0;
+	padding: 0;
+
 	padding-top: 60px;
 }
 
@@ -66,13 +67,13 @@
 	
 	min-width: 60px;
 	height: 60px;
-	line-height: 60px;
+	line-height: 80px;
 	
 	text-align: center;
 }
 
 .adSidebar ul li a .admin-icon ion-icon{
-	font-size: 1.5em;
+	font-size: 30px;
 }
 
 .adSidebar ul li a .admin-title{
@@ -83,13 +84,19 @@
 	height: 60px;
 	line-height: 60px;
 	
+	font-size: 30px;
+	
 	white-space: normal;
 }
 
 .toggle{
 	position: relative;
-	display: block;
-	left: 30px;
+	top: 0;
+	left: 0;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	
 	width: 60px;
 	height: 60px;
@@ -97,15 +104,11 @@
 	
 	text-align: center;
 	
-	background: #4d4dff;
-	
 	border-radius: 10px;
 	
-	cursor: pointer;
+	background: #4d4dff;
 	
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	cursor: pointer;
 }
 
 .toggle.active{
@@ -126,5 +129,4 @@
 .toggle ion-icon.close,
 .toggle.active ion-icon.open{
 	display: none;
-}
-
+} 

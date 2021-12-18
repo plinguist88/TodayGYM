@@ -6,3 +6,18 @@
 	
 	background: #fff;
 }
+
+.admin-overview{
+	position: absolute;
+	top: 83px;
+	left: 200px;
+}
+
+.temp-image{
+	position: relative;
+	
+	width: 2000px;
+	height: 100vh;
+	
+	background-image: url("../img/admin/temp.jpg");
+}
