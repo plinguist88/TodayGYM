@@ -9,9 +9,9 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+</head>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/buy_style.css">
-</head>
 <body>
 	<div class="wrap">
 		<header>
@@ -24,8 +24,7 @@
 			<div class="buytitle">
 				<h1>회원권 구매</h1>
 			</div>	
-			<ul class="buy_cate">
-				
+			<ul class="buy_cate">			
 				<li class="on"><a href="#" data-filter=".health">헬스</a></li>
 				<li><a href="#" data-filter=".swim">수영</a></li>
 				<li><a href="#" data-filter=".climb">클라이밍</a></li>
@@ -36,7 +35,7 @@
 					<div class="health_cate">
 					<a href="#"><img src="resources/img/buy/h1.png"></a>
 					<a href="#"><img src="resources/img/buy/h2.png"></a>
-					<a href="#"><img src="resources/img/buy/h3.png" style="height: 434.77px;"></a>
+					<a href="#"><img src="resources/img/buy/h3.png"></a>
 					<a href="#"><img src="resources/img/buy/h4.png"></a>
 					</div>
 				</div>				
@@ -49,10 +48,20 @@
 					</div>
 				</div>
 				<div class="buy_cate_sub climb">
-					<p>클라이밍구매권</p>
+					<div class="climb_cate">
+					<a href="#"><img src="resources/img/buy/cb1m.png"></a>
+					<a href="#"><img src="resources/img/buy/cb2m.png"></a>
+					<a href="#"><img src="resources/img/buy/cb3m.png"></a>
+					<a href="#"><img src="resources/img/buy/cb4m.png"></a>
+					</div>
 				</div>
 				<div class="buy_cate_sub cross">
-					<p>크로스핏구매권</p>
+					<div class="cross_cate">
+					<a href="#"><img src="resources/img/buy/cs1m.png"></a>
+					<a href="#"><img src="resources/img/buy/cs2m.png"></a>
+					<a href="#"><img src="resources/img/buy/cs3m.png"></a>
+					<a href="#"><img src="resources/img/buy/cs4m.png"></a>
+					</div>
 				</div>
 			</div>
 			
