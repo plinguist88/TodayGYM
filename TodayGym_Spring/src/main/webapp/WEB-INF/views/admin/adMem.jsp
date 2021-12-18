@@ -5,10 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>관리자 회원관리 페이지</title>
+<link type="text/css" rel="stylesheet"
+	href="resources/css/admin_style.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<link type="text/css" rel="stylesheet"
-	href="resources/CSS/admin_style.css">
+<script type="module"
+	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule
+	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </head>
 <body>
 	<div class="wrap">
@@ -17,52 +22,52 @@
 		</header>
 		<section>
 			<div class="content-admin">
-			<!-- 사이드 바 메뉴 -->
-			<div class="admin-sidebar">
-					<ul>
-						<li>
-							<span class="admin-icon">icon</span>
-							<span class="admin-title">Home</span>
-						</li>
-						<li>
-							<span class="admin-icon">icon</span>
-							<span class="admin-title">Member</span>
-						</li>
-						<li>
-							<span class="admin-icon">icon</span>
-							<span class="admin-title">Ticket</span>
-						</li>
-						<li>
-							<span class="admin-icon">icon</span>
-							<span class="admin-title">Spot</span>
-						</li>
-					</ul>
+				<!-- 사이드 메뉴 
+				<jsp:include page="../layout/adSidebar.jsp" />
+				<div class="admin-overview"></div>	-->
+				<!-- 회원 총원 및 목록 -->
+				<div class="admem-table">
+					<h3>회원 총원</h3>
+					<table class="admem-table-total" border="1" width="700px">
+						<thead>
+							<tr>
+								<th>총원</th>
+								<td>1005</td>
+							</tr>
+						</thead>
+					</table>
+						
+					<h3>회원 목록</h3>
+					<table class="admem-table-list" border="1" width="700px">
+						<thead>
+							<tr>
+								<th>등록 일자</th>
+								<th>이 름</th>
+								<th>아이디</th>
+								<th>생년월일</th>
+								<th>성별</th>
+							</tr>
+							<tr>
+								<td>2021-12-18</td>
+								<td>홍길동</td>
+								<td>test01</td>
+								<td>00001111</td>
+								<td>남</td>
+							</tr>
+						</thead>
+					</table>
 				</div>
-			<!-- 회원 관리 메인 -->
-				<div class="content-admin-data">
-					<!-- 회원 수 표시 -->
-					<div class="addata-total">
-						<div class="at-1">총 원</div>
-					</div>
-					<!-- 회원 목록 -->
-					<div class="addata-list">
-						<div class="al-1">등록 일자</div>
-						<div class="al-1">이 름</div>
-						<div class="al-1">아 이 디</div>
-						<div class="al-1">생 년 월 일</div>
-						<div class="al-1">성 별</div>					
-					</div>
+										
 					<!-- 회원 검색 -->
-					<div class="addata-search">
-						<form action="AdminController">
-							<select class="addata-search-selbar">
-								<option vlaue="name">이 름</option>
-								<option vlaue="id">아 이 디</option>
-							</select>
-							<input type="text">
-							<input type="submit" value="검색">
-						</form>
-					</div>
+				<div class="admin-member-search">
+					<form action="AdminController">
+						<select class="addata-search-selbar">
+							<option vlaue="name">이 름</option>
+							<option vlaue="id">아 이 디</option>
+						</select>
+						<input type="text">
+						<input type="submit" value="검색">
+					</form>
 				</div>
 			</div>
 		</section>

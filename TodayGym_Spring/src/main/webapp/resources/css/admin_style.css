@@ -8,4 +8,11 @@
 
 .content-admin {
 	height: 2000px;
+	
+}
+
+/********************************* adMem area*************************************/
+
+.admem-table {
+	box-sizing: border-box;
 }
