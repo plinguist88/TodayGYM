@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/******************************** myinfo area ******************************/
+
+header {
+	position: sticky;
+	top: 0px;
+}
+
+.wrap {
+	background-color: #FFFFFF;
+}
+
+/******************************** memberInfo area ******************************/
+.content-myInfo {
+	height: 1000px;
+	background-color: #968C83;
+}
+
+.myInfo-form {
+	height: 500px;
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #D6D2C4;
+}
+
+.myClass-form {
+	height: 500px;
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #FFF5EA;
+}
+
+/******************************** memberUpdate area ******************************/
+.content-myInfoUpdate {
+	height: 1000px;
+	background-color: #968C83;
+}
+
+.myInfoUpdate-form {
+	height: 1000px;
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #D6D2C4;
+}
+
+/******************************** memberClass area ******************************/
+.content-myClass {
+	height: 1000px;
+	background-color: #968C83;
+}
+
+.myClassDetail-form {
+	height: 1000px;
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #FFF5EA;
+}
