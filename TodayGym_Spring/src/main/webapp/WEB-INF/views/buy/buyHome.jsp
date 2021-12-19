@@ -33,34 +33,34 @@
 			<div class="buy_cate_sub">
 				<div class="buy_cate_sub health">
 					<div class="health_cate">
-					<a href="#"><img src="resources/img/buy/h1.png"></a>
-					<a href="#"><img src="resources/img/buy/h2.png"></a>
-					<a href="#"><img src="resources/img/buy/h3.png"></a>
-					<a href="#"><img src="resources/img/buy/h4.png"></a>
+						<p onclick="location.href='./bHealthDetail'"><img src="resources/img/buy/h1.png"></p>
+						<p onclick="location.href='./bHealthDetail'"><img src="resources/img/buy/h2.png"></p>
+						<p onclick="location.href='./bHealthDetail'"><img src="resources/img/buy/h3.png"></p>
+						<p onclick="location.href='./bHealthDetail'"><img src="resources/img/buy/h4.png"></p>
 					</div>
 				</div>				
 				<div class="buy_cate_sub swim">
 					<div class="swim_cate">
-					<a href="#"><img src="resources/img/buy/s1.png"></a>
-					<a href="#"><img src="resources/img/buy/s2.png"></a>
-					<a href="#"><img src="resources/img/buy/s3.png"></a>
-					<a href="#"><img src="resources/img/buy/s4.png"></a>
+					<p onclick="location.href='./bSwimDetail'"><img src="resources/img/buy/s1.png"></p>
+					<p onclick="location.href='./bSwimDetail'"><img src="resources/img/buy/s2.png"></p>
+					<p onclick="location.href='./bSwimDetail'"><img src="resources/img/buy/s3.png"></p>
+					<p onclick="location.href='./bSwimDetail'"><img src="resources/img/buy/s4.png"></p>
 					</div>
 				</div>
 				<div class="buy_cate_sub climb">
 					<div class="climb_cate">
-					<a href="#"><img src="resources/img/buy/cb1m.png"></a>
-					<a href="#"><img src="resources/img/buy/cb2m.png"></a>
-					<a href="#"><img src="resources/img/buy/cb3m.png"></a>
-					<a href="#"><img src="resources/img/buy/cb4m.png"></a>
+					<p onclick="location.href='./bClimbDetail'"><img src="resources/img/buy/cb1m.png"></p>
+					<p onclick="location.href='./bClimbDetail'"><img src="resources/img/buy/cb2m.png"></p>
+					<p onclick="location.href='./bClimbDetail'"><img src="resources/img/buy/cb3m.png"></p>
+					<p onclick="location.href='./bClimbDetail'"><img src="resources/img/buy/cb4m.png"></p>
 					</div>
 				</div>
 				<div class="buy_cate_sub cross">
 					<div class="cross_cate">
-					<a href="#"><img src="resources/img/buy/cs1m.png"></a>
-					<a href="#"><img src="resources/img/buy/cs2m.png"></a>
-					<a href="#"><img src="resources/img/buy/cs3m.png"></a>
-					<a href="#"><img src="resources/img/buy/cs4m.png"></a>
+					<p onclick="location.href='./bCrossDetail'"><img src="resources/img/buy/cs1m.png"></p>
+					<p onclick="location.href='./bCrossDetail'"><img src="resources/img/buy/cs2m.png"></p>
+					<p onclick="location.href='./bCrossDetail'"><img src="resources/img/buy/cs3m.png"></p>
+					<p onclick="location.href='./bCrossDetail'"><img src="resources/img/buy/cs4m.png"></p>
 					</div>
 				</div>
 			</div>

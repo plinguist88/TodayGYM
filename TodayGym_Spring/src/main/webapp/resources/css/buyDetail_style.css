@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.buy_section{
+	width: 1280px;
+	margin: 0 auto;
+}
+.buy_title h1{	
+	margin: 0 auto;
+	padding: 90px;
+	text-align: center;
+}
+.buy_imfo_img{
+	float: left;
+}
+.buy_info_rightbar{
+	float: right;
+	width: 750px;
+}
+.buy_fieldset{
+	
+}
+.buy_info_h2{
+	margin-bottom: 40px;
+}
+.buy_info_sale{
+	float: left;
+	color: blue;
+	font-size: 40px;
+}
+.buy_info_price{
+	float: right;
+}
