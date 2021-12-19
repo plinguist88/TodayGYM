@@ -4,65 +4,148 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>JOIN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/member_style.css">
+<script type="text/javascript">
+	$(function() {
+		//메시지 출력 부분
+		var msg = "${msg}";
+		if (msg != "") {
+			alert(msg);
+		}
+	});
+</script>
 </head>
 <body>
-	<div class="login">
+	<div class="wrap">
 		<header>
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 
+
+
+		<section>
+			<div class="content">
+				<form name="joinFrm" class="login-form" action="./memInsert"
+					method="post" onsubmit="return check()">
+					<h2 class="login-header">회원 가입</h2>
+					<input type="text" class="login-input" id="mid" title="아이디" name="m_id" autofocus placeholder="아이디"> 
+					<input type="button" class="idcheck-btn" value="중복확인" onclick="idcheck()">
+					<input type="password" class="login-input" title="비밀번호" name="m_pwd" placeholder="비밀번호"> 
+					<input type="password" class="login-input" title="비밀번호" name="m_pwd" placeholder="비밀번호 확인">
+					<input type="button" class="pwcheck-btn" value="중복확인" onclick="pwcheck()">
+					<input type="text" class="login-input" title="이름" name="m_name" placeholder="이름"> 
+					<input type="text" class="login-input" title="이메일" name="m_mail" placeholder="메일"> 
+					<input type="text" class="login-input" title="연락처" name="m_phone" placeholder="연락처"> 
+					<input type="text" class="login-input" title="생일" name="m_birth" placeholder="생일"> 
+					<input type="submit" class="login-btn" value="가입">
+				</form>
+			</div>
+		</section>
+
+		<div>
+			<footer>
+				<jsp:include page="../layout/footer.jsp" />
+			</footer>
+		</div>
+
+
 	</div>
+	<script type="text/javascript">
+		//아이디 중복 체크를 했는지 여부 저장
+		var ckOk = false;
 
-	<div class="signForm">
-		<div id="warning"></div>
-		<h1 id="title">Today Gym</h1>
-		<div class="Form">
-			<input type="text" class="inputBox" placeholder="ID" name="uCode"
-				onkeyup=" korCheck(this, event)" onfocus="reInput()"
-				onblur="dupCheck()" /> <input type="hidden" name="idCheck"
-				value="false" />
-		</div>
-		<div class="Form">
-			<input type="password" class="inputBox" placeholder="PW" name="aCode"
-				onblur="pwValidateCheck(this)" />
-		</div>
-		<div class="Form">
-			<input type="password" class="inputBox" placeholder="Confirm PW"
-				name="aCode" onblur="comfirmPw()" />
-		</div>
-		<div class="Form">
-			<input type="text" class="inputBox" placeholder="UserName"
-				name="uName" onblur="nameCheck(this)" />
-		</div>
-		<div class="Form">
-			<span id="info">Birth</span> <input type="date" class="infoBox"
-				name="birth" />
-		</div>
-		<div class="eMailForm">
-			<span id="info">Email</span><input type="text" class="eMailBox"
-				placeholder="email" name="email" />
+		function idcheck() {
+			var inId = $("#mid").val();
 
-		</div>
-		<div class="Form">
-			<span id="info">Phone</span><input type="text" class="infoBox"
-				placeholder="Phone" name="phone" />
-		</div>
+			//아이디 값을 입력했는지 확인
+			if (inId == "") {//입력 안했을 경우
+				alert("아이디를 입력하세요.");
+				$("#mid").focus();
+				return;
+			}
 
-		<button type="button" class="btn" onclick="sendJoinInfo()">
-			JOIN</button>
-	</div>
+			var ckObj = {
+				"mid" : inId
+			};
 
+			//ajax로 전송
+			$.ajax({
+				url : "idCheck",
+				type : "get",
+				data : ckObj,
+				success : function(result) {
+					//중복 id가 아니면 "ok".
+					if (result == "ok") {
+						alert("아이디 사용 가능");
+						ckOk = true;
+					} else {
+						alert("사용할 수 없는 아이디");
+						$("#mid").val("");//입력한 아이디 지우기
+						$("#mid").focus();//아이디 입력칸에 포커스
+						ckOk = false;
+					}
+				},
+				error : function(error) {
+					console.log(error);
+					ckOk = false;
+				}
+			});
+		}
+		
+		function chkPW(){
 
-	<div>
-		<footer>
-			<jsp:include page="../layout/footer.jsp" />
-		</footer>
-	</div>
+			 var pw = $("#mpw").val();
+			 var num = pw.search(/[0-9]/g);
+			 var eng = pw.search(/[a-z]/ig);
+			 var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
 
+			 if(pw.length < 8 || pw.length > 20){
 
+			  alert("8자리 ~ 20자리 이내로 입력해주세요.");
+			  return false;
+			 }else if(pw.search(/\s/) != -1){
+			  alert("비밀번호는 공백 없이 입력해주세요.");
+			  return false;
+			 }else if(num < 0 || eng < 0 || spe < 0 ){
+			  alert("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+			  return false;
+			 }else {
+				console.log("통과"); 
+			    return true;
+			 }
 
+			}
+
+		//입력 양식에 빈칸이 있는지 확인하는 함수
+		function check() {
+			if (ckOk == false) {
+				alert("아이디 중복 체크를 해주세요.");
+				return false;//submit 막기(action 실행 안됨)
+			}
+
+			//form 태그의 내용을 전부 가져오기
+			var frm = document.joinFrm;
+			console.log(frm);
+
+			//submit 버튼을 제외한 나머지 input 태그의 개수
+			var length = frm.length - 1;
+
+			//input 태그 중 value가 ""인 요소가 있는지 확인(입력 안된 요소)
+			for (var i = 0; i < length; i++) {
+				if (frm[i].value == "" || frm[i].value == null) {
+					alert(frm[i].title + " 입력!");
+					frm[i].focus();
+					return false;
+				}
+			}
+			//모든 입력칸이 다 채워졌고, 아이디 중복 체크도 한 상태
+			return true;//submit이 실행되도록 true를 반환
+		}
+	</script>
 </body>
 </html>
