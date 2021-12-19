@@ -1,5 +1,7 @@
 package com.project.todaygym.service;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
@@ -18,23 +20,29 @@ public class OrderService {
 	private MemberDao mDao;
 	*/
 	
+	@Autowired
+	private HttpSession session;
+	
 	private ModelAndView mv;
 	
 	//__________ 결제 페이지
-	public ModelAndView getOrderAndInfo() {
+	public ModelAndView getMyOrderAndInfo() {
+		
 		mv = new ModelAndView();
 		
-		/*
-		CartDto mCart = cDao.memberSelect();
-		MemberDto  mAccount = mDao.memberSelect();
+		String id = (String)session.getAttribute("id");
 		
-		mv.addObject("mAccount", mAccount);
-		mv.addObject("mClass", mClass);
+		/*
+		MemberDto myInfo = mDao.myInfoSelect(id);
+		List<CartDto> myOrderList = cDao.myOrderSelect(id);
+		
+		mv.addObject("myOrder", myOrderList);
+		mv.addObject("myInfo", myInfo);		
 		*/
 		
 		mv.setViewName("order/orderHome");
 		
 		return mv;
-	} // getMemberAndClass end
+	} // getOrderAndInfo end
 	
 } // class end

@@ -15,16 +15,16 @@ public class OrderController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	@Autowired
-	private OrderService oServ;
+	private OrderService orderServ;
 
 	private ModelAndView mv;
 
-	//__________ 결제 페이지
+	//__________ 겔제 페이지
 	@GetMapping("myOrder")
 	public ModelAndView myOrderMove() {
 		logger.info("myOrderMove()");
 		
-		mv = oServ.getOrderAndInfo();
+		mv = orderServ.getMyOrderAndInfo();
 		
 		return mv;
 	} // myOrderMove end

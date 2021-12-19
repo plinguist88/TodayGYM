@@ -11,6 +11,22 @@ header {
 	background-color: #40BAD5;
 }
 
-.content-order {
-	height: 2000px;
+/******************************** orderHome area ******************************/
+.content-myOrder {
+	height: 1000px;
+	background-color: #968C83;
+}
+
+.myOrder-form {
+	height: 500px;
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #D6D2C4;
+}
+
+.myInfo-form {
+	height: 500px;
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #FFF5EA;
 }
