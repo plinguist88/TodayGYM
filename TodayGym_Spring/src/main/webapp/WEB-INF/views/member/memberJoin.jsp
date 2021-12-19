@@ -15,11 +15,11 @@
 		</header>
 
 	</div>
-	
-<div class="signForm">
+
+	<div class="signForm">
 		<div id="warning"></div>
 		<h1 id="title">Today Gym</h1>
-		<div class="Form">	
+		<div class="Form">
 			<input type="text" class="inputBox" placeholder="ID" name="uCode"
 				onkeyup=" korCheck(this, event)" onfocus="reInput()"
 				onblur="dupCheck()" /> <input type="hidden" name="idCheck"
@@ -42,23 +42,17 @@
 				name="birth" />
 		</div>
 		<div class="eMailForm">
-		<span id="info">Email</span><input type="text" class="eMailBox" placeholder="email" name="email" />
-	
+			<span id="info">Email</span><input type="text" class="eMailBox"
+				placeholder="email" name="email" />
+
 		</div>
 		<div class="Form">
 			<span id="info">Phone</span><input type="text" class="infoBox"
 				placeholder="Phone" name="phone" />
 		</div>
-		
-		<div class="Form">
-		<span id="info">profile</span><input type="file" name="mpfile" placeholder="choose file"/>
-		</div>
 
 		<button type="button" class="btn" onclick="sendJoinInfo()">
-			CREATE</button>
-		<div class="bottomText">
-			Already have an account? <a href="/LogInForm" id="aText"><b>sign-in</b></a>
-		</div>
+			JOIN</button>
 	</div>
 
 

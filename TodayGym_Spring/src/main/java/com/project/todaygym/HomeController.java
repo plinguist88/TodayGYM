@@ -31,15 +31,4 @@ public class HomeController {
 		return "admin/adMain";
 	}
 	
-	@GetMapping("/memberLogin")
-	public String memberLogin() {
-		logger.info("memberLogin()");
-		return "member/memberLogin";
-	}
-	
-	@GetMapping("/memberJoin")
-	public String memberJoin() {
-		logger.info("memberJoin()");
-		return "member/memberJoin";
-	}
 } // class end
