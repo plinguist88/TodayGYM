@@ -18,35 +18,29 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 		<section>
-			<div class="content-order">
-				<div class="order-form">
-					<div class="order-title">
+			<div class="content-myOrder">
+				<div class="myOrder-form">
+					<div class="myOrder-title">
 						<div class="title-num">주문번호</div>
 						<div class="title-cate">카테고리</div>
 						<div class="title-title">수강명</div>
 						<div class="title-price">가격</div>
 					</div>
-					<c:forEach var="olist" items="">
-						<div class="order-list">
-							<div class="list-num">주문번호</div>
-							<div class="list-cate">카테고리</div>
-							<div class="list-title">수강명</div>
-							<div class="list-price">가격</div>
+					<c:forEach var="myOrder" items="${myOrderList}">
+						<div class="myOrder-list">
+							<div class="myOrder-list-num">${myOrder.num}</div>
+							<div class="myOrder-list-cate">${myOrder.cate}</div>
+							<div class="myOrder-list-title">${myOrder.title}</div>
+							<div class="myOrder-list-price">${myOrder.price}</div>
 						</div>
 					</c:forEach>
-					<div class="user-info">
-						<div class="user-name"></div>
-						<div class="user-phone"></div>
-					</div>
+				</div>
+				<div class="myInfo-form">
+					<div class="myInfo-name">이름 : ${myInfo.name}</div>
+					<div class="myInfo-phone">전화번호 : ${myInfo.phone}</div>
+					<div class="myInfo-email">이메일 : ${myInfo.email}</div>
 				</div>
 				<div class="bank-form">
-					<div class="bank-payment">
-						<form action="./oPayAct" method="post">
-							<input type="text" name="bk_account" id="bkaccount" placeholder="계좌번호">
-							<input type="password" name="bk_pwd" id="bkpwd" placeholder="비멀번호">
-							<input type="submit" value="결제하기">
-						</form>
-					</div>
 				</div>
 			</div>
 		</section>

@@ -14,10 +14,10 @@ public class MyInfoService {
 	
 	/*
 	@Autowired
-	MemberDao mDao;
+	private MemberDao mDao;
 	
 	@Autowired
-	TicketDao tDao;
+	private TicketDao tDao;
 	*/
 	
 	@Autowired
