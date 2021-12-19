@@ -70,10 +70,18 @@ public class MyInfoService {
 		String view = null;
 		String alert = null;
 		String id = (String)session.getAttribute("id");
+		String name = (String)session.getAttribute("name");
+		String birth = (String)session.getAttribute("birth");
+		String joindate = (String)session.getAttribute("joindate");
+		String point = (String)session.getAttribute("point");
 		
 		/*
 		
 		myUpdate.setM_id(id);
+		myUpdate.setM_name(name);
+		myUpdate.setM_birth(birth);
+		myUpdate.setM_joindate(joindate);
+		myUpdate.setM_point(point);
 		
 		try {
 			mDao.myInfoSelect(myUpdate);
