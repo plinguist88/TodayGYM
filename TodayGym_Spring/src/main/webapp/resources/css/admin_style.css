@@ -3,7 +3,7 @@
 /******************************** admin area ******************************/
 
 .wrap {
-	background-color: #40BAD5;
+	background-color: #000;
 }
 
 .content-admin {
@@ -12,7 +12,38 @@
 }
 
 /********************************* adMem area*************************************/
+.content-admin {
+	border-radius: 5px;
+	border: 2px solid #fff;
+}
 
-.admem-table {
-	box-sizing: border-box;
+table {
+	border-radius: 5px;
+	color: white;
+	border: 2px solid #fff;
+	width: 700px;
+
+}
+
+th, td {
+	border-radius: 5px;
+	border: 2px solid #fff;
+}
+
+.addata-search-selbar {
+	color: white;
+	background-color: #000;
+	border: 2px solid #fff;
+}
+
+.addata-search-txtbar {
+	color: white;
+	background-color: #000;
+	border: 2px solid #fff;
+}
+
+.addata-search-btn {
+	color: white;
+	background-color: #000;
+	border: 2px solid #fff;
 }
