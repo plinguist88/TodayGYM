@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* 관리자 사이드바 */
 .adSidebar{
 	width: 200px;
 	height: 100vh;
@@ -45,7 +44,7 @@
 .adSidebar ul li a .admin-title{
 	font-size: 30px;
 }
-/* 관리자 사이드바 반응형 버튼 */
+
 .toggle{
 	width: 60px;
 	height: 60px;

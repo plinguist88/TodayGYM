@@ -1,4 +1,3 @@
-<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <link type="text/css" rel="stylesheet"
@@ -29,9 +28,7 @@
 	menuToggle.onclick = function() {
 		menuToggle.classList.toggle('active')
 	}
-	
-	var i = '<c:out value='${sideNum.val}' />';
-	
+
 	let list = document.querySelectorAll('.list');
 	for (let i = 0; i < list.length; i++) {
 		list[i].onclick = function() {
@@ -44,24 +41,21 @@
 	}
 </script>
 <script type="text/javascript">
+	int adPage = 0;
 
 	function adMainMove() {
-		location.href = "/todaygym/adMainMove.ad";
+		location.href = "adMainMove.ad";
 	}
 
 	function adMemberMove() {
-		location.href = "/todaygym/adMemberMove.ad";
+		location.href = "adMemberMove.ad";
 	}
 
 	function adTicketMove() {
-		let form = document.createElement('form');
-		form.setAttribute('method', 'post');
-		form.setAttribute('action'. 'adTicketMove.ad')
-		document.body.appendChild(form);
-		form.submit();
+		location.href = "adTicketMove.ad";
 	}
 
 	function adSpotMove() {
-		location.href = "/todaygym/adSpotMove.ad";
+		location.href = "adSpotMove.ad";
 	}
 </script>
