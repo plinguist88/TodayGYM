@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/c182b5bf7c.js" crossorigin="anonymous"></script>
-    <script src="resorces/JavaScript/header.js" defer></script>
+    <script src="resources/JavaScript/header.js" defer></script>
 
 <nav class="navbar">
         <div class="navbar_logo">
