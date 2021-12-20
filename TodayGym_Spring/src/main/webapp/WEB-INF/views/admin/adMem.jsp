@@ -22,6 +22,7 @@
 		</header>
 		<section>
 			<div class="content-admin">
+				<div class="content-admin-membox">
 				<!-- 사이드 메뉴 
 				<jsp:include page="../layout/adSidebar.jsp" />
 				<div class="admin-overview"></div>	-->
