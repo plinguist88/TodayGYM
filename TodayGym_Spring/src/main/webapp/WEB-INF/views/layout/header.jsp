@@ -38,10 +38,22 @@
 						class="fas fa-lock-open fa-sm"></i></abbr></a></li>
 		</ul>
 
+        <ul class="navbar_icons">
+        <li><a href="./memberJoin"><abbr title="회원가입"><i class="fas fa-edit fa-sm"></i></abbr></a></li>
+        <li><a href="./memberLogin"><abbr title="로그인"><i class="fas fa-lock fa-sm"></abbr></i></a></li>
+        <li><a href=""><abbr title="마이페이지"><i class="far fa-address-card fa-sm"></i></abbr></a></li>
+        <li><a href="./logout"><abbr title="로그아웃"><i class="fas fa-lock-open fa-sm"></i></abbr></a></li>
+         </ul>
 
 		<a.href ="#" class="navbar_toogleBtn"> <i class="fas fa-bars"></i>
 		</a>
 	</nav>
 </header>
+
+
+       </nav>
+       
+     
+    
 
 

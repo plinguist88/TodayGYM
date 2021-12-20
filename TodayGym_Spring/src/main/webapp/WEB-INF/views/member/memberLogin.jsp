@@ -4,40 +4,44 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>LOGIN</title>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/member_style.css">
+<script type="text/javascript">
+	$(function() {
+		//메시지 출력 부분
+		var msg = "${msg}";
+		if (msg != "") {
+			alert(msg);
+		}
+	});
+</script>
 </head>
 <body>
-	<div class="login">
+	<div class="wrap">
 		<header>
 			<jsp:include page="../layout/header.jsp" />
 		</header>
-		<h1>로그인</h1>
-		<form method="post" action="">
-			<p>
-				<input type="text" name="login" value="" placeholder="ID">
-			</p>
-			<p>
-				<input type="password" name="password" value=""
-					placeholder="Password">
-			</p>
-			<p class="remember_me">
-				<label> <input type="checkbox" name="remember_me"
-					id="remember_me"> 비밀번호를 저장하시겠습니까?
-				</label>
-			</p>
-			<p class="submit">
-				<input type="submit" name="commit" value=로그인 />
-			</p>
-		</form>
+		<section>
+			<div class="content">
+				<form class="login-form" action="./loginProc" method="post">
+					<h1 class="login-header">로그인</h1>
+					<input type="text" class="login-input" name="m_id" autofocus
+						required placeholder="아이디"> <input type="password"
+						class="login-input" name="m_pwd" placeholder="비밀번호" required>
+					<input type="submit" class="login-btn" value="로그인">
+				</form>
+			</div>
+
+			<div>
+				<footer>
+					<jsp:include page="../layout/footer.jsp" />
+				</footer>
+			</div>
+		</section>
 	</div>
 
-	<div>
-		<footer>
-			<jsp:include page="../layout/footer.jsp" />
-		</footer>
-	</div>
+
 
 
 

@@ -28,3 +28,38 @@ header {
 	border-radius: 15px;
 	box-shadow: 0px 0px 15px #adadad;
 }
+
+
+.login-form {
+	max-width: 350px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.login-form, .login-header {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.login-form input[type="text"] {
+	margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.login-form input[type="password"] {
+	margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.login-form .login-input {
+	position: relative;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+
