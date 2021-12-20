@@ -1,14 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin Ticket List</title>
+<title>Admin Ticket</title>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/adMain_style.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="module"
 	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule
@@ -21,27 +22,17 @@
 		</header>
 		<section>
 			<div class="content-admin">
-				<jsp:include page="../layout/adSidebar.jsp" />
-				<div class="adTicketList">
-					관리자 회원권 목록 페이지
+				<div class="content-adSidebar">
+					<jsp:include page="../layout/adSidebar.jsp" />
+				</div>
+				<div class="content-print">
+					<p>여긴 회원권 공간</p>
 				</div>
 			</div>
 		</section>
 		<footer>
-			<%-- <jsp:include page="../layout/footer.jsp" /> --%>
+			<jsp:include page="../layout/footer.jsp" />
 		</footer>
 	</div>
-
-	<script type="text/javascript">
-		let list = document.querySelectorAll('.list');
-			list[c:out value="${listNum}"].onclick = function(){
-				let j = 0;
-				while(j < list.length){
-					list[j++].className = 'list';
-				}
-				list[c:out value="${listNum}"].className = 'list active';
-			}
-		}
-	</script>
 </body>
 </html>

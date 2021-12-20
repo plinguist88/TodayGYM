@@ -1,13 +1,13 @@
 package com.project.todaygym.service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
+import org.springframework.web.servlet.ModelAndView;
 
 @Service
 public class AdTicketListService {
 	
-	public Model getTicketList(Model model) {
+	public ModelAndView getTicketList(Integer sideNum) {
 		
-		return model;
+		return null;
 	}
 }
