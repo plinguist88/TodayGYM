@@ -3,16 +3,16 @@
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 	
 <mapper namespace="com.project.todaygym.dao.MemberDao">
-<!-- <select id="idCheck" parameterType="String"
+    <select id="idCheck" parameterType="String"
 		resultType="Integer">
 		SELECT COUNT(*) FROM M WHERE m_id=#{id}
 	</select>
 	
 	<insert id="memberInsert" 
-		parameterType="com.openplatform.board.dto.MemberDto">
+		parameterType="com.project.todaygym.dto.MemberDto">
 		INSERT INTO M
-		VALUES (#{m_id},#{m_pwd},#{m_name},#{m_birth},
-				#{m_addr},#{m_phone},DEFAULT)
+		VALUES (#{m_id},#{m_pwd},#{m_name},#{m_email},
+				#{m_phone},#{m_birth},DEFAULT)
 	</insert>
 	
 	<select id="pwdSelect" parameterType="String"
@@ -21,8 +21,8 @@
 	</select>
 	
 	<select id="memberSelect" parameterType="String"
-		resultType="com.openplatform.board.dto.MemberDto">
+		resultType="com.project.todaygym.dto.MemberDto">
 		SELECT * FROM MINFO WHERE m_id=#{id}
-	</select> -->
+	</select>
 	
 </mapper>
