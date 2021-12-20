@@ -28,7 +28,7 @@
 				<!-- 회원 총원 및 목록 -->
 				<div class="admem-table">
 					<h3>회원 총원</h3>
-					<table class="admem-table-total" border="1" width="700px">
+					<table class="admem-table-total">
 						<thead>
 							<tr>
 								<th>총원</th>
@@ -38,7 +38,7 @@
 					</table>
 						
 					<h3>회원 목록</h3>
-					<table class="admem-table-list" border="1" width="700px">
+					<table class="admem-table-list">
 						<thead>
 							<tr>
 								<th>등록 일자</th>
@@ -65,8 +65,8 @@
 							<option vlaue="name">이 름</option>
 							<option vlaue="id">아 이 디</option>
 						</select>
-						<input type="text">
-						<input type="submit" value="검색">
+						<input type="text" class="addata-search-txtbar">
+						<input type="submit" value="검색" class="addata-search-btn">
 					</form>
 				</div>
 			</div>
