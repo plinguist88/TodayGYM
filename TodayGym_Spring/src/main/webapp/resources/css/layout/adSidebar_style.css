@@ -1,44 +1,18 @@
 @charset "UTF-8";
 
 .adSidebar{
-	position: absolute;
-	top: 83px;
-	
-	width: 60px;
+	width: 200px;
 	height: 100vh;
 	
 	background: #4d4dff;
-	
-	transition: width 0.5s;
-	overflow-x: hidden;
-}
-
-.adSidebar.active{
-	width: 200px;
 }
 
 .adSidebar ul{
-	position: absolute;
-	top: 0;
-	left: 0;
-	
-	width: 100%;
-	
-	margin: 0;
-	padding: 0;
 
-	padding-top: 60px;
 }
 
 .adSidebar ul li{
-	position: relative;
-	
-	width: 100%;
-	
 	list-style: none;
-	
-	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
 }
 
 .adSidebar ul li.active{
@@ -46,30 +20,21 @@
 }
 
 .adSidebar ul li a{
-	position: relative;
+	height: 60px;
 	
 	display: flex;
-	
-	width: 100%;
-	
-	text-decoration: none;
-	
-	color: #fff;
+	justify-content: flex-start;
+	align-items: center;
+
 }
 
 .adSidebar ul li.active a{
-	color: #333;
+	color: #000;
 }
 
 .adSidebar ul li a .admin-icon{
-	position: relative;
-	display: block;
-	
-	min-width: 60px;
-	height: 60px;
-	line-height: 80px;
-	
-	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .adSidebar ul li a .admin-icon ion-icon{
@@ -77,48 +42,25 @@
 }
 
 .adSidebar ul li a .admin-title{
-	position: relative;
-	display: block;
-	
-	padding-left: 10px;
-	height: 60px;
-	line-height: 60px;
-	
 	font-size: 30px;
-	
-	white-space: normal;
 }
 
 .toggle{
-	position: relative;
-	top: 0;
-	left: 0;
+	width: 60px;
+	height: 60px;
 	
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	
-	width: 60px;
-	height: 60px;
-	line-height: 60px;
-	
-	text-align: center;
-	
-	border-radius: 10px;
-	
-	background: #4d4dff;
-	
-	cursor: pointer;
-}
-
-.toggle.active{
 	background: #4d4dff;
 }
 
 .toggle ion-icon{
-	position: absolute;
 	color: #fff;
 	font-size: 30px;
+	
+	cursor: pointer;
 }
 
 .toggle ion-icon.open,

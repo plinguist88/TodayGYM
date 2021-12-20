@@ -21,10 +21,10 @@
 			<div class="content-myOrder">
 				<div class="myOrder-form">
 					<div class="myOrder-title">
-						<div class="title-num">주문번호</div>
-						<div class="title-cate">카테고리</div>
-						<div class="title-title">수강명</div>
-						<div class="title-price">가격</div>
+						<div class="myOrder-title-num">주문번호</div>
+						<div class="myOrder-title-cate">카테고리</div>
+						<div class="myOrder-title-title">수강명</div>
+						<div class="myOrder-title-price">가격</div>
 					</div>
 					<c:forEach var="myOrder" items="${myOrderList}">
 						<div class="myOrder-list">

@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 /******************************** myinfo area ******************************/
-
 header {
 	position: sticky;
 	top: 0px;
@@ -13,46 +12,100 @@ header {
 
 /******************************** memberInfo area ******************************/
 .content-myInfo {
-	height: 1000px;
-	background-color: #968C83;
+	height: 1200px;
+	background-color: #F9F3DF;
 }
 
 .myInfo-form {
-	height: 500px;
-	width: 1000px;
+	height: 600px;
+	width: 1200px;
 	margin: 0 auto;
-	background-color: #D6D2C4;
+	padding: 20px 50px;
+	background-color: #FDFCE5;
 }
 
+.myInfo-user {
+	float: left;
+	height: 500px;
+	width: 550px;
+}
+
+.myInfo-info {
+	height: 100px;
+	border: 1px solid #dadada;
+	padding: 36px 80px;
+	box-sizing: border-box;
+	font-size: 18px;
+}
+
+.myInfo-btn {
+	height: 100px;
+	width: 550px;
+	border: 1px solid #dadada;
+	box-sizing: border-box;
+	line-height: 100px;
+	text-align: center;
+}
+
+.btn-myInfo {
+	width: 300px;
+	padding: 20px 20px 20px 20px;
+	font-size: 18px;
+}
+
+.myInfo-adv {
+	float: left;
+	height: 500px;
+	width: 550px;
+	border: 1px solid red;
+	box-sizing: border-box;
+}
+
+/***** memberInfo area *****/
 .myClass-form {
-	height: 500px;
-	width: 1000px;
+	height: 600px;
+	width: 1200px;
 	margin: 0 auto;
-	background-color: #FFF5EA;
+	padding: 20px 50px;
+	background-color: #D7E9F7;
 }
 
+.myClass-list {
+	height: 100%;
+	width: 100%;
+}
+
+.myClass-user {
+	height: 100px;
+	width: 100%;
+	border: 1px solid #ffffff;
+	padding: 36px 80px;
+	box-sizing: border-box;
+	font-size: 18px;
+}
 /******************************** memberUpdate area ******************************/
 .content-myInfoUpdate {
 	height: 1000px;
-	background-color: #968C83;
+	background-color: #F9F3DF;
 }
 
 .myInfoUpdate-form {
 	height: 1000px;
-	width: 1000px;
+	width: 1200px;
 	margin: 0 auto;
-	background-color: #D6D2C4;
+	padding: 50px 50px 50px 50px;
+	background-color: #FDFCE5;
 }
 
 /******************************** memberClass area ******************************/
 .content-myClass {
 	height: 1000px;
-	background-color: #968C83;
+	background-color: #F9F3DF;
 }
 
 .myClassDetail-form {
 	height: 1000px;
-	width: 1000px;
+	width: 1200px;
 	margin: 0 auto;
-	background-color: #FFF5EA;
+	background-color: #D7E9F7;
 }

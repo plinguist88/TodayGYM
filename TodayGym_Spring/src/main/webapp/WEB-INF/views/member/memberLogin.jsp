@@ -34,7 +34,6 @@
 	</div>
 
 	<div>
-	<p> id / pw 찾기 </p>
 		<footer>
 			<jsp:include page="../layout/footer.jsp" />
 		</footer>
