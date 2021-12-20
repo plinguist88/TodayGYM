@@ -15,6 +15,7 @@ footer{
     color: #fff;
     padding-top: 40px;
     padding: 0;
+    margin-bottom: 0;
 }
 .footer-content{
     display: flex;

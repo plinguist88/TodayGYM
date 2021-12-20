@@ -6,6 +6,7 @@
 }
 
 .content-admin {
+	margin-top: 60px;
 	height: auto;
 	display: flex;
 	align-items: center;
@@ -13,6 +14,32 @@
 	flex-direction: column;
 	text-align: center;
 }
+
+.admem-table {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+th {
+	background-color: #4848ff;
+	color: #fff;
+	border-radius: 2px;
+	border: 1px solid #4848ff;
+	margin: 0px;
+	width: 300px;
+}
+
+td {
+	background-color: #fff;
+	border-radius: 3px;
+	border: 2px inset #fff;
+	margin: 0;
+	width: 500px;
+}
+
 
 /********************************* adMem area*************************************/
 .content-admin-membox {
@@ -40,23 +67,6 @@
 	border: 2px solid #4848ff;
 	padding: 0px;
 	width: 700px;
-}
-
-th {
-	background-color: #4848ff;
-	color: #fff;
-	border-radius: 2px;
-	border: 1px solid #4848ff;
-	margin: 0px;
-	width: 300px;
-}
-
-td {
-	background-color: #fff;
-	border-radius: 3px;
-	border: 2px inset #fff;
-	margin: 0;
-	width: 500px;
 }
 
 .admin-member-search {
@@ -98,8 +108,31 @@ td {
 
 /***********************************adMemDetail area*****************************************/
 
+.admem-table-basic {
+	border: 2px solid #4848ff;
+	border-radius: 3px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	width: 80%;
+	
+}
 
+.admem-table-dtbox {
+	border: 2px solid #4848ff;
+	border-radius: 3px;
+	width: 80%;
+	height: 500px;
+	display: flex;
+	text-align: center;
+}
 
+.admem-btnarea {
+	
+}
+
+.admem-btnarea-upbtn {
+	
+}
 
 
 
