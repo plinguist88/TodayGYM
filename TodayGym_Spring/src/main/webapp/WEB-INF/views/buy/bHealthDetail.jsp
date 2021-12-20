@@ -18,7 +18,7 @@
 		<!-- buyDetail 본문 -->		
 		<section class="buy_section">
 			<div class="buy_title">
-		 		<h1>구매상세 페이지</h1>
+		 		<h1>구매 페이지</h1>
 		 	</div>
 		 	<div class="buy_info">
 		 		<div class="buy_imfo_img">
@@ -83,7 +83,7 @@
 			 			<hr>
 			 			<div>
 				 			<span class="buy_price1">옵션명</span>
-				 			<span class="buy_price2">원<button>x</button></span>
+				 			<span class="buy_price2">원</span>
 				 			
 			 			</div>
 			 			<hr>
@@ -91,13 +91,70 @@
 			 		<div class="buy_price">
 			 			<div>총 상품 금액</div>
 			 			<span class="">원</span>
-			 		</div>
-		 		</div>
-		 	</div>
-		 	
+			 		</div>			
+		 		</div>	
+		 		<form action="" method="post">
+		 			<input type="button" value="💳구매하기" class="nextbutton1">
+		 		</form>	 
+		 		<form action="" method="post">
+		 			<input type="button" value="🛒장바구니" class="nextbutton2">
+		 		</form>	 		
+		 	</div>		 	
+		</section>
+		<section class="buy_detail">
+			<div>
+				<fieldset>
+					<legend class="buy_detail_legend">회원권 상세정보</legend>
+					<table class="buy_table">
+						<tr class="t1">
+							<td class="t1">⚠︎ 직거래 유도 안내</td>
+						</tr>
+						<tr class="t2">
+							<td class="t2">현금결제를 유도하는 경우 사기의 가능성이 있으니 절대 결제하지 마시고<br>
+								네이버 고객센터로 문의하여 주시기 바랍니다.
+							</td>
+						</tr>
+					</table>
+					<table class="buy_table_info">
+						<tr>
+							<th>상품번호</th>
+							<td colspan="3">TgHealth001</td>
+							<th>상품종류</th>
+							<td>회원권</td>
+						</tr>
+						<tr>
+							<th>발행국가</th>
+							<td colspan="3">대한민국</td>
+						</tr>
+						<tr>
+							<th>유효기간</th>
+							<td colspan="3">구매일로부터 120일</td>
+							<th>사용장소</th>
+							<td>위치보기</td>
+						</tr>
+						<tr>
+							<th>발행처</th>
+							<td colspan="3">TOGYM피트니스</td>
+							<th>연락처</th>
+							<td>010-9231-9163</td>
+						</tr>
+						<tr>
+							<th>영수증발급</th>
+							<td colspan="3">신용카드전표, 현금영수증발급</td>
+						</tr>
+						<tr>
+							<th>교환환불문의</th>
+							<td colspan="3">010-9231-9163</td>
+						</tr>
+					</table>
+					<div class="videozone">
+					
+					</div>
+				</fieldset>
+			</div>
 		</section>
 		<footer>
-			<jsp:include page="../layout/footer.jsp" />
+			<!--<jsp:include page="../layout/footer.jsp" />-->
 		</footer>
 	</div>
 </body>
