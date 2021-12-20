@@ -12,9 +12,9 @@ footer{
     height: auto;
     width: 100%;
     font-family: "open Sans";
+    color: #fff;
     padding-top: 40px;
     padding: 0;
-    color: #fff;
 }
 .footer-content{
     display: flex;
@@ -72,7 +72,9 @@ footer{
     opacity: .4;
     font-weight: 200;
 }
-
+.font1{
+    font-family: 'Abril Fatface', cursive;
+}
 
 
 

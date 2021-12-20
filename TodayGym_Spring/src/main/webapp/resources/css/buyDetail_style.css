@@ -1,5 +1,11 @@
 @charset "UTF-8";
+
 .buy_section{
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	width: 1280px;
 	margin: 0 auto;
 }
@@ -7,6 +13,7 @@
 	margin: 0 auto;
 	padding: 90px;
 	text-align: center;
+	height: 100%;
 }
 .buy_imfo_img{
 	float: left;
@@ -18,6 +25,7 @@
 .buy_info_rightbar{
 	float: right;
 	width: 750px;
+	
 }
 .buy_fieldset{
 	border: none;

@@ -7,12 +7,17 @@ header {
 	top: 0px;
 }
 
-.wrap {
-	background-color: #40BAD5;
-}
 
 .content-home {
-	height: 2000px;
+	height: auto;
 	border: 1px solid red;
 	box-sizing: border-box;
+	background-color: #000;
+}
+
+
+
+video{
+	background-size: cover;
+	width: 100%;
 }
