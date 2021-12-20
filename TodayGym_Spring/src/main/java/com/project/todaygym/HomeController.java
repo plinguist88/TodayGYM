@@ -25,9 +25,10 @@ public class HomeController {
 	}
 	
 	// 관리자 메인으로 이동
-	@GetMapping("/adMainMove.ad")
+	@GetMapping("adMainMove.ad")
 	public String adMainMove() {
 		logger.info("adMainMove()");
+		
 		return "admin/adMain";
 	}
 	

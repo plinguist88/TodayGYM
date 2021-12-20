@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin Main</title>
+<title>Admin Spot</title>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/adMain_style.css">
 <script
@@ -22,7 +22,7 @@
 				<jsp:include page="../layout/adSidebar.jsp" />
 			</div>
 			<div class="content">
-				<h1>Overview Content</h1>
+				<h1>Spot Content</h1>
 			</div>
 		</div>
 	</div>
