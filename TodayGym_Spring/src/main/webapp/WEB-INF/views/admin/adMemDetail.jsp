@@ -29,23 +29,22 @@
 
 				<div class="content-admin-membox">
 					<div class="admem-table">
-						<div class="admem-table">
-							<h3>회원 상세</h3>
-							<table class="admem-table-basic">
-								<thead>
-									<tr>
-										<th>이름</th>
-										<td>name</td>
-									</tr>
-									<tr>
-										<th>가입일자</th>
-										<td>yyyy.MM.dd</td>
-									</tr>
-								</thead>
-							</table>
-							
-							<div class="admem-table-dtbox">
-								<table class="admem-table-detail">
+						<h3>회원 상세</h3>
+						<table class="admem-table-basic">
+							<thead>
+								<tr>
+									<th>이름</th>
+									<td>name</td>
+								</tr>
+								<tr>
+									<th>가입일자</th>
+									<td>yyyy.MM.dd</td>
+								</tr>
+							</thead>
+						</table>
+
+						<div class="admem-table-dtbox">
+							<table class="admem-table-detail">
 								<thead>
 									<tr>
 										<th>아이디</th>
@@ -73,8 +72,14 @@
 									</tr>
 								</thead>
 							</table>
-							</div>
 						</div>
+					</div>
+					
+					<!-- 회원 수정 버튼 -->
+					<div class="admem-btnarea">
+						<button class="admem-btnarea-upbtn">
+						<a href="./adMemUpdate">수정</a>
+						</button>
 					</div>
 				</div>
 			</div>
