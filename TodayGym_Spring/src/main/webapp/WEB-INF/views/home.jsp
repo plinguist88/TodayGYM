@@ -18,7 +18,15 @@
 		</header>
 		<section>
 			<div class="content-home"></div>
+			<div class=home_videos>
+				<video autoplay="true" loop="true" muted="muted">
+					<source src="resources/videos/mains.mp4" type="video/mp4">
+				</video>
+			</div>
 		</section>
+		
+		
+		
 		<footer>
 			<jsp:include page="layout/footer.jsp" />
 		</footer>
