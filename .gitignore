@@ -126,3 +126,5 @@ buildNumber.properties
 *.MF
 *.properties
 TodayGym_Spring/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+TodayGym_Spring/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+TodayGym_Spring/target/m2e-wtp/web-resources/META-INF/maven/com.project/todaygym/pom.properties

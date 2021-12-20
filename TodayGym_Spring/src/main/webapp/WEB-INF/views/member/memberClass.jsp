@@ -20,15 +20,15 @@
 			<div class="content-myClass">
 				<div class="myClassDetail-form">
 					<div class="myCLass-title">
-						<div class="myClass-list-cate">구분</div>
-						<div class="myClass-list-title">강좌명</div>
-						<div class="myClass-list-month">기간</div>
+						<div class="myClass-user">구분</div>
+						<div class="myClass-user">강좌명</div>
+						<div class="myClass-user">기간</div>
 					</div>
 					<c:forEach var="myClass" items="${myClassList}">
 						<div class="myClass-list">
-							<div class="myClass-list-cate"><p>${myClass.cate}</p></div>
-							<div class="myClass-list-title"><p>${myClass.title}</p></div>
-							<div class="myClass-list-month"><p>${myClass.month}</p></div>
+							<div class="myClass-user"><p>${myClass.cate}</p></div>
+							<div class="myClass-user"><p>${myClass.title}</p></div>
+							<div class="myClass-user"><p>${myClass.month}</p></div>
 						</div>
 					</c:forEach>
 				</div>
