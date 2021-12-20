@@ -14,9 +14,9 @@ li {
 	list-style: none;
 }
 
-/******************************** memberInfo area ******************************/
+/******************************** myInfoSide area ******************************/
 .content-myInfo {
-	height: 800px;
+	height: 900px;
 	background-color: #FFFFFF;
 }
 
@@ -24,41 +24,40 @@ li {
 	width: 1200px;
 	height: 100%;
 	margin: 0 auto;
-	border: 1px solid blue;
+	padding: 100px 0 50px 0;
 }
 
 .myInfo-list {
 	float: left;
-	width: 25%;
+	width: 300px;
 	height: 100%;
-	border: 1px solid blue;
 }
 
 .myInfo-list-user {
-	width: 100%;
-	height: 30%;
-	border: 1px solid blue;
+	width: 298px;
+	height: 298px;
+	margin-bottom: 3px;
+	border: 1px solid gray;
 }
 
 .myInfo-list-contents {
-	width: 100%;
-	height: 70%;
+	width: 298px;
+	height: 449px;
 	padding: 20px 20px;
-	border: 1px solid blue;
-	line-height: 80px;
-	text-align: center;
+	border: 1px solid gray;
 }
 
 .myInfo-list-contents ul li {
-	margin: 0 auto;
-	color: black;
-	font-size: 20px;
+	border-bottom: 1px solid gray;
 }
 
 .myInfo-list-contents ul li a {
+	display: block;
 	margin: 0 auto;
 	color: black;
-	font-size: 20px;
+	font-size: 16px;
+	line-height: 50px;
+	text-align: center;
 	text-decoration: none;
 }
 
@@ -67,39 +66,124 @@ li {
 }
 
 .myInfo-list-contents ul li a:hover {
-	color: gray;
+	color: white;
+	background-color: gray;
 }
 
+/******************************** myInfo area ******************************/
 .myInfo-info {
 	float: left;
-	width: 75%;
+	width: 898px;
 	height: 100%;
-	border: 1px solid blue;
+	padding: 50px 100px;
+	border: 1px solid gray;
 }
 
-/******************************** memberUpdate area ******************************/
-.content-myInfoUpdate {
-	height: 1000px;
-	background-color: #F9F3DF;
-}
-
-.myInfoUpdate-form {
-	height: 1000px;
-	width: 1200px;
+.myInfo-info-contents {
 	margin: 0 auto;
-	padding: 50px 50px 50px 50px;
-	background-color: #FDFCE5;
 }
 
-/******************************** memberClass area ******************************/
-.content-myClass {
-	height: 1000px;
-	background-color: #F9F3DF;
+.info-contents {
+	height: 80px;
+	font-size: 20px;
+	margin-bottom: 30px;
+	padding: 0 100px;
+	line-height: 80px;
+	border: 1px solid black;
 }
 
-.myClassDetail-form {
-	height: 1000px;
-	width: 1200px;
+.info-contents-btn {
+	text-align: center;
+}
+
+.btn-myInfo {
+	height: 80px;
+	font-size: 20px;
+	margin-bottom: 30px;
+	padding: 0 100px;
+	line-height: 80px;
+	border: 1px solid black;
+}
+
+/******************************** myPwdChange area ******************************/
+.myInfo-pwdChange {
+	float: left;
+	width: 898px;
+	height: 100%;
+	padding: 50px 100px;
+	border: 1px solid gray;
+}
+
+.myInfo-pwdChange-contents {
 	margin: 0 auto;
-	background-color: #D7E9F7;
+}
+
+.pwdChange-contents {
+	width: 696px;
+	height: 80px;
+	font-size: 20px;
+	margin-bottom: 30px;
+	padding: 0 100px;
+	line-height: 80px;
+	border: 1px solid black;
+}
+
+.pwdChange-contents-btn {
+	text-align: center;
+}
+
+.btn-pwdChange {
+	height: 80px;
+	font-size: 20px;
+	margin-bottom: 30px;
+	padding: 0 100px;
+	line-height: 80px;
+	border: 1px solid black;
+}
+
+/******************************** myClass area ******************************/
+.myInfo-class {
+	float: left;
+	width: 898px;
+	height: 100%;
+	padding: 50px 100px;
+	border: 1px solid gray;
+}
+
+.myInfo-class-list {
+	height: 150px;
+	margin: 0 auto;
+}
+
+.list-img {
+	float: left;
+	width: 150px;
+	height: 150px;
+	margin-right: 10px;
+	border: 1px solid gray;
+}
+
+.list-info {
+	float: left;
+	width: 530px;
+	height: 100px;
+}
+
+.list-info-title {
+	float: left;
+	width: 530px;
+	height: 73px;
+	padding: 0 50px;
+	margin-bottom: 4px;
+	border: 1px solid gray;
+	line-height: 73px;
+}
+
+.list-info-month {
+	float: left;
+	width: 530px;
+	height: 73px;
+	padding: 0 50px;
+	border: 1px solid gray;
+	line-height: 73px;
 }
