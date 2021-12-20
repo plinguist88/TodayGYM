@@ -40,7 +40,7 @@ public class MyInfoService {
 		mv.addObject("myClassList", myClassList);
 		*/
 		
-		mv.setViewName("member/memberInfo");
+		mv.setViewName("myinfo/myInfo");
 		
 		return mv;
 	} // getMyInfo end
@@ -58,7 +58,7 @@ public class MyInfoService {
 		mv.addObject("myInfo", myInfo);		
 		*/
 		
-		mv.setViewName("member/memberUpdate");
+		mv.setViewName("myinfo/myInfoUpdate");
 		
 		return mv;
 	} // getMyInfoUpdate end
@@ -114,7 +114,7 @@ public class MyInfoService {
 		mv.addObject("myClassList", myClassList);
 		*/
 		
-		mv.setViewName("member/memberClass");
+		mv.setViewName("myinfo/myClass");
 		
 		return mv;
 	} // getMyClass end

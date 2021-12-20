@@ -50,6 +50,14 @@ public class MyInfoController {
 		return view;
 	} // myInfoUpdateProc end
 	
+	//__________ 비밀번호 변경 페이지
+	@GetMapping("myPwdChange")
+	public String myPwdChangeMove() {
+		logger.info("myPwdChangeMove");
+		
+		return "myinfo/myPwdChange";
+	} // myInfoUpdateProc end
+	
 	//__________ 수강내역 페이지
 	@GetMapping("myClass")
 	public ModelAndView myClassMove() {
