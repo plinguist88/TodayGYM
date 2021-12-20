@@ -36,8 +36,6 @@
 					<input type="text" class="login-input" id="mid" title="아이디" name="m_id" autofocus placeholder="아이디"> 
 					<input type="button" class="idcheck-btn" value="중복확인" onclick="idcheck()">
 					<input type="password" class="login-input" title="비밀번호" name="m_pwd" placeholder="비밀번호"> 
-					<input type="password" class="login-input" title="비밀번호" name="m_pwd" placeholder="비밀번호 확인">
-					<input type="button" class="pwcheck-btn" value="중복확인" onclick="pwcheck()">
 					<input type="text" class="login-input" title="이름" name="m_name" placeholder="이름"> 
 					<input type="text" class="login-input" title="이메일" name="m_mail" placeholder="메일"> 
 					<input type="text" class="login-input" title="연락처" name="m_phone" placeholder="연락처"> 
