@@ -213,6 +213,9 @@ span.buy_price2{
 	float: none;
 	margin-top: 450px;
 }
+.buy_detail fieldset{
+	border: 1px solid #ceeff2;
+}
 .buy_table{
 	margin: 0 auto;
 	margin-bottom: 20px;
@@ -256,7 +259,15 @@ th, td{
 	font-size: 30px;
 	font-weight: bold;
 }
-
+.videozone{
+	margin: 0 auto;
+	margin-top: 40px;
+	background-size: cover;
+}
+.healthvideo{
+	background-size: cover;
+	margin: 0 auto;
+}
 
 
 

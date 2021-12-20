@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=LIBRARY"></script>
 </head>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/buyDetail_style.css">
@@ -148,8 +149,16 @@
 						</tr>
 					</table>
 					<div class="videozone">
-					
+						<video class="healthvideo" muted autoplay loop>
+							<source src="resources/video/health.mp4" type="video/mp4">
+						</video>
 					</div>
+					<div>
+						<p><img src="resources/img/buy/buyDetail/buyimg.jpg"></p>
+					</div>
+					
+					
+					
 				</fieldset>
 			</div>
 		</section>
@@ -158,5 +167,7 @@
 		</footer>
 	</div>
 </body>
+
+
 
 </html>
