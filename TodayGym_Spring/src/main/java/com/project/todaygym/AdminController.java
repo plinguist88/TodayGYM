@@ -46,4 +46,25 @@ public class AdminController { //관리자 컨트롤러
 	public String adMemSearch() {
 		return "admin/adMem";
 	}
+	
+	//회원 상세 페이지 이동
+	@GetMapping("/adMemDetailMove")
+	public String adMemDetailMove() {
+		logger.info("adMemDetailMove()");
+		
+		return "admin/adMemDetail";
+	}
 }//AdminController end
+
+
+
+
+
+
+
+
+
+
+
+
+
