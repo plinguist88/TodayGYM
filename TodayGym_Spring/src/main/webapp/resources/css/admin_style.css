@@ -1,49 +1,124 @@
 @charset "UTF-8";
 
 /******************************** admin area ******************************/
-
 .wrap {
-	background-color: #000;
+	background-color: #fff;
 }
 
 .content-admin {
-	height: 2000px;
-	
+	height: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
 }
 
 /********************************* adMem area*************************************/
 .content-admin-membox {
+	background-color: #fff;
 	border-radius: 5px;
-	border: 2px solid #fff;
+	border: 2px solid #4848ff;
+	margin: 20px 40px 20px 40px;
+	padding: 10px;
+	height: 800px;
 }
 
-table {
+.admem-table-total {
+	background-color: #fff;
 	border-radius: 5px;
-	color: white;
-	border: 2px solid #fff;
+	color: #000;
+	border: 2px solid #4848ff;
+	padding: 0;
 	width: 700px;
-
 }
 
-th, td {
+.admem-table-list {
+	background-color: #fff;
 	border-radius: 5px;
-	border: 2px solid #fff;
+	color: #000;
+	border: 2px solid #4848ff;
+	padding: 0px;
+	width: 700px;
+}
+
+th {
+	background-color: #4848ff;
+	color: #fff;
+	border-radius: 2px;
+	border: 1px solid #4848ff;
+	margin: 0px;
+	width: 300px;
+}
+
+td {
+	background-color: #fff;
+	border-radius: 3px;
+	border: 2px inset #fff;
+	margin: 0;
+	width: 500px;
+}
+
+.admin-member-search {
+	height: 30px;
+	width: 500px;
+	border: 1px solid #4848ff;
+	border-radius: 3px;
 }
 
 .addata-search-selbar {
-	color: white;
-	background-color: #000;
-	border: 2px solid #fff;
+	width: 60px;
+	height: 100%;
+	border: 0px;
+	background: #4848ff;
+	outline: none;
+	float: left;
+	color: #fff
 }
 
 .addata-search-txtbar {
-	color: white;
-	background-color: #000;
-	border: 2px solid #fff;
+	font-size: 15px;
+	width: 300px;
+	padding: 2px;
+	margin: 2px;
+	border: 0px;
+	outline: none;
+	float: left;
 }
 
 .addata-search-btn {
-	color: white;
-	background-color: #000;
-	border: 2px solid #fff;
+	width: 50px;
+	height: 100%;
+	border: 0px;
+	background: #4848ff;
+	outline: none;
+	float: right;
+	color: #fff;
 }
+
+/***********************************adMemDetail area*****************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
