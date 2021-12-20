@@ -84,7 +84,7 @@ public class MyInfoService {
 		myUpdate.setM_point(point);
 		
 		try {
-			mDao.myInfoSelect(myUpdate);
+			mDao.myInfoUpdate(myUpdate);
 			
 			view = "member/memberInfo";
 			alert = "회원정보 수정 성공";
