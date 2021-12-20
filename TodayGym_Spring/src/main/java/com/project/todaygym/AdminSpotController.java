@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class AdminTicketController {
+public class AdminSpotController {
 
-	private final Logger logger = LoggerFactory.getLogger(AdminTicketController.class);
+	private final Logger logger = LoggerFactory.getLogger(AdminSpotController.class);
 	
-	//회원권 관리로 이동
-	@GetMapping("adTicketMove.ad")
-	public String adTicketMove() {
-		logger.info("adTicketMove()");
+	//지점 관리로 이동
+	@GetMapping("adSpotMove.ad")
+	public String adSpotMove() {
+		logger.info("adSpotMove()");
 		
-		return "admin/adTicketList";
+		return "admin/adSpotList";
 	}
 }

@@ -8,7 +8,8 @@
 }
 
 .adSidebar ul{
-
+	margin: 0;
+	padding: 0;
 }
 
 .adSidebar ul li{
@@ -16,6 +17,9 @@
 }
 
 .adSidebar ul li.active{
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	
 	background: #fff;
 }
 
@@ -25,7 +29,10 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-
+	
+	color: #fff;
+	
+	text-decoration: none;
 }
 
 .adSidebar ul li.active a{
