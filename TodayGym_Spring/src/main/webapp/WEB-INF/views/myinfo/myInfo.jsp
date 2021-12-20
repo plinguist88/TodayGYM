@@ -19,32 +19,18 @@
 		<section>
 			<div class="content-myInfo">
 				<div class="myInfo-form">
-					<div class="myInfo-list">
-						<div class="myInfo-list-user">유저정보</div>
-						<div class="myInfo-list-contents">
-							<ul>
-								<li><a href="">내 정보</a></li>
-								<hr>
-								<li><a href="">수강목록</a></li>
-								<hr>
-								<li><a href="">후기작성</a></li>
-								<hr>
-								<li><a href="">회원탈퇴</a></li>
-								<hr>
-							</ul>
-						</div>
-					</div>
+					<jsp:include page="myInfoSide.jsp" />
 					<div class="myInfo-info">
 						<h2>회원정보 || My Info</h2>
-						<br>
-						<div class="myInfo-user">
-							<div class="myInfo-a">이름 : ${myInfo.name}</div>
-							<div class="myInfo-info">생년월일 : ${myInfo.birth}</div>
-							<div class="myInfo-info">전화번호 : ${myInfo.phone}</div>
-							<div class="myInfo-info">이메일 : ${myInfo.email}</div>
-							<div class="myInfo-btn">
+						<br><br>
+						<div class="myInfo-info-contents">
+							<div class="info-contents">이름 : ${myInfo.name}</div>
+							<div class="info-contents">생년월일 : ${myInfo.birth}</div>
+							<div class="info-contents">전화번호 : ${myInfo.phone}</div>
+							<div class="info-contents">이메일 : ${myInfo.email}</div>
+							<div class="info-contents-btn">
 								<button class="btn-myInfo" id="memberUpdate"
-									onclick="location.href='./myInfoUpdate'">수정하기</button>
+									onclick="location.href='./myInfoUpdate'">내 정보 수정하기</button>
 							</div>
 						</div>
 					</div>
