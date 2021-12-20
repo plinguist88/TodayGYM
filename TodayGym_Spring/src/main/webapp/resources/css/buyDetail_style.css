@@ -11,12 +11,16 @@
 .buy_imfo_img{
 	float: left;
 }
+.buy_imfo_img img{
+	width: 508px;
+	height: 600px;
+}
 .buy_info_rightbar{
 	float: right;
 	width: 750px;
 }
 .buy_fieldset{
-	
+	border: none;
 }
 .buy_info_h2{
 	margin-bottom: 40px;
@@ -24,8 +28,148 @@
 .buy_info_sale{
 	float: left;
 	color: blue;
-	font-size: 40px;
+	font-size: 50px;
+	font-weight: bold;
 }
 .buy_info_price{
 	float: right;
+}
+.buy_info_before{
+	font-size: 25px;
+	text-decoration: line-through;
+	font-weight: bold;
+	margin-right: 20px;
+	color: #a6a6a6;
+}
+.buy_info_after{
+	font-size: 40px;
+	font-weight: 900;
+}
+.buy_info_sub{
+	text-align: center;
+	margin: 0 auto;
+	padding: 20px;
+	font-size: 20px;
+}
+.buy_info_sub {
+	padding: 20px;
+	text-align: left;
+	margin-top: 20px;
+	border: 3px solid;
+	color: #a6a6a6;
+	background-color: #f7f8fa;
+}
+.buy_info_sub a{
+	color: #03c75b;	
+}
+.buy_info_sub2{
+	margin-top: 20px;
+	border: 3px solid;
+	color: #a6a6a6;
+}
+.buy_info_sub2 span{
+	margin: 20px;
+}
+.buy_hr{
+	margin: 20px;
+	font-size: 30px;
+	color: black;
+}
+.buy_info_table{
+	margin-top: 20px;
+	margin: 10px;
+	border: 1px solid;
+	margin: 20px 20px;
+	background-color: #f7f8fa;
+	
+}
+.buy_info_table p{
+	margin: 20px;
+	font-weight: bold;
+}
+.tip{
+	font-size: 30px;
+	font-weight: bold;
+	color: black;
+}
+.tip_div{
+	margin: 0;
+}
+.tip_div p{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+.buy_info_table a{
+	color: black;
+}
+.buy_info_banner{
+	border: none;
+	margin-top: 20px;
+}
+.buy_info_banner img{
+	width: 744px;
+	margin-bottom: 20px;
+}
+.buy_info_content{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.buy_info_updown{
+	margin-bottom: 10px;
+	font-size: 20px;	
+}
+.buy_info_updown a{
+	color: blue;
+	text-decoration: underline;
+}
+.updown { 
+	border-right: 1px solid #a6a6a6; 
+	font-weight: bold;
+}
+.buy_select{
+	margin-top: 20px;
+}
+.buy_select_contants{
+	width: 750px;
+	height: 50px;
+	font-size: 25px;
+}
+.buy_select_contants option{
+	font-size: 20px;
+}
+.buy_price_hidden{
+	margin-top: 40px;
+}
+.buy_price_hidden span{
+	margin: 40px;
+	font-weight: bold;
+	font-size: 25px;	
+}
+.buy_price_hidden div{
+	margin: 20px;
+}
+span.buy_price1{
+	margin-left: 0px;
+}
+span.buy_price2{
+	float: right;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+}
+.buy_price {
+	margin-top: 40px;
+}
+.buy_price div{
+	float: left;
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 60px;	
+	margin-left: 10px;
+}
+.buy_price span{
+	float: right;
+	font-weight: bold;
+	font-size: 40px;
 }
