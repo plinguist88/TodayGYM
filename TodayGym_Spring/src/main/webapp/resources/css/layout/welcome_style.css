@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    padding: 0;
+}
+/* 
+body::before{
+	content: "";
+   
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    
+    opacity: 0.5;
+} 
+*/
+
+.content{
+	width: 100%;
+	height: 100vh;
+	
+	background-image: url("../../../resources/img/home/welcome.jpg");
+    background-size: cover;
+    
+    display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.content .textBox{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	flex-wrap: wrap;
+	flex-direction: column;
+	
+	border: 5px solid #000;
+	border-radius: 20px;
+	
+	background-color: #e6e6e6;
+	
+	padding: 10px;
+}
+
+.content .textBox h1{
+	margin: 0;
+	
+	font-family: 'Pacifico', cursive;
+	font-size: 50px;
+	
+	color: #000;
+}
+
+.content .textBox p{
+	margin: 0;
+	
+	font-size: 30px;
+}
+
+.content .textBox a{
+	text-decoration: none;
+	
+	font-size: 30px;
+	
+	color: #0055ff;
+}

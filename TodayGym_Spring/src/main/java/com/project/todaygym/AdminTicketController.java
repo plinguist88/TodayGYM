@@ -20,4 +20,11 @@ public class AdminTicketController {
 		
 		return "admin/adTicketList";
 	}
+	
+	@GetMapping("adTicketDetailMove.ad")
+	public String adTicketDetailMove() {
+		logger.info("adTicketDetailMove()");
+		
+		return "admin/adTicketDetail";
+	}
 }

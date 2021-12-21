@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* Common */
 body{
 	margin: 0;
 	padding: 0;
@@ -18,5 +19,52 @@ body{
 	width: 100%;
 	height: 100vh;
 	
-	background: orange;
+	background: #fff;
 }
+
+/* Overview */
+.Overview-Member{
+	position: relative;
+	top: 0;
+	left: 0;
+	
+	width: 50%;
+	height: 50%;
+	
+	background: red;
+}
+
+.Overview-Ticket{
+	position: relative;
+	top: -50%;
+	left: 50%;
+	
+	width: 50%;
+	height: 50%;
+	
+	background: green;
+}
+
+.Overview-Spot{
+	position: relative;
+	top: -50%;
+	left: 0;
+	
+	width: 50%;
+	height: 50%;
+	
+	background: blue;
+}
+
+.Overview-Review{
+	position: relative;
+	top: -100%;
+	left: 50%;
+	
+	width: 50%;
+	height: 50%;
+	
+	background: yellow;
+}
+
+
