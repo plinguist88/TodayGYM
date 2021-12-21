@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.project.todaygym.dao.AdminMemDao">
+	
+	<select id="getMList" parameterType="HashMap"
+		resultType="com.project.todaygym.dto.MemberDto">
+		SELECT m_id, m_pw, m_name, m_email, m_phone, m_birth,
+			m_joindate, m_point
+		FROM MEMBER_TB
+		ORDER BY m_name
+	</select>
+</mapper>

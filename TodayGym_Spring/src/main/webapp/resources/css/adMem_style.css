@@ -131,11 +131,34 @@ td {
 }
 
 .admem-btnarea-upbtn {
-	
+	width: 50px;
+	height: 25px;
+	margin-top: 10px;
+	border: 3px outset #4848ff;
+	border-radius: 3px;
+	background: #4848ff;
+	color: #fff
 }
 
+/*****************************adMemUpdate area***************************************/
 
+.admem-up-write {
+	background-color: #fff;
+	border: 1px solid #fff;
+	margin: 0;
+	width: 490px;
+	height: auto;
+}
 
+.admem-btnarea-upendbtn {
+	width: 70px;
+	height: 25px;
+	margin-top: 10px;
+	border: 3px outset #4848ff;
+	border-radius: 3px;
+	background: #4848ff;
+	color: #fff
+}
 
 
 

@@ -12,7 +12,7 @@ public class MemberDto {
 	private String m_email;
 	private String m_phone;
 	private String m_birth;
-	private String m_joindate;
+	private Timestamp m_joindate;
 	private String m_point;
 	
 	

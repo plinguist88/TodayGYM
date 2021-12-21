@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>관리자 회원관리 페이지</title>
 <link type="text/css" rel="stylesheet"
-	href="resources/css/admin_style.css">
+	href="resources/css/adMem_style.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="module"
@@ -48,13 +50,14 @@
 									<th>생년월일</th>
 									<th>성별</th>
 								</tr>
-								<tr>
-									<td>yyyy-MM-dd</td>
-									<td>name</td>
-									<td><a href="./adMemDetailMove" style="color: #000;">id</a></td>
-									<td>YYYY-MM-dd</td>
-									<td>F/M</td>
-								</tr>
+								<c:forEach items="${mList}" var="mb">
+									<tr>
+										<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${mb.m_joindate}"/></td>
+										<td>${mb.m_name}</td>
+										<td><a href="./adMemDetailMove" style="color: #000;">${mb.m_id}</a></td>
+										<td>${mb.m_birth}</td>
+									</tr>
+								</c:forEach>
 							</thead>
 						</table>
 					</div>
