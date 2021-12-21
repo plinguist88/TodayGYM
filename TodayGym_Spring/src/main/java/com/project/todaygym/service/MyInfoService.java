@@ -1,5 +1,6 @@
 package com.project.todaygym.service;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -66,7 +67,7 @@ public class MyInfoService {
 		session.setAttribute("join", getMyInfo.getM_joindate());
 		session.setAttribute("point", getMyInfo.getM_point());
 		
-		String join = (String)session.getAttribute("join");
+		Timestamp join = (Timestamp)session.getAttribute("join");
 		String point = (String)session.getAttribute("point");
 		
 		myInfo.setM_id(getId);
