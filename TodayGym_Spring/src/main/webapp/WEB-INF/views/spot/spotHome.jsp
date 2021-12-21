@@ -16,9 +16,18 @@
 		<header>
 			<jsp:include page="../layout/header.jsp" />
 		</header>
-		<section>
-			<div class="content-spot"></div>
+					<!-- 헤더 끝 -->
+		<section style="margin-top: 60px;">
+			<div class = spot_sub_image style="height: 800px; ">
+				<div class = spot_sub_content>
+					<h1>지점안내</h1>
+				</div>
+			</div>
 		</section>
+		
+		
+		
+		<!-- 바디 끝 -->
 		<footer>
 			<jsp:include page="../layout/footer.jsp" />
 		</footer>
