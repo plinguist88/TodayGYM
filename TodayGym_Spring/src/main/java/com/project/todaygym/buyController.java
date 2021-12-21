@@ -4,6 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import oracle.jdbc.proxy.annotation.GetProxy;
 
 @Controller
 public class buyController {
@@ -105,6 +108,13 @@ public class buyController {
 		logger.info("bCrossDetail4()");
 		return "buy/bCrossDetail4";
 	}
+	//장바구니페이지 이동
+	@GetMapping("cartHome")
+		public String cartHome() {
+			logger.info("cartHome()");
+			return "cart/cartHome";
+	}
+	
 	
 	
 	
