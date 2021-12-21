@@ -31,5 +31,11 @@ public class HomeController {
 		
 		return "admin/adMain";
 	}
-	
+	//reviewsHome으로 이동
+	@GetMapping("review")
+	public String review() {
+		logger.info("review()");
+		
+		return "reviews/reviewsHome";
+	}
 } // class end

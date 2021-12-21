@@ -24,7 +24,7 @@
 			<li><a href="">ABOUT</a></li>
 			<li><a href="">PROGRAM</a></li>
 			<li><a href="">CONTACT</a></li>
-			<li><a href="">REVIEW</a></li>
+			<li><a href="review">REVIEW</a></li>
 		</ul>
 
 		<ul class="navbar_icons">
