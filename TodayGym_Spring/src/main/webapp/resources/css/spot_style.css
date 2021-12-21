@@ -10,6 +10,7 @@ header {
 
 .spot_sub_image{
 	margin-top: 200px;
+	height: 400px;
 }
 .spot_sub_image img{
 	width:100%;
@@ -38,3 +39,56 @@ p{  text-align: center;
     font-weight: 400;
     letter-spacing: 0.027em;
     }
+
+.spot_image1{
+	width:430px;
+	height: 250px; 
+	<!--overflow: hidden;-->
+	<!--margin: 0 auto;-->
+	background:#ef9a9a;
+}
+
+.z_img{
+	width: 100%;
+	height: 100%;
+	
+}
+
+.spot_btn a{
+	color: black;
+	border
+}
+
+.spot_container{
+	background: beige;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+.spot_content{
+	background: #a5d6a7;
+	width:380px;
+	height: 250px; 
+}
+
+.spot_btn{
+	background: #90caf9;
+	width:380px;
+	height: 100px; 
+	text-align: center;
+	
+}   
+
+.spot_btn a{
+	border: 1px solid;
+	border-radius: 4px;
+	
+	}
+
+.spot_info ul{
+	list-style: none;
+}
+.spot_info li{
+	float: left;
+	
+}
