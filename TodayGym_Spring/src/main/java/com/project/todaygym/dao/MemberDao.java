@@ -3,7 +3,7 @@ package com.project.todaygym.dao;
 import com.project.todaygym.dto.MemberDto;
 
 public interface MemberDao {
-	//아이디 중복 체크용
+		//아이디 중복 체크용
 		public int idCheck(String id);
 		//회원 가입 처리
 		public void memberInsert(MemberDto member);

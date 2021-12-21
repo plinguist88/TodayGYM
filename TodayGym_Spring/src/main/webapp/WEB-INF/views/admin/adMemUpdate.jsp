@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원 관리 상세페이지</title>
+<title>회원정보 수정 페이지</title>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/adMem_style.css">
 <script
@@ -29,16 +29,18 @@
 
 				<div class="content-admin-membox">
 					<div class="admem-table">
-						<h3>회원 상세</h3>
+						<h3>회원 정보 수정</h3>
 						<table class="admem-table-basic">
 							<thead>
 								<tr>
 									<th>이름</th>
-									<td>name</td>
+									<td><input type="text" class="admem-up-write"
+											name="m_birth" autofocus placeholder="이름" 
+											value="${mb.m_name}" required></td>
 								</tr>
 								<tr>
 									<th>가입일자</th>
-									<td>yyyy.MM.dd</td>
+									<td>${mb.m_joindate}</td>
 								</tr>
 							</thead>
 						</table>
@@ -48,19 +50,25 @@
 								<thead>
 									<tr>
 										<th>아이디</th>
-										<td>id</td>
+										<td>${mb.m_id}</td>
 									</tr>
 									<tr>
 										<th>생년월일</th>
-										<td>yyyy-MM-dd</td>
+										<td><input type="text" class="admem-up-write"
+											name="m_birth" autofocus placeholder="생년월일" 
+											value="${mb.m_birth}" required></td>
 									</tr>
 									<tr>
 										<th>연락처</th>
-										<td>nnn-nnnn-nnnn</td>
+										<td><input type="text" class="admem-up-write"
+											name="m_birth" autofocus placeholder="연락처" 
+											value="${mb.m_phone}" required></td>
 									</tr>
 									<tr>
 										<th>E-mail</th>
-										<td>abc123@icia.co.kr</td>
+										<td><input type="text" class="admem-up-write"
+											name="m_birth" autofocus placeholder="E-mail" 
+											value="${mb.m_email}" required></td>
 									</tr>
 									<tr>
 										<th>보유 회원권</th>
@@ -68,17 +76,17 @@
 									</tr>
 									<tr>
 										<th>보유 포인트</th>
-										<td>null</td>
+										<td>${mb.m_point}</td>
 									</tr>
 								</thead>
 							</table>
 						</div>
 					</div>
 					
-					<!-- 회원 수정 버튼 -->
+					<!-- 수정 완료 버튼 -->
 					<div class="admem-btnarea">
-						<button class="admem-btnarea-upbtn">
-						<a href="./adMemUpdateMove">수정</a>
+						<button class="admem-btnarea-upendbtn">
+						<a href="">수정 완료</a>
 						</button>
 					</div>
 				</div>
