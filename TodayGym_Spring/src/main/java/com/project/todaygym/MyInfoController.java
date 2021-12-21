@@ -23,10 +23,12 @@ public class MyInfoController {
 
 	private ModelAndView mv;
 
+	//________________________________________ 회원정보
+	
 	//__________ 회원정보 페이지
-	@GetMapping("myInfoUpdate")
-	public ModelAndView myInfoUpdateMove() {
-		logger.info("myInfoUpdateMove()");
+	@GetMapping("myInfo")
+	public ModelAndView myInfoMove() {
+		logger.info("myInfoMove()");
 
 		mv = myServ.getMyInfo();
 
@@ -42,13 +44,15 @@ public class MyInfoController {
 
 		return view;
 	} // myInfoUpdateProc end
+	
+	//________________________________________ 비밀번호 변경
 
 	//__________ 비밀번호 변경 페이지
-	@GetMapping("myPwdUpdate")
-	public String myPwdUpdateMove() {
-		logger.info("myPwdUpdateMove");
+	@GetMapping("myPassword")
+	public String myPasswordMove() {
+		logger.info("myPasswordMove()");
 
-		return "myinfo/myPwdUpdate";
+		return "myinfo/myPassword";
 	} // myPwdUpdateMove end
 
 	//__________ 현재 비밀번호 확인
@@ -62,6 +66,15 @@ public class MyInfoController {
 		
 		return result;
 	} // prePwdCheck end
+	
+	//__________ 비밀번호 변경 실행
+	@PostMapping("myPwdUpdateProc")
+	public String myPwdUpdateProc(MemberDto myInfo, RedirectAttributes rttr) {
+		logger.info("myPwdUpdateProc");
 
+		String view = myServ.myPwdUpdate(myInfo, rttr);
+
+		return view;
+	} // myInfoUpdateProc end
 
 } // class end
