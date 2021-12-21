@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>회원권 구매</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
@@ -34,33 +34,33 @@
 				<div class="buy_cate_sub health">
 					<div class="health_cate">
 						<p onclick="location.href='./bHealthDetail'"><img src="resources/img/buy/h1.png"></p>
-						<p onclick="location.href='./bHealthDetail'"><img src="resources/img/buy/h2.png"></p>
-						<p onclick="location.href='./bHealthDetail'"><img src="resources/img/buy/h3.png"></p>
-						<p onclick="location.href='./bHealthDetail'"><img src="resources/img/buy/h4.png"></p>
+						<p onclick="location.href='./bHealthDetail2'"><img src="resources/img/buy/h2.png"></p>
+						<p onclick="location.href='./bHealthDetail3'"><img src="resources/img/buy/h3.png"></p>
+						<p onclick="location.href='./bHealthDetail4'"><img src="resources/img/buy/h4.png"></p>
 					</div>
 				</div>				
 				<div class="buy_cate_sub swim">
 					<div class="swim_cate">
 					<p onclick="location.href='./bSwimDetail'"><img src="resources/img/buy/s1.png"></p>
-					<p onclick="location.href='./bSwimDetail'"><img src="resources/img/buy/s2.png"></p>
-					<p onclick="location.href='./bSwimDetail'"><img src="resources/img/buy/s3.png"></p>
-					<p onclick="location.href='./bSwimDetail'"><img src="resources/img/buy/s4.png"></p>
+					<p onclick="location.href='./bSwimDetail2'"><img src="resources/img/buy/s2.png"></p>
+					<p onclick="location.href='./bSwimDetail3'"><img src="resources/img/buy/s3.png"></p>
+					<p onclick="location.href='./bSwimDetail4'"><img src="resources/img/buy/s4.png"></p>
 					</div>
 				</div>
 				<div class="buy_cate_sub climb">
 					<div class="climb_cate">
 					<p onclick="location.href='./bClimbDetail'"><img src="resources/img/buy/cb1m.png"></p>
-					<p onclick="location.href='./bClimbDetail'"><img src="resources/img/buy/cb2m.png"></p>
-					<p onclick="location.href='./bClimbDetail'"><img src="resources/img/buy/cb3m.png"></p>
-					<p onclick="location.href='./bClimbDetail'"><img src="resources/img/buy/cb4m.png"></p>
+					<p onclick="location.href='./bClimbDetail2'"><img src="resources/img/buy/cb2m.png"></p>
+					<p onclick="location.href='./bClimbDetail3'"><img src="resources/img/buy/cb3m.png"></p>
+					<p onclick="location.href='./bClimbDetail4'"><img src="resources/img/buy/cb4m.png"></p>
 					</div>
 				</div>
 				<div class="buy_cate_sub cross">
 					<div class="cross_cate">
 					<p onclick="location.href='./bCrossDetail'"><img src="resources/img/buy/cs1m.png"></p>
-					<p onclick="location.href='./bCrossDetail'"><img src="resources/img/buy/cs2m.png"></p>
-					<p onclick="location.href='./bCrossDetail'"><img src="resources/img/buy/cs3m.png"></p>
-					<p onclick="location.href='./bCrossDetail'"><img src="resources/img/buy/cs4m.png"></p>
+					<p onclick="location.href='./bCrossDetail2'"><img src="resources/img/buy/cs2m.png"></p>
+					<p onclick="location.href='./bCrossDetail3'"><img src="resources/img/buy/cs3m.png"></p>
+					<p onclick="location.href='./bCrossDetail4'"><img src="resources/img/buy/cs4m.png"></p>
 					</div>
 				</div>
 			</div>
