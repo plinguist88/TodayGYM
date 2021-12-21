@@ -23,6 +23,9 @@ a{
 .buytitle h1{
 	text-align: center;
 }
+.buy_section{
+	height: 2000px;
+}
 .buy_section .buy_cate {
 	padding: 0;
 	display: flex;
