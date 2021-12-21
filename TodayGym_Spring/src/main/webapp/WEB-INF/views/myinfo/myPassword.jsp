@@ -32,7 +32,7 @@
 								<div class="myPwd-contents-btn">
 									<input type="button" class="btn-myPwd" value="현재 비밀번호 확인" onclick="preCheck()">
 								</div>
-								<input type="password" class="myPwd-contents" id="newPwd" placeholder="새 비밀번호">
+								<input type="password" name="m_pw" class="myPwd-contents" id="newPwd" placeholder="새 비밀번호">
 								<input type="password" class="myPwd-contents" id="newPwdCheck" placeholder="새 비밀번호 확인">
 								<p class="contents-updatePwdCheck"></p>
 								<div class="myPwd-contents-btn">
@@ -50,12 +50,14 @@
 	</div>
 </body>
 <script type="text/javascript">
-	// 현재 비밀번호 확인
+
+	//__________ 현재 비밀번호 확인
 	var prePwdCheck = false;
 
 	function preCheck() {
-
-		var prePwd = $("#prePwd").val();
+		
+		var prePwd = document.getElementById("prePwd").value;
+		//var prePwd = $("#prePwd").val();
 
 		if (prePwd == "") {
 			alert("현재 비밀번호를 입력하세요.");
@@ -99,12 +101,15 @@
 
 	} // preCheck end
 
-	// 비밀번호 일치 확인
+	//__________ 새 비밀번호 일치 확인
 	var updatePwdCheck = false;
+	
 	$("#newPwdCheck").focusout(function() {
-
-		var newPwd = $("#newPwd").val()
-		var newPwdCheck = $("#newPwdCheck").val()
+		
+		var newPwd = document.getElementById("newPwd").value;
+		var newPwdCheck = document.getElementById("newPwdCheck").value;
+		//var newPwd = $("#newPwd").val();
+		//var newPwdCheck = $("#newPwdCheck").val();
 
 		if (newPwd != newPwdCheck || newPwd == "" || newPwdCheck == "") {
 			$(".contents-updatePwdCheck").text("새 비밀번호가 틀립니다.");
@@ -121,9 +126,10 @@
 			updatePwdCheck = true;
 
 		} // else end
-
+		
 	});
-	// 비밀번호 변경 빈칸 확인
+	
+	//__________ 비밀번호 변경 빈칸확인
 	function emptyCheck() {
 
 		if (prePwdCheck == false) {
@@ -139,7 +145,6 @@
 		} // if end
 
 		var form = document.myPwdUpdateForm;
-
 		var length = form.length - 1;
 
 		for (var i = 0; i < length; i++) {

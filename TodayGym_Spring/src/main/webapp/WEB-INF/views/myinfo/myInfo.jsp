@@ -26,13 +26,13 @@
 						</div>
 						<div class="myPage-myInfoUpdate-contents">
 							<form action="./myInfoUpdateProc" method="post" name="myInfoUpdateForm" onsubmit="return emptyCheck()">
-								<p class="myInfo-contents">아이디 : ${myInfo.id}</p>
-								<input type="text" class="myInfo-contents" value="${myInfo.name}" placeholder="이름">
-								<input type="text" class="myInfo-contents" value="${myInfo.email}" placeholder="이메일">
-								<input type="text" class="myInfo-contents" value="${myInfo.phone}" placeholder="전화번호">
-								<input type="text" class="myInfo-contents" value="${myInfo.birth}" placeholder="생년월일">
-								<p class="myInfo-contents">가입날짜 : ${myInfo.joindate}</p>
-								<p class="myInfo-contents">포인트 : ${myInfo.point}</p>
+								<p class="myInfo-contents">아이디 : ${myInfo.m_id}</p>
+								<input type="text" name="m_name" class="myInfo-contents" value="${myInfo.m_name}" placeholder="이름">
+								<input type="text" name="m_email" class="myInfo-contents" value="${myInfo.m_email}" placeholder="이메일">
+								<input type="text" name="m_phone" class="myInfo-contents" value="${myInfo.m_phone}" placeholder="전화번호">
+								<input type="text" name="m_birth" class="myInfo-contents" value="${myInfo.m_birth}" placeholder="생년월일">
+								<p class="myInfo-contents">가입날짜 : ${myInfo.m_joindate}</p>
+								<p class="myInfo-contents">포인트 : ${myInfo.m_point}</p>
 								<div class="myInfo-contents-btn">
 									<input type="submit" class="btn-myInfoUpdate" value="내 정보 수정하기">
 								</div>
