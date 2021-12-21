@@ -29,7 +29,10 @@
 						<tr>
 							<th colspan="6"><h1>회원권</h1></th>
 						</tr>
-						<tr>
+						<tr class="listSpace">
+							<td></td>
+						</tr>
+						<tr class="listTitle">
 							<td>번호</td>
 							<td>이름</td>
 							<td>종목</td>
@@ -41,7 +44,7 @@
 					<!-- List Contents -->
 					<tbody>
 						<tr>
-							<td><a href="#">T01</a></td>
+							<td><a href="adTicketDetailMove.ad">T001</a></td>
 							<td><a href="#">유저A</a></td>
 							<td>헬스</td>
 							<td><a href="#">빡빡이와 함께하는 해피헬스</a></td>
@@ -49,7 +52,7 @@
 							<td><button class="button ticketOn">사용</button></td>
 						</tr>
 						<tr>
-							<td>T02</td>
+							<td>T002</td>
 							<td>유저B</td>
 							<td>수영</td>
 							<td>초고속 자유형 특강</td>

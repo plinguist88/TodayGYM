@@ -10,11 +10,20 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
+	// 시작페이지로 이동
 	@GetMapping("/")
 	public String welcome() {
 		logger.info("welcome()");
 		
 		return "welcome";
+	}
+	
+	// home으로 이동
+	@GetMapping("home")
+	public String home() {
+		logger.info("home()");
+		
+		return "home";
 	}
 	
 	// buyHome으로 이동

@@ -12,7 +12,7 @@
 				class="admin-icon"> <ion-icon name="pulse-outline" />
 			</span> <span class="admin-title">Home</span></a></li>
 			
-		<li class="list"><a href="#adMemberMove.ad"> <span
+		<li class="list"><a href="adMemMove"> <span
 				class="admin-icon"> <ion-icon name="people-outline" />
 			</span> <span class="admin-title">Member</span></a></li>
 			
@@ -24,6 +24,9 @@
 				class="admin-icon"> <ion-icon name="flag-outline" />
 			</span> <span class="admin-title">Spot</span></a></li>
 	</ul>
+	<div class="toggle">
+		<a href="home"><ion-icon name="exit-outline"></ion-icon></a>
+	</div>
 </div>
 
 <script type="text/javascript">

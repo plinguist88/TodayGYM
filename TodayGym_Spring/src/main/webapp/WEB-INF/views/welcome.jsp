@@ -5,24 +5,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>welcome</title>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Questrial&display=swap" rel="stylesheet" />
-<link href ="resources/css/layout/welcome.css" rel="stylesheet"/>
+<title>Welcome TODAY GYM</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<link type="text/css" rel="stylesheet"
+	href="resources/css/layout/welcome_style.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<link type="text/css" rel="stylesheet"
-	href="resources/css/layout/home_style.css">
 </head>
 <body>
-
-<div id="main"> <!--배경 이미지 출력용 -->
-        <div id="contents"> <!--텍스트와 버튼 영역-->
-            <h1>TODAY GYM</h1>
-            <p>Start of exercise TODAY GYM</p>
-            <a href="home" >Get Started</a>
-        </div>
-    </div>
-    
-    
+	<div class="content">
+		<div class="textBox">
+			<h1>TODAY GYM</h1>
+			<p>Start of exercise TODAY GYM</p>
+			<a href="home">Let`s Go!!</a>
+			<br>
+			<br>
+			<br>
+			<a href="adMainMove.ad">임시링크 : 관리자</a>
+		</div>
+	</div>
 </body>
 </html>

@@ -23,7 +23,7 @@ body{
 	background: #fff;
 }
 
-/* Ticket List */
+/* Spot List */
 
 .listTable{
 	position: relative;
@@ -73,16 +73,14 @@ body{
 
 .listTable .button{
 	border-radius: 6px;
+	
+	cursor: pointer;
 }
 
-.listTable .ticketOn{
-	border: none;
-	background: #99ff99;
-}
-
-.listTable .ticketOff{
+.listTable .detail{
 	border: none;
 	background: #e6e6e6;
+	color: #000;
 }
 
 

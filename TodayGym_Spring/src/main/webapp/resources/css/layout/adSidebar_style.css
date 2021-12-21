@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* Sidebar List */
+
 .adSidebar{
 	width: 200px;
 	height: 100vh;
@@ -51,6 +53,8 @@
 .adSidebar ul li a .admin-title{
 	font-size: 30px;
 }
+
+/* Sidebar Toggle */
 
 .toggle{
 	width: 60px;
