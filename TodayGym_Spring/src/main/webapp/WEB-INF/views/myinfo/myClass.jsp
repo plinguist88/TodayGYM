@@ -19,10 +19,10 @@
 		<section>
 			<div class="content-myInfo">
 				<div class="myInfo-form">
-					<jsp:include page="myInfoSide.jsp" />
+					<jsp:include page="myPageSide.jsp" />
 					<div class="myInfo-class">
 						<h2>수강내역 || My Class</h2>
-						<br><br>
+						<br>
 						<div class="myInfo-class-list">
 							<div class="list-img">이미지</div>
 							<div class="list-info">
