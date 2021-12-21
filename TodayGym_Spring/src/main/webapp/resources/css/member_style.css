@@ -29,15 +29,25 @@ header {
 	box-shadow: 0px 0px 15px #adadad;
 }
 
+ section{
+	height: 600px;
+	background-color: #fff;
+}
+
+/* login style */
 
 .login-form {
-	max-width: 350px;
+	max-width: 500px;
 	padding: 15px;
 	margin: 0 auto;
 }
 
+.login-header {
+ text-align: center;
+ }
+
 .login-form, .login-header {
-	margin-top: 30px;
+	margin-top: 80px;
 	margin-bottom: 30px;
 }
 
@@ -61,5 +71,55 @@ header {
     font-size: 16px;
 }
 
+.login-input {
+	display: block;
+    width: 100%;
+    line-height: 1.5;
+    color: #555;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
 
+.login-btn {
+	display: block;
+	width: 99%;
+	padding: 10px 16px;
+	margin: 4px;
+	font-size: 18px;
+	line-height: 1.5;
+	border-radius: 6px;
+	color: #fff;
+	background-color: black;
+	border-color: black;;
+}
 
+.search-btn {
+	display: block;
+	width: 99%;
+	padding: 10px 16px;
+	margin: 4px;
+	font-size: 18px;
+	line-height: 1.5;
+	border-radius: 6px;
+	color: #fff;
+	background-color: black;
+	border-color: black;;
+}
+
+/* join style */
+.idcheck-btn {
+	display: block;
+	width: 99%;
+	padding: 10px 16px;
+	margin: 4px;
+	font-size: 18px;
+	line-height: 1.5;
+	border-radius: 6px;
+	background-color: black;
+	border-color: black;
+	margin: 2px auto;
+	color: #fff;
+}
