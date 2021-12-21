@@ -95,7 +95,7 @@ li {
 	height: 50px;
 	font-size: 20px;
 	padding: 0 100px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	line-height: 50px;
 	border: 1px solid black;
 }
@@ -105,12 +105,14 @@ li {
 }
 
 .btn-myInfoUpdate {
+	width: 300px;
 	height: 50px;
-	font-size: 20px;
 	margin-bottom: 30px;
-	padding: 0 100px;
+	font-size: 20px;
 	line-height: 50px;
+	text-align: center;
 	border: 1px solid black;
+	
 }
 
 /******************************** myPwdChange area ******************************/
@@ -137,7 +139,7 @@ li {
 	height: 50px;
 	font-size: 20px;
 	padding: 0 100px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	line-height: 50px;
 	border: 1px solid black;
 }
@@ -147,35 +149,24 @@ li {
 	margin-bottom: 20px;
 }
 
-.btn {
-	width: 300px;
-	margin: 0 auto;
-}
-.btn-prePwdCheck {
-	width: 300px;
-	height: 50px;
-	font-size: 20px;
-	margin-bottom: 20px;
-	padding: 0 50px;
-	line-height: 50px;
-	border: 1px solid black;
-}
-
 .contents-updatePwdCheck {
 	display: none;
 	margin-bottom: 20px;
 }
 
 .myPwd-contents-btn {
+	width: 300px;
+	margin: 0 auto;
 	text-align: center;
 }
 
-.btn-myPwdUpdate {
+.btn-myPwd {
+	width: 300px;
 	height: 50px;
-	font-size: 20px;
 	margin-bottom: 30px;
-	padding: 0 100px;
+	font-size: 20px;
 	line-height: 50px;
+	text-align: center;
 	border: 1px solid black;
 }
 
