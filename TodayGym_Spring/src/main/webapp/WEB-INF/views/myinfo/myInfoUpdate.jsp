@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>정보수정</title>
+<title>회원정보</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link type="text/css" rel="stylesheet"
@@ -17,19 +17,28 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 		<section>
-			<div class="content-myInfoUpdate">
-				<div class="myInfoUpdate-form">
-					<form action="./myInfoUpdateProc" method="post">
-						<p class="myInfo-update">아이디 : ${myInfo.id}</p>
-						<input type="password" class="myInfo-upate" name="m_pw" value="${myInfo.pwd}" placeholder="비밀번호">
-						<p class="myInfo-update">이름 : ${myInfo.name}</p>
-						<input type="text" name="m_email" class="myInfo-update" value="${myInfo.email}" placeholder="이메일">
-						<input type="text" name="m_phone" class="myInfo-update" value="${myInfo.phone}" placeholder="전화번호">
-						<p class="myInfo-update">생일 : ${myInfo.birth}</p>
-						<p class="myInfo-update">가입날짜 : ${myInfo.joindate}</p>
-						<p class="myInfo-update">포인트 : ${myInfo.point}</p>
-						<input type="submit" class="btn-myInfoUpdate" value="회원정보 수정">
-					</form>
+			<div class="content-myPage">
+				<div class="myPage-form">
+					<jsp:include page="myPageSide.jsp" />
+					<div class="myPage-myInfoUpdate">
+						<div class="myPage-myInfoUpdate-title">
+							<h2>회원정보 수정 || My Info Update</h2>
+						</div>
+						<div class="myPage-myInfoUpdate-contents">
+							<form action="./myInfoUpdateProc" method="post" name="myInfoUpdateForm" onsubmit="return emptyCheck()">
+								<p class="myInfo-contents">아이디 : ${myInfo.id}</p>
+								<input type="text" class="myInfo-contents" value="${myInfo.name}" placeholder="이름">
+								<input type="text" class="myInfo-contents" value="${myInfo.email}" placeholder="이메일">
+								<input type="text" class="myInfo-contents" value="${myInfo.phone}" placeholder="전화번호">
+								<input type="text" class="myInfo-contents" value="${myInfo.birth}" placeholder="생년월일">
+								<p class="myInfo-contents">가입날짜 : ${myInfo.joindate}</p>
+								<p class="myInfo-contents">포인트 : ${myInfo.point}</p>
+								<div class="myInfo-contents-btn">
+									<input type="submit" class="btn-myInfoUpdate" value="내 정보 수정하기">
+								</div>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -38,4 +47,25 @@
 		</footer>
 	</div>
 </body>
+<script type="text/javascript">
+function emptyCheck() {
+	
+	var form = document.myInfoUpdateForm;
+	
+	var length = form.length - 1;
+	
+	for(var i = 0; i < length; i++) {
+		if(form[i].value == "" || form[i].value == null) {
+			alert("빈칸이 있습니다.");
+			console.log(alert);
+			return false;
+		} // if end
+		
+	} // for end
+	
+	return true;
+	
+} // emptyCheck end
+
+</script>
 </html>

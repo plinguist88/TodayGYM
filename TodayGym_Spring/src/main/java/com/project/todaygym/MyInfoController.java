@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.project.todaygym.dto.MemberDto;
 import com.project.todaygym.service.MyInfoService;
 
 @Controller
@@ -20,52 +23,45 @@ public class MyInfoController {
 
 	private ModelAndView mv;
 
-	//__________ 회원정보 메인 페이지
-	@GetMapping("myInfo")
-	public ModelAndView myInfoMove() {
-		logger.info("myInfoMove()");
-
-		mv = myServ.getMyInfo();
-
-		return mv;
-	} // myInfoMove end
-
-	//__________ 회원정보 수정 페이지
+	//__________ 회원정보 페이지
 	@GetMapping("myInfoUpdate")
 	public ModelAndView myInfoUpdateMove() {
 		logger.info("myInfoUpdateMove()");
 
-		mv = myServ.getMyInfoUpdate();
+		mv = myServ.getMyInfo();
 
 		return mv;
-	} // myAccountMove end
-	
+	} // myInfoUpdateMove end
+
 	//__________ 회원정보 수정 실행
-	@PostMapping("myInfoUpdatePorc")
-	public String myInfoUpdateProc() {
+	@PostMapping("myInfoUpdateProc")
+	public String myInfoUpdateProc(MemberDto myInfo, RedirectAttributes rttr) {
 		logger.info("myInfoUpdateProc");
-		
-		String view = myServ.myInfoUpdate();
-		
+
+		String view = myServ.myInfoUpdate(myInfo, rttr);
+
 		return view;
 	} // myInfoUpdateProc end
-	
+
 	//__________ 비밀번호 변경 페이지
-	@GetMapping("myPwdChange")
-	public String myPwdChangeMove() {
-		logger.info("myPwdChangeMove");
+	@GetMapping("myPwdUpdate")
+	public String myPwdUpdateMove() {
+		logger.info("myPwdUpdateMove");
+
+		return "myinfo/myPwdUpdate";
+	} // myPwdUpdateMove end
+
+	//__________ 현재 비밀번호 확인
+	@PostMapping(value = "prePwdCheck",
+			produces = "application/text; charset=utf-8")
+	@ResponseBody
+	public String prePwdCheck(String prePwd) {
+		logger.info("prePwdCheck");
 		
-		return "myinfo/myPwdChange";
-	} // myInfoUpdateProc end
-	
-	//__________ 수강내역 페이지
-	@GetMapping("myClass")
-	public ModelAndView myClassMove() {
-		logger.info("myClassMove()");
+		String result = myServ.prePwdCheck(prePwd);
+		
+		return result;
+	} // prePwdCheck end
 
-		mv = myServ.getMyClass();
-
-		return mv;
-	} // myClassMove end
 
 } // class end
