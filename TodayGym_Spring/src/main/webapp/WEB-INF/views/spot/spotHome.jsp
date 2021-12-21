@@ -16,11 +16,31 @@
 		<header>
 			<jsp:include page="../layout/header.jsp" />
 		</header>
+					<!-- 헤더 끝 -->
+		
+			<div class=spot_sub_image>
+				<img class=gray_img src="resources/img/spot/gray.jpg">
+				<div class = spot_sub_content>
+					<h1><i>지점안내</i></h1>
+					
+					<p>활력 있는 생활을 추구하는 당신을 위한 수준 높은 퍼블릭 스포츠센터</p>
+				</div>
+			</div>
+			
 		<section>
-			<div class="content-spot"></div>
+			<form>
+				<fieldset>
+					<legend>전체 지점안내</legend>
+					<div class=spot1>이미지</div>
+				</fieldset>
+			</form>
 		</section>
+		
+		
+		
+		
+		<!-- 바디 끝 -->
 		<footer>
-			<jsp:include page="../layout/footer.jsp" />
 		</footer>
 	</div>
 </body>

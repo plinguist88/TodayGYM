@@ -51,9 +51,9 @@ public class MemberService {
 		//Spring Security에서 제공하는 암호화 인코더 사용
 		BCryptPasswordEncoder pwdEncoder = new BCryptPasswordEncoder();
 		//Dto에서 비밀번호를 꺼내서 인코더를 사용하여 비밀번호 암호화
-		String encPwd = pwdEncoder.encode(member.getM_pwd());
+		String encPwd = pwdEncoder.encode(member.getM_pw());
 		//암호화된 비밀번호를 다시 Dto에 저장
-		member.setM_pwd(encPwd);
+		member.setM_pw(encPwd);
 
 		try {
 			mDao.memberInsert(member);			
@@ -83,7 +83,7 @@ public class MemberService {
 			//비밀번호 암호화 인코더 생성
 			BCryptPasswordEncoder enc = new BCryptPasswordEncoder();
 			//matches(평문, 암호문) : 같으면 true, 틀리면 false.
-			if(enc.matches(member.getM_pwd(), encPwd)) {
+			if(enc.matches(member.getM_pw(), encPwd)) {
 				//로그인 성공. -> 세션에 로그인 정보를 저장.
 				//회원 정보 가져와서 세션에 저장. member 재활용.
 				member = mDao.memberSelect(member.getM_id());

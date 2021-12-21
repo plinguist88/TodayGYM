@@ -7,10 +7,34 @@ header {
 	top: 0px;
 }
 
-.wrap {
-	background-color: #40BAD5;
+
+.spot_sub_image{
+	margin-top: 200px;
+}
+.spot_sub_image img{
+	width:100%;
+	height: 300px;	
+}
+.spot_sub_content{
+	text-align: center;
+	z-index: 1;
+	position: relative;
+	bottom: 230px;
+	color: white;
+}
+h1{
+    font-size: 50px;
+    line-height: 1.4;
+    font-weight: 600;
+    font-family: Font Awesome 5 Free;
+    font-family: Courier New, Bookman;
 }
 
-.content-spot {
-	height: 2000px;
-}
+p{  text-align: center;
+    color: white;
+    font-family: Garamond;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0.027em;
+    }
