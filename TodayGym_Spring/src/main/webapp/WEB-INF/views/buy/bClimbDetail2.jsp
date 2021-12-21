@@ -98,7 +98,7 @@
 		 			<input type="button" value="💳구매하기" class="nextbutton1">
 		 		</form>	 
 		 		<form action="" method="post">
-		 			<input type="button" value="🛒장바구니" class="nextbutton2">
+		 			<input type="button" value="🛒장바구니" class="nextbutton2" onclick="location.href='cartHome'">
 		 		</form>	 		
 		 	</div>		 	
 		</section>
