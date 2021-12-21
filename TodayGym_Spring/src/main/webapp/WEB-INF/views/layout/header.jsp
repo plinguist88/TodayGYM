@@ -27,16 +27,7 @@
 			<li><a href="review">REVIEW</a></li>
 		</ul>
 
-		<ul class="navbar_icons">
-			<li><a href=""><abbr title="회원가입"><i
-						class="fas fa-edit fa-sm"></i></abbr></a></li>
-			<li><a href=""><abbr title="로그인"><i
-						class="fas fa-lock fa-sm"></i></abbr></a></li>
-			<li><a href=""><abbr title="마이페이지"><i
-						class="far fa-address-card fa-sm"></i></abbr></a></li>
-			<li><a href=""><abbr title="로그아웃"><i
-						class="fas fa-lock-open fa-sm"></i></abbr></a></li>
-		</ul>
+		
 
         <ul class="navbar_icons">
         <li><a href="./memberJoin"><abbr title="회원가입"><i class="fas fa-edit fa-sm"></i></abbr></a></li>
