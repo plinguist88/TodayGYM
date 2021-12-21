@@ -28,6 +28,7 @@
 		</ul>
 
 
+
         <ul class="navbar_icons">
         <li><a href="./memberJoin"><abbr title="회원가입"><i class="fas fa-edit fa-sm"></i></abbr></a></li>
         <li><a href="./memberLogin"><abbr title="로그인"><i class="fas fa-lock fa-sm"></abbr></i></a></li>

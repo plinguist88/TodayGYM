@@ -7,10 +7,10 @@ header {
 	top: 0px;
 }
 
-.wrap {
-	background-color: #40BAD5;
+html,body{
+	margin:0;
+	padding:0;
 }
-
-.content-spot {
-	height: 2000px;
+h1{
+	margin:20px;
 }
