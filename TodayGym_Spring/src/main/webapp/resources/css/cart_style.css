@@ -2,15 +2,73 @@
 
 /******************************** cart area ******************************/
 
+
 header {
 	position: sticky;
 	top: 0px;
 }
-
-.wrap {
-	background-color: #40BAD5;
+.cart_section{
+	height: 1500px;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.cart_title{
+	padding-bottom: 20px;
+}
+.cart_info{
+	padding-top: 30px;
+}
+.cart_info ul{
+	border: 1px solid #ebeff2;
+	padding: 25px;
+	padding-bottom: 5px;
+	padding-top: 15px;
+	background-color: #fafbfc;
+}
+.cart_info ul li{
+	margin-bottom: 10px;
+}
+.cart_info_li{
+	color: #0abe16;
+}
+.cart_info_table{
+	margin-top: 50px;
+	border: 1px solid black;
+}
+.cart_info_table table{
+	margin:  0 auto;
 }
 
-.content-cart {
-	height: 2000px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

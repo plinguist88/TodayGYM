@@ -25,7 +25,7 @@
 .buy_info_rightbar{
 	float: right;
 	width: 750px;
-	
+	margin-left: 20px;
 }
 .buy_fieldset{
 	border: none;
@@ -274,8 +274,18 @@ th, td{
 .healthvideo{
 	background-size: cover;
 	margin: 0 auto;
+	width: 1280px;
+	height: 720px;
 }
-
+h3{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#map{
+	width: 965px;
+	height: 500px;
+	margin: 0 auto;
+}
 
 
 

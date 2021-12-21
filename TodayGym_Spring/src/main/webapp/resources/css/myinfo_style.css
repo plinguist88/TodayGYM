@@ -15,43 +15,43 @@ li {
 }
 
 /******************************** myInfoSide area ******************************/
-.content-myInfo {
+.content-myPage {
 	height: 900px;
 	background-color: #FFFFFF;
 }
 
-.myInfo-form {
+.myPage-form {
 	width: 1200px;
 	height: 100%;
 	margin: 0 auto;
 	padding: 100px 0 50px 0;
 }
 
-.myInfo-list {
+.myPage-list {
 	float: left;
 	width: 300px;
 	height: 100%;
 }
 
-.myInfo-list-user {
+.myPage-list-user {
 	width: 298px;
 	height: 298px;
 	margin-bottom: 3px;
 	border: 1px solid gray;
 }
 
-.myInfo-list-contents {
+.myPage-list-contents {
 	width: 298px;
 	height: 449px;
 	padding: 20px 20px;
 	border: 1px solid gray;
 }
 
-.myInfo-list-contents ul li {
+.myPage-list-contents ul li {
 	border-bottom: 1px solid gray;
 }
 
-.myInfo-list-contents ul li a {
+.myPage-list-contents ul li a {
 	display: block;
 	margin: 0 auto;
 	color: black;
@@ -61,83 +61,121 @@ li {
 	text-decoration: none;
 }
 
-.myInfo-list-contents ul li a:visited {
+.myPage-list-contents ul li a:visited {
 	color: black;
 }
 
-.myInfo-list-contents ul li a:hover {
+.myPage-list-contents ul li a:hover {
 	color: white;
 	background-color: gray;
 }
 
-/******************************** myInfo area ******************************/
-.myInfo-info {
+/******************************** myInfoUpdate area ******************************/
+.myPage-myInfoUpdate {
 	float: left;
 	width: 898px;
 	height: 100%;
-	padding: 50px 100px;
+	margin: 0 auto;
+	padding: 80px 80px;
 	border: 1px solid gray;
 }
 
-.myInfo-info-contents {
-	margin: 0 auto;
-}
-
-.info-contents {
-	height: 80px;
-	font-size: 20px;
-	margin-bottom: 30px;
-	padding: 0 100px;
-	line-height: 80px;
-	border: 1px solid black;
-}
-
-.info-contents-btn {
+.myPage-myInfoUpdate-title {
+	margin-bottom: 20px;
 	text-align: center;
 }
 
-.btn-myInfo {
-	height: 80px;
+.myPage-myInfoUpdate-contents {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.myInfo-contents {
+	width: 600px;
+	height: 50px;
+	font-size: 20px;
+	padding: 0 100px;
+	margin-bottom: 20px;
+	line-height: 50px;
+	border: 1px solid black;
+}
+
+.myInfo-contents-btn {
+	text-align: center;
+}
+
+.btn-myInfoUpdate {
+	height: 50px;
 	font-size: 20px;
 	margin-bottom: 30px;
 	padding: 0 100px;
-	line-height: 80px;
+	line-height: 50px;
 	border: 1px solid black;
 }
 
 /******************************** myPwdChange area ******************************/
-.myInfo-pwdChange {
+.myPage-myPwdUpdate {
 	float: left;
 	width: 898px;
 	height: 100%;
-	padding: 50px 100px;
+	padding: 80px 80px;
 	border: 1px solid gray;
 }
 
-.myInfo-pwdChange-contents {
-	margin: 0 auto;
-}
-
-.pwdChange-contents {
-	width: 696px;
-	height: 80px;
-	font-size: 20px;
-	margin-bottom: 30px;
-	padding: 0 100px;
-	line-height: 80px;
-	border: 1px solid black;
-}
-
-.pwdChange-contents-btn {
+.myPage-myPwdUpdate-title {
+	margin-bottom: 20px;
 	text-align: center;
 }
 
-.btn-pwdChange {
-	height: 80px;
+.myPage-myPwdUpdate-contents {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.myPwd-contents {
+	width: 600px;
+	height: 50px;
+	font-size: 20px;
+	padding: 0 100px;
+	margin-bottom: 20px;
+	line-height: 50px;
+	border: 1px solid black;
+}
+
+.contents-prePwdCheck {
+	display: none;
+	margin-bottom: 20px;
+}
+
+.btn {
+	width: 300px;
+	margin: 0 auto;
+}
+.btn-prePwdCheck {
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
+	margin-bottom: 20px;
+	padding: 0 50px;
+	line-height: 50px;
+	border: 1px solid black;
+}
+
+.contents-updatePwdCheck {
+	display: none;
+	margin-bottom: 20px;
+}
+
+.myPwd-contents-btn {
+	text-align: center;
+}
+
+.btn-myPwdUpdate {
+	height: 50px;
 	font-size: 20px;
 	margin-bottom: 30px;
 	padding: 0 100px;
-	line-height: 80px;
+	line-height: 50px;
 	border: 1px solid black;
 }
 

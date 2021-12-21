@@ -22,7 +22,12 @@
 				<jsp:include page="../layout/adSidebar.jsp" />
 			</div>
 			<div class="content">
-				<h1>Overview Content</h1>
+			<!-- Admin Overview Start  -->
+				<div class="Overview-Member">Overview-Member</div>
+				<div class="Overview-Ticket">Overview-Ticket</div>
+				<div class="Overview-Spot">Overview-Spot</div>
+				<div class="Overview-Review">Overview-Review</div>
+			<!-- Admin Overview End  -->
 			</div>
 		</div>
 	</div>

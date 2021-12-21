@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 /* Common */
+
 body{
 	margin: 0;
 	padding: 0;
@@ -22,7 +23,7 @@ body{
 	background: #fff;
 }
 
-/* TicketList */
+/* Ticket List */
 
 .listTable{
 	position: relative;
@@ -40,24 +41,34 @@ body{
 	border: 1px solid #000;
 }
 
-.listTable td{
+.listTable .listSpace td{
+	border: none;
+	
+	height: 30px;
+}
+
+.listTable .listTitle td{
 	padding: 10px;
 	
 	text-align: center;
+	
+	font-size: 30px;
+	
+	border-bottom: 5px double #000;
+}
+
+.listTable tbody td{
+	padding: 10px;
+	
+	text-align: center;
+	
+	border-bottom: 1px solid #000;
 }
 
 .listTable td a{
 	color: #000;
 	
 	text-decoration: none;
-}
-
-.listTable thead td{
-	border-bottom: 5px double #000;
-}
-
-.listTable tbody td{
-	border-bottom: 1px solid #000;
 }
 
 .listTable .button{

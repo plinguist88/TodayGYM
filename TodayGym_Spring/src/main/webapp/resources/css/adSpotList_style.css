@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* Common */
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.content-admin{
+	width: 100%;
+	height: 100vh;
+	
+	display: flex;
+	
+	background: #fff;
+}
+
+.content{
+	width: 100%;
+	height: 100vh;
+	
+	background: #fff;
+}
+
+/* Spot List */
+
+.listTable{
+	position: relative;
+	top: 60px;
+	
+	width: 80%;
+	heigth: 100vh;
+	
+	margin: auto;
+	
+	border-collapse: collapse;
+}
+
+.listTable th{
+	border: 1px solid #000;
+}
+
+.listTable .listSpace td{
+	border: none;
+	
+	height: 30px;
+}
+
+.listTable .listTitle td{
+	padding: 10px;
+	
+	text-align: center;
+	
+	font-size: 30px;
+	
+	border-bottom: 5px double #000;
+}
+
+.listTable tbody td{
+	padding: 10px;
+	
+	text-align: center;
+	
+	border-bottom: 1px solid #000;
+}
+
+.listTable td a{
+	color: #000;
+	
+	text-decoration: none;
+}
+
+.listTable .button{
+	border-radius: 6px;
+	
+	cursor: pointer;
+}
+
+.listTable .detail{
+	border: none;
+	background: #e6e6e6;
+	color: #000;
+}
+
+
