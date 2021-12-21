@@ -27,7 +27,7 @@
 			<li><a href="review">REVIEW</a></li>
 		</ul>
 
-		
+
 
         <ul class="navbar_icons">
         <li><a href="./memberJoin"><abbr title="회원가입"><i class="fas fa-edit fa-sm"></i></abbr></a></li>
