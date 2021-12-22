@@ -25,8 +25,7 @@
 							<h2>비밀번호 변경 || My Password Change</h2>
 						</div>
 						<div class="myPage-myPwdUpdate-contents">
-							<form action="./myPwdUpdateProc" method="post"
-								name="myPwdUpdateForm" onsubmit="return emptyCheck()">
+							<form action="./myPwdUpdateProc" method="post" name="myPwdUpdateForm" onsubmit="return emptyCheck()">
 								<input type="password" class="myPwd-contents" id="prePwd" placeholder="현재 비밀번호">
 								<p class="contents-prePwdCheck"></p>
 								<div class="myPwd-contents-btn">
@@ -78,7 +77,7 @@
 				if (result == "true") {
 					$(".contents-prePwdCheck").text("현재 비밀번호가 일치 합니다.");
 					$(".contents-prePwdCheck").css("color", "blue");
-					$(".contents-prePwdCheck").css("display", "inline-block");
+					$(".contents-prePwdCheck").css("display", "block");
 					prePwdCheck = true;
 
 				} // if end
@@ -86,7 +85,7 @@
 				else {
 					$(".contents-prePwdCheck").text("현재 비밀번호가 일치하지 않습니다.");
 					$(".contents-prePwdCheck").css("color", "red");
-					$(".contents-prePwdCheck").css("display", "inline-block");
+					$(".contents-prePwdCheck").css("display", "block");
 					$("#prePwd").focus();
 					prePwdCheck = false;
 

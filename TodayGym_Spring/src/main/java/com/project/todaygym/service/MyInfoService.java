@@ -104,6 +104,7 @@ public class MyInfoService {
 		
 		// 변수 선언 및 초기화
 		String result = null;
+		
 		String getId = (String)session.getAttribute("id");
 		BCryptPasswordEncoder pwdEnc = new BCryptPasswordEncoder();
 		
@@ -141,7 +142,7 @@ public class MyInfoService {
 		try {
 			
 			//mDao.myPwdUpdate(getId);
-			view = "redirect:myPassword";
+			view = "redirect:myInfo";
 			alert = "비밀번호 변경 성공!";
 			
 		} catch (Exception e) {
@@ -199,6 +200,38 @@ public class MyInfoService {
 		
 		return myClassPageHtml;
 	} // getMyClassPaging end
+	
+	//________________________________________ 회원탈퇴
 
+	//__________ 회원탈퇴 실행
+	
+	@Transactional
+	public String myAccountResign(MemberDto myResign, RedirectAttributes rttr) {
+		
+		// 변수 선언 및 초기화
+		String view = null;
+		String alert = null;
+		
+		// Database 연동 구역
+		String getId = (String)session.getAttribute("id");
+		
+		try {
+			// mDao.myAccountDelete(getId);
+			session.invalidate();
+			
+			view = "redirect:/";
+			alert ="회원탈퇴에 성공 했습니다. 이용해 주셔서 감사합니다.";
+			
+		} catch (Exception e) {
+			//e.printStackTrace();
+			view = "redirect:myResign";
+			alert ="회원탈퇴에 실패 했습니다. 관리자에게 문의하세요.";
+			
+		}
+		
+		rttr.addFlashAttribute("alert", alert);
+		
+		return view;
+	} // myAccountResign end
 
 } // class end

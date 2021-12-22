@@ -34,7 +34,7 @@
 								<p class="myInfo-contents">가입날짜 : ${myInfo.m_joindate}</p>
 								<p class="myInfo-contents">포인트 : ${myInfo.m_point}</p>
 								<div class="myInfo-contents-btn">
-									<input type="submit" class="btn-myInfoUpdate" value="내 정보 수정하기">
+									<input type="submit" class="btn-myInfo" value="내 정보 수정하기">
 								</div>
 							</form>
 						</div>
