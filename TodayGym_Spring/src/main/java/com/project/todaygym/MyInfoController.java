@@ -76,5 +76,17 @@ public class MyInfoController {
 
 		return view;
 	} // myInfoUpdateProc end
+	
+	//________________________________________ 수강내역
+
+	//__________ 수강내역 페이지
+	@GetMapping("myClass")
+	public ModelAndView myClassMove(Integer pageNum) {
+		logger.info("myClassMove()");
+		
+		mv = myServ.getMyClass(pageNum);
+		
+		return mv;
+	} // myClassMove end
 
 } // class end

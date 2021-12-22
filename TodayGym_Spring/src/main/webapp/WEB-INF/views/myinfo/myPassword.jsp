@@ -114,7 +114,7 @@
 		if (newPwd != newPwdCheck || newPwd == "" || newPwdCheck == "") {
 			$(".contents-updatePwdCheck").text("새 비밀번호가 틀립니다.");
 			$(".contents-updatePwdCheck").css("color", "red");
-			$(".contents-updatePwdCheck").css("display", "inline-block");
+			$(".contents-updatePwdCheck").css("display", "block");
 			updatePwdCheck = false;
 
 		} // if end
@@ -122,7 +122,7 @@
 		else {
 			$(".contents-updatePwdCheck").text("새 비밀번호가 일치 합니다.");
 			$(".contents-updatePwdCheck").css("color", "blue");
-			$(".contents-updatePwdCheck").css("display", "inline-block");
+			$(".contents-updatePwdCheck").css("display", "block");
 			updatePwdCheck = true;
 
 		} // else end

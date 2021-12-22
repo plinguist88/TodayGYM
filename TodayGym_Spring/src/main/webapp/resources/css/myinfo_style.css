@@ -81,7 +81,7 @@ li {
 }
 
 .myPage-myInfoUpdate-title {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	text-align: center;
 }
 
@@ -93,9 +93,9 @@ li {
 .myInfo-contents {
 	width: 600px;
 	height: 50px;
-	font-size: 20px;
-	padding: 0 100px;
 	margin-bottom: 30px;
+	padding: 0 100px;
+	font-size: 20px;
 	line-height: 50px;
 	border: 1px solid black;
 }
@@ -125,7 +125,7 @@ li {
 }
 
 .myPage-myPwdUpdate-title {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	text-align: center;
 }
 
@@ -137,21 +137,21 @@ li {
 .myPwd-contents {
 	width: 600px;
 	height: 50px;
-	font-size: 20px;
-	padding: 0 100px;
 	margin-bottom: 30px;
+	padding: 0 100px;
+	font-size: 20px;
 	line-height: 50px;
 	border: 1px solid black;
 }
 
 .contents-prePwdCheck {
 	display: none;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .contents-updatePwdCheck {
 	display: none;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .myPwd-contents-btn {
@@ -171,48 +171,72 @@ li {
 }
 
 /******************************** myClass area ******************************/
-.myInfo-class {
+.myPage-myClass {
 	float: left;
 	width: 898px;
 	height: 100%;
-	padding: 50px 100px;
+	margin: 0 auto;
+	padding: 80px 80px;
 	border: 1px solid gray;
 }
 
-.myInfo-class-list {
-	height: 150px;
+.myPage-myClass-title {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.myPage-myClass-contents-null {
+	display: block;
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+.myPage-myClass-contents {
+	display: none;
+	width: 600px;
 	margin: 0 auto;
 }
 
-.list-img {
+.myClass-contents {
+	width: 600px;
+	height: 150px;
+	margin-bottom: 30px;
+}
+
+.contents-img {
 	float: left;
 	width: 150px;
 	height: 150px;
-	margin-right: 10px;
-	border: 1px solid gray;
+	margin-right: 8px;
+	border: 1px solid black;
+	box-sizing: border-box;
 }
 
-.list-info {
-	float: left;
-	width: 530px;
-	height: 100px;
+.contents-info {
+	float: right;
+	width: 440px;
+	height: 150px;
 }
 
-.list-info-title {
+.contents-info-title {
 	float: left;
-	width: 530px;
-	height: 73px;
-	padding: 0 50px;
-	margin-bottom: 4px;
-	border: 1px solid gray;
-	line-height: 73px;
+	width: 440px;
+	height: 70px;
+	margin-bottom: 10px;
+	padding: 0 20px;
+	font-size: 16px;
+	line-height: 70px;
+	border: 1px solid black;
 }
 
-.list-info-month {
+.contents-info-item {
 	float: left;
-	width: 530px;
-	height: 73px;
-	padding: 0 50px;
-	border: 1px solid gray;
-	line-height: 73px;
+	width: 440px;
+	height: 70px;
+	padding: 0 20px;
+	font-size: 16px;
+	line-height: 70px;
+	border: 1px solid black;
 }

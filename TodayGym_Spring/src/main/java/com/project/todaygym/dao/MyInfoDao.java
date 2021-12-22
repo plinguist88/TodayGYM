@@ -1,11 +1,17 @@
 package com.project.todaygym.dao;
 
+import java.util.List;
+import java.util.Map;
+
+import com.project.todaygym.dto.MyClassDto;
+
 public interface MyInfoDao {
-	
-	//__________ 회원정보 가져오기
-	//public MemberDto myInfoSelect(String id);
+
+	//________________________________________ 수강내역
 	
 	//__________ 수강내역 가져오기
-	//public List<TicketDto> myClassSelect(String id);
+	public List<MyClassDto> myClassListSelect(Map<String, Integer> myClassMap);
 	
+	//__________ 총 수강내역 갯수 가져오기
+	public int myClassMaxSelect();
 } // interface end
