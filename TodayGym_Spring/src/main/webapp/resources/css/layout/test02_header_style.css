@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #000;
+	
+	z-index: 100;
+}
+
+.navbar a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.navbar a abbr {
+	text-decoration: none;
+}
+
+.navbar .navbar_logo a {
+	padding-left: 20px;
+	font-size: 30px;
+}
+
+.navbar .navbar_menu ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.navbar .navbar_menu ul li {
+	list-style: none;
+	width: 200px;
+	text-align: center;
+}
+
+.navbar .navbar_menu ul li a {
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+.navbar .navbar_menu ul li a:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+.navbar .navbar_sign ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar .navbar_sign ul li {
+	list-style: none;
+	width: 60px;
+	text-align: center;
+}
+
+.navbar .navbar_sign ul li a {
+	margin: 10px;
+	font-size: 30px;
+	border-radius: 10px;
+}
+
+.navbar .navbar_sign ul li a:hover {
+	background-color: #fff;
+}
+
+.navbar .navbar_sign ul li a:hover abbr .navbar_icon ion-icon{
+	color: #000;
+}
+
+@media screen and (max-width: 950px) {
+	.navbar {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 250px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		background-color: #000;
+	}
+	.navbar .navbar_logo a {
+		padding-left: 0;
+		font-size: 30px;
+	}
+	.navbar .navbar_menu ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.navbar .navbar_sign ul li a {
+		padding-right: 0;
+		font-size: 30px;
+	}
+	.navbar .navbar_menu ul li:hover {
+		background-color: #fff;
+		color: #000;
+	}
+	.navbar .navbar_menu ul li a {
+		padding: 0;
+		font-size: 20px;
+		border-radius: 0;
+	}
+}

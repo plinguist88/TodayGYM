@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AdminSpotController {
 
-	private final Logger logger = LoggerFactory.getLogger(AdminSpotController.class);
+	private final Logger Logger = LoggerFactory.getLogger(AdminSpotController.class);
 	
 	//지점 관리로 이동
 	@GetMapping("adSpotMove.ad")
 	public String adSpotMove() {
-		logger.info("adSpotMove()");
+		Logger.info("adSpotMove()");
 		
 		return "admin/adSpotList";
 	}

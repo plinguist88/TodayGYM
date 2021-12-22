@@ -12,7 +12,7 @@
 				class="admin-icon"> <ion-icon name="pulse-outline" />
 			</span> <span class="admin-title">Home</span></a></li>
 			
-		<li class="list"><a href="adMemMove"> <span
+		<li class="list"><a href="#adMemMove"> <span
 				class="admin-icon"> <ion-icon name="people-outline" />
 			</span> <span class="admin-title">Member</span></a></li>
 			

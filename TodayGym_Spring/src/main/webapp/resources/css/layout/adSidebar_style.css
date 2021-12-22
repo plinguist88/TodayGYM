@@ -6,7 +6,7 @@
 	width: 200px;
 	height: 100vh;
 	
-	background: #4d4dff;
+	background: #000;
 }
 
 .adSidebar ul{
@@ -22,7 +22,7 @@
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
 	
-	background: #fff;
+	background: #fcfcfc;
 }
 
 .adSidebar ul li a{
@@ -64,7 +64,7 @@
 	justify-content: center;
 	align-items: center;
 	
-	background: #4d4dff;
+	background: #000;
 }
 
 .toggle ion-icon{
