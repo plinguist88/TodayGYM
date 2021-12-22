@@ -34,7 +34,7 @@
 		<section>
 			<form>
 				<fieldset>
-					<legend>전체 지점안내</legend>
+					
 					<div class=spot_container>
 						<div class=spot_image1>
 							<img class=z_img src="resources/img/spot/z.jpg">
@@ -70,44 +70,7 @@
 		<section>
 			<form>
 				<fieldset>
-					<legend>전체 지점안내</legend>
-					<div class=spot_container>
-						<div class=spot_image1>
-							<img class=z_img src="resources/img/spot/z.jpg">
-						</div>
-
-						<div class=spot_content>
-							<h4 class="spot_name">연수점</h4>
-							<div class=spot_info>
-								<ul class=info_list>
-									<li><strong>지점</strong></li>
-									<li class=li_point><span>연수점</span></li>
-									<li><strong>위치</strong></li>
-									<li class=li_point><span>인천광역시 연수구 새말로6</span></li>
-								</ul>
-							</div>
-							<div class=spot_btn>
-								<div>
-									<a class=detail_btn href="http://www.naver.com" target="">상세히
-										보기</a>
-								</div>
-								<div>
-									<a class=kakao_btn href="http://www.naver.com" target=""><i
-										class="fas fa-comment"></i>문의하기</a>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</fieldset>
-			</form>
-		</section>
-		
-		
-		<section>
-			<form>
-				<fieldset>
-					<legend>전체 지점안내</legend>
+					
 					<div class=spot_container>
 						<div class=spot_image1>
 							<img class=z_img src="resources/img/spot/z.jpg">
@@ -144,7 +107,7 @@
 		<section>
 			<form>
 				<fieldset>
-					<legend>전체 지점안내</legend>
+					
 					<div class=spot_container>
 						<div class=spot_image1>
 							<img class=z_img src="resources/img/spot/z.jpg">
@@ -181,7 +144,44 @@
 		<section>
 			<form>
 				<fieldset>
-					<legend>전체 지점안내</legend>
+					
+					<div class=spot_container>
+						<div class=spot_image1>
+							<img class=z_img src="resources/img/spot/z.jpg">
+						</div>
+
+						<div class=spot_content>
+							<h4 class="spot_name">연수점</h4>
+							<div class=spot_info>
+								<ul class=info_list>
+									<li><strong>지점</strong></li>
+									<li class=li_point><span>연수점</span></li>
+									<li><strong>위치</strong></li>
+									<li class=li_point><span>인천광역시 연수구 새말로6</span></li>
+								</ul>
+							</div>
+							<div class=spot_btn>
+								<div>
+									<a class=detail_btn href="http://www.naver.com" target="">상세히
+										보기</a>
+								</div>
+								<div>
+									<a class=kakao_btn href="http://www.naver.com" target=""><i
+										class="fas fa-comment"></i>문의하기</a>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+		
+		
+		<section>
+			<form>
+				<fieldset>
+					
 					<div class=spot_container>
 						<div class=spot_image1>
 							<img class=z_img src="resources/img/spot/z.jpg">
