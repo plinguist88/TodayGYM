@@ -9,17 +9,16 @@ body{
 
 .reivewfull{
 	position: absolute;
-	top: 83.2px;
-	
+	top: 83.2px;	
 	width: 100%;
 	height: 100vh;
-	
 	background-color: white;
+
 }
 .reviewmain{
 	width: 100%;
 	height: 130px;
-	background-color: red;	
+	background-color: grey;	
 }
 
 .board_name{
@@ -30,7 +29,7 @@ body{
 	margin: 0;
 }
 
-.ohgvva2{
+.review_menu{
 	display:flex;
 	justify-content: center;
 	align-items: center;
@@ -38,32 +37,41 @@ body{
 
 }
 
-.oh1{
+.menu_h{
 	width:70px;
     height:30px;
-    border: 5px solid red;
+    border: 1px solid skyblue ;
     background-color: white;
+    border-radius:5px;
+ 
 }
-.oh2{
+.menu_s{
 	width:70px;
     height:30px;
-    border: 5px solid red;
+    border: 1px solid skyblue ;
     background-color: white;
+    border-radius:5px;
 }
-.oh3{
+.menu_c{
 	width:70px;
     height:30px;
-    border: 5px solid red;
+    border: 1px solid skyblue ;
     background-color: white;
+    border-radius:5px;
 }
-.oh4{
+.menu_c2{
 	width:70px;
     height:30px;
-    border: 5px solid red;
+    border: 1px solid skyblue ;
     background-color: white;
+    border-radius:5px;
 }
-.ohgvva{
-	background-color: blue;
+a{
+	text-decoration: none;
+	color:#5a5a5a;
+}
+.table_full{
+	background-color: white;
 }
 .low{
 	width: 100%;
@@ -72,7 +80,33 @@ body{
 	align-items: center;
 	list-style: none;
 }
-th{
-	width: 130px;
+ 
+.column_number{
+	width: 120px; 
+}
+.column_title{
+	width: 240px; 
+}
+.column_id{
+	width: 120px; 
+}
+.column_day{
+	width: 120px; 
+}
+.column_score{
+	width: 120px; 
+}
+
+.pageing_menu{
+	margin-left: 1000px;
+	margin-top: 10px;
+	border: 1px solid grey;
+}
+.td_list td{
+	text-align: center;
+	border: 1px solid grey ;
+}
+table{
+	border-collapse: collapse;
 }
 
