@@ -11,19 +11,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AdminTicketController {
 
-	private final Logger logger = LoggerFactory.getLogger(AdminTicketController.class);
+	private final Logger Logger = LoggerFactory.getLogger(AdminTicketController.class);
 	
 	//회원권 관리로 이동
 	@GetMapping("adTicketMove.ad")
 	public String adTicketMove() {
-		logger.info("adTicketMove()");
+		Logger.info("adTicketMove()");
 		
 		return "admin/adTicketList";
 	}
 	
 	@GetMapping("adTicketDetailMove.ad")
 	public String adTicketDetailMove() {
-		logger.info("adTicketDetailMove()");
+		Logger.info("adTicketDetailMove()");
 		
 		return "admin/adTicketDetail";
 	}
