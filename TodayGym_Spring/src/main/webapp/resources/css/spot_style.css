@@ -60,35 +60,86 @@ p{  text-align: center;
 }
 
 .spot_container{
-	background: beige;
+	
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: center;
 }
 .spot_content{
-	background: #a5d6a7;
-	width:380px;
+	
+	width:600px;
 	height: 250px; 
 }
 
 .spot_btn{
-	background: #90caf9;
+	
 	width:380px;
 	height: 100px; 
-	text-align: center;
+	
+	margin: 0 auto;
+	display: flex;
+    
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+	margin-left: 120px;
 	
 }   
 
 .spot_btn a{
 	border: 1px solid;
 	border-radius: 4px;
+	font-size: 20px;
 	
 	}
-
-.spot_info ul{
-	list-style: none;
+.detail_btn:hover{
+	background-color: gray;
 }
-.spot_info li{
-	float: left;
+
+.kakao_btn{
+	background-color: #F7E500;
+}
+.kakao_btn:hover{
+	background: gray;
+}
+.spot_info ul li{
+	list-style-type: none;
+	 margin-left: 20px;
+	 display: inline;
+}
+
+.spot_name{
+	
+    font-family: sans-serif;
+    font-size: 29px;
+    line-height: 0.6;
+    font-weight: 500;
+    letter-spacing: 0.056em;
+    margin-left: 200px;
+}
+.spot_info{
+	margin-left: 0px;
+}
+
+.li_point{
+	border: 3px solid;
+	background-color:gray;
+	border-radius: 10px;
+}
+
+.detail_btn{
+	margin-bottom: 15px;
 	
 }
+
+.detail_btn{
+	display:block;
+	width: 300px;
+	height: 25px;
+}
+.kakao_btn{
+	display: block;
+	width: 300px;
+	height: 25px;
+}
+
