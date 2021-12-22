@@ -70,7 +70,7 @@ li {
 	background-color: gray;
 }
 
-/******************************** myInfoUpdate area ******************************/
+/******************************** myInfo area ******************************/
 .myPage-myInfoUpdate {
 	float: left;
 	width: 898px;
@@ -104,7 +104,7 @@ li {
 	text-align: center;
 }
 
-.btn-myInfoUpdate {
+.btn-myInfo {
 	width: 300px;
 	height: 50px;
 	margin-bottom: 30px;
@@ -115,7 +115,7 @@ li {
 	
 }
 
-/******************************** myPwdChange area ******************************/
+/******************************** myPassword area ******************************/
 .myPage-myPwdUpdate {
 	float: left;
 	width: 898px;
@@ -239,4 +239,93 @@ li {
 	font-size: 16px;
 	line-height: 70px;
 	border: 1px solid black;
+}
+
+/******************************** myResign area ******************************/
+.myPage-myResign {
+	float: left;
+	width: 898px;
+	height: 100%;
+	padding: 80px 80px;
+	border: 1px solid gray;
+}
+
+.myPage-myResign-title {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.myPage-myResign-contents-guide {
+	display: block;
+	width: 600px;
+	margin: 0 auto;
+}
+
+.myResign-contents-guide {
+	width: 600px;
+	margin-bottom: 30px;
+	padding: 30px 30px;
+	font-size: 16px;
+	border: 1px solid black;
+}
+
+.myPage-myResign-contents {
+	display: none;
+	width: 600px;
+	margin: 0 auto;
+}
+
+.myResign-contents {
+	width: 600px;
+	height: 50px;
+	margin-bottom: 30px;
+	padding: 0 100px;
+	font-size: 20px;
+	line-height: 50px;
+	border: 1px solid black;
+}
+
+.myResign-contents-btn {
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.btn-myResign {
+	width: 300px;
+	height: 50px;
+	margin-bottom: 30px;
+	font-size: 20px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.myResign-contents {
+	width: 600px;
+	height: 50px;
+	margin-bottom: 30px;
+	padding: 0 100px;
+	font-size: 20px;
+	line-height: 50px;
+	border: 1px solid black;
+}
+
+.contents-resignPwdCheck {
+	margin-bottom: 30px;
+}
+
+.myResign-contents-btn {
+	text-align: center;
+}
+
+.btn-myResign {
+	width: 300px;
+	height: 50px;
+	margin-bottom: 30px;
+	font-size: 20px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid black;
+	
 }

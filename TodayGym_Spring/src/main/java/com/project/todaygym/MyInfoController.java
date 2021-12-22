@@ -88,5 +88,25 @@ public class MyInfoController {
 		
 		return mv;
 	} // myClassMove end
+	
+	//________________________________________ 회원탈퇴
+
+	//__________ 회원탈퇴 페이지
+	@GetMapping("myResign")
+	public String myResignMove() {
+		logger.info("myResignMove()");
+		
+		return "myinfo/myResign";
+	} // myClassMove end
+	
+	//__________ 회원탈퇴 실행
+	@PostMapping("myResignProc")
+	public String myResignProc(MemberDto myResign, RedirectAttributes rttr) {
+		logger.info("myResignProc");
+
+		String view = myServ.myAccountResign(myResign, rttr);
+
+		return view;
+	} // myInfoResignProc end
 
 } // class end
