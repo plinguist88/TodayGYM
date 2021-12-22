@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>후기 게시판</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link type="text/css" rel="stylesheet"
@@ -54,7 +54,7 @@
 					</div>	
 				</div>
 				<div class="pageing">
-				<button class="pageing_menu"><a href="">글쓰기</a></button>
+				<button class="pageing_menu"><a href="reviewsWrite">글쓰기</a></button>
 				</div>
 				
 			</div>
