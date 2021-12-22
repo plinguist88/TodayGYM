@@ -48,24 +48,24 @@
 	</div>
 </body>
 <script type="text/javascript">
-function emptyCheck() {
-	
-	var form = document.myInfoUpdateForm;
-	
-	var length = form.length - 1;
-	
-	for(var i = 0; i < length; i++) {
-		if(form[i].value == "" || form[i].value == null) {
-			alert("빈칸이 있습니다.");
-			console.log(alert);
-			return false;
-		} // if end
-		
-	} // for end
-	
-	return true;
-	
-} // emptyCheck end
+	//__________ 회원정보 변경 빈칸확인
+	function emptyCheck() {
 
+		var form = document.myInfoUpdateForm;
+
+		var length = form.length - 1;
+
+		for (var i = 0; i < length; i++) {
+			if (form[i].value == "" || form[i].value == null) {
+				alert("빈칸이 있습니다.");
+				console.log(alert);
+				return false;
+			} // if end
+
+		} // for end
+
+		return true;
+
+	} // emptyCheck end
 </script>
 </html>

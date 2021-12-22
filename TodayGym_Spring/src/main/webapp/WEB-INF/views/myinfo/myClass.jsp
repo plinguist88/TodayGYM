@@ -17,37 +17,30 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 		<section>
-			<div class="content-myInfo">
-				<div class="myInfo-form">
+			<div class="content-myPage">
+				<div class="myPage-form">
 					<jsp:include page="myPageSide.jsp" />
-					<div class="myInfo-class">
-						<h2>수강내역 || My Class</h2>
-						<br>
-						<div class="myInfo-class-list">
-							<div class="list-img">이미지</div>
-							<div class="list-info">
-								<div class="list-info-title">제목, 구분</div>
-								<div class="list-info-month">수강 기간</div>
+					<div class="myPage-myClass">
+						<div class="myPage-myClass-title">
+							<h2>수강내역 || My Class</h2>
+						</div>
+						<div class="myPage-myClass-contents-null">
+							<div class="myClass-contents">
+								<p>수강내역이 없습니다.</p>
 							</div>
 						</div>
-						<br>
-						<div class="myInfo-class-list">
-							<div class="list-img">이미지</div>
-							<div class="list-info">
-								<div class="list-info-title">제목, 구분</div>
-								<div class="list-info-month">수강 기간</div>
-							</div>
-						</div>
-						<c:forEach var="myClass" items="${myClassList}">
-							<div class="myInfo-class-list">
-								<div class="list-img">이미지</div>
-								<div class="list-info">
-									<div class="list-info-title">제목, 구분</div>
-									<div class="list-info-month">수강 기간</div>
+						<div class="myPage-myClass-contents">
+							<c:forEach var="myClass" items="${myClass}">
+								<div class="myClass-contents">
+									<div class="contents-img">이미지파일</div>
+									<div class="contents-info">
+										<div class="contents-info-title">제목 : ${myClass.b_title}</div>
+										<div class="contents-info-item">수강기간 :
+											${myClass.b_month}</div>
+									</div>
 								</div>
-							</div>
-							<br>
-						</c:forEach>
+							</c:forEach>
+						</div>
 					</div>
 				</div>
 			</div>
