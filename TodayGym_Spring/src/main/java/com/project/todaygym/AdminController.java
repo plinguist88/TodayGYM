@@ -50,10 +50,12 @@ public class AdminController { //관리자 컨트롤러
 	
 	//회원 상세 페이지 이동
 	@GetMapping("/adMemDetailMove")
-	public String adMemDetailMove() {
-		logger.info("adMemDetailMove()");
+	public ModelAndView adMemDetail(String m_id) {
+		logger.info("adMemDetail()");
+	
+		mv = adMServ.getAdMemDetail(m_id);
 		
-		return "admin/adMemDetail";
+		return mv;
 	}
 	
 	//회원정보 수정 페이지 이동
