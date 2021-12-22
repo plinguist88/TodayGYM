@@ -34,30 +34,160 @@ header {
 }
 .cart_info_table{
 	margin-top: 50px;
-	border: 1px solid black;
 }
 .cart_info_table table{
 	margin:  0 auto;
+	border-top: 3px solid;
+	border-bottom: 1px solid #cacbd4;
+	text-align: center;
+	border-spacing: 0;
+	width: 80%;
 }
 
+.thead_th1{
+	width: 20px;
+	height: 20px;
+}
+.thead_th2{
+	width: 360px;
+	height: 48px;
+}
+.thead_th3{
+	width: 275px;
+	height: 48px;
+}
+.thead_th4{
+	width: 130px;
+	height: 48px;
+}
+.thead_th5{
+	width: 140px;
+	height: 48px;
+}
+.buttonx{
+	width: 22px;
+	height: 22px;
+	background-size: cover;
+	border: none;
+	cursor: pointer;
+}
+.cart_body{
+	height: 600px;
+}
+.tbody_td1{
+	border-top: 1px solid #cacbd4;
+	border-right: 1px solid #cacbd4;
+	border-spacing: 0;
+}
+.tbody_td11{
+	border-top: 1px solid #cacbd4;
+}
+.checkbox{
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+}
+.cart_delete{
+	width: 80%;
+	margin: 0 auto;
+	height: 60px;
+	padding-top: 20px;
+	margin-bottom: 50px;
+}
+.checkboxarea{
+	float: left;
+	margin-right: 20px;
+}
+.deletebuttonarea{
+	height: 34px;
+}
+.deletebutton{
+	padding: 0 15px;
+	height: 34px;
+	font-size: 15px;
+	background-color: white;
+	border: 1px solid #cacbd4;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.cart_calculator{
+	display: table;
+	width: 100%;
+	padding: 32px 0;
+	border: 1px solid #9ca0aa;
+	border-left: none;
+	border-right: none;
+	margin: 0 auto;
+	text-align: center;
+	table-layout: fixed;
+}
+.cart_cal_sub{
+	display: table-cell;
+	width: 50%;
+	vertical-align: middle;
+	border-right: 1px solid #9ca0aa;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.cart_price{
+	vertical-align: middle;
+	display: inline-block;
+}
+.cart_price_sub{
+	float: left;
+	margin: 0px 30px;
+}
+.cart_price_sub dt{
+	font-size: 20px;
+}
+.cart_price_sub span{
+	font-weight: bold;
+	font-size: 22px;
+}
+.cart_price_sub img{
+	margin-top: 10px;
+}
+.cart_cal_sub2{
+	vertical-align: middle;
+	display: table-cell;
+}
+.cart_cal_sub2 span{
+	font-size: 22px;
+	font-weight: bold;
+}
+.sale{
+	color: #f85151;
+}
+.total{
+	font-size: 22px;
+	font-weight: bold;
+	color: #00c63a;
+}
+.cart_button{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 100px;
+}
+.cart_button .cart_back{
+	margin-right: 30px;
+	border: 1px solid #9ca0aa;
+	padding: 20px 65px;
+	font-size: 30px;
+	font-weight: bold;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.cart_button .ordermove{
+	margin-right: 30px;
+	border: 1px solid #9ca0aa;
+	padding: 20px 65px;
+	font-size: 30px;
+	font-weight: bold;
+	border-radius: 8px;
+	cursor: pointer;
+	background-color: #00c63a;
+	color: white;
+}
 
 
 

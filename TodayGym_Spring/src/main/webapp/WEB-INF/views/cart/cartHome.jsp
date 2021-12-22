@@ -5,11 +5,44 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>장바구니</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/cart_style.css">
+	<script type="text/javascript">
+		//전체선택
+		$(document).ready(function() {
+			$("#chkall").click(function() {
+				if($("#chkall").is(":checked")) $("input[name=chk]").prop("checked", true);
+				else $("input[name=chk]").prop("checked", false);
+			});
+			
+			$("input[name=chk]").click(function() {
+				var total = $("input[name=chk]").length;
+				var checked = $("input[name=chk]:checked").length;
+				
+				if(total != checked) $("#chkall").prop("checked", false);
+				else $("#chkall").prop("checked", true); 
+			});
+		});
+		//전체선택(삭제)
+		$(document).ready(function() {
+			$("#chkall2").click(function() {
+				if($("#chkall2").is(":checked")) $("input[name=chk]").prop("checked", true);
+				else $("input[name=chk]").prop("checked", false);
+			});
+			
+			$("input[name=chk]").click(function() {
+				var total = $("input[name=chk]").length;
+				var checked = $("input[name=chk]:checked").length;
+				
+				if(total != checked) $("#chkall2").prop("checked", false);
+				else $("#chkall2").prop("checked", true); 
+			});
+		});
+		
+	</script>
 </head>
 <body>
 	<div class="wrap">
@@ -29,39 +62,94 @@
 			 </ul>
 			</div>
 			<div class="cart_info_table">
-				<table>
-					<tr>
-						<th> <input type="checkbox"> </th>
-						<th colspan="2">상품정보</th>
-						<th>옵션</th>
-						<th>상품금액</th>
-						<th>비고</th>
-					</tr>
-					<tr>
-						<td>  <input type="checkbox"> </td>
-						<td> DB상품이미지 </td>
-						<td> DB상품이름 </td>
-						<td> DB옵션이름 </td>
-						<td> DB상품금액 </td>
-						<td>  </td>
-					</tr>
-					<tr>
-						<td>  <input type="checkbox"> </td>
-						<td> DB상품이미지 </td>
-						<td> DB상품이름 </td>
-						<td> DB옵션이름 </td>
-						<td> DB상품금액 </td>
-						<td>  </td>
-					</tr>
-					<tr>
-						<td>  <input type="checkbox"> </td>
-						<td> DB상품이미지 </td>
-						<td> DB상품이름 </td>
-						<td> DB옵션이름 </td>
-						<td> DB상품금액 </td>
-						<td>  </td>
-					</tr>
+				<table class="table_title">
+					<thead class="cart_head">
+						<tr>
+							<th class="thead_th1"> <input class="checkbox" type="checkbox" checked id="chkall"> </th>
+							<th class="thead_th2" colspan="3"> 상품정보 </th>
+							<th class="thead_th3"> 옵션 </th>
+							<th class="thead_th4"> 상품금액 </th>
+							<th class="thead_th5"> 비고 </th>
+						</tr>
+					</thead>
+					<tbody class="cart_body">
+						<tr>
+							<td class="tbody_td11"> <input class="checkbox" type="checkbox" checked name="chk"> </td>
+							<td class="tbody_td11">DB사진</td>
+							<td class="tbody_td11">DB제품이름</td>
+							<td class="tbody_td1"> <button class="buttonx" type="button"><img src="resources/img/cart/x.png"></button></td>
+							<td class="tbody_td1">DB옵션</td>
+							<td class="tbody_td1">DB금액</td>
+							<td class="tbody_td11"> </td>
+						</tr>
+						<tr>
+							<td class="tbody_td11"> <input class="checkbox" type="checkbox" checked name="chk"> </td>
+							<td class="tbody_td11">DB사진</td>
+							<td class="tbody_td11">DB제품이름</td>
+							<td class="tbody_td1"> <button class="buttonx" type="button"><img src="resources/img/cart/x.png"></button></td>
+							<td class="tbody_td1">DB옵션</td>
+							<td class="tbody_td1">DB금액</td>
+							<td class="tbody_td11"> </td>
+						</tr>
+						<tr>
+							<td class="tbody_td11"> <input class="checkbox" type="checkbox" checked name="chk"> </td>
+							<td class="tbody_td11">DB사진</td>
+							<td class="tbody_td11">DB제품이름</td>
+							<td class="tbody_td1"> <button class="buttonx" type="button"><img src="resources/img/cart/x.png"></button></td>
+							<td class="tbody_td1">DB옵션</td>
+							<td class="tbody_td1">DB금액</td>
+							<td class="tbody_td11"> </td>
+						</tr>
+					</tbody>
 				</table>
+			</div>	
+				<div class="cart_delete">
+					<div class="checkboxarea">
+						<input class="checkbox" type="checkbox" checked id="chkall2">
+					</div>
+					<div class="deletebuttonarea">
+						<input class="deletebutton" type="button" value="선택상품 삭제">
+					</div>
+				</div>
+				<div class="cart_calculator">
+					<div class="cart_cal_sub">
+						<div class="cart_price">
+							<dl class="cart_price_sub">
+								<dt>총 상품금액</dt>
+								<dd>
+									<span>0</span>
+									<span>원</span>
+								</dd>
+							</dl>
+						</div>
+						<div class="cart_price">
+							<dl class="cart_price_sub">
+								<dt></dt>
+								<dd>
+									<span></span>
+									<img src="resources/img/cart/minus.png">
+								</dd>
+							</dl>
+						</div>
+						<div class="cart_price">
+							<dl class="cart_price_sub">
+								<dt>할인예상금액</dt>
+								<dd>
+									<span class="sale">0</span>
+									<span>원</span>
+								</dd>
+							</dl>
+						</div>	
+					</div>
+					<div class="cart_cal_sub2">
+						<span>총 주문금액</span>
+						<span class="total">0</span>
+						<span class="total">원</span>
+					</div>
+				</div>
+			<div class="cart_button">
+				<span class="cart_back" onclick="location.href='./buyHome'">계속하기</span>
+				<span class="ordermove" onclick="location.href=''">결제하기</span>
 			</div>
 		</section>
 		<footer>
