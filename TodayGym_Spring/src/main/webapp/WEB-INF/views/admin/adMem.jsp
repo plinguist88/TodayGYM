@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
@@ -23,11 +23,11 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 		<section>
-			<div class="content-admin">
-				<!-- 사이드 메뉴 
-				<jsp:include page="../layout/adSidebar.jsp" />
-				<div class="admin-overview"></div>	-->
-				<!-- 회원 총원 및 목록 -->
+			<div class="content-adminmem">
+				<div class="content-adSidebar">
+					<jsp:include page="../layout/adSidebar.jsp" />
+				</div>
+
 				<div class="content-admin-membox">
 					<div class="admem-table">
 						<h3>회원 총원</h3>
@@ -39,12 +39,12 @@
 								</tr>
 							</thead>
 						</table>
-							
+
 						<h3>회원 목록</h3>
 						<table class="admem-table-list">
 							<thead>
 								<tr>
-									<th>등록 일자</th>
+									<th>가입일자</th>
 									<th>이 름</th>
 									<th>아이디</th>
 									<th>생년월일</th>
@@ -52,7 +52,8 @@
 								</tr>
 								<c:forEach items="${mList}" var="mb">
 									<tr>
-										<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${mb.m_joindate}"/></td>
+										<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
+												value="${mb.m_joindate}" /></td>
 										<td>${mb.m_name}</td>
 										<td><a href="./adMemDetailMove" style="color: #000;">${mb.m_id}</a></td>
 										<td>${mb.m_birth}</td>
@@ -61,15 +62,15 @@
 							</thead>
 						</table>
 					</div>
-											
-						<!-- 회원 검색 -->
+
+					<!-- 회원 검색 -->
 					<div class="admin-member-search">
-							<select class="addata-search-selbar">
-								<option vlaue="name">이 름</option>
-								<option vlaue="id">아 이 디</option>
-							</select>
-							<input type="text" class="addata-search-txtbar" placeholder="찾으시는 회원의 정보를 입력해주세요.">
-							<input type="submit" value="검색" class="addata-search-btn">
+						<select class="addata-search-selbar">
+							<option vlaue="name">이 름</option>
+							<option vlaue="id">아 이 디</option>
+						</select> <input type="text" class="addata-search-txtbar"
+							placeholder="찾으시는 회원의 정보를 입력해주세요."> <input type="submit"
+							value="검색" class="addata-search-btn">
 					</div>
 				</div>
 			</div>

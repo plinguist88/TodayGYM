@@ -40,5 +40,17 @@ public class adMemService {
 		
 		return mv;
 	}
+
+	public ModelAndView getAdMemDetail(String m_id) {
+		mv = new ModelAndView();
+		
+		MemberDto md = adMDao.getMDetail(m_id);
+		
+		mv.addObject("md", md);
+		
+		mv.setViewName("admin/adMemDetail");
+		
+		return mv;
+	}
 	
 }
