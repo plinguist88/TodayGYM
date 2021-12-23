@@ -32,8 +32,8 @@
 			 			<div class="buy_info_title">
 			 				<span class="buy_info_sale">10%</span>
 			 				<div class="buy_info_price">
-				 				<span class="buy_info_before">110,000원</span>
-				 				<span class="buy_info_after">100,000원</span>
+				 				<span class="buy_info_before">${bInfo.b_price}원</span>
+				 				<span class="buy_info_after">${oprice}원</span>
 			 				</div>
 			 			</div>	 			
 			 		</div>			 				 		
@@ -74,24 +74,24 @@
 			 		<div class="buy_select">
 			 			<select class="buy_select_contants">
 			 				<option disabled selected>&nbsp;&nbsp;&nbsp;HEALTH</option>
-			 				<option value="">일반이용권 1개월 (100,000원)</option>
-			 				<option value="">일반이용권 3개월 (300,000원)</option>
-			 				<option value="">일반이용권 6개월 (600,000원)</option>
-			 				<option value="">일반이용권 12개월 (1,200,000원)</option>
+			 				<option value="1">일반이용권 1개월 (100,000원)</option>
+			 				<option value="2">일반이용권 3개월 (300,000원)</option>
+			 				<option value="3">일반이용권 6개월 (600,000원)</option>
+			 				<option value="4">일반이용권 12개월 (1,200,000원)</option>
 			 			</select>
 			 		</div>
 			 		<div class="buy_price_hidden">
 			 			<hr>
 			 			<div>
 				 			<span class="buy_price1">옵션명</span>
-				 			<span class="buy_price2">원</span>
+				 			<span class="buy_price2"></span>
 				 			
 			 			</div>
 			 			<hr>
 			 		</div>
 			 		<div class="buy_price">
 			 			<div>총 상품 금액</div>
-			 			<span class="">원</span>
+			 			<span id="total_price">원</span>
 			 		</div>			
 		 		</div>	
 		 		<form action="" method="post">
@@ -160,52 +160,72 @@
 				<em class="link"> 
 					<a href="javascript:void(0);"onclick="window.open('http://fiy.daum.net/fiy/map/CsGeneral.daum', '_blank', 'width=981, height=650')"></a>
 				</em>
-			</p>
-			<h3>찾아오는 길</h3>
-			<div id="map"></div>
-			<script type="text/javascript"
-				src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4a83a37e9876c49619ffc58ce56c6445&libraries=services">				
-			</script>
-			<script>
-				var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-			    mapOption = {
-			        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-			        level: 3 // 지도의 확대 레벨
-			    };  
-			
-				// 지도를 생성합니다    
-				var map = new kakao.maps.Map(mapContainer, mapOption); 
+					</p>
+				<h3>찾아오는 길</h3>
+				<div id="map"></div>
+				<script type="text/javascript"
+					src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4a83a37e9876c49619ffc58ce56c6445&libraries=services">				
+				</script>
+				<script>
+					var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+				    mapOption = {
+				        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+				        level: 3 // 지도의 확대 레벨
+				    };  
 				
-				// 주소-좌표 변환 객체를 생성합니다
-				var geocoder = new kakao.maps.services.Geocoder();
+					// 지도를 생성합니다    
+					var map = new kakao.maps.Map(mapContainer, mapOption); 
+					
+					// 주소-좌표 변환 객체를 생성합니다
+					var geocoder = new kakao.maps.services.Geocoder();
+					
+					// 주소로 좌표를 검색합니다
+					geocoder.addressSearch('인천광역시 학익동', function(result, status) {
 				
-				// 주소로 좌표를 검색합니다
-				geocoder.addressSearch('인천광역시 학익동', function(result, status) {
-			
-			    // 정상적으로 검색이 완료됐으면 
-			     if (status === kakao.maps.services.Status.OK) {
-			
-			        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-			
-			        // 결과값으로 받은 위치를 마커로 표시합니다
-			        var marker = new kakao.maps.Marker({
-			            map: map,
-			            position: coords
-			        });
-			
-			        // 인포윈도우로 장소에 대한 설명을 표시합니다
-			        var infowindow = new kakao.maps.InfoWindow({
-			            content: '<div style="width:150px;text-align:center;padding:6px 0;">TOGYM 헬스본점</div>'
-			        });
-			        infowindow.open(map, marker);
-			
-			        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-			        map.setCenter(coords);
-				    } 
-				});    
-			</script>
+				    // 정상적으로 검색이 완료됐으면 
+				     if (status === kakao.maps.services.Status.OK) {
+				
+				        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+				
+				        // 결과값으로 받은 위치를 마커로 표시합니다
+				        var marker = new kakao.maps.Marker({
+				            map: map,
+				            position: coords
+				        });
+				
+				        // 인포윈도우로 장소에 대한 설명을 표시합니다
+				        var infowindow = new kakao.maps.InfoWindow({
+				            content: '<div style="width:150px;text-align:center;padding:6px 0;">TOGYM 헬스본점</div>'
+				        });
+				        infowindow.open(map, marker);
+				
+				        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+				        map.setCenter(coords);
+					    } 
+					});    
 					
-					
+					$(".buy_select_contants").change(function(){
+						//alert("되나?");
+						
+						if($(this).val() == 1){
+							$(".buy_price2").html("일반이용권 1개월");
+							$("#total_price").html("100,000 원");
+						}
+						else if($(this).val() == 2){
+							$(".buy_price2").html("일반이용권 3개월");
+							$("#total_price").html("300,000 원");
+						}
+						else if($(this).val() == 3){
+							$(".buy_price2").html("일반이용권 6개월");
+							$("#total_price").html("600,000 원");
+						}
+						else if($(this).val() == 4){
+							$(".buy_price2").html("일반이용권 12개월");
+							$("#total_price").html("1,200,000 원");
+						}
+						
+					});
+				</script>				
 				</fieldset>
 			</div>
 		</section>
@@ -214,7 +234,5 @@
 		</footer>
 	</div>
 </body>
-
-
 
 </html>
