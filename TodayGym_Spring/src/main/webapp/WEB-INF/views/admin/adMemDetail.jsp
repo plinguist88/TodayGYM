@@ -16,6 +16,16 @@
 <script nomodule
 	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+<script type="text/javascript">
+	$(function() {
+		//메시지 출력 부분
+		var msg = "${msg}";
+		if (msg != "") {
+			alert(msg);
+		}
+	});
+</script>
+
 </head>
 <body>
 	<div class="wrap">
@@ -79,9 +89,12 @@
 
 					<!-- 회원 수정 버튼 -->
 					<div class="admem-btnarea">
-						<button class="admem-btnarea-upbtn">
-							<a href="./adMemUpdateMove?m_id=${memdto.m_id}">수정</a>
-						</button>
+						<button class="admem-btnarea-upbtn"
+							onclick="location.href='./adMemUpdateMove?m_id=${memdto.m_id}'">
+							수정</button>
+						<button class="admem-btnarea-delbtn"
+							onclick="location.href='./adMemDelAct?m_id=${memdto.m_id}'">
+							삭제</button>
 					</div>
 				</div>
 			</div>

@@ -16,4 +16,15 @@
 		resultType="com.project.todaygym.dto.MemberDto">
 		SELECT * FROM MEMBER_TB WHERE m_id = #{m_id}
 	</select>
+	
+	<update id="adMemUpdateAct"
+		parameterType="com.project.todaygym.dto.MemberDto">
+		UPDATE M SET M_NAME=#{m_name}, M_BIRTH=#{m_birth},
+			M_PHONE=#{m_phone}, M_EMAIL=#{m_email}
+		WHERE m_id=#{m_id}
+	</update>
+	
+	<delete id="adMemDelAct" parameterType="String">
+		DELETE FROM M WHERE m_id=#{m_id}
+	</delete>
 </mapper>
