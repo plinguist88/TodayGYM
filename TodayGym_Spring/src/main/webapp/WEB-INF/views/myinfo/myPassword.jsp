@@ -31,13 +31,13 @@
 						<div class="myPage-myPwdUpdate-contents">
 							<form action="./myPwdUpdateProc" method="post" name="myPwdUpdateForm" onsubmit="return emptyCheck()">
 								<input type="password" class="myPwd-contents" id="prePwd" placeholder="현재 비밀번호">
-								<p class="contents-prePwdCheck"></p>
+								<div class="contents-prePwdCheck"></div>
 								<div class="myPwd-contents-btn">
 									<input type="button" class="btn-myPwd" value="현재 비밀번호 확인" onclick="preCheck()">
 								</div>
 								<input type="password" name="m_pw" class="myPwd-contents" id="newPwd" placeholder="새 비밀번호">
 								<input type="password" class="myPwd-contents" id="newPwdCheck" placeholder="새 비밀번호 확인">
-								<p class="contents-updatePwdCheck"></p>
+								<div class="contents-updatePwdCheck"></div>
 								<div class="myPwd-contents-btn">
 									<input type="submit" class="btn-myPwd" value="비밀번호 변경">
 								</div>
