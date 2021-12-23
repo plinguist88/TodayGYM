@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 /******************************** member area ******************************/
+<<<<<<< Updated upstream
 
 body{
 	magin: 0;
@@ -8,7 +9,9 @@ body{
 }
 
 .wrap {
+
 	background-color: white;
+
 }
 
 .content-member {
@@ -48,7 +51,7 @@ body{
 }
 
  section{
-	height: 600px;
+	height: 800px;
 	background-color: #fff;
 }
 
