@@ -2,17 +2,34 @@
 
 /******************************** member area ******************************/
 
-header {
-	position: sticky;
-	top: 0px;
+body{
+	magin: 0;
+	padding: 0;
 }
 
 .wrap {
-	background-color: #40BAD5;
+	background-color: white;
 }
 
 .content-member {
 	height: 2000px;
+}
+
+.sub_image{
+ margin-top: 60px;
+}
+.sub_image img{
+	width:100%;
+	height: 300px;	
+}
+
+.sub_content{
+	text-align: center;
+	z-index: 1;
+	position: relative;
+	bottom: 250px;
+	color: white;
+	font-size: 40px;
 }
 
 .signForm {
@@ -99,7 +116,7 @@ header {
 
 .search-btn {
 	display: block;
-	width: 99%;
+	width: 100%;
 	padding: 10px 16px;
 	margin: 4px;
 	font-size: 18px;
