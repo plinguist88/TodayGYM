@@ -10,6 +10,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	margin-top: 60px;
+	margin-bottom: 30px;
 }
 select{
 	border: 2px solid #5a5a5a;
@@ -26,4 +27,34 @@ textarea{
 }
 .review_button{
 	text-align: right;	
+}
+.review_star{
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  justify-content: space-around;
+  padding: 0 0.2em;
+  text-align: center;
+  width: 5em;
+  margin-bottom: 10px;
+}
+.review_star input {
+  display: none;
+}
+ 
+.review_star label {
+  -webkit-text-fill-color: transparent; 
+  -webkit-text-stroke-width: 2.3px;
+  -webkit-text-stroke-color: #2b2a29;
+  cursor: pointer;
+}
+ 
+.review_star :checked ~ label {
+  -webkit-text-fill-color: gold;
+}
+ 
+.review_star label:hover,
+.review_star label:hover ~ label {
+  -webkit-text-fill-color: #fff58c;
 }
