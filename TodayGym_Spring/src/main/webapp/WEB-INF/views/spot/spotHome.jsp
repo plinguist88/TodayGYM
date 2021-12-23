@@ -220,7 +220,9 @@
 
 
 		<!-- 바디 끝 -->
-		<footer> </footer>
+		<footer>
+		<jsp:include page="../layout/footer.jsp" />
+		 </footer>
 	</div>
 </body>
 </html>
