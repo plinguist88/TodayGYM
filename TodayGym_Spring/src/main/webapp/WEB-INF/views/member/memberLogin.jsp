@@ -27,7 +27,7 @@
 				<form class="login-form" action="./loginProc" method="post">
 					<h1 class="login-header">로그인</h1>
 					<input type="text" class="login-input" name="m_id" autofocus required placeholder="아이디">
-					 <input type="password" class="login-input" name="m_pwd" placeholder="비밀번호" required>
+					 <input type="password" class="login-input" name="m_pw" placeholder="비밀번호" required>
 					<input type="submit" class="login-btn" value="로그인">
 					<input type="submit" class="search-btn" value="ID / PASSWORD 찾기">
 				</form>
