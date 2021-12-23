@@ -148,7 +148,8 @@ td {
 	height: auto;
 }
 
-.admem-btnarea-upendbtn {
+.admem-btnarea-upendbtn[type="reset"], 
+	.admem-btnarea-upendbtn[type="button"] {
 	width: 70px;
 	height: 25px;
 	margin-top: 10px;
@@ -157,6 +158,8 @@ td {
 	background: #000;
 	color: #fff
 }
+
+
 
 
 

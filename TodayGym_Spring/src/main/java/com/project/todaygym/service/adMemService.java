@@ -8,14 +8,19 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dao.AdminMemDao;
 import com.project.todaygym.dto.MemberDto;
 
+import lombok.extern.java.Log;
+
 @Service
+@Log
 public class adMemService {
 	
 	@Autowired
@@ -70,4 +75,71 @@ public class adMemService {
 		return mv;
 	}
 	
+	//회원정보 수정 완료
+	@Transactional
+	public String adMemUpdateAct(MultipartHttpServletRequest multi,
+			RedirectAttributes rda) {
+		String act = null;
+		
+		String m_id = multi.getParameter("m_id");
+		String m_name = multi.getParameter("m_name");
+		String m_birth = multi.getParameter("m_birth");
+		String m_phone = multi.getParameter("m_phone");
+		String m_email = multi.getParameter("m_email");
+		
+		log.info("adMemUpdateAct() name: " + m_name + ", birth: "
+				+ m_birth + ", phone: " + m_phone + ", email: " + m_email);
+		
+		MemberDto memdto = new MemberDto();
+		memdto.setM_id(m_id);
+		memdto.setM_name(m_name);
+		memdto.setM_birth(m_birth);
+		memdto.setM_phone(m_phone);
+		memdto.setM_email(m_email);
+		
+		try {
+			adMDao.adMemUpdateAct(memdto);
+			
+			rda.addFlashAttribute("msg", "수정 성공");
+		} catch (Exception e) {
+			// TODO: handle exception
+			rda.addFlashAttribute("msg", "수정 실패");
+		}
+		
+		act = "redirect:adMemDetailMove?m_id=" + m_id;
+		
+		return act;
+	}
+	
+	@Transactional
+	public String adMemDelAct(String m_id,
+			RedirectAttributes rda) {
+		log.info("adMemDelAct()");
+		
+		String act = null;
+		
+		try {
+			adMDao.adMemDelAct(m_id);
+			
+			act = "redirect:adMemMove";
+			rda.addFlashAttribute("msg", "삭제 성공");
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			act = "redirect:adMemDetailMove?m_id" + m_id;
+			rda.addFlashAttribute("msg", "삭제 실패");
+		}
+		
+		return act;
+	}
+	
 }
+
+
+
+
+
+
+
+
+
