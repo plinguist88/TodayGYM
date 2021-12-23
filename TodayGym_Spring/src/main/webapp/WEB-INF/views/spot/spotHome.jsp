@@ -37,7 +37,7 @@
 					
 					<div class=spot_container>
 						<div class=spot_image1>
-							<img class=z_img src="resources/img/spot/z.jpg">
+							<img class=z_img src="resources/img/spot/x.jpg">
 						</div>
 
 						<div class=spot_content>
@@ -77,7 +77,7 @@
 						</div>
 
 						<div class=spot_content>
-							<h4 class="spot_name">연수점</h4>
+							<h4 class="spot_name">구월점</h4>
 							<div class=spot_info>
 								<ul class=info_list>
 									<li><strong>지점</strong></li>
@@ -110,11 +110,11 @@
 					
 					<div class=spot_container>
 						<div class=spot_image1>
-							<img class=z_img src="resources/img/spot/z.jpg">
+							<img class=z_img src="resources/img/spot/v.jpg">
 						</div>
 
 						<div class=spot_content>
-							<h4 class="spot_name">연수점</h4>
+							<h4 class="spot_name">주안점</h4>
 							<div class=spot_info>
 								<ul class=info_list>
 									<li><strong>지점</strong></li>
@@ -147,11 +147,11 @@
 					
 					<div class=spot_container>
 						<div class=spot_image1>
-							<img class=z_img src="resources/img/spot/z.jpg">
+							<img class=z_img src="resources/img/spot/n.jpg">
 						</div>
 
 						<div class=spot_content>
-							<h4 class="spot_name">연수점</h4>
+							<h4 class="spot_name">학익점</h4>
 							<div class=spot_info>
 								<ul class=info_list>
 									<li><strong>지점</strong></li>
@@ -184,11 +184,11 @@
 					
 					<div class=spot_container>
 						<div class=spot_image1>
-							<img class=z_img src="resources/img/spot/z.jpg">
+							<img class=z_img src="resources/img/spot/m.jpg">
 						</div>
 
 						<div class=spot_content>
-							<h4 class="spot_name">연수점</h4>
+							<h4 class="spot_name">만수점</h4>
 							<div class=spot_info>
 								<ul class=info_list>
 									<li><strong>지점</strong></li>
