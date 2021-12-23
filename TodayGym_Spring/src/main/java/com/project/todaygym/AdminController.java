@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dto.MemberDto;
 import com.project.todaygym.service.adMemService;
@@ -60,10 +61,13 @@ public class AdminController { //관리자 컨트롤러
 	
 	//회원정보 수정 페이지 이동
 	@GetMapping("/adMemUpdateMove")
-	public String adMemUpdateMove() {
-		logger.info("adMemUpdateMove()");
+	public ModelAndView adMemUpdate(String m_id,
+			RedirectAttributes rda) {
+		logger.info("adMemUpdate()");
 		
-		return "admin/adMemUpdate";
+		mv = adMServ.adMemUpdate(m_id, rda);
+		
+		return mv;
 	}
 }//AdminController end
 
