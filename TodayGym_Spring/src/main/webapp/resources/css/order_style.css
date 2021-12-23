@@ -8,25 +8,122 @@ header {
 }
 
 .wrap {
-	background-color: #40BAD5;
+	background-color: #FFFFFF;
+}
+
+li {
+	list-style: none;
 }
 
 /******************************** orderHome area ******************************/
 .content-myOrder {
-	height: 1000px;
-	background-color: #968C83;
+	height: 1500px;
+	background-color: #FFFFFF;
 }
 
 .myOrder-form {
-	height: 500px;
-	width: 1000px;
+	width: 1200px;
+	height: 100%;
 	margin: 0 auto;
-	background-color: #D6D2C4;
+	padding: 100px 0 50px 0;
 }
 
-.myInfo-form {
-	height: 500px;
-	width: 1000px;
-	margin: 0 auto;
-	background-color: #FFF5EA;
+/******************************** myOrder-header area */
+.myOrder-header {
+	width: 1200px;
+	height: 100px;
+	line-height: 100px;
+}
+
+.myOrder-header-title {
+	float: left;
+	font-size: 30px;
+}
+
+.myOrder-header-orderseq {
+	float: right;
+	font-size: 20px;
+}
+
+/******************************** myOrder-contents area */
+.myOrder-contents {
+	width: 1200px;
+	height: 1200px;
+}
+
+/******************************** myOrder-contents-title area */
+.myOrder-contents-title {
+	width: 1200px;
+	height: 50px;
+	background-color: #cccccc;
+}
+
+.contents-title-cate {
+	float:left;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.contents-title-title {
+	float:left;
+	width: 500px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.contents-title-term {
+	float:left;
+	width: 250px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.contents-title-price {
+	float:left;
+	width: 250px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+
+/******************************** myOrder-contents-orderlist area */
+.myOrder-contents-orderlist {
+	width: 1200px;
+	height: 150px;
+}
+
+.contents-orderlist-cate {
+	float:left;
+	width: 200px;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+}
+
+.contents-orderlist-title {
+	float:left;
+	width: 500px;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+}
+
+.contents-orderlist-term {
+	float:left;
+	width: 250px;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+}
+
+.contents-orderlist-price {
+	float:left;
+	width: 250px;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
 }

@@ -19,11 +19,15 @@
 		<section>
 			<div class="content-myPage">
 				<div class="myPage-form">
+					<%-- myPage 좌측 메뉴바 --%>
 					<jsp:include page="myPageSide.jsp" />
+					<%-- myPage 우측 페이지 전체내용 --%>
 					<div class="myPage-myResign">
+						<%-- 우측 페이지 타이틀 --%>
 						<div class="myPage-myResign-title">
 							<h2>회원탈퇴 || My Resign</h2>
 						</div>
+						<%-- 우측 페이지 상세내용 --%>
 						<div class="myPage-myResign-contents-guide">
 							<div class="myResign-contents-guide">
 								<p>회원탈퇴 안내입니다.</p><br>
@@ -46,7 +50,9 @@
 								</div>
 							</form>
 						</div>
+						<%-- 우측 페이지 상세내용 end --%>
 					</div>
+					<%-- myPage 우측 페이지 전체내용 end --%>
 				</div>
 			</div>
 		</section>
@@ -82,16 +88,16 @@
 				if (result == "true") {
 					$(".contents-resignPwdCheck").text("비밀번호를 확인 했습니다.");
 					$(".contents-resignPwdCheck").css("color", "blue");
+					
 					prePwdCheck = true;
-
 				} // if end
 
 				else {
 					$(".contents-resignPwdCheck").text("비밀번호가 틀렸습니다.");
 					$(".contents-resignPwdCheck").css("color", "red");
 					$("#prePwd").focus();
+					
 					prePwdCheck = false;
-
 				} // else end
 			},
 
