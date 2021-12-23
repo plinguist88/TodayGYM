@@ -26,19 +26,23 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 
-
+		<div class="sub_image">
+			<image class="gray_image" src="resources/img/spot/gray.jpg">
+			<div class="sub_content">
+				<h1>JOIN</h1>
+			</div>
+		</div>
 
 		<section>
 			<div class="content">
-				<form name="joinFrm" class="login-form" action="./memInsert"
-					method="post" onsubmit="return check()">
-					<h2 class="login-header">회원 가입</h2>
+				<form name="joinFrm" class="login-form" action="./memInsert" method="post" onsubmit="return check()">
 					<input type="text" class="login-input" id="mid" title="아이디" name="m_id" autofocus placeholder="아이디"> 
 					<input type="button" class="idcheck-btn" value="중복확인" onclick="idcheck()">
 					<input type="password" class="login-input" title="비밀번호" name="m_pw" placeholder="비밀번호"> 
+					<input type="password" class="login-input" title="비밀번호 확인" name="m_pw" placeholder="비밀번호 확인">
 					<input type="text" class="login-input" title="이름" name="m_name" placeholder="이름"> 
 					<input type="text" class="login-input" title="이메일" name="m_email" placeholder="메일 ex)asd@gmail.com"> 
-					<input type="text" class="login-input" title="연락처" name="m_phone" placeholder="연락처"> 
+					<input type="text" class="login-input" title="연락처" name="m_phone" placeholder="연락처">
 					<input type="text" class="login-input" title="생일" name="m_birth" placeholder="생일 ex)930101"> 
 					<input type="submit" class="login-btn" value="가입">
 				</form>
@@ -94,30 +98,6 @@
 				}
 			});
 		}
-		
-		function chkPW(){
-
-			 var pw = $("#mpw").val();
-			 var num = pw.search(/[0-9]/g);
-			 var eng = pw.search(/[a-z]/ig);
-			 var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
-
-			 if(pw.length < 8 || pw.length > 20){
-
-			  alert("8자리 ~ 20자리 이내로 입력해주세요.");
-			  return false;
-			 }else if(pw.search(/\s/) != -1){
-			  alert("비밀번호는 공백 없이 입력해주세요.");
-			  return false;
-			 }else if(num < 0 || eng < 0 || spe < 0 ){
-			  alert("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
-			  return false;
-			 }else {
-				console.log("통과"); 
-			    return true;
-			 }
-
-			}
 
 		//입력 양식에 빈칸이 있는지 확인하는 함수
 		function check() {

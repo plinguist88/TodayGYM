@@ -2,17 +2,37 @@
 
 /******************************** member area ******************************/
 
-header {
-	position: sticky;
-	top: 0px;
+body{
+	magin: 0;
+	padding: 0;
 }
 
 .wrap {
-	background-color: #40BAD5;
+
+	background-color: white;
+
 }
 
 .content-member {
 	height: 2000px;
+}
+
+.sub_image{
+ margin-top: 60px;
+ height: 350px;
+}
+.sub_image img{
+	width:100%;
+	height: 300px;	
+}
+
+.sub_content{
+	text-align: center;
+	z-index: 1;
+	position: relative;
+	bottom: 250px;
+	color: white;
+	font-size: 40px;
 }
 
 .signForm {
@@ -30,7 +50,7 @@ header {
 }
 
  section{
-	height: 600px;
+	height: 800px;
 	background-color: #fff;
 }
 
@@ -53,13 +73,13 @@ header {
 }
 
 .login-form input[type="text"] {
-	margin-bottom: -1px;
+	margin-bottom: 5px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 
 .login-form input[type="password"] {
-	margin-bottom: 10px;
+	margin-bottom: 5px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
@@ -114,7 +134,7 @@ header {
 
 .login-btn {
 	display: block;
-	width: 100%;
+	width: 99%;
 	padding: 10px 16px;
 	font-size: 18px;
 	line-height: 1.5;

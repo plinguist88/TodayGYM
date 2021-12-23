@@ -19,18 +19,22 @@
 		<section>
 			<div class="content-myPage">
 				<div class="myPage-form">
+					<%-- myPage 좌측 메뉴바 --%>
 					<jsp:include page="myPageSide.jsp" />
+					<%-- myPage 우측 페이지 전체내용 --%>
 					<div class="myPage-myResign">
+						<%-- 우측 페이지 타이틀 --%>
 						<div class="myPage-myResign-title">
 							<h2>회원탈퇴 || My Resign</h2>
 						</div>
+						<%-- 우측 페이지 상세내용 --%>
 						<div class="myPage-myResign-contents-guide">
 							<div class="myResign-contents-guide">
-								<p>회원탈퇴 안내입니다.</p><br>
-								<p>1. 회원탈퇴 시 회원권은 재발급이 불가능 합니다.</p><br>
-								<p>2. 회원권 및 포인트는 소멸합니다.</p><br>
-								<p>3. 작성한 후기는 자동 삭제됩니다.</p><br>
-								<p>4. 삭제시 계정복구는 불가능합니다.</p><br>
+								<div>회원탈퇴 안내입니다.</div><br>
+								<div>1. 회원탈퇴 시 회원권은 재발급이 불가능 합니다.</div><br>
+								<div>2. 회원권 및 포인트는 소멸합니다.</div><br>
+								<div>3. 작성한 후기는 자동 삭제됩니다.</div><br>
+								<div>4. 삭제시 계정복구는 불가능합니다.</div><br>
 							</div>
 							<div class="myResign-contents-btn">
 								<input type="button" class="btn-myResign" value="탈퇴 하겠습니다." onclick="guideCheck()">
@@ -38,15 +42,17 @@
 						</div>
 						<div class="myPage-myResign-contents">
 							<form action="./myResignProc" method="post" name="myResignCheckForm" onsubmit="return emptyCheck()">
-								<p class="myResign-contents">아이디 : ${myInfo.m_id}</p>
+								<div class="myResign-contents">아이디 : ${myInfo.m_id}</div>
 								<input type="password" name="m_pw" class="myResign-contents" id="prePwd" placeholder="비밀번호 확인">
-								<p class="contents-resignPwdCheck">비밀번호를 확인하세요!</p>
+								<div class="contents-resignPwdCheck">비밀번호를 확인하세요!</div>
 								<div class="myResign-contents-btn">
 									<input type="submit" class="btn-myResign" value="회원탈퇴">
 								</div>
 							</form>
 						</div>
+						<%-- 우측 페이지 상세내용 end --%>
 					</div>
+					<%-- myPage 우측 페이지 전체내용 end --%>
 				</div>
 			</div>
 		</section>
@@ -82,16 +88,16 @@
 				if (result == "true") {
 					$(".contents-resignPwdCheck").text("비밀번호를 확인 했습니다.");
 					$(".contents-resignPwdCheck").css("color", "blue");
+					
 					prePwdCheck = true;
-
 				} // if end
 
 				else {
 					$(".contents-resignPwdCheck").text("비밀번호가 틀렸습니다.");
 					$(".contents-resignPwdCheck").css("color", "red");
 					$("#prePwd").focus();
+					
 					prePwdCheck = false;
-
 				} // else end
 			},
 

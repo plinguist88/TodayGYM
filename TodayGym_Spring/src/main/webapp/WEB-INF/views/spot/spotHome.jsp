@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>지점안내페이지</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -19,7 +19,7 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 		<!-- 헤더 끝 -->
-
+  
 		<div class=spot_sub_image>
 			<img class=gray_img src="resources/img/spot/gray.jpg">
 			<div class=spot_sub_content>
@@ -31,9 +31,12 @@
 			</div>
 		</div>
 
+
+
+		
 		<section>
 			<form>
-				<fieldset>
+				<fieldset >
 					
 					<div class=spot_container>
 						<div class=spot_image1>
@@ -220,7 +223,9 @@
 
 
 		<!-- 바디 끝 -->
-		<footer> </footer>
+		<footer>
+		<jsp:include page="../layout/footer.jsp" />
+		 </footer>
 	</div>
 </body>
 </html>

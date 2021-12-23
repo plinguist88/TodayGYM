@@ -4,6 +4,7 @@ import java.security.Provider.Service;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.print.attribute.standard.PageRanges;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -13,9 +14,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dto.MemberDto;
 import com.project.todaygym.service.adMemService;
@@ -41,13 +46,6 @@ public class AdminController { //관리자 컨트롤러
 		return mv;
 	}
 	
-	/*@GetMapping("/adMemMove")
-	public String adMemMove() {
-		logger.info("adMemMove()");
-		
-		return "admin/adMem";
-	}*/
-	
 	//회원 상세 페이지 이동
 	@GetMapping("/adMemDetailMove")
 	public ModelAndView adMemDetail(String m_id) {
@@ -60,11 +58,39 @@ public class AdminController { //관리자 컨트롤러
 	
 	//회원정보 수정 페이지 이동
 	@GetMapping("/adMemUpdateMove")
-	public String adMemUpdateMove() {
-		logger.info("adMemUpdateMove()");
+	public ModelAndView adMemUpdate(String m_id,
+			RedirectAttributes rda) {
+		logger.info("adMemUpdate()");
 		
-		return "admin/adMemUpdate";
+		mv = adMServ.adMemUpdate(m_id, rda);
+		
+		return mv;
 	}
+	
+	//회원정보 수정 완료
+	@PostMapping("/adMemUpdateAct")
+	public String adMemUpdateAct(MultipartHttpServletRequest multi,
+			RedirectAttributes rda) {
+		
+		logger.info("adMemUpdateAct()");
+		String act = adMServ.adMemUpdateAct(multi, rda);
+		
+		return act;
+	}
+	
+	//회원 삭제
+	@GetMapping("/adMemDelAct")
+	public String adMemDelAct(String m_id,
+			RedirectAttributes rda) {
+		logger.info("adMemDelAct()");
+		
+		String act = adMServ.adMemDelAct(m_id, rda);
+		
+		return act;
+	}
+	
+	//회원 검색
+	
 }//AdminController end
 
 

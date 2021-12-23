@@ -15,14 +15,14 @@
 				#{m_phone},#{m_birth},SYSDATE,DEFAULT)
 	</insert>
 	
-	<select id="pwSelect" parameterType="String"
+	<select id="pwdSelect" parameterType="String"
 		resultType="String">
 		SELECT m_pw FROM M WHERE m_id=#{id}
 	</select>
 	
 	<select id="memberSelect" parameterType="String"
 		resultType="com.project.todaygym.dto.MemberDto">
-		SELECT * FROM MINFO WHERE m_id=#{id}
+		SELECT * FROM M WHERE m_id=#{id}
 	</select>
 	
 </mapper>

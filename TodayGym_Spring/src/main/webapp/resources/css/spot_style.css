@@ -43,6 +43,9 @@ p{  text-align: center;
     letter-spacing: 0.027em;
     }
 
+
+/*-------------------------*/
+
 .spot_image1{
 	width:600px;
 	height: 350px; 
@@ -168,3 +171,4 @@ fieldset {
 .info_list{
 	margin-left: 60px;
 }
+

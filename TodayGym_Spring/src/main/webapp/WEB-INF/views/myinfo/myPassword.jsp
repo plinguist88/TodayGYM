@@ -19,27 +19,33 @@
 		<section>
 			<div class="content-myPage">
 				<div class="myPage-form">
+					<%-- myPage 좌측 메뉴바 --%>
 					<jsp:include page="myPageSide.jsp" />
+					<%-- myPage 우측 페이지 전체내용 --%>
 					<div class="myPage-myPwdUpdate">
+						<%-- 우측 페이지 타이틀 --%>
 						<div class="myPage-myPwdUpdate-title">
 							<h2>비밀번호 변경 || My Password Change</h2>
 						</div>
+						<%-- 우측 페이지 상세내용 --%>
 						<div class="myPage-myPwdUpdate-contents">
 							<form action="./myPwdUpdateProc" method="post" name="myPwdUpdateForm" onsubmit="return emptyCheck()">
 								<input type="password" class="myPwd-contents" id="prePwd" placeholder="현재 비밀번호">
-								<p class="contents-prePwdCheck"></p>
+								<div class="contents-prePwdCheck"></div>
 								<div class="myPwd-contents-btn">
 									<input type="button" class="btn-myPwd" value="현재 비밀번호 확인" onclick="preCheck()">
 								</div>
 								<input type="password" name="m_pw" class="myPwd-contents" id="newPwd" placeholder="새 비밀번호">
 								<input type="password" class="myPwd-contents" id="newPwdCheck" placeholder="새 비밀번호 확인">
-								<p class="contents-updatePwdCheck"></p>
+								<div class="contents-updatePwdCheck"></div>
 								<div class="myPwd-contents-btn">
 									<input type="submit" class="btn-myPwd" value="비밀번호 변경">
 								</div>
 							</form>
 						</div>
+						<%-- 우측 페이지 상세내용 end --%>
 					</div>
+					<%-- myPage 우측 페이지 전체내용 end --%>
 				</div>
 			</div>
 		</section>
@@ -78,8 +84,8 @@
 					$(".contents-prePwdCheck").text("현재 비밀번호가 일치 합니다.");
 					$(".contents-prePwdCheck").css("color", "blue");
 					$(".contents-prePwdCheck").css("display", "block");
+					
 					prePwdCheck = true;
-
 				} // if end
 
 				else {
@@ -87,8 +93,8 @@
 					$(".contents-prePwdCheck").css("color", "red");
 					$(".contents-prePwdCheck").css("display", "block");
 					$("#prePwd").focus();
+					
 					prePwdCheck = false;
-
 				} // else end
 			},
 
@@ -114,16 +120,16 @@
 			$(".contents-updatePwdCheck").text("새 비밀번호가 틀립니다.");
 			$(".contents-updatePwdCheck").css("color", "red");
 			$(".contents-updatePwdCheck").css("display", "block");
+			
 			updatePwdCheck = false;
-
 		} // if end
 
 		else {
 			$(".contents-updatePwdCheck").text("새 비밀번호가 일치 합니다.");
 			$(".contents-updatePwdCheck").css("color", "blue");
 			$(".contents-updatePwdCheck").css("display", "block");
+			
 			updatePwdCheck = true;
-
 		} // else end
 		
 	});
@@ -149,7 +155,7 @@
 		for (var i = 0; i < length; i++) {
 			if (form[i].value == "" || form[i].value == null) {
 				alert("빈칸이 있습니다.");
-
+				
 				return false;
 			} // if end
 
