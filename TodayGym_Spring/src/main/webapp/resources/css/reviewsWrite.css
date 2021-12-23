@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/**************************************************************/
+body{
+	margin: 0;
+	padding: 0;
+}
+.review_full{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 60px;
+}
+select{
+	border: 2px solid #5a5a5a;
+}
+.input_title{
+	width: 590px;
+	border: 2px solid #5a5a5a;
+}
+textarea{
+	border: 2px solid #5a5a5a;
+}
+.review_event{
+	margin-right: 520px;
+}
+.review_button{
+	text-align: right;	
+}
