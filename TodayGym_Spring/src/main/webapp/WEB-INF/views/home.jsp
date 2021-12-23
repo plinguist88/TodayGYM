@@ -5,31 +5,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TodayGYM Home</title>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/layout/home_style.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-	<div class="wrap">
-		<header>
-			<jsp:include page="layout/header.jsp" />
-		</header>
-		<section>
-			<div class="content-home"></div>
-			<div class=home_videos>
-				<video autoplay="true" loop="true" muted="muted">
-					<source src="resources/videos/mains.mp4" type="video/mp4">
-				</video>
-			</div>
-		</section>
-		
-		
-		
-		<footer>
-			<jsp:include page="layout/footer.jsp" />
-		</footer>
+	<header>
+		<jsp:include page="layout/header.jsp" />
+	</header>
+	<div class="content_main">
+		<video autoplay="true" loop="true" muted="muted">
+			<source src="resources/videos/mains.mp4" type="video/mp4">
+		</video>
 	</div>
+	<footer>
+		<jsp:include page="layout/footer.jsp" />
+	</footer>
 </body>
 </html>

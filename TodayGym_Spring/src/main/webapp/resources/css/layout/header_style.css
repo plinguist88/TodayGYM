@@ -1,103 +1,124 @@
 @charset "UTF-8";
 
-body {
-	
-}
-
-a {
-	text-decoration: none;
-	color: white;
-}
-
-header {
-	position: fixed;
- 	z-index: 1000;
-	left: 0px;
-	top: 0px;
-	height: 60px;
-	width: 100%;
-	margin: 0;
-	font-family: 'Roboto', sans-serif;
-}
-
 .navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	background-color: black;
-	padding: 8px 12px;
+	background-color: #000;
+	
+	z-index: 100;
 }
 
-.navbar_logo {
-	display: flex;
-	font-size: 24px;
-	color: white;
+.navbar a {
+	text-decoration: none;
+	color: #fff;
 }
 
-.navbar_menu {
+.navbar a abbr {
+	text-decoration: none;
+}
+
+.navbar .navbar_logo a {
+	padding-left: 20px;
+	font-size: 30px;
+}
+
+.navbar .navbar_menu ul {
+	margin: 0;
+	padding: 0;
 	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.navbar .navbar_menu ul li {
 	list-style: none;
-	padding-left: 0;
+	width: 200px;
+	text-align: center;
 }
 
-.navbar_menu li {
-	padding: 8px 12px;
+.navbar .navbar_menu ul li a {
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 10px;
 }
 
-.navbar_menu li:hover {
-	background-color: orange;
-	border-radius: 4px;
+.navbar .navbar_menu ul li a:hover {
+	background-color: #fff;
+	color: #000;
 }
 
-.navbar_icons li:hover {
-	background-color: orange;
-	border-radius: 4px;
-}
-
-.navbar_icons {
-	list-style: none;
-	color: white;
+.navbar .navbar_sign ul {
+	margin: 0;
+	padding: 0;
 	display: flex;
-	padding-left: 0;
+	justify-content: center;
+	align-items: center;
 }
 
-.navbar_icons li {
-	padding: 8px 12px;
+.navbar .navbar_sign ul li {
+	list-style: none;
+	width: 60px;
+	text-align: center;
 }
 
-.navbar_toogleBtn {
-	display: none;
-	position: absolute;
-	right: 32px;
-	font-size: 24px;
-	color: #d49466;
+.navbar .navbar_sign ul li a {
+	margin: 10px;
+	font-size: 30px;
+	border-radius: 10px;
 }
 
-@media screen and (max-width: 760px) {
+.navbar .navbar_sign ul li a:hover {
+	background-color: #fff;
+}
+
+.navbar .navbar_sign ul li a:hover abbr .navbar_icon ion-icon{
+	color: #000;
+}
+
+@media screen and (max-width: 950px) {
 	.navbar {
-		flex-direction: column;
-		align-items: flex-start;
-		padding: 8px 24px
-	}
-	.navbar_menu {
-		display: none;
-		flex-direction: column;
-		align-items: center;
+		position: relative;
+		top: 0;
+		left: 0;
 		width: 100%;
-	}
-	.navbar_menu li {
-		width: 100%;
-		text-align: center;
-	}
-	.navbar_icons {
-		display: none;
-		justify-content: center;
-		width: 100%;
-	}
-	.navbar_toogleBtn {
-		display: block;
-	}
-	.navbar_menu.active, .navbar_icons.active {
+		height: 250px;
 		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		background-color: #000;
+	}
+	.navbar .navbar_logo a {
+		padding-left: 0;
+		font-size: 30px;
+	}
+	.navbar .navbar_menu ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.navbar .navbar_sign ul li a {
+		padding-right: 0;
+		font-size: 30px;
+	}
+	.navbar .navbar_menu ul li:hover {
+		background-color: #fff;
+		color: #000;
+	}
+	.navbar .navbar_menu ul li a {
+		padding: 0;
+		font-size: 20px;
+		border-radius: 0;
 	}
 }
