@@ -2,20 +2,33 @@ package com.project.todaygym;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.project.todaygym.dto.buyDto;
+import com.project.todaygym.service.buyService;
 
 import oracle.jdbc.proxy.annotation.GetProxy;
 
 @Controller
 public class buyController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	@Autowired
+	private buyService bServ;
+	private ModelAndView mv;
 	
+/////////////////////이동구간 Start///////////////////////
 	// 헬스구매상세페이지 이동
 	@GetMapping("bHealthDetail")
 	public String bHealthDetail() {
 		logger.info("bHealthDetail()");
+		
+		
 		return "buy/bHealthDetail";
 	}
 	// 헬스구매상세페이지2 이동
@@ -114,11 +127,8 @@ public class buyController {
 			logger.info("cartHome()");
 			return "cart/cartHome";
 	}
-	
-	
-	
-	
-	
+/////////////////////이동구간 End///////////////////////	
+
 	
 	
 	
