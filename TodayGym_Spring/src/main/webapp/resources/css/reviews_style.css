@@ -8,8 +8,8 @@ body{
 }
 
 .reivewfull{
-	position: absolute;
-	top: 83.2px;	
+	position: relative ;
+	top: 80px;	
 	width: 100%;
 	height: 100vh;
 	background-color: white;
@@ -34,7 +34,10 @@ body{
 	justify-content: center;
 	align-items: center;
 	list-style: none;
+}
 
+.review_menu button{
+	margin: 20px;
 }
 
 .menu_h{
@@ -109,4 +112,5 @@ a{
 table{
 	border-collapse: collapse;
 }
+
 
