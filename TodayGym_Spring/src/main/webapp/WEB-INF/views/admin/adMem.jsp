@@ -55,7 +55,7 @@
 										<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
 												value="${mb.m_joindate}" /></td>
 										<td>${mb.m_name}</td>
-										<td><a href="./adMemDetailMove" style="color: #000;">${mb.m_id}</a></td>
+										<td><a href="./adMemDetailMove?m_id=${mb.m_id}" style="color: #000;">${mb.m_id}</a></td>
 										<td>${mb.m_birth}</td>
 									</tr>
 								</c:forEach>

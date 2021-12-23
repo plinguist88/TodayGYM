@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dao.AdminMemDao;
 import com.project.todaygym.dto.MemberDto;
@@ -24,6 +25,7 @@ public class adMemService {
 	
 	private ModelAndView mv;
 	
+	//회원관리 이동 및 회원 리스트 출력
 	public ModelAndView getAdmemList(String m_id) {
 		mv = new ModelAndView();
 		
@@ -41,14 +43,29 @@ public class adMemService {
 		return mv;
 	}
 
+	//회원 상세정보 이동 및 출력
 	public ModelAndView getAdMemDetail(String m_id) {
 		mv = new ModelAndView();
 		
-		MemberDto md = adMDao.getMDetail(m_id);
+		MemberDto memdto = adMDao.getMDetail(m_id);
 		
-		mv.addObject("md", md);
+		mv.addObject("memdto", memdto);
 		
 		mv.setViewName("admin/adMemDetail");
+		
+		return mv;		
+	}
+	
+	//회원정보 수정 이동 및 출력
+	public ModelAndView adMemUpdate(String m_id,
+			RedirectAttributes rda) {
+		mv = new ModelAndView();
+		
+		MemberDto memdto = adMDao.getMDetail(m_id);
+		
+		mv.addObject("memdto", memdto);
+		
+		mv.setViewName("admin/adMemUpdate");
 		
 		return mv;
 	}

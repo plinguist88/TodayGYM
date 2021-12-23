@@ -21,11 +21,10 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 		<section>
-			<div class="content-admin">
-				<!-- 사이드 메뉴 
-				<jsp:include page="../layout/adSidebar.jsp" />
-				<div class="admin-overview"></div>	-->
-				<!-- 회원 총원 및 목록 -->
+			<div class="content-adminmem">
+				<div class="content-adSidebar">
+					<jsp:include page="../layout/adSidebar.jsp" />
+				</div>
 
 				<div class="content-admin-membox">
 					<div class="admem-table">
@@ -35,12 +34,12 @@
 								<tr>
 									<th>이름</th>
 									<td><input type="text" class="admem-up-write"
-											name="m_birth" autofocus placeholder="이름" 
-											value="${mb.m_name}" required></td>
+										name="m_birth" autofocus placeholder="이름" value="${memdto.m_name}"
+										required></td>
 								</tr>
 								<tr>
 									<th>가입일자</th>
-									<td>${mb.m_joindate}</td>
+									<td>${memdto.m_joindate}</td>
 								</tr>
 							</thead>
 						</table>
@@ -50,25 +49,25 @@
 								<thead>
 									<tr>
 										<th>아이디</th>
-										<td>${mb.m_id}</td>
+										<td>${memdto.m_id}</td>
 									</tr>
 									<tr>
 										<th>생년월일</th>
 										<td><input type="text" class="admem-up-write"
-											name="m_birth" autofocus placeholder="생년월일" 
-											value="${mb.m_birth}" required></td>
+											name="m_birth" autofocus placeholder="생년월일"
+											value="${memdto.m_birth}" required></td>
 									</tr>
 									<tr>
 										<th>연락처</th>
 										<td><input type="text" class="admem-up-write"
-											name="m_birth" autofocus placeholder="연락처" 
-											value="${mb.m_phone}" required></td>
+											name="m_birth" autofocus placeholder="연락처"
+											value="${memdto.m_phone}" required></td>
 									</tr>
 									<tr>
 										<th>E-mail</th>
 										<td><input type="text" class="admem-up-write"
-											name="m_birth" autofocus placeholder="E-mail" 
-											value="${mb.m_email}" required></td>
+											name="m_birth" autofocus placeholder="E-mail"
+											value="${memdto.m_email}" required></td>
 									</tr>
 									<tr>
 										<th>보유 회원권</th>
@@ -76,17 +75,17 @@
 									</tr>
 									<tr>
 										<th>보유 포인트</th>
-										<td>${mb.m_point}</td>
+										<td>${memdto.m_point}</td>
 									</tr>
 								</thead>
 							</table>
 						</div>
 					</div>
-					
+
 					<!-- 수정 완료 버튼 -->
 					<div class="admem-btnarea">
 						<button class="admem-btnarea-upendbtn">
-						<a href="">수정 완료</a>
+							<a href="">수정 완료</a>
 						</button>
 					</div>
 				</div>
