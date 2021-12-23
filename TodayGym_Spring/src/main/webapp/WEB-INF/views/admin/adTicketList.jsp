@@ -44,7 +44,7 @@
 					<!-- List Contents -->
 					<tbody>
 						<tr>
-							<td><a href="adTicketDetailMove.ad">T001</a></td>
+							<td><a href="adTicketDetailMove.ad" class="ticketNum">T001</a></td>
 							<td><a href="#">유저A</a></td>
 							<td>헬스</td>
 							<td><a href="#">빡빡이와 함께하는 해피헬스</a></td>
@@ -73,5 +73,9 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript">
+	
+		
+	</script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* Home */
+
 body {
 	margin: 0;
 	padding: 0;
@@ -18,6 +20,19 @@ body {
 .content_main video {
 	width: 100%;
 	background-size: cover;
+}
+
+/* Responsive Home */
+@media screen and (max-width: 1450px) {
+	.content_main {
+		position: relative;
+		top: 0;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		z-index: 0;
+	}
 }
 
 @media screen and (max-width: 950px) {

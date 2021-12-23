@@ -9,7 +9,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+	rel="stylesheet">
 
 <link type="text/css" rel="stylesheet"
 	href="resources/css/layout/welcome_style.css">
@@ -17,16 +19,45 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-	<div class="content">
-		<div class="textBox">
-			<h1>TODAY GYM</h1>
+	<div class="container">
+		<div class="content">
+			<a href="home"><h1>TODAY GYM</h1></a>
 			<p>Start of exercise TODAY GYM</p>
-			<a href="home">Let`s Go!!</a>
-			<br>
-			<br>
-			<br>
+			<div class="time">
+				<div>
+					<span class="hour">00</span> <span>Hours</span>
+				</div>
+				<div>
+					<span class="minute">00</span> <span>Minutes</span>
+				</div>
+				<div>
+					<span class="second">00</span> <span>Seconds</span>
+				</div>
+			</div>
+			<br> <br> <br> <br> <br> <br> <br>
 			<a href="adMainMove.ad">임시링크 : 관리자</a>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function clock() {
+			const hour = document.getElementsByClassName('hour');
+			const minute = document.getElementsByClassName('minute');
+			const second = document.getElementsByClassName('second');
+
+			let time = new Date();
+
+			let h = time.getHours();
+			let m = time.getMinutes();
+			let s = time.getSeconds();
+
+			hour[0].innerHTML = h;
+			minute[0].innerHTML = m;
+			second[0].innerHTML = s;
+
+			console.log(h + ':' + m + ':' + s);
+		}
+
+		setInterval(clock, 1000);
+	</script>
 </body>
 </html>

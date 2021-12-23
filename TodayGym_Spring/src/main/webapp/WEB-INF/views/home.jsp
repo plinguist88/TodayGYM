@@ -18,7 +18,7 @@
 	</header>
 	<div class="content_main">
 		<video autoplay="true" loop="true" muted="muted">
-			<source src="resources/videos/mains.mp4" type="video/mp4">
+			<source src="resources/videos/home.mp4" type="video/mp4">
 		</video>
 	</div>
 	<footer>

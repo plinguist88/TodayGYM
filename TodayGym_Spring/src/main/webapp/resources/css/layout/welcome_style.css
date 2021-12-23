@@ -1,70 +1,91 @@
 @charset "UTF-8";
 
-body{
-    margin: 0;
-    padding: 0;
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-/* 
-body::before{
-	content: "";
-   
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    
-    opacity: 0.5;
-} 
-*/
 
-.content{
+.container {
 	width: 100%;
 	height: 100vh;
-	
-	background-image: url("../../../resources/img/home/welcome.jpg");
-    background-size: cover;
-    
-    display: flex;
-	justify-content: center;
-	align-items: center;
-
+	text-align: center;
+	background-color: #000;
 }
-.content .textBox{
+
+.content {
+	position: relative;
+	top: 30%;
+	display: flex;
+	flex-direction: column; justify-content : center;
+	align-items: center;
+	justify-content: center;
+}
+
+.content a {
+	position: relative;
+	text-decoration: none;
+	font-size: 30px;
+	color: #fff;
+}
+
+.content a h1 {
+	margin: 0;
+	font-family: 'Pacifico', cursive;
+	font-size: 50px;
+	color: #fff;
+}
+
+.content a h1:hover{
+	padding: 0 10px;
+	border-left: 5px double #fff;
+	border-right: 5px double #fff;
+	border-radius: 10px;
+	
+	box-sizing: border-box;
+}
+
+.content p {
+	margin: 0;
+	font-size: 30px;
+	color: #fff;
+}
+
+.content .time {
+	margin: 10px;
+	display: flex;
+}
+
+.content .time div {
+	position: relative;
+	margin: 0 10px;
+	-webkit-box-reflect: below 0 linear-gradient(transparent, #0008);
+}
+
+.content .time div span {
+	position: relative;
+	display: block;
+	width: 200px;
+	height: 100px;
+	background-color: #fff;
+	color: #000;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
-	flex-wrap: wrap;
-	flex-direction: column;
-	
-	border: 5px solid #000;
-	border-radius: 20px;
-	
-	background-color: #e6e6e6;
-	
-	padding: 10px;
+	font-size: 100px;
+	border-bottom: 1px solid #000;
 }
 
-.content .textBox h1{
-	margin: 0;
-	
-	font-family: 'Pacifico', cursive;
-	font-size: 50px;
-	
-	color: #000;
+.content .time div:nth-child(2) span {
+	background-color: #3366ff;
 }
 
-.content .textBox p{
-	margin: 0;
-	
+.content .time div:last-child span {
+	background-color: #ff0066;
+}
+
+.content .time div span:nth-child(2) {
+	height: 50px;
 	font-size: 30px;
-}
-
-.content .textBox a{
-	text-decoration: none;
-	
-	font-size: 30px;
-	
-	color: #0055ff;
+	opacity: 0.8;
 }
