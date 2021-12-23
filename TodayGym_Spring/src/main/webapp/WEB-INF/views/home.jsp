@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Test</title>
+<title>TodayGYM Home</title>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/layout/home_style.css">
 <script
