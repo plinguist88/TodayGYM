@@ -33,7 +33,7 @@ public class MyInfoController {
 		mv = myServ.getMyInfo();
 
 		return mv;
-	} // myInfoUpdateMove end
+	} // myInfoMove end
 
 	//__________ 회원정보 수정 실행
 	@PostMapping("myInfoUpdateProc")
@@ -53,7 +53,7 @@ public class MyInfoController {
 		logger.info("myPasswordMove()");
 
 		return "myinfo/myPassword";
-	} // myPwdUpdateMove end
+	} // myPasswordMove end
 
 	//__________ 현재 비밀번호 확인
 	@PostMapping(value = "prePwdCheck",
@@ -75,7 +75,7 @@ public class MyInfoController {
 		String view = myServ.myPwdUpdate(myInfo, rttr);
 
 		return view;
-	} // myInfoUpdateProc end
+	} // myPwdUpdateProc end
 	
 	//________________________________________ 수강내역
 
@@ -97,7 +97,7 @@ public class MyInfoController {
 		logger.info("myResignMove()");
 		
 		return "myinfo/myResign";
-	} // myClassMove end
+	} // myResignMove end
 	
 	//__________ 회원탈퇴 실행
 	@PostMapping("myResignProc")
