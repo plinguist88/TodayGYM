@@ -30,7 +30,7 @@
 						<%-- 우측 페이지 상세내용 --%>
 						<div class="myPage-myClass-contents-null">
 							<div class="myClass-contents">
-								<p>수강내역이 없습니다.</p>
+								<div>수강내역이 없습니다.</div>
 							</div>
 						</div>
 						<div class="myPage-myClass-contents">

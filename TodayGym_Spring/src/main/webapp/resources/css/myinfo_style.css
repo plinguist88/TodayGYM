@@ -14,37 +14,40 @@ li {
 	list-style: none;
 }
 
-/******************************** myPageSide area ******************************/
 .content-myPage {
-	height: 900px;
+	height: 800px;
+	padding: 100px 0 100px 0;
 	background-color: #FFFFFF;
 }
 
 .myPage-form {
 	width: 1200px;
-	height: 100%;
+	height: 800px;
 	margin: 0 auto;
-	padding: 100px 0 50px 0;
 }
 
+/******************************** myPageSide area ******************************/
 .myPage-list {
 	float: left;
-	width: 300px;
-	height: 100%;
+	width: 298px;
+	height: 800px;
 }
 
 .myPage-list-user {
 	width: 298px;
-	height: 298px;
-	margin-bottom: 3px;
+	height: 300px;
+	padding: 20px 20px;
 	border: 1px solid gray;
+	box-sizing: border-box;
 }
 
 .myPage-list-contents {
 	width: 298px;
-	height: 449px;
+	height: 495px;
+	margin-top : 5px;
 	padding: 20px 20px;
 	border: 1px solid gray;
+	box-sizing: border-box;
 }
 
 .myPage-list-contents ul li {
@@ -72,12 +75,12 @@ li {
 
 /******************************** myInfo area ******************************/
 .myPage-myInfoUpdate {
-	float: left;
+	float: right;
 	width: 898px;
-	height: 100%;
-	margin: 0 auto;
-	padding: 80px 80px;
+	height: 800px;
+	padding: 30px 30px;
 	border: 1px solid gray;
+	box-sizing: border-box;
 }
 
 .myPage-myInfoUpdate-title {
@@ -98,6 +101,7 @@ li {
 	font-size: 20px;
 	line-height: 50px;
 	border: 1px solid black;
+	box-sizing: border-box;
 }
 
 .myInfo-contents-btn {
@@ -112,16 +116,18 @@ li {
 	line-height: 50px;
 	text-align: center;
 	border: 1px solid black;
+	box-sizing: border-box;
 	
 }
 
 /******************************** myPassword area ******************************/
 .myPage-myPwdUpdate {
-	float: left;
+	float: right;
 	width: 898px;
-	height: 100%;
-	padding: 80px 80px;
+	height: 800px;
+	padding: 30px 30px;
 	border: 1px solid gray;
+	box-sizing: border-box;
 }
 
 .myPage-myPwdUpdate-title {
@@ -142,6 +148,7 @@ li {
 	font-size: 20px;
 	line-height: 50px;
 	border: 1px solid black;
+	box-sizing: border-box;
 }
 
 .contents-prePwdCheck {
@@ -168,16 +175,17 @@ li {
 	line-height: 50px;
 	text-align: center;
 	border: 1px solid black;
+	box-sizing: border-box;
 }
 
 /******************************** myClass area ******************************/
 .myPage-myClass {
-	float: left;
+	float: right;
 	width: 898px;
-	height: 100%;
-	margin: 0 auto;
-	padding: 80px 80px;
+	height: 800px;
+	padding: 30px 30px;
 	border: 1px solid gray;
+	box-sizing: border-box;
 }
 
 .myPage-myClass-title {
@@ -229,6 +237,7 @@ li {
 	font-size: 16px;
 	line-height: 70px;
 	border: 1px solid black;
+	box-sizing: border-box;
 }
 
 .contents-info-item {
@@ -239,15 +248,17 @@ li {
 	font-size: 16px;
 	line-height: 70px;
 	border: 1px solid black;
+	box-sizing: border-box;
 }
 
 /******************************** myResign area ******************************/
 .myPage-myResign {
-	float: left;
+	float: right;
 	width: 898px;
-	height: 100%;
-	padding: 80px 80px;
+	height: 800px;
+	padding: 30px 30px;
 	border: 1px solid gray;
+	box-sizing: border-box;
 }
 
 .myPage-myResign-title {
@@ -267,6 +278,7 @@ li {
 	padding: 30px 30px;
 	font-size: 16px;
 	border: 1px solid black;
+	box-sizing: border-box;
 }
 
 .myPage-myResign-contents {
@@ -283,6 +295,7 @@ li {
 	font-size: 20px;
 	line-height: 50px;
 	border: 1px solid black;
+	box-sizing: border-box;
 }
 
 .myResign-contents-btn {
@@ -299,6 +312,7 @@ li {
 	line-height: 50px;
 	text-align: center;
 	border: 1px solid black;
+	box-sizing: border-box;
 }
 
 .myResign-contents {
@@ -309,6 +323,7 @@ li {
 	font-size: 20px;
 	line-height: 50px;
 	border: 1px solid black;
+	box-sizing: border-box;
 }
 
 .contents-resignPwdCheck {
@@ -327,5 +342,6 @@ li {
 	line-height: 50px;
 	text-align: center;
 	border: 1px solid black;
+	box-sizing: border-box;
 	
 }
