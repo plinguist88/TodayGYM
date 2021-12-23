@@ -53,7 +53,7 @@ public class MyInfoService {
 		String getId = (String)session.getAttribute("id");
 		MemberDto getMyInfo = mDao.memberSelect(getId);
 		
-		// Servlet 저장 구역
+		// JSP 페이지 데이터 전송
 		mv.addObject("myInfo", getMyInfo);
 		mv.setViewName("myinfo/myInfo");
 
@@ -80,16 +80,16 @@ public class MyInfoService {
 		myInfo.setM_joindate(getJoin);
 		myInfo.setM_point(getPoint);
 		
-		// Servlet 저장 구역
+		// JSP 페이지 데이터 전송
 		try {
 			//mDao.myInfoUpdate(myInfo);
 			view = "redirect:myInfo";
-			alert = "회원정보 수정 성공!";
+			alert = "회원정보를 업데이트 했습니다!";
 
 		} catch (Exception e) {
 			//e.printStackTrace();
 			view = "redirect:myInfo";
-			alert = "회원정보 수정 실패!";
+			alert = "회원정보 업데이트를 실패 했습니다.! 관리자에게 문의하세요";
 		}
 
 		rttr.addFlashAttribute("alert", alert);
@@ -111,7 +111,7 @@ public class MyInfoService {
 		// Database 연동 구역
 		String getPrePwd = mDao.pwdSelect(getId);
 		
-		// Servlet 저장 구역
+		// JSP 페이지 데이터 전송
 		if(pwdEnc.matches(prePwd, getPrePwd)) {
 			result = "true";
 		} // if end
@@ -138,17 +138,17 @@ public class MyInfoService {
 		
 		myPwd.setM_pw(getPwdEnc);
 		
-		// Servlet 저장 구역
+		// JSP 페이지 데이터 전송
 		try {
 			
 			//mDao.myPwdUpdate(getId);
 			view = "redirect:myInfo";
-			alert = "비밀번호 변경 성공!";
+			alert = "비밀번호를 변경 했습니다.";
 			
 		} catch (Exception e) {
 			//e.printStackTrace();
 			view = "redirect:myPassword";
-			alert = "비밀번호 변경 실패!";
+			alert = "비밀번호 변경을 실패 했습니다.! 관리자에게 문의하세요";
 			
 		}
 		
@@ -177,7 +177,7 @@ public class MyInfoService {
 		
 		String myClassPageHtml = getMyClassPaging(num);
 		
-		// Servlet 저장 구역
+		// JSP 페이지 데이터 전송
 		mv.addObject("myClass", myClassList);		
 		mv.addObject("myClassPage", myClassPageHtml);
 		mv.setViewName("myinfo/myClass");
@@ -215,20 +215,21 @@ public class MyInfoService {
 		// Database 연동 구역
 		String getId = (String)session.getAttribute("id");
 		
+		// JSP 페이지 데이터 전송
 		try {
 			// mDao.myAccountDelete(getId);
 			session.invalidate();
 			
 			view = "redirect:/";
-			alert ="회원탈퇴에 성공 했습니다. 이용해 주셔서 감사합니다.";
+			alert ="회원탈퇴를 했습니다. 이용해 주셔서 감사합니다.";
 			
 		} catch (Exception e) {
 			//e.printStackTrace();
 			view = "redirect:myResign";
-			alert ="회원탈퇴에 실패 했습니다. 관리자에게 문의하세요.";
+			alert ="회원탈퇴에 실패 했습니다. 관리자에게 문의하세요.!";
 			
 		}
-		
+
 		rttr.addFlashAttribute("alert", alert);
 		
 		return view;
