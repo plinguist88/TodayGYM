@@ -1,23 +1,33 @@
 @charset "UTF-8";
 
-/******************************** home area ******************************/
-
-header {
-	position: sticky;
-	top: 0px;
-}
-
-
-.content-home {
-	height: auto;
-	border: 1px solid red;
-	box-sizing: border-box;
+body {
+	margin: 0;
+	padding: 0;
+	
 	background-color: #000;
 }
 
-
-
-video{
-	background-size: cover;
+.content_main {
+	position: relative;
+	top: 0;
+	left: 0;
 	width: 100%;
+	z-index: 0;
+}
+
+.content_main video {
+	width: 100%;
+	background-size: cover;
+}
+
+@media screen and (max-width: 950px) {
+	.content_main {
+		position: relative;
+		top: 0;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		z-index: 0;
+	}
 }
