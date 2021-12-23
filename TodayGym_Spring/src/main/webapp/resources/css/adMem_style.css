@@ -1,8 +1,23 @@
 @charset "UTF-8";
 
-/******************************** admin area ******************************/
-.wrap {
-	background-color: #fff;
+/* Common */
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.content-admin{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	background: #fff;
+}
+
+.content{
+	width: 100%;
+	height: 100vh;
+	background: #fcfcfc;
 }
 
 .content-adminmem {
@@ -13,12 +28,29 @@
 	text-align: center;
 }
 
-.admem-table {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	text-align: center;
+.admem-table-total{
+	position: relative;
+	top: 60px;
+	width: 80%;
+	heigth: 100vh;
+	margin: auto;
+	border-collapse: collapse;
+}
+.admem-table-mlist{
+	position: relative;
+	top: 60px;
+	width: 80%;
+	heigth: 100vh;
+	margin: 20px;
+	border-collapse: collapse;
+}
+.admem-table-search{
+	position: relative;
+	top: 60px;
+	width: 80%;
+	heigth: 100vh;
+	margin: 20px;
+	border-collapse: collapse;
 }
 
 th {

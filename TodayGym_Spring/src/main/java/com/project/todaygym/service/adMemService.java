@@ -30,7 +30,9 @@ public class adMemService {
 	
 	private ModelAndView mv;
 	
-	//회원관리 이동 및 회원 리스트 출력
+	private int listCnt = 10;
+	
+	//회원관리 이동 및 회원 리스트 출력	
 	public ModelAndView getAdmemList(String m_id) {
 		mv = new ModelAndView();
 		

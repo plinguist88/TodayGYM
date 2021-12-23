@@ -12,6 +12,10 @@
 		ORDER BY m_name
 	</select>
 	
+	<select id="getMemCnt" resultType="Integer">
+		SELECT COUNT(*) FROM MEMBER_TB
+	</select>
+	
 	<select id="getMDetail" parameterType="String"
 		resultType="com.project.todaygym.dto.MemberDto">
 		SELECT * FROM MEMBER_TB WHERE m_id = #{m_id}
