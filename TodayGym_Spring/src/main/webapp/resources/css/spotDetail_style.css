@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.img_spcae{
+	margin-top: 60px;
+}
+
+.img_gray{
+	position: absolute;
+	top: 60px;
+	
+	width: 100%;
+	height: 500px;
+}
+
+.img_sub{
+	position: absolute;
+	top: 18%;
+	
+	width: 100%;
+	height: 500px;
+	
+	text-align: center;
+}
+
+.img_sub h1{
+	font-size: 52px;
+	color: white;
+}
+.img_sub p{
+	color: white;
+	font-size: 30px;
+	margin-top: 100px;
+}

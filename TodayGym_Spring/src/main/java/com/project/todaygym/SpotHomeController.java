@@ -18,5 +18,13 @@ public class SpotHomeController{
 		return "spot/spotHome";
 	}
 	
+	//spotDetail 페이지로 이동
+	@GetMapping("spotDetail")
+	public String spotDetail() {
+		logger.info("spotDetail()");
+		
+		return "spot/spotDetail";
+	}
+	
 	
 }
