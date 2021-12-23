@@ -29,7 +29,7 @@
 		<div class="sub_image">
 			<image class="gray_image" src="resources/img/spot/gray.jpg">
 			<div class="sub_content">
-				<h1>회원가입</h1>
+				<h1>JOIN</h1>
 			</div>
 		</div>
 
@@ -37,7 +37,6 @@
 			<div class="content">
 				<form name="joinFrm" class="login-form" action="./memInsert"
 					method="post" onsubmit="return check()">
-					<h2 class="login-header">회원 가입</h2>
 					<input type="text" class="login-input" id="mid" title="아이디"
 						name="m_id" autofocus placeholder="아이디"> <input
 						type="button" class="idcheck-btn" value="중복확인" onclick="idcheck()">

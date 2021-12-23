@@ -17,6 +17,7 @@ body{
 
 .sub_image{
  margin-top: 60px;
+ height: 350px;
 }
 .sub_image img{
 	width:100%;
