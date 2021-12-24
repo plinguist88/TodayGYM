@@ -20,120 +20,79 @@ body{
 	background: #fcfcfc;
 }
 
-.content-adminmem {
-	margin-top: 60px;
-	height: auto;
-	display: flex;
-	justify-content: center;
-	text-align: center;
+/*adMem area*/
+.content-admem {
+	max-width: 80%;
+	margin: 30px 10% 30px 10%;
 }
 
 .admem-table-total{
+	margin: 20px;
+	background-color: #0c0c0c;
 	position: relative;
 	top: 60px;
-	width: 80%;
-	heigth: 100vh;
-	margin: auto;
-	border-collapse: collapse;
+	border: 2px solid #000;
 }
+
+.admem-table-total th{
+	color: #fff;
+	width: 40%;
+	margin: 0;
+}
+
+.admem-table-total td{
+	background-color: #fcfcfc;
+	border: 2px inset #fcfcfc;
+	text-align: center;
+	width: 60%;
+	margin: 0;
+}
+
 .admem-table-mlist{
 	position: relative;
 	top: 60px;
 	width: 80%;
 	heigth: 100vh;
 	margin: 20px;
-	border-collapse: collapse;
-}
-.admem-table-search{
-	position: relative;
-	top: 60px;
-	width: 80%;
-	heigth: 100vh;
-	margin: 20px;
-	border-collapse: collapse;
-}
-
-th {
+	border: 2px solid #000;
 	background-color: #000;
-	color: #fff;
-	border-radius: 2px;
-	border: 1px solid #000;
-	margin: 0px;
-	width: 300px;
 }
 
-td {
-	background-color: #fff;
-	border-radius: 3px;
-	border: 2px inset #fff;
+.admem-table-mlist th{
+	color: #fcfcfc;
+	border: outset;
+}
+
+.admem-table-mlist td{
+	background-color: #fcfcfc;
+	border: 2px inset #fcfcfc;
 	margin: 0;
-	width: 500px;
 }
 
-
-/********************************* adMem area*************************************/
-.content-admin-membox {
-	background-color: #fff;
-	border-radius: 5px;
-	border: 2px solid #000;
-	margin: 20px 40px 20px 40px;
-	padding: 10px;
-	height: 800px;
+.admem-dtbtn{
+	width: 100%;
+	color: #fcfcfc;
+	background-color: #000;
+	font-weight: bold;
+	font-size: medium;
 }
 
-.admem-table-total {
-	background-color: #fff;
-	border-radius: 5px;
-	color: #000;
-	border: 2px solid #000;
-	padding: 0;
-	width: 700px;
+.s-box{
+	position: relative;
+	margin: 20px;
+	top: 60px;
 }
 
-.admem-table-list {
-	background-color: #fff;
-	border-radius: 5px;
-	color: #000;
-	border: 2px solid #000;
-	padding: 0px;
-	width: 700px;
-}
-
-.admin-member-search {
+.s-selbar{
 	height: 30px;
-	width: 500px;
-	border: 1px solid #000;
-	border-radius: 3px;
 }
 
-.addata-search-selbar {
-	width: 60px;
-	height: 100%;
-	border: 0px;
-	background: #000;
-	outline: none;
-	float: left;
-	color: #fff
+.s-txtbar{
+	height: 25px;
 }
 
-.addata-search-txtbar {
-	font-size: 15px;
-	width: 300px;
-	padding: 2px;
-	margin: 2px;
-	border: 0px;
-	outline: none;
-	float: left;
-}
-
-.addata-search-btn {
-	width: 50px;
-	height: 100%;
-	border: 0px;
-	background: #000;
-	outline: none;
-	float: right;
-	color: #fff;
+.s-btn{
+	height: 30px;
 }
 
 /***********************************adMemDetail area*****************************************/
