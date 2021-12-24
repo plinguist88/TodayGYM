@@ -88,7 +88,7 @@
 				if (result == "true") {
 					$(".contents-resignPwdCheck").text("비밀번호를 확인 했습니다.");
 					$(".contents-resignPwdCheck").css("color", "blue");
-					
+					console.log(result);
 					prePwdCheck = true;
 				} // if end
 

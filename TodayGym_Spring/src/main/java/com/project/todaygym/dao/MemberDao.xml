@@ -25,4 +25,29 @@
 		SELECT * FROM M WHERE m_id=#{id}
 	</select>
 	
+	
+	
+	
+	
+	
+	<!-- myInfo area -->
+	<!-- 회원정보 수정 -->
+	<update id="myInfoUpdate" parameterType="com.project.todaygym.dto.MemberDto">
+		UPDATE M SET
+		m_name=#{m_name}, m_email=#{m_email}, m_phone=#{m_phone}, m_birth=#{m_birth}
+		WHERE m_id=#{m_id}
+	</update>
+	
+	<!-- 비밀번호 변경 -->
+	<update id="myPwdUpdate" parameterType="com.project.todaygym.dto.MemberDto">
+		UPDATE M SET
+		m_pw=#{m_pw}
+		WHERE m_id=#{m_id}
+	</update>
+	
+	<!-- 회원탈퇴 실행 -->
+	<delete id="myAccountDelete" parameterType="String">
+		DELETE FROM M WHERE m_id=#{getId}
+	</delete>
+	
 </mapper>

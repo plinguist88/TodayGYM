@@ -58,6 +58,19 @@
 								<hr>
 							</c:forEach>
 						</div>
+						<div class="myOrder-contents-user">
+							<div class="contents-user-title">
+								<b>주문자 정보</b>
+							</div>
+							<div class="contents-user-info">
+								<div class="user-info">
+									<div class="info-name">이름 : ${myInfo.m_id}</div>
+									<div class="info-email">이메일 : ${myInfo.m_email}</div>
+									<div class="info-phone">전화번호 : ${myInfo.m_phone}</div>
+								</div>
+								<div class="user-info-payment"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

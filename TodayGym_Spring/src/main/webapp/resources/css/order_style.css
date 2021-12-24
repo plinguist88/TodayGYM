@@ -17,7 +17,7 @@ li {
 
 /******************************** orderHome area ******************************/
 .content-myOrder {
-	height: 1500px;
+	height: 1200px;
 	background-color: #FFFFFF;
 }
 
@@ -93,37 +93,80 @@ li {
 /******************************** myOrder-contents-orderlist area */
 .myOrder-contents-orderlist {
 	width: 1200px;
-	height: 150px;
+	height: auto;
+	margin-bottom: 30px;
 }
 
 .contents-orderlist-cate {
 	float:left;
 	width: 200px;
-	height: 150px;
-	line-height: 150px;
+	height: 100px;
+	line-height: 100px;
 	text-align: center;
 }
 
 .contents-orderlist-title {
 	float:left;
 	width: 500px;
-	height: 150px;
-	line-height: 150px;
+	height: 100px;
+	line-height: 100px;
 	text-align: center;
 }
 
 .contents-orderlist-term {
 	float:left;
 	width: 250px;
-	height: 150px;
-	line-height: 150px;
+	height: 100px;
+	line-height: 100px;
 	text-align: center;
 }
 
 .contents-orderlist-price {
 	float:left;
 	width: 250px;
-	height: 150px;
-	line-height: 150px;
+	height: 100px;
+	line-height: 100px;
 	text-align: center;
 }
+
+/******************************** myOrder-contents-user area */
+.myOrder-contents-user {
+	width: 1200px;
+	height: 150px;
+}
+
+.contents-user-title {
+	width: 1200px;
+	height: 100px;
+	font-size: 30px;
+	line-height: 100px;
+}
+
+.contents-user-info {
+	width: 1200px;
+	height: 100px;
+}
+.user-info-name {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.user-info-email {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.user-info-phone {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 1px solid black;
+}
+

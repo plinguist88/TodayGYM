@@ -82,7 +82,7 @@ public class MyInfoService {
 		
 		// JSP 페이지 데이터 전송
 		try {
-			//mDao.myInfoUpdate(myInfo);
+			mDao.myInfoUpdate(myInfo);
 			view = "redirect:myInfo";
 			alert = "회원정보를 업데이트 했습니다!";
 
@@ -125,7 +125,7 @@ public class MyInfoService {
 	
 	//__________ 비밀번호 변경 실행
 	@Transactional
-	public String myPwdUpdate(MemberDto myPwd, RedirectAttributes rttr) {
+	public String myPwdUpdate(MemberDto myInfo, RedirectAttributes rttr) {
 		
 		// 변수 선언 및 초기화
 		String view = null;
@@ -134,19 +134,20 @@ public class MyInfoService {
 		
 		// Database 연동 구역
 		String getId = (String)session.getAttribute("id");
-		String getPwdEnc = pwdUpdateEnc.encode(myPwd.getM_pw());
+		String getPwdEnc = pwdUpdateEnc.encode(myInfo.getM_pw());
 		
-		myPwd.setM_pw(getPwdEnc);
+		myInfo.setM_id(getId);
+		myInfo.setM_pw(getPwdEnc);
 		
 		// JSP 페이지 데이터 전송
 		try {
 			
-			//mDao.myPwdUpdate(getId);
+			mDao.myPwdUpdate(myInfo);
 			view = "redirect:myInfo";
 			alert = "비밀번호를 변경 했습니다.";
 			
 		} catch (Exception e) {
-			//e.printStackTrace();
+			e.printStackTrace();
 			view = "redirect:myPassword";
 			alert = "비밀번호 변경을 실패 했습니다.! 관리자에게 문의하세요";
 			
@@ -166,6 +167,7 @@ public class MyInfoService {
 		// 변수 선언 및 초기화
 		mv = new ModelAndView();
 		
+		/*
 		int num = (pageNum == null) ? 1 : pageNum;
 		
 		// Database 연동 구역
@@ -180,6 +182,8 @@ public class MyInfoService {
 		// JSP 페이지 데이터 전송
 		mv.addObject("myClass", myClassList);		
 		mv.addObject("myClassPage", myClassPageHtml);
+		*/
+		
 		mv.setViewName("myinfo/myClass");
 				
 		return mv;
@@ -203,6 +207,23 @@ public class MyInfoService {
 	
 	//________________________________________ 회원탈퇴
 
+	//__________ 회원탈퇴 페이지
+	public ModelAndView getMyResign() {
+		
+		// 변수 선언 및 초기화
+		mv = new ModelAndView();
+		String getId = (String)session.getAttribute("id");
+		
+		// Database 연동 구역
+		MemberDto getMyInfo = mDao.memberSelect(getId);
+		
+		// JSP 페이지 데이터 전송
+		mv.addObject("myInfo", getMyInfo);
+		mv.setViewName("myinfo/myResign");
+
+		return mv;
+	} // getMyInfo end
+	
 	//__________ 회원탈퇴 실행
 	
 	@Transactional
@@ -217,7 +238,7 @@ public class MyInfoService {
 		
 		// JSP 페이지 데이터 전송
 		try {
-			// mDao.myAccountDelete(getId);
+			mDao.myAccountDelete(getId);
 			session.invalidate();
 			
 			view = "redirect:/";
