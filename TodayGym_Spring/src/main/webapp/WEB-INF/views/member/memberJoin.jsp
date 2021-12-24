@@ -35,14 +35,16 @@
 
 		<section>
 			<div class="content">
-				<form name="joinFrm" class="login-form" action="./memInsert" method="post" onsubmit="return check()">
+				<form name="joinFrm" class="login-form" action="./memInsert"
+					method="post" onsubmit="return check()">
+					<h2 class="login-header">회원 가입</h2>
+					
 					<input type="text" class="login-input" id="mid" title="아이디" name="m_id" autofocus placeholder="아이디"> 
 					<input type="button" class="idcheck-btn" value="중복확인" onclick="idcheck()">
-					<input type="password" class="login-input" title="비밀번호" name="m_pw" placeholder="비밀번호"> 
-					<input type="password" class="login-input" title="비밀번호 확인" name="m_pw" placeholder="비밀번호 확인">
+					<input type="password" id="pw1" class="login-input" title="비밀번호" name="m_pw" placeholder="비밀번호">
 					<input type="text" class="login-input" title="이름" name="m_name" placeholder="이름"> 
 					<input type="text" class="login-input" title="이메일" name="m_email" placeholder="메일 ex)asd@gmail.com"> 
-					<input type="text" class="login-input" title="연락처" name="m_phone" placeholder="연락처">
+					<input type="text" class="login-input" title="연락처" name="m_phone" placeholder="연락처"> 
 					<input type="text" class="login-input" title="생일" name="m_birth" placeholder="생일 ex)930101"> 
 					<input type="submit" class="login-btn" value="가입">
 				</form>
