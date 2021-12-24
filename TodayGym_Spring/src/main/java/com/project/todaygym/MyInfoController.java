@@ -93,10 +93,12 @@ public class MyInfoController {
 
 	//__________ 회원탈퇴 페이지
 	@GetMapping("myResign")
-	public String myResignMove() {
+	public ModelAndView myResignMove() {
 		logger.info("myResignMove()");
 		
-		return "myinfo/myResign";
+		mv = myServ.getMyResign();
+		
+		return mv;
 	} // myResignMove end
 	
 	//__________ 회원탈퇴 실행
@@ -107,6 +109,6 @@ public class MyInfoController {
 		String view = myServ.myAccountResign(myResign, rttr);
 
 		return view;
-	} // myInfoResignProc end
+	} // myResignProc end
 
 } // class end
