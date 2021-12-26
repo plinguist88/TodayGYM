@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +23,7 @@
 				<jsp:include page="../layout/adSidebar.jsp" />
 			</div>
 			<div class="content">
-<!-- Admin Spot List Start  -->
+				<!-- Admin Spot List Start  -->
 				<table class="listTable">
 					<!-- Spot List Title -->
 					<thead>
@@ -42,20 +43,15 @@
 					</thead>
 					<!-- Spot List Contents -->
 					<tbody>
-						<tr>
-							<td><a href="#">S001</a></td>
-							<td><a href="#">인천연수점</a></td>
-							<td>032-123-5678</td>
-							<td><a href="#">인천 연수구 새말로107번길 16 영남스포츠센터</a></td>
-							<td><a href="#"><button class="button detail">상세정보</button></a></td>
-						</tr>
-						<tr>
-							<td>S002</td>
-							<td>인천부평점</td>
-							<td>032-987-6543</td>
-							<td>인천 부평구 체육관로 60 삼산월드체육관</td>
-							<td><a href="#"><button class="button detail">상세정보</button></a></td>
-						</tr>
+						<c:forEach items="${sList}" var="sList">
+							<tr>
+								<td><a href="#">${sList.s_code}</a></td>
+								<td><a href="#">${sList.s_name}</a></td>
+								<td>${sList.s_phone}</td>
+								<td><a href="#">${sList.s_addr}</a></td>
+								<td><a href="#"><button class="button detail">상세정보</button></a></td>
+							</tr>
+						</c:forEach>
 					</tbody>
 					<!-- Spot List Search -->
 					<tfoot>
@@ -66,7 +62,7 @@
 						</tr>
 					</tfoot>
 				</table>
-<!-- Admin Spot List End  -->
+				<!-- Admin Spot List End  -->
 			</div>
 		</div>
 	</div>

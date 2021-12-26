@@ -2,22 +2,37 @@ package com.project.todaygym;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.project.todaygym.service.AdSpotListService;
 
 @Controller
 public class AdminSpotController {
 
 	private final Logger Logger = LoggerFactory.getLogger(AdminSpotController.class);
 	
+	private ModelAndView mv;
+	
+	@Autowired
+	private AdSpotListService adSpotListService;
+	
 	//지점 관리로 이동
 	@GetMapping("adSpotMove.ad")
-	public String adSpotMove() {
+	public ModelAndView adSpotMove() {
 		Logger.info("adSpotMove()");
 		
-		return "admin/adSpotList";
+		System.out.println("AdminSpotController Start");
+		
+		mv = adSpotListService.getAdSpotList();
+		
+		System.out.println("AdminSpotController End");
+		
+		return mv;
 	}
 }
