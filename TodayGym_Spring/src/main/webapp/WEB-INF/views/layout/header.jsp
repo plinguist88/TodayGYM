@@ -29,7 +29,7 @@
 						class="navbar_icon"><ion-icon name="person-add-outline"></ion-icon></span></abbr></a></li>
 			<li><a href="./memberLogin"><abbr title="로그인"><span
 						class="navbar_icon"><ion-icon name="lock-closed-outline"></ion-icon></span></abbr></a></li>
-			<li><a href="#myPage"><abbr title="마이페이지"><span
+			<li><a href="./myInfo"><abbr title="마이페이지"><span
 						class="navbar_icon"><ion-icon name="person-circle-outline"></ion-icon></span></abbr></a></li>
 			<li><a href="./logout"><abbr title="로그아웃"><span
 						class="navbar_icon"><ion-icon name="lock-open-outline"></ion-icon></span></abbr></a></li>
