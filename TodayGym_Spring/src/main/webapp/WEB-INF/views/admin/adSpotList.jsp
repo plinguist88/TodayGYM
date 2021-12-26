@@ -17,53 +17,45 @@
 	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-	<div class="wrap">
-		<div class="content-admin">
-			<div class="content-adSidebar">
-				<jsp:include page="../layout/adSidebar.jsp" />
-			</div>
-			<div class="content">
-				<!-- Admin Spot List Start  -->
-				<table class="listTable">
-					<!-- Spot List Title -->
-					<thead>
+	<div class="content-admin">
+		<div class="content-adSidebar">
+			<jsp:include page="../layout/adSidebar.jsp" />
+		</div>
+		<div class="content">
+			<!-- Admin Spot List Start  -->
+			<table class="listTable">
+				<!-- Spot List Title -->
+				<thead>
+					<tr>
+						<th colspan="5"><h1>TodayGYM 지점</h1></th>
+					</tr>
+					<tr class="listRegMove">
+						<td colspan="5"><a href="adSpotRegFormMove.ad"> <input
+								type="button" value="지점 등록" />
+						</a></td>
+					</tr>
+					<tr class="listTitle">
+						<td>번호</td>
+						<td>지점명</td>
+						<td>연락처</td>
+						<td>주소</td>
+						<td>상세정보</td>
+					</tr>
+				</thead>
+				<!-- Spot List Contents -->
+				<tbody class="spotListPrint">
+					<c:forEach items="${sList}" var="sList">
 						<tr>
-							<th colspan="5"><h1>TodayGYM 지점</h1></th>
+							<td><a href="#">${sList.s_code}</a></td>
+							<td><a href="#">${sList.s_name}</a></td>
+							<td>${sList.s_phone}</td>
+							<td><a href="#">${sList.s_addr}</a></td>
+							<td><a href="#"><button class="spotDetail">상세정보</button></a></td>
 						</tr>
-						<tr class="listSpace">
-							<td></td>
-						</tr>
-						<tr class="listTitle">
-							<td>번호</td>
-							<td>지점명</td>
-							<td>연락처</td>
-							<td>주소</td>
-							<td>상세정보</td>
-						</tr>
-					</thead>
-					<!-- Spot List Contents -->
-					<tbody>
-						<c:forEach items="${sList}" var="sList">
-							<tr>
-								<td><a href="#">${sList.s_code}</a></td>
-								<td><a href="#">${sList.s_name}</a></td>
-								<td>${sList.s_phone}</td>
-								<td><a href="#">${sList.s_addr}</a></td>
-								<td><a href="#"><button class="button detail">상세정보</button></a></td>
-							</tr>
-						</c:forEach>
-					</tbody>
-					<!-- Spot List Search -->
-					<tfoot>
-						<tr>
-							<td>검색조건</td>
-							<td colspan="3">검색내용</td>
-							<td>검색</td>
-						</tr>
-					</tfoot>
-				</table>
-				<!-- Admin Spot List End  -->
-			</div>
+					</c:forEach>
+				</tbody>
+			</table>
+			<!-- Admin Spot List End  -->
 		</div>
 	</div>
 </body>

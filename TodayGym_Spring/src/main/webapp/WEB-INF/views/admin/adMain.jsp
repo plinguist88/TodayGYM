@@ -16,19 +16,17 @@
 	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-	<div class="wrap">
-		<div class="content-admin">
-			<div class="content-adSidebar">
-				<jsp:include page="../layout/adSidebar.jsp" />
-			</div>
-			<div class="content">
+	<div class="content-admin">
+		<div class="content-adSidebar">
+			<jsp:include page="../layout/adSidebar.jsp" />
+		</div>
+		<div class="content">
 			<!-- Admin Overview Start  -->
-				<div class="Overview-Member">Overview-Member</div>
-				<div class="Overview-Ticket">Overview-Ticket</div>
-				<div class="Overview-Spot">Overview-Spot</div>
-				<div class="Overview-Review">Overview-Review</div>
+			<div class="Overview-Member">Overview-Member</div>
+			<div class="Overview-Ticket">Overview-Ticket</div>
+			<div class="Overview-Spot">Overview-Spot</div>
+			<div class="Overview-Review">Overview-Review</div>
 			<!-- Admin Overview End  -->
-			</div>
 		</div>
 	</div>
 </body>

@@ -1,70 +1,57 @@
 @charset "UTF-8";
 
 /* Common */
-body{
+body {
 	margin: 0;
 	padding: 0;
 }
 
-.content-admin{
+.content-admin {
 	width: 100%;
 	height: 100vh;
-	
 	display: flex;
-	
-	background: #fff;
+	background-color: #fff;
 }
 
-.content{
+.content {
 	width: 100%;
 	height: 100vh;
-	
-	background: #fcfcfc;
+	background-color: #fcfcfc;
 }
 
 /* Overview */
-.Overview-Member{
+.Overview-Member {
 	position: relative;
 	top: 0;
 	left: 0;
-	
 	width: 50%;
 	height: 50%;
-	
 	background: red;
 }
 
-.Overview-Ticket{
+.Overview-Ticket {
 	position: relative;
 	top: -50%;
 	left: 50%;
-	
 	width: 50%;
 	height: 50%;
-	
 	background: green;
 }
 
-.Overview-Spot{
+.Overview-Spot {
 	position: relative;
 	top: -50%;
 	left: 0;
-	
 	width: 50%;
 	height: 50%;
-	
 	background: blue;
 }
 
-.Overview-Review{
+.Overview-Review {
 	position: relative;
 	top: -100%;
 	left: 50%;
-	
 	width: 50%;
 	height: 50%;
-	
 	background: yellow;
 }
-
-

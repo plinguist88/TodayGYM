@@ -4,6 +4,12 @@
 	
 <mapper namespace="com.project.todaygym.dao.AdSpotDao">
 	<select id="spotAllSelect" resultType="com.project.todaygym.dto.SpotDto">
-		SELECT * FROM SPOT_TB
+		SELECT * FROM SPOT_TB ORDER BY s_code DESC
 	</select>
+	
+	<insert id="spotInsert" parameterType="com.project.todaygym.dto.SpotDto">
+		INSERT INTO SPOT_TB
+		VALUES (#{s_code},#{s_name},#{s_phone},#{s_addr},
+				#{s_content})
+	</insert>
 </mapper>

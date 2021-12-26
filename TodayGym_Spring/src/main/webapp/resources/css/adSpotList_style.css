@@ -1,86 +1,86 @@
 @charset "UTF-8";
 
 /* Common */
-
-body{
+body {
 	margin: 0;
 	padding: 0;
 }
 
-.content-admin{
+.content-admin {
 	width: 100%;
 	height: 100vh;
-	
 	display: flex;
-	
 	background-color: #fff;
 }
 
-.content{
+.content {
 	width: 100%;
 	height: 100vh;
-	
 	background-color: #f2f2f2;
 }
 
 /* Spot List */
-
-.listTable{
+.listTable {
 	position: relative;
 	top: 60px;
-	
 	width: 80%;
-	heigth: 100vh;
-	
 	margin: auto;
-	
 	border-collapse: collapse;
 }
 
-.listTable th{
+.listTable th {
 	border: 1px solid #000;
 }
 
-.listTable .listSpace td{
-	border: none;
-	
-	height: 30px;
+.listTable .listRegMove td {
+	height: 50px;
 }
 
-.listTable .listTitle td{
+.listTable .listRegMove td input{
+	width: 100px;
+	height: 30px;
+	
+	margin: 5px;
+	padding: 5px;
+	
+	border: none;
+	border-radius: 5px;
+	background-color: #000;
+	color: #fff;
+	
+	cursor: pointer;
+	
+}
+
+.listTable .listRegMove td input:hover{
+	border: 1px solid #fff;
+	
+	box-sizing: border-box;
+}
+
+.listTable .listTitle td {
 	padding: 10px;
-	
 	text-align: center;
-	
 	font-size: 30px;
-	
 	border-bottom: 5px double #000;
 }
 
-.listTable tbody td{
+.listTable tbody td {
 	padding: 10px;
-	
 	text-align: center;
-	
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #fff;
 }
 
-.listTable td a{
+.listTable .spotListPrint td a {
 	color: #000;
-	
 	text-decoration: none;
 }
 
-.listTable .button{
-	border-radius: 6px;
-	
-	cursor: pointer;
-}
-
-.listTable .detail{
+.listTable .spotDetail {
 	border: none;
+	border-radius: 6px;
 	background-color: #00FF80;
 	color: #000;
+	border-radius: 6px;
+	cursor: pointer;
 }
-
-
