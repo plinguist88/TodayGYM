@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-	
+
 <mapper namespace="com.project.todaygym.dao.AdSpotDao">
-	<select id="spotAllSelect" resultType="com.project.todaygym.dto.SpotDto">
+	<!-- 지점 전체 목록 -->
+	<select id="spotAllSelect"
+		resultType="com.project.todaygym.dto.SpotDto">
 		SELECT * FROM SPOT_TB ORDER BY s_code DESC
 	</select>
 	
-	<insert id="spotInsert" parameterType="com.project.todaygym.dto.SpotDto">
+	<!-- 지점 번호 검색 -->
+	<select id="spotNextNumber" parameterType="String"
+		resultType="String">
+		SELECT max(s_code) FROM SPOT_TB
+	</select>
+	
+	<!-- 지점 등록 -->
+	<insert id="spotInsert"
+		parameterType="com.project.todaygym.dto.SpotDto">
 		INSERT INTO SPOT_TB
-		VALUES (#{s_code},#{s_name},#{s_phone},#{s_addr},
-				#{s_content})
+		VALUES
+		(#{s_code},#{s_name},#{s_phone},#{s_addr},
+		#{s_content})
 	</insert>
+	
+	<!-- 지점 상세 -->
+	<select id="spotOneSelect" parameterType="String"
+		resultType="com.project.todaygym.dto.SpotDto">
+		SELECT * FROM SPOT_TB WHERE s_code=#{s_code}
+	</select>
 </mapper>

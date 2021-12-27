@@ -17,7 +17,7 @@ public class AdSpotRegService {
 	@Autowired
 	private AdSpotDao adSpotDao;
 	
-	public ModelAndView getAdSpotRegService(SpotFormDto spotFormDto) {
+	public ModelAndView getAdSpotReg(SpotFormDto spotFormDto) {
 		
 		mv = new ModelAndView();
 		
@@ -28,6 +28,27 @@ public class AdSpotRegService {
 		String s_addr2 = spotFormDto.getS_addr2();
 		String s_content = spotFormDto.getS_content();
 		
+		s_code = adSpotDao.spotNextNumber();
+		
+		if(s_code == null) {
+			s_code = "S01";
+		} else {
+			String[] s_codeArray = s_code.split("");
+			String str1 = s_codeArray[0];
+			String str2 = s_codeArray[1];
+			String str3 = s_codeArray[2];
+			
+			if(str3.equals("9")) {
+				int i = Integer.parseInt(str2) + 1;
+				str3 = "0";
+				s_code = str1 + i + str3;
+			} else {
+				int j = Integer.parseInt(str3) + 1;
+				s_code = str1 + str2 + j;
+			}
+			
+		}
+
 		spotDto = new SpotDto();
 		
 		spotDto.setS_code(s_code);
@@ -41,9 +62,11 @@ public class AdSpotRegService {
 		if(result > 0) {
 			System.out.println("지점 등록 성공");
 			mv.setViewName("redirect:/adSpotMove.ad");
+			mv.addObject("msg", "지점 등록 성공");
 		} else {
 			System.out.println("지점 등록 실패");
 			mv.setViewName("admin/adSpotRegForm");
+			mv.addObject("msg", "지점 등록 실패");
 		}
 		return mv;
 	}
