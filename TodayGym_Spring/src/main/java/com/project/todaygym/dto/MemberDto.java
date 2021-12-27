@@ -2,6 +2,8 @@ package com.project.todaygym.dto;
 
 import java.sql.Timestamp;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import lombok.Data;
 
 @Data
@@ -12,8 +14,13 @@ public class MemberDto {
 	private String m_email;
 	private String m_phone;
 	private String m_birth;
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm",
+			timezone = "Asia/Seoul")
 	private Timestamp m_joindate;
 	private String m_point;
 	
+	//검색필터
+	private String type;
+	private String keyword;
 	
 } // class end, 멤버테이블, mifo 뷰용 DTO

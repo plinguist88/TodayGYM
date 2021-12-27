@@ -15,7 +15,10 @@
 	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule
 	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="resources/JavaScript/jquery.serializeObject.js"></script>
+<script type="text/javascript">
 
+</script>
 </head>
 <body>
 	<div class="wrap">
@@ -36,7 +39,7 @@
 							</thead>
 						</table>
 
-						<table class="admem-table-mlist">
+						<table class="admem-listtitle">
 							<thead>
 								<tr>
 									<th colspan="5"><h1>회원 목록</h1></th>
@@ -48,40 +51,70 @@
 									<th>생년월일</th>
 									<th></th>
 								</tr>
-								<c:forEach items="${mList}" var="mb">
-									<tr>
-										<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
-												value="${mb.m_joindate}" /></td>
-										<td>${mb.m_name}</td>
-										<td>${mb.m_id}</td>
-										<td>${mb.m_birth}</td>
-										<th><button class="admem-dtbtn"
-												onclick="location.href='./adMemDetailMove?m_id=${mb.m_id}'">
-												상세보기</button></th>
-									</tr>
-								</c:forEach>
 							</thead>
+							<tbody class="admem-mlist">
+								<c:forEach items="${mList}" var="mb">
+								<tr>
+									<td>${mb.m_joindate}</td>
+									<td>${mb.m_name}</td>
+									<td>${mb.m_id}</td>
+									<td>${mb.m_birth}</td>
+									<td><button class="admem-dtbtn" type="button"
+											onclick="movehref('${mb.m_id}')">
+											상세보기</button></td>
+								</tr>
+							</c:forEach>
+							</tbody>
 						</table>
 						<!-- 회원 검색 -->
-						<div class="admem-search">
-							<div class="s-box">
-								<select class="s-selbar">
-									<option value="m_id">아이디</option>
+						<form name="adsearch-form" autocomplete="off">
+							<div class="admem-search">
+								<select class="admem-sselct" name="searchType">
+									<option selected value="">검색 선택</option>
 									<option value="m_name">이름</option>
-								</select>
+									<option value="m_id">아이디</option>
+								</select> <input type="text" name="keyword" value=""></input> <input
+									type="button" onclick="getSearchList()" class="admem-sbtn"
+									value="검색">
 							</div>
-							<div>
-								<input class="s-txtbar" value="${map.keyword}"
-									placeholder="이름 / 아이디를 입력하세요.">
-							</div>
-							<div>
-								<input class="s-btn" type="submit" value="검색">
-							</div>
-						</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</section>
 	</div>
 </body>
+<script type="text/javascript">
+function getSearchList(){
+	var formdata = $("form[name=adsearch-form]").serializeObject();
+	console.log(formdata);
+	$.ajax({
+		type: 'GET',
+		url : "./getSearchList",
+		data : formdata,
+		dataType : "json",
+		success : function(result){
+			console.log(result);
+			//테이블 초기화
+			$('.admem-listtitle > tbody').empty();
+			if(result.length>=1){
+				result.forEach(function(mb){
+					str='<tr>'
+					str += "<td>"+mb.m_joindate+"</td>";
+					str += "<td>"+mb.m_name+"</td>";
+					str += "<td>"+mb.m_id+"</td>";
+					str += "<td>"+mb.m_birth+"</td>";
+					str += "<td><button class='admem-dtbtn' type='button' onclick='movehref(\"" + mb.m_id + "\")'>상세보기</button></td>";
+					st="</tr>"
+					$('.admem-listtitle').append(str);
+				})
+			}
+		}
+	})
+}
+
+function movehref(id){
+	location.href="./adMemDetailMove?m_id=" + id;
+}
+</script>
 </html>
