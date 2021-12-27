@@ -26,19 +26,20 @@
 				<!-- Spot List Title -->
 				<thead>
 					<tr>
-						<th colspan="5"><h1>TodayGYM 지점</h1></th>
+						<th colspan="6"><h1>TodayGYM 지점</h1></th>
 					</tr>
 					<tr class="listRegMove">
-						<td colspan="5"><a href="adSpotRegFormMove.ad">
-								<input type="button" value="지점 등록" />
+						<td colspan="5"><a href="adSpotRegFormMove.ad"> <input
+								type="button" value="지점 등록" />
 						</a></td>
 					</tr>
 					<tr class="listTitle">
-						<td>번호</td>
-						<td>지점명</td>
+						<td>지점 번호</td>
+						<td>지점 이름</td>
 						<td>연락처</td>
 						<td>주소</td>
-						<td>상세정보</td>
+						<td>기타</td>
+						<td>지점 이미지</td>
 					</tr>
 				</thead>
 				<!-- Spot List Contents -->
@@ -49,8 +50,10 @@
 							<td>${sList.s_name }</td>
 							<td>${sList.s_phone }</td>
 							<td><a href="#">${sList.s_addr }</a></td>
-							<td><a href="adSpotDetailMove.ad?s_code=${sList.s_code }"><button
-										class="spotDetail">상세정보</button></a></td>
+							<td>${sList.s_content }</td>
+							<td><a href="adSpotDetailMove.ad?s_code=${sList.s_code }">
+									<button class="spotImages">지점 사진</button>
+							</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

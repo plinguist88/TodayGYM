@@ -23,7 +23,9 @@ public class AdSpotRegService {
 		
 		String s_code = spotFormDto.getS_code();
 		String s_name = spotFormDto.getS_name();
-		String s_phone = spotFormDto.getS_phone();
+		String s_phone1 = spotFormDto.getS_phone1();
+		String s_phone2 = spotFormDto.getS_phone2();
+		String s_phone3 = spotFormDto.getS_phone3();
 		String s_addr1 = spotFormDto.getS_addr1();
 		String s_addr2 = spotFormDto.getS_addr2();
 		String s_content = spotFormDto.getS_content();
@@ -46,14 +48,13 @@ public class AdSpotRegService {
 				int j = Integer.parseInt(str3) + 1;
 				s_code = str1 + str2 + j;
 			}
-			
 		}
 
 		spotDto = new SpotDto();
 		
 		spotDto.setS_code(s_code);
 		spotDto.setS_name(s_name);
-		spotDto.setS_phone(s_phone);
+		spotDto.setS_phone(s_phone1 + s_phone2 + s_phone3);
 		spotDto.setS_addr(s_addr1 + ", " + s_addr2);
 		spotDto.setS_content(s_content);
 		

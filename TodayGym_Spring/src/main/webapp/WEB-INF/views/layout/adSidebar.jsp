@@ -11,16 +11,16 @@
 		<li class="list active"><a href="adMainMove.ad"> <span
 				class="admin-icon"> <ion-icon name="pulse-outline" />
 			</span> <span class="admin-title">Home</span></a></li>
-			
+
 		<li class="list"><a href="adMemMove"> <span
 				class="admin-icon"> <ion-icon name="people-outline" />
 			</span> <span class="admin-title">Member</span></a></li>
-			
+
 		<li class="list"><a href="adTicketMove.ad"> <span
 				class="admin-icon"> <ion-icon name="id-card-outline" />
 			</span> <span class="admin-title">Ticket</span></a></li>
-			
-		<li class="list"><a href="adSpotMove.ad"> <span
+
+		<li class="list"><a href="adSpotMove.ad?side=4"> <span
 				class="admin-icon"> <ion-icon name="flag-outline" />
 			</span> <span class="admin-title">Spot</span></a></li>
 	</ul>
@@ -36,7 +36,7 @@
 	}
 	
 	let list = document.querySelectorAll('.list');
-	for (let i = 0; i < list.length; i++) {
+	for (i = 0; i < list.length; i++) {
 		list[i].onclick = function() {
 			let j = 0;
 			while (j < list.length) {

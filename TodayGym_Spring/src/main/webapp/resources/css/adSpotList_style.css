@@ -36,32 +36,27 @@ body {
 	height: 50px;
 }
 
-.listTable .listRegMove td input{
+.listTable .listRegMove td input {
 	width: 100px;
 	height: 30px;
-	
 	margin: 5px;
 	padding: 5px;
-	
 	border: none;
 	border-radius: 5px;
 	background-color: #000;
 	color: #fff;
-	
 	cursor: pointer;
-	
 }
 
-.listTable .listRegMove td input:hover{
+.listTable .listRegMove td input:hover {
 	border: 1px solid #fff;
-	
 	box-sizing: border-box;
 }
 
 .listTable .listTitle td {
 	padding: 10px;
 	text-align: center;
-	font-size: 30px;
+	font-size: 1.5rem;
 	border-bottom: 5px double #000;
 }
 
@@ -72,15 +67,13 @@ body {
 }
 
 .listTable .spotListPrint td a {
-	color: #000;
 	text-decoration: none;
+	color: #000;
 }
 
-.listTable .spotDetail {
-	border: none;
-	border-radius: 6px;
-	background-color: #00FF80;
-	color: #000;
-	border-radius: 6px;
+.listTable .spotImages {
+	border-style: none;
+	background-color: #000;
+	color: #fff;
 	cursor: pointer;
 }

@@ -21,8 +21,8 @@
 <body>
 	<div class="container">
 		<div class="content">
-			<a href="home"><h1>TODAY GYM</h1></a>
-			<p>Start of exercise TODAY GYM</p>
+			<a href="home"><h1>Today GYM</h1></a>
+			<p>Start of Exercise Today GYM</p>
 			<div class="time">
 				<div>
 					<span class="hour">00</span> <span>Hours</span>

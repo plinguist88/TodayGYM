@@ -19,7 +19,7 @@ public class AdSpotListService {
 	@Autowired
 	private AdSpotDao adSpotDao;
 	
-	public ModelAndView getAdSpotList() {
+	public ModelAndView getAdSpotList(String side) {
 		
 		sList = new ArrayList<SpotDto>();
 		
@@ -27,6 +27,7 @@ public class AdSpotListService {
 		
 		mv = new ModelAndView();
 		
+		mv.addObject("side", side);
 		mv.addObject("sList", sList);
 		mv.setViewName("admin/adSpotList");
 

@@ -30,33 +30,36 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td class="regTitle">번호</td>
+							<td class="regTitle">지점 번호</td>
 							<td class="regContent"><input type="text" name="s_code"
-								id="s_code" value="자동" placeholder="지점번호" readonly /></td>
+								id="s_code" class="regInput" size="4" placeholder="자동 입력" readonly /></td>
 							<td class="regImage" rowspan="5">이미지 등록 공간</td>
 						</tr>
 						<tr>
-							<td class="regTitle">지점명</td>
+							<td class="regTitle">지점 이름</td>
 							<td class="regContent"><input type="text" name="s_name"
-								id="s_name" placeholder="예)인천연수점, 인천송도점..." /></td>
+								id="s_name" class="regInput" size="30" placeholder="예)인천연수점, 인천송도점..." required /></td>
 						</tr>
 						<tr>
 							<td class="regTitle">연락처</td>
-							<td class="regContent"><input type="text" name="s_phone"
-								id="s_phone" placeholder="주의) 'ㅡ' 제외" /></td>
+							<td class="regContent">
+								<input type="text" name="s_phone1" id="s_phone1" class="regInput" size="3" required/> -
+								<input type="text" name="s_phone2" id="s_phone2" class="regInput" size="3" required/> -
+								<input type="text" name="s_phone3" id="s_phone3" class="regInput" size="3" required/>
+							</td>
 						</tr>
 						<tr>
 							<td class="regTitle">주소</td>
-							<td class="regContent apiKakaoAddress">
-								<input type="button" onclick="apiKakaoAddress()" value="주소 검색"><br>
-								<input type="text" name="s_addr1" id="s_addr1" placeholder="도로명주소"> 
-								<input type="text" name="s_addr2" id="s_addr2" placeholder="상세주소"> 
+							<td class="regContent">
+								<input type="button" class="btnKakaoApi"onclick="apiKakaoAddress()" value="주소 검색"><br>
+								<input type="text" name="s_addr1" id="s_addr1" class="regInput" size="30" placeholder="도로명주소" required> 
+								<input type="text" name="s_addr2" id="s_addr2" class="regInput" size="30" placeholder="상세주소"> 
 							</td>
 						</tr>
 						<tr>
 							<td class="regTitle">기타</td>
 							<td class="regContent"><input type="text" name="s_content"
-								id="s_content" placeholder="" /></td>
+								id="s_content" class="regInput" size="30" placeholder="특이사항" /></td>
 						</tr>
 					</tbody>
 					<tfoot>

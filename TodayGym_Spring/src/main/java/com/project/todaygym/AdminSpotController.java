@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -32,12 +33,12 @@ public class AdminSpotController {
 
 	//지점 관리로 이동
 	@GetMapping("adSpotMove.ad")
-	public ModelAndView adSpotMove() {
+	public ModelAndView adSpotMove(@RequestParam(value="side", defaultValue = "1") String side) {
 		Logger.info("adSpotMove()");
 
 		mv = new ModelAndView();
 		
-		mv = adSpotListService.getAdSpotList();
+		mv = adSpotListService.getAdSpotList(side);
 
 		return mv;
 	}
