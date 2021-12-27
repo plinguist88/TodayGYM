@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,8 +29,8 @@
 						<th colspan="5"><h1>TodayGYM 지점</h1></th>
 					</tr>
 					<tr class="listRegMove">
-						<td colspan="5"><a href="adSpotRegFormMove.ad"> <input
-								type="button" value="지점 등록" />
+						<td colspan="5"><a href="adSpotRegFormMove.ad">
+								<input type="button" value="지점 등록" />
 						</a></td>
 					</tr>
 					<tr class="listTitle">
@@ -46,11 +45,12 @@
 				<tbody class="spotListPrint">
 					<c:forEach items="${sList}" var="sList">
 						<tr>
-							<td><a href="#">${sList.s_code}</a></td>
-							<td><a href="#">${sList.s_name}</a></td>
-							<td>${sList.s_phone}</td>
-							<td><a href="#">${sList.s_addr}</a></td>
-							<td><a href="#"><button class="spotDetail">상세정보</button></a></td>
+							<td>${sList.s_code }</td>
+							<td>${sList.s_name }</td>
+							<td>${sList.s_phone }</td>
+							<td><a href="#">${sList.s_addr }</a></td>
+							<td><a href="adSpotDetailMove.ad?s_code=${sList.s_code }"><button
+										class="spotDetail">상세정보</button></a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

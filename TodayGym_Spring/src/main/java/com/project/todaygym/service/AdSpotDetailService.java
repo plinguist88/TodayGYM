@@ -1,8 +1,5 @@
 package com.project.todaygym.service;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
@@ -11,26 +8,26 @@ import com.project.todaygym.dao.AdSpotDao;
 import com.project.todaygym.dto.SpotDto;
 
 @Service
-public class AdSpotListService {
-	
+public class AdSpotDetailService {
+
 	private ModelAndView mv;
-	private List<SpotDto> sList;
-	
+	private SpotDto spotDto;
+
 	@Autowired
 	private AdSpotDao adSpotDao;
-	
-	public ModelAndView getAdSpotList() {
+
+	public ModelAndView getAdSpotDetail(String s_code) {
 		
-		sList = new ArrayList<SpotDto>();
+		spotDto = new SpotDto();
 		
-		sList = adSpotDao.spotAllSelect();
-		
+		spotDto = adSpotDao.spotOneSelect(s_code);
+
 		mv = new ModelAndView();
 		
-		mv.addObject("sList", sList);
-		mv.setViewName("admin/adSpotList");
-
-		System.out.println("AdSpotListService Result : " + sList);
+		mv.addObject("spotDto", spotDto);
+		mv.setViewName("admin/adSpotDetail");
+		
+		System.out.println("AdSpotDetailService Result : " + spotDto);
 		
 		return mv;
 	}

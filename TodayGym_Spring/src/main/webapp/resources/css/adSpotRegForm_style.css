@@ -22,16 +22,13 @@ body {
 /* Spot Reg Form */
 
 table {
-	position: relative;
-	top: 60px;
-	width: 50%;
-	height: 80vh;
-	margin: auto;
-	border: 1px solid #000;
+	width: 70%;
+	height: 100vh;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
 	border-collapse: collapse;
-	border-radius: 20px;
-	border-style: hidden;
-	box-shadow: 0 0 0 1px #000;
 	
 	background-color: #fff;
 }
@@ -91,7 +88,7 @@ table tfoot tr{
 
 table tfoot td.regSubmit input{
 	width: 100px;
-	height: 30px;
+	height: 50px;
 	
 	margin: 5px;
 	padding: 5px;
@@ -100,6 +97,8 @@ table tfoot td.regSubmit input{
 	border-radius: 5px;
 	background-color: #000;
 	color: #fff;
+	
+	font-size: 30px;
 	
 	cursor: pointer;
 }
