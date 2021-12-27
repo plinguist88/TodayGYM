@@ -23,6 +23,7 @@
 		<div class=spot_sub_image>
 			<img class=gray_img src="resources/img/spot/gray.jpg">
 			<div class=spot_sub_content>
+				
 				<h1>
 					<i>지점안내</i>
 				</h1>
@@ -55,7 +56,7 @@
 							</div>
 							<div class=spot_btn>
 								<div>
-									<a class=detail_btn href="http://www.naver.com" target="">상세히
+									<a class=detail_btn href="spotDetail" target="">상세히
 										보기</a>
 								</div>
 								<div>
