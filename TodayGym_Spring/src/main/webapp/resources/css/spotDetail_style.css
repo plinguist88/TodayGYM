@@ -90,7 +90,7 @@ fieldset{
     
     .container{
       width: 1000px;
-      height: 800px;
+      height: 500px;
       margin: 0 auto;
       margin-top: 100px;
     }
@@ -101,5 +101,47 @@ fieldset{
  	
  }
  
+table{
+	border: 1px solid black;
+	width: 1000px;
+	margin: 0 auto;
+	font-size: 18px;
+	margin-bottom: 150px;
+}
 
+th,td, tr{
+	border: 1px solid black;
+	border-left: none;
+	
+	border-right: none;
+	border-top: none;
+	width: 300px;
+	height: 50px;
+}
+th{
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	width: 100px;
+}
 
+td{
+	padding-left: 20px;
+}
+.tr_map{
+	
+	height: 500px;
+}
+.map_box{
+	width: 800px;
+	height: 400px;
+	background-color: beige;
+	margin: 0 auto;
+	
+}
+#map{
+	background-size: cover;
+	margin: 0;
+}
+.td_map{
+	padding: 0px;
+}
