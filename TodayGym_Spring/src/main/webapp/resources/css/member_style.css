@@ -155,3 +155,10 @@ body{
 	color: #fff;
 }
 
+.alert-success {
+	color: blue;
+}
+
+.alert-danger {
+	color: red;
+}

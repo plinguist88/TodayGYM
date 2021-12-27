@@ -19,6 +19,29 @@
 		}
 	});
 </script>
+
+ <script type="text/javascript">
+	 $(function(){
+		 $("#alert-success").hide();
+		 $("#alert-danger").hide();
+		 $("input").keyup(function(){
+			 var pw1=$("#pw1").val();
+			 var pw2=$("#pw2").val();
+			 if(pw1 != "" || pw2 != ""){
+				 if(pw1 == pw2){
+					 $("#alert-success").show();
+					 $("#alert-danger").hide();
+					 $("#submit").removeAttr("disabled");
+				}else{
+					$("#alert-success").hide();
+					$("#alert-danger").show();
+					$("#submit").attr("disabled", "disabled");
+				}
+			 }
+		 });
+	 });
+	 </script>
+
 </head>
 <body>
 	<div class="wrap">
@@ -40,7 +63,10 @@
 					
 					<input type="text" class="login-input" id="mid" title="아이디" name="m_id" autofocus placeholder="아이디"> 
 					<input type="button" class="idcheck-btn" value="중복확인" onclick="idcheck()">
-					<input type="password" id="pw1" class="login-input" title="비밀번호" name="m_pw" placeholder="비밀번호">
+					<input type="password" id="pw1" class="login-input" title="비밀번호" name="m_pw" placeholder="비밀번호" required />
+					<input type="password" id="pw2" class="login-input" title="비밀번호 확인" name="m_pw" placeholder="비밀번호 확인" required />
+					<div class="alert alert-success" id="alert-success">비밀번호 일치</div>
+					<div class="alert alert-danger" id="alert-danger">비밀번호가 일치하지 않습니다.</div>
 					<input type="text" class="login-input" title="이름" name="m_name" placeholder="이름"> 
 					<input type="text" class="login-input" title="이메일" name="m_email" placeholder="메일 ex)asd@gmail.com"> 
 					<input type="text" class="login-input" title="연락처" name="m_phone" placeholder="연락처"> 
@@ -58,6 +84,9 @@
 
 
 	</div>
+	
+	
+	
 	<script type="text/javascript">
 		//아이디 중복 체크를 했는지 여부 저장
 		var ckOk = false;

@@ -45,9 +45,5 @@
 		</div>
 	</div>
 
-
-
-
-
 </body>
 </html>
