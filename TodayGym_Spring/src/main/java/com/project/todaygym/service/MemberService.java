@@ -93,6 +93,7 @@ public class MemberService {
 				//로그인 다음 페이지로 이동 : 게시글 목록 페이지.
 				//게시판 목록 화면용 url - list
 				view = "redirect:home";
+				msg = "환영합니다.";
 			}
 			else {
 				//비밀번호 오류.
