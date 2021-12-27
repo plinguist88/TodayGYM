@@ -1,136 +1,141 @@
 @charset "UTF-8";
 
 /* Common */
-
-body{
+body {
 	margin: 0;
 	padding: 0;
 }
 
-.content-admin{
+.content-admin {
 	width: 100%;
 	height: 100vh;
 	display: flex;
 	background: #fff;
 }
 
-.content{
+.content {
 	width: 100%;
 	height: 100vh;
 	background: #fcfcfc;
+	text-align: center;
 }
 
 /*adMem area*/
 .content-admem {
-	max-width: 80%;
-	margin: 30px 10% 30px 10%;
+	width: 80%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.admem-table-total{
-	margin: 20px;
-	background-color: #0c0c0c;
-	position: relative;
-	top: 60px;
-	border: 2px solid #000;
+.admem-table-total {
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	border-top: 5px solid #0c0c0c;
 }
 
-.admem-table-total th{
-	color: #fff;
+.admem-table-total th {
 	width: 40%;
 	margin: 0;
 }
 
-.admem-table-total td{
-	background-color: #fcfcfc;
-	border: 2px inset #fcfcfc;
+.admem-table-total td {
 	text-align: center;
 	width: 60%;
 	margin: 0;
+	border-bottom: 2px inset #c0c0c0;
 }
 
-.admem-table-mlist{
-	position: relative;
-	top: 60px;
+.admem-listtitle {
 	width: 80%;
-	heigth: 100vh;
-	margin: 20px;
-	border: 2px solid #000;
-	background-color: #000;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-top: 5px solid #0c0c0c;
 }
 
-.admem-table-mlist th{
-	color: #fcfcfc;
-	border: outset;
+.admem-listtitle th {
+	background-color: #0c0c0c;
+	color: #fcfcfc;	
 }
 
-.admem-table-mlist td{
-	background-color: #fcfcfc;
-	border: 2px inset #fcfcfc;
+.admem-listtitle td {
+	text-align: center;
 	margin: 0;
+	border-bottom: 2px inset #c0c0c0;
 }
 
-.admem-dtbtn{
+.admem-dtbtn {
 	width: 100%;
-	color: #fcfcfc;
-	background-color: #000;
+	border-top: 0;
+	border-left: 0;
+	border-bottom: 0;
+	background: 0;
 	font-weight: bold;
 	font-size: medium;
 }
 
-.s-box{
+.admem-search {
 	position: relative;
-	margin: 20px;
 	top: 60px;
-}
-
-.s-selbar{
-	height: 30px;
-}
-
-.s-txtbar{
-	height: 25px;
-}
-
-.s-btn{
-	height: 30px;
+	margin: 20px;
 }
 
 /***********************************adMemDetail area*****************************************/
-
-.admem-table-basic {
-	border: 2px solid #000;
-	border-radius: 3px;
-	margin-top: 20px;
-	margin-bottom: 30px;
+.adDetail-main {
+	border-top: 5px solid #000;
+	margin-left: auto;
+	margin-right: auto;
 	width: 80%;
-	
 }
 
-.admem-table-dtbox {
-	border: 2px solid #000;
-	border-radius: 3px;
+.adDetail-main th {
+	color: #fcfcfc;
+	background-color: #0c0c0c;
+}
+
+.adDetail-main td {
+	text-align: center;
+	border-bottom: 2px solid #c0c0c0;
+}
+
+.adDetail-sub {
+	border-top: 5px solid #000;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
 	width: 80%;
 	height: 500px;
-	display: flex;
 	text-align: center;
 }
 
-.admem-btnarea {
+.adDetail-sub th {
+	color: #fcfcfc;
+	background-color: #0c0c0c;
+}
+
+.adDetail-sub td {
+	text-align: center;
+	border-bottom: 2px solid #c0c0c0;
+}
+
+.adDetail-btn {
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+.adbtn-upbtn {
 	
 }
 
-.admem-btnarea-upbtn {
-	width: 50px;
-	height: 25px;
-	margin-top: 10px;
-	border: 3px outset #000;
-	border-radius: 3px;
-	background: #000;
-	color: #fff
+.adbtn-delbtn {
+	
 }
 
 /*****************************adMemUpdate area***************************************/
-
 .admem-up-write {
 	background-color: #fff;
 	border: 1px solid #fff;
@@ -139,8 +144,8 @@ body{
 	height: auto;
 }
 
-.admem-btnarea-upendbtn[type="reset"], 
-	.admem-btnarea-upendbtn[type="button"] {
+.admem-btnarea-upendbtn[type="reset"], .admem-btnarea-upendbtn[type="button"]
+	{
 	width: 70px;
 	height: 25px;
 	margin-top: 10px;
@@ -149,24 +154,3 @@ body{
 	background: #000;
 	color: #fff
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
