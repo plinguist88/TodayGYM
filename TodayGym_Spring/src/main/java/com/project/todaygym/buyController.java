@@ -5,15 +5,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.project.todaygym.dto.buyDto;
+import org.springframework.web.servlet.ModelAndView;
+
 import com.project.todaygym.service.buyService;
 
-import oracle.jdbc.proxy.annotation.GetProxy;
+
 
 @Controller
 public class buyController {
@@ -37,11 +34,28 @@ public class buyController {
 		mv = bServ.getDetail(b_code);
 		return mv;
 	}
-
+	
 	@GetMapping("cartHome")
-	public ModelAndView cartHome(String type, String price) {
+	public String cartHome(String type, String price) {
 		logger.info("cartHome() - t:" + type + ", p:" + price);
-		mv = null;
-		return mv;
+		
+		return "cart/cartHome";
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

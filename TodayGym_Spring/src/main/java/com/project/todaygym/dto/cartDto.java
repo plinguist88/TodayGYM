@@ -6,5 +6,6 @@ import lombok.Data;
 public class cartDto {
 	private String c_code;
 	private String m_id;
-	private String b_code;
+	private String bc_code;
+	private String p_code;
 }

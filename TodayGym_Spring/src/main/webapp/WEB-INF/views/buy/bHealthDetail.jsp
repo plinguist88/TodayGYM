@@ -94,7 +94,7 @@
 			 		</div>			
 		 		</div>	
 		 		<form action="" method="post">
-		 			<input type="button" value="💳구매하기" class="nextbutton1">
+		 			<input type="button" value="💳구매하기" class="nextbutton1" onclick="goCart()">
 		 		</form>	 
 		 		<form action="" method="post">
 		 			<input type="button" value="🛒장바구니" class="nextbutton2" onclick="goCart()">
