@@ -4,14 +4,8 @@
 li{
 	list-style: none;
 }
-.buytitle{
-	width: 80%;
-	margin: 0 auto;
-	text-align: center;
-	font-size: 30px;
-}
 .buy_section{
-	height: 2000px;
+	height: 2200px;
 	margin-top: 200px;
 }
 .buy_cate{
@@ -31,6 +25,8 @@ li{
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+	flex-direction: row;
 }
 .img{
 	width: 300px;
