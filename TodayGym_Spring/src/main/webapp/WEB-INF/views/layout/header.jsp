@@ -31,7 +31,7 @@
 		<ul>
 			<li><a href="">HOME</a></li>
 			<li><a href="">ABOUT</a></li>
-			<li><a href="">PROGRAM</a></li>
+			<li><a href="buyHome">PROGRAM</a></li>
 			<li><a href="spotHome">SPOT</a></li>
 			<li><a href="review">REVIEW</a></li>
 		</ul>
