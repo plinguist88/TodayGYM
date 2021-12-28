@@ -14,7 +14,7 @@
 		//메시지 출력 부분
 		var msg = "${msg}";
 		
-		console.log(msg);
+		
 		if (msg != "") {
 			alert(msg);
 		}
