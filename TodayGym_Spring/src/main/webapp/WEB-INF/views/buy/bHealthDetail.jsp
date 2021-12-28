@@ -23,17 +23,16 @@
 		 	</div>
 		 	<div class="buy_info">
 		 		<div class="buy_imfo_img">
-		 			<img src="resources/img/buy/buyDetail/h1.png">
+		 			<img src="${bDto.b_img}">
 		 		</div>
 		 		<div class="buy_info_rightbar">
 			 		<fieldset class="buy_fieldset">
 			 		<div class="buy_info_top">
-			 			<h2 class="buy_info_h2">[헬스 일반 이용권]</h2>
+			 			<h2 class="buy_info_h2">${bDto.b_subcate}</h2>
 			 			<div class="buy_info_title">
 			 				<span class="buy_info_sale">10%</span>
 			 				<div class="buy_info_price">
-				 				<span class="buy_info_before">${bInfo.b_price}원</span>
-				 				<span class="buy_info_after">${oprice}원</span>
+			 					
 			 				</div>
 			 			</div>	 			
 			 		</div>			 				 		
@@ -72,13 +71,13 @@
 			 		</div>
 			 		<hr>
 			 		<div class="buy_select">
-			 			<select class="buy_select_contants">
-			 				<option disabled selected>&nbsp;&nbsp;&nbsp;HEALTH</option>
-			 				<option value="1">일반이용권 1개월 (100,000원)</option>
-			 				<option value="2">일반이용권 3개월 (300,000원)</option>
-			 				<option value="3">일반이용권 6개월 (600,000원)</option>
-			 				<option value="4">일반이용권 12개월 (1,200,000원)</option>
-			 			</select>
+			 			
+			 			<select class="buy_select_contants" name="">
+			 			<c:forEach var="pList" items="${pList}">
+			 				<option disabled selected>&nbsp;&nbsp;&nbsp;${pList.b_subcate}</option>		
+			 				<option value="${pList.p_term}_${pList.p_price}">&nbsp;&nbsp;&nbsp;${pList.p_term} : ${pList.p_price}원</option>		 				
+			 			</c:forEach>
+			 			</select>			 			
 			 		</div>
 			 		<div class="buy_price_hidden">
 			 			<hr>
@@ -98,7 +97,7 @@
 		 			<input type="button" value="💳구매하기" class="nextbutton1">
 		 		</form>	 
 		 		<form action="" method="post">
-		 			<input type="button" value="🛒장바구니" class="nextbutton2" onclick="location.href='cartHome'">
+		 			<input type="button" value="🛒장바구니" class="nextbutton2" onclick="goCart()">
 		 		</form>	 		
 		 	</div>		 	
 		</section>
@@ -204,7 +203,8 @@
 					    } 
 					});    
 					
-					$(".buy_select_contants").change(function(){
+						/*
+						$(".buy_select_contants").change(function(){
 						//alert("되나?");
 						
 						if($(this).val() == 1){
@@ -223,8 +223,7 @@
 							$(".buy_price2").html("일반이용권 12개월");
 							$("#total_price").html("1,200,000 원");
 						}
-						
-					});
+						*/
 				</script>				
 				</fieldset>
 			</div>
@@ -234,5 +233,24 @@
 		</footer>
 	</div>
 </body>
+<script type="text/javascript">
+	//제품 정보 표시
+	var varr;
 
+	$(function() {
+
+		$(".buy_select_contants").on("change", function() {
+			var m = $(".buy_select_contants").val();
+			varr = m.split("_");
+			$(".buy_price2").html(varr[0]);
+			$("#total_price").html(varr[1] + "원");
+		});
+
+	});
+
+	function goCart() {
+		console.log(varr);
+		location.href = './cartHome?type=' + varr[0] + '&price=' + varr[1];
+	}
+</script>
 </html>
