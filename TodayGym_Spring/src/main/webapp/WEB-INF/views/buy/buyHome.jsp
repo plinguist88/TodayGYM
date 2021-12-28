@@ -20,18 +20,8 @@
 		
 		
 		<!-- buyHome 본문 -->		
-		<section class="buy_section">
-			<div class="buytitle">
-				<h1>회원권 구매</h1>
-			</div>	
-			<ul class="buy_cate">			
-				<li class="on"><a href="#" data-filter=".health">헬스</a></li>
-				<li><a href="#" data-filter=".swim">수영</a></li>
-				<li><a href="#" data-filter=".climb">클라이밍</a></li>
-				<li><a href="#" data-filter=".cross">크로스핏</a></li>
-			</ul>
-			<div class="buy_cate_sub">
-				<div class="buy_cate_sub health">
+		<section class="buy_section">	
+			<div class="buy_cate_sub">				
 				<c:forEach var="bList" items="${bList}">
 					<div class="health_cate">
 						<div class="procImage">
@@ -44,11 +34,8 @@
 							<div>제목 : ${bList.b_subcate}</div>
 						</div>
 					</div>
-				</c:forEach>	
-				</div>				
-			</div>
-			
-			
+				</c:forEach>									
+			</div>	
 		</section>
 		<footer>
 			<jsp:include page="../layout/footer.jsp" />
