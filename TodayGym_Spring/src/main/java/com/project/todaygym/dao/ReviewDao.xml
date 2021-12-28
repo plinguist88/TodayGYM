@@ -1,1 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.project.todaygym.dao.ReviewDao">
+
+	<insert id ="WriteInsert"
+		parameterType="com.project.todaygym.dto.ReviewDto"
+		useGeneratedKeys="true" keyProperty="r_no">
+		<selectKey keyProperty="r_no" resultType="Integer"
+			order="BEFORE">
+			SELECT REVIEW_SEQ.NEXTVAL FROM DUAL
+		</selectKey>
+		INSERT INTO REVIEW_TB
+		VALUES (#{r_no},#{r_cate},#{r_title},#{r_contents}
+		,#{m_id},SYSDATE,#{r_score})	
+	</insert>
+
+</mapper>
