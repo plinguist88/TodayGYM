@@ -26,12 +26,7 @@ public class HomeController {
 		return "home";
 	}
 	
-	// buyHome으로 이동
-	@GetMapping("buyHome")
-	public String buyHome() {
-		logger.info("buyHome()");
-		return "buy/buyHome";
-	}
+	
 	
 	// 관리자 메인으로 이동
 	@GetMapping("adMainMove.ad")
