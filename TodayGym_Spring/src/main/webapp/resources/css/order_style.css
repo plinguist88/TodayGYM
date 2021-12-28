@@ -132,7 +132,7 @@ li {
 /******************************** myOrder-contents-user area */
 .myOrder-contents-user {
 	width: 1200px;
-	height: 150px;
+	height: 250px;
 }
 
 .contents-user-title {
@@ -144,29 +144,37 @@ li {
 
 .contents-user-info {
 	width: 1200px;
-	height: 100px;
+	height: 150px;
 }
-.user-info-name {
+
+.user-info {
+	float: left;
+	width: 600px;
+	hight: 150px;
+}
+.info-name {
 	width: 300px;
 	height: 50px;
 	line-height: 50px;
-	text-align: center;
-	border: 1px solid black;
 }
 
-.user-info-email {
+.info-email {
 	width: 300px;
 	height: 50px;
 	line-height: 50px;
-	text-align: center;
-	border: 1px solid black;
 }
 
-.user-info-phone {
+.info-phone {
 	width: 300px;
 	height: 50px;
 	line-height: 50px;
-	text-align: center;
-	border: 1px solid black;
 }
 
+.user-payment {
+	float: left;
+	width: 600px;
+	hight: 150px;
+	line-height: 150px;
+	text-align: center;
+	
+}
