@@ -24,7 +24,7 @@
 							<b>주문/결제</b>
 						</div>
 						<div class="myOrder-header-orderseq">
-							장바구니 > <b>주문/결제</b> > 완료
+							<b>주문/결제</b> > 완료
 						</div>
 					</div>
 					<div class="myOrder-contents">
@@ -68,7 +68,7 @@
 									<div class="info-email">이메일 : ${myInfo.m_email}</div>
 									<div class="info-phone">전화번호 : ${myInfo.m_phone}</div>
 								</div>
-								<div class="user-info-payment"></div>
+								<div class="user-payment">은행</div>
 							</div>
 						</div>
 					</div>
