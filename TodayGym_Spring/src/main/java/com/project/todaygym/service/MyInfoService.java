@@ -20,6 +20,8 @@ import com.project.todaygym.dto.MemberDto;
 import com.project.todaygym.dto.MyClassDto;
 import com.project.todaygym.util.MyClassPagingUtil;
 
+import lombok.extern.java.Log;
+
 @Service
 public class MyInfoService {
 
