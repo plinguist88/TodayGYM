@@ -14,6 +14,8 @@
 	padding: 90px;
 	text-align: center;
 	height: 100%;
+	font-size: 35px;
+	
 }
 .buy_imfo_img{
 	float: left;
@@ -21,6 +23,9 @@
 .buy_imfo_img img{
 	width: 508px;
 	height: 600px;
+}
+.buy_info{
+	height: 800px;
 }
 .buy_info_rightbar{
 	float: right;
@@ -32,6 +37,9 @@
 }
 .buy_info_h2{
 	margin-bottom: 40px;
+	font-size: 40px;
+	margin-top: 0px;
+	font-weight: 900;
 }
 .buy_info_sale{
 	float: left;

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>헬스장 일반이용권</title>
+<title>구매상세페이지</title>
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=LIBRARY"></script>
 </head>
@@ -19,7 +19,7 @@
 		<!-- buyDetail 본문 -->		
 		<section class="buy_section">
 			<div class="buy_title">
-		 		<h1>구매 페이지</h1>
+		 		<h1>TodayGYM</h1>
 		 	</div>
 		 	<div class="buy_info">
 		 		<div class="buy_imfo_img">
@@ -28,7 +28,7 @@
 		 		<div class="buy_info_rightbar">
 			 		<fieldset class="buy_fieldset">
 			 		<div class="buy_info_top">
-			 			<h2 class="buy_info_h2">${bDto.b_subcate}</h2>
+			 			<h2 class="buy_info_h2">${bDto.b_cate}  ${bDto.b_subcate} </h2>
 			 			<div class="buy_info_title">
 			 				<span class="buy_info_sale">10%</span>
 			 				<div class="buy_info_price">
