@@ -35,8 +35,8 @@
 				<form action="./adMemUpdateAct" class="content" method="post"
 					enctype="multipart/form-data"
 					onkeydown="return event.key != 'Enter';">
-					<div class="content-admem">
-						<h3>회원 정보 수정</h3>
+					<div class="content-admemUp">
+						<h2>회원 정보 수정</h2>
 						<table class="adUpdate-main">
 							<thead>
 								<tr>
