@@ -20,9 +20,18 @@ body {
 	text-align: center;
 }
 
-/*adMem area*/
+h1{
+	border: 3px solid #0c0c0c;
+	border-radius: 3px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #0c0c0c;
+	color: #fcfcfc;
+}
+
+/****************************adMem area****************************/
 .content-admem {
-	width: 80%;
+	width: 90%;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -30,9 +39,8 @@ body {
 
 .admem-table-total {
 	margin-top: 20px;
-	margin-right: auto;
 	margin-left: auto;
-	border-top: 5px double #0c0c0c;
+	border-bottom: 5px double #0c0c0c;
 }
 
 .admem-table-total th {
@@ -44,20 +52,17 @@ body {
 	text-align: center;
 	width: 60%;
 	margin: 0;
-	border-bottom: 2px inset #c0c0c0;
 }
 
 .admem-listtitle {
-	width: 80%;
+	width: 100%;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	border-top: 5px double #0c0c0c;
 }
 
 .admem-listtitle th {
-	background-color: #c0c0c0;
-	color: #fcfcfc;
+	border-bottom: 5px double #0c0c0c;
 }
 
 .admem-listtitle td {
@@ -71,6 +76,7 @@ body {
 	border-top: 0;
 	border-left: 0;
 	border-bottom: 0;
+	border-right-width: 10px;
 	background: 0;
 	font-weight: bold;
 	font-size: medium;
@@ -109,7 +115,6 @@ body {
 	float: left;
 	width: 200px;
 	margin-top: 2px;
-	
 }
 
 .admem-search button {
@@ -120,10 +125,9 @@ body {
 
 /***********************************adMemDetail area*****************************************/
 .adDetail-main {
-	border-top: 5px double #000;
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;
+	width: 100%;
 }
 
 .adDetail-main th {
@@ -137,11 +141,10 @@ body {
 }
 
 .adDetail-sub {
-	border-top: 5px double #000;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;
+	width: 100%;
 	height: 500px;
 	text-align: center;
 }
@@ -170,11 +173,30 @@ body {
 }
 
 /*****************************adMemUpdate area***************************************/
-.adUpdate-main {
-	border-top: 5px double #000;
+.content-admemUp {
+	width: 70%;
+	text-align: center;
+	margin-top: 30px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;
+	padding: 20px;
+	border: 2px solid #c0c0c0;
+	border-radius: 3px;
+}
+
+h2{
+	border: 2px solid #c0c0c0;
+	border-radius: 3px;
+	background-color: #c0c0c0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #fcfcfc;
+}
+
+.adUpdate-main {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 }
 
 .adUpdate-main th {
@@ -196,11 +218,10 @@ body {
 }
 
 .adUpdate-sub {
-	border-top: 5px double #000;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;
+	width: 100%;
 	height: 500px;
 	text-align: center;
 }
@@ -223,7 +244,7 @@ body {
 	color: #c0c0c0;
 }
 
-.admem-btnarea input{
+.admem-btnarea input {
 	border-radius: 3px;
 	background-color: #0c0c0c;
 	color: #fcfcfc;

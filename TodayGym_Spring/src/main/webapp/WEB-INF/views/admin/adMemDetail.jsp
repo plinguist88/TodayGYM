@@ -37,7 +37,7 @@
 
 				<div class="content">
 					<div class="content-admem">
-						<h3>회원 상세</h3>
+						<h1>회원 상세</h1>
 						<table class="adDetail-main">
 							<thead>
 								<tr>

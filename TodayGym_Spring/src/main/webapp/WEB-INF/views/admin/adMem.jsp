@@ -39,11 +39,9 @@
 							</thead>
 						</table>
 
+						<h1>회원 목록</h1>
 						<table class="admem-listtitle">
 							<thead>
-								<tr>
-									<th colspan="5"><h1>회원 목록</h1></th>
-								</tr>
 								<tr>
 									<th>가입일자</th>
 									<th>이 름</th>
