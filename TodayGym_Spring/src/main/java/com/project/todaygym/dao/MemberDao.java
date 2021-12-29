@@ -27,7 +27,7 @@ public interface MemberDao {
 		//__________ 비밀번호 변경
 		public void myPwdUpdate(MemberDto myInfo);
 		
-		//__________ 회원탈퇴 싫행
+		//__________ 회원탈퇴 실행
 		public void myAccountDelete(String getId);
 		
 } // interface end

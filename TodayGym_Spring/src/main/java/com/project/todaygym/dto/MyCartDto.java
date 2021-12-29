@@ -3,11 +3,12 @@ package com.project.todaygym.dto;
 import lombok.Data;
 
 @Data
-public class CartDto {
+public class MyCartDto {
 	
 	private int c_code;
 	private String m_id;
-	private String p_code;
-	private String op_code;
+	private String p_title;
+	private String o_month;
+	private String o_price;
 	
 } // class end

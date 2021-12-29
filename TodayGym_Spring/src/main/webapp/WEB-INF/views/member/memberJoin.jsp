@@ -64,7 +64,7 @@
 					<input type="text" class="login-input" id="mid" title="아이디" name="m_id" autofocus placeholder="아이디"> 
 					<input type="button" class="idcheck-btn" value="중복확인" onclick="idcheck()">
 					<input type="password" id="pw1" class="login-input" title="비밀번호" name="m_pw" placeholder="비밀번호" required />
-					<input type="password" id="pw2" class="login-input" title="비밀번호 확인" name="m_pw" placeholder="비밀번호 확인" required />
+					<input type="password" id="pw2" class="login-input" title="비밀번호 확인" placeholder="비밀번호 확인" required />
 					<div class="alert alert-success" id="alert-success">비밀번호 일치</div>
 					<div class="alert alert-danger" id="alert-danger">비밀번호가 일치하지 않습니다.</div>
 					<input type="text" class="login-input" title="이름" name="m_name" placeholder="이름"> 

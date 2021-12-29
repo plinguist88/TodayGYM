@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/******************************** product area ******************************/
+header {
+	position: sticky;
+	top: 0px;
+}
+
+.wrap {
+	background-color: #FFFFFF;
+}
+
+li {
+	list-style: none;
+}
+
+.content-product {
+	height: 800px;
+	padding: 100px 0 100px 0;
+	background-color: #FFFFFF;
+}
+
+.product-form {
+	width: 1200px;
+	height: 800px;
+	margin: 0 auto;
+}
