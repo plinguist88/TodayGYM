@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원권 구매</title>
+<title>회원권구매 메인</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
@@ -20,18 +20,28 @@
 		
 		
 		<!-- buyHome 본문 -->		
-		<section class="buy_section">	
+		<section class="buy_section">
+			<div class="section_info">
+				<div class="section_info_img">
+					<img class="infoimg" src="resources/img/spot/gray.jpg">
+				</div>
+				<div class="section_info_title">
+					<h1>PROGRAM</h1>
+					<br>
+					<p>다양한 프로그램으로 맞춤형 프로세스를 제공하여 고객님의 니즈를 충족시켜드립니다</p>
+				</div>
+			</div>	
 			<div class="buy_cate_sub">				
 				<c:forEach var="bList" items="${bList}">
 					<div class="health_cate">
 						<div class="procImage">
 							<div class="urlImage">
-								<a href="./buyDetail?b_code=${bList.b_code}"> <img src="${bList.b_img}"> </a>
+								<a  href="./buyDetail?b_code=${bList.b_code}"> <img class="dbimg" src="${bList.b_img}"> </a>
 							</div>
 						</div>
 						<div class="health_info">
-							<div>번호 : ${bList.b_code}</div>
-							<div>제목 : ${bList.b_subcate}</div>
+							<div class="info1">PROGRAM &nbsp;&nbsp;&nbsp;&nbsp;<span> [${bList.b_cate}] </span></div>
+							<div class="info2">CONTENTS &nbsp;&nbsp;&nbsp;<span> ${bList.b_subcate} </span></div>
 						</div>
 					</div>
 				</c:forEach>									
