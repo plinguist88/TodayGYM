@@ -15,5 +15,8 @@
 		VALUES (#{r_no},#{r_cate},#{r_title},#{r_contents}
 		,#{m_id},SYSDATE,#{r_score})	
 	</insert>
-
+	<select id="getList" resultType="com.project.todaygym.dto.ReviewDto">
+		SELECT * FROM REVIEW_TB ORDER BY r_no DESC
+	</select>
+	
 </mapper>

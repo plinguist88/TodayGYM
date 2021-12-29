@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dto.ReviewDto;
@@ -21,6 +22,8 @@ public class ReviewsController {
 	
 	@Autowired
 	ReviewService tServe;
+	
+	private ModelAndView mv;
 	
 	@GetMapping("reviewsWrite")
 	public String reviewsWrite() {
@@ -41,5 +44,14 @@ public class ReviewsController {
 		
 		String view = tServe.WriteAct(rdto , rttr);
 		return view;
+	}
+	@GetMapping("review")
+	public ModelAndView reviewList(Integer pageNum) {
+		
+		logger.info("reviewList()");
+		
+		mv = tServe.getReviewList(pageNum);
+		
+		return mv;
 	}
 }

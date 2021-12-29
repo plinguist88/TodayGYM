@@ -55,13 +55,19 @@
 										style="background-color: #eeeeee; text-align: center;">별점</th>
 								</tr>
 							</thead>
+							<c:forEach var="list" items="${rList}">
 							<tbody class="td_list">
-								<td>1</td>
-								<td>안녕</td>
-								<td>박민영</td>
-								<td>작성일</td>
-								<td>5</td>
+							
+							<tr>
+								<td>${list.r_no}</td>
+								<td>${list.r_title}</td>
+								<td>${list.m_id}</td>
+								<td>${list.r_date }</td>
+								<%-- <td>${list.r_score }</td> --%>
+								</tr>	
+										
 							</tbody>
+							</c:forEach>
 						</table>
 					</div>
 				</div>
