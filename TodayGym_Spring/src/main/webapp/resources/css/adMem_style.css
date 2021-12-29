@@ -32,7 +32,7 @@ body {
 	margin-top: 20px;
 	margin-right: auto;
 	margin-left: auto;
-	border-top: 5px solid #0c0c0c;
+	border-top: 5px double #0c0c0c;
 }
 
 .admem-table-total th {
@@ -52,12 +52,12 @@ body {
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	border-top: 5px solid #0c0c0c;
+	border-top: 5px double #0c0c0c;
 }
 
 .admem-listtitle th {
-	background-color: #0c0c0c;
-	color: #fcfcfc;	
+	background-color: #c0c0c0;
+	color: #fcfcfc;
 }
 
 .admem-listtitle td {
@@ -74,17 +74,53 @@ body {
 	background: 0;
 	font-weight: bold;
 	font-size: medium;
+	color: #c0c0c0;
 }
 
-.admem-search {
+.adsearch-form {
 	position: relative;
 	top: 60px;
 	margin: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.admem-search {
+	border: 2px solid #0c0c0c;
+	width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	background-color: #0c0c0c;
+	border-radius: 3px;
+}
+
+.admem-search select {
+	border: 0;
+	float: left;
+	width: 80px;
+	margin-top: 3px;
+	background-color: #0c0c0c;
+	color: #fcfcfc;
+}
+
+.admem-search input {
+	border: 0;
+	float: left;
+	width: 200px;
+	margin-top: 2px;
+	
+}
+
+.admem-search button {
+	border: 0;
+	background-color: #0c0c0c;
+	color: #fcfcfc;
 }
 
 /***********************************adMemDetail area*****************************************/
 .adDetail-main {
-	border-top: 5px solid #000;
+	border-top: 5px double #000;
 	margin-left: auto;
 	margin-right: auto;
 	width: 80%;
@@ -92,7 +128,7 @@ body {
 
 .adDetail-main th {
 	color: #fcfcfc;
-	background-color: #0c0c0c;
+	background-color: #c0c0c0;
 }
 
 .adDetail-main td {
@@ -101,7 +137,7 @@ body {
 }
 
 .adDetail-sub {
-	border-top: 5px solid #000;
+	border-top: 5px double #000;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
@@ -112,7 +148,7 @@ body {
 
 .adDetail-sub th {
 	color: #fcfcfc;
-	background-color: #0c0c0c;
+	background-color: #c0c0c0;
 }
 
 .adDetail-sub td {
@@ -127,21 +163,70 @@ body {
 	width: 80%;
 }
 
-.adbtn-upbtn {
-	
-}
-
-.adbtn-delbtn {
-	
+.adDetail-btn button {
+	border-radius: 3px;
+	background-color: #0c0c0c;
+	color: #fcfcfc;
 }
 
 /*****************************adMemUpdate area***************************************/
-.admem-up-write {
-	background-color: #fff;
-	border: 1px solid #fff;
-	margin: 0;
-	width: 490px;
-	height: auto;
+.adUpdate-main {
+	border-top: 5px double #000;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+.adUpdate-main th {
+	color: #fcfcfc;
+	background-color: #c0c0c0;
+}
+
+.adUpdate-main td {
+	text-align: center;
+	border-bottom: 2px solid #c0c0c0;
+}
+
+.adUpdate-main input {
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	text-align: center;
+	color: #c0c0c0;
+}
+
+.adUpdate-sub {
+	border-top: 5px double #000;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 500px;
+	text-align: center;
+}
+
+.adUpdate-sub th {
+	color: #fcfcfc;
+	background-color: #c0c0c0;
+}
+
+.adUpdate-sub td {
+	text-align: center;
+	border-bottom: 2px solid #c0c0c0;
+}
+
+.adUpdate-sub input {
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	text-align: center;
+	color: #c0c0c0;
+}
+
+.admem-btnarea input{
+	border-radius: 3px;
+	background-color: #0c0c0c;
+	color: #fcfcfc;
 }
 
 .admem-btnarea-upendbtn[type="reset"], .admem-btnarea-upendbtn[type="button"]
