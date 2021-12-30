@@ -37,7 +37,7 @@
 						<div class="myOrder-contents-orderlist">
 							<c:forEach var="myOrder" items="${myOrder}">
 								<div class="contents-orderlist-cate">${myOrder.c_code}</div>
-								<div class="contents-orderlist-title">${myOrder.p_title}</div>
+								<div class="contents-orderlist-title">${myOrder.p_subcate}</div>
 								<div class="contents-orderlist-term">${myOrder.o_month}</div>
 								<div class="contents-orderlist-price">${myOrder.o_price}</div>
 								<hr>
