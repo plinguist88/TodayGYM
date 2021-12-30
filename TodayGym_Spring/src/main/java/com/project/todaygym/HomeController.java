@@ -26,8 +26,6 @@ public class HomeController {
 		return "home";
 	}
 	
-	
-	
 	// 관리자 메인으로 이동
 	@GetMapping("adMainMove.ad")
 	public String adMainMove() {
