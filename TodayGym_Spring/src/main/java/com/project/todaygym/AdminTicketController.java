@@ -38,12 +38,12 @@ public class AdminTicketController {
 		return "admin/adTicketDetail";
 	}
 	//회원권 상세 페이지 이동
-	@GetMapping("adTicketDetailMove.ad")
-	public ModelAndView adTicketDetailMove2(int t_no) {
-		Logger.info("adTicketDetailMove()");
-		
-		mv = adTServ.getTicketDetail(t_no);
-		
-		return mv;
-	}
+//	@GetMapping("adTicketDetailMove.ad")
+//	public ModelAndView adTicketDetailMove2(int t_no) {
+//		Logger.info("adTicketDetailMove()");
+//		
+//		mv = adTServ.getTicketDetail(t_no);
+//		
+//		return mv;
+//	}
 }
