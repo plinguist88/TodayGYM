@@ -32,16 +32,16 @@
 				</div>
 			</div>	
 			<div class="buy_cate_sub">				
-				<c:forEach var="bList" items="${bList}">
+				<c:forEach var="pList" items="${pList}">
 					<div class="health_cate">
 						<div class="procImage">
 							<div class="urlImage">
-								<a  href="./buyDetail?b_code=${bList.b_code}"> <img class="dbimg" src="${bList.b_img}"> </a>
+								<a  href="./detail?p_code=${pList.p_code}"> <img class="dbimg" src="${pList.p_img}"> </a>
 							</div>
 						</div>
 						<div class="health_info">
-							<div class="info1">PROGRAM &nbsp;&nbsp;&nbsp;&nbsp;<span> [${bList.b_cate}] </span></div>
-							<div class="info2">CONTENTS &nbsp;&nbsp;&nbsp;<span> ${bList.b_subcate} </span></div>
+							<div class="info1">PROGRAM &nbsp;&nbsp;&nbsp;&nbsp;<span> [${pList.p_cate}] </span></div>
+							<div class="info2">CONTENTS &nbsp;&nbsp;&nbsp;<span> ${pList.p_subcate} </span></div>
 						</div>
 					</div>
 				</c:forEach>									
@@ -52,19 +52,5 @@
 		</footer>
 	</div>
 </body>
-<script type="text/javascript">
-//회원권 구매 카테고리 구분
-$(document).ready( function() { 
-	$('.buy_cate_sub').isotope({ 
-		itemSelector: '.buy_cate_sub', 
-		}); 
-		
-	$('.buy_cate').on( 'click', 'li', function() { 
-		var filterValue = $(this).children().attr('data-filter'); 
-		$('.buy_cate_sub').isotope({ filter: filterValue }); 
-		$('.buy_cate li').removeClass('on'); 
-		$(this).addClass('on'); 
-		}); 
-	});
-</script>
+
 </html>

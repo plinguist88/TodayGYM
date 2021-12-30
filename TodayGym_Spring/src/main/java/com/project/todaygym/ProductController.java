@@ -13,54 +13,69 @@ import com.project.todaygym.service.ProductService;
 
 @Controller
 public class ProductController {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	@Autowired
-	private ProductService proServ;
-
+	private ProductService pServ;
 	private ModelAndView mv;
 	
-	//________________________________________ 상품
-	
-	//__________ 상품 페이지
+	//1. 구매메인페이지
 	@GetMapping("product")
 	public ModelAndView productMove() {
 		logger.info("productMove()");
-	
-		mv = proServ.getProductList();
-	
+		mv = pServ.getProductList();
 		return mv;
-	} // myInfoMove end
-	
-	//__________ 상품 상세 페이지
+	}
+	//2. 구매상세페이지
 	@GetMapping("detail")
 	public ModelAndView getProductDetail(String p_code) {
-		logger.info("getProductDetail");
-		
-		mv = proServ.getProductDetail(p_code);
-		
+		logger.info("getProductDetail()");
+		mv = pServ.getProductDetail(p_code);
 		return mv;
-	} // getProductDetail end
-	
-	//__________ 장바구니 저장하기
+	}
+	//3. 장바구니 페이지
+	@GetMapping("myCart")
+	public ModelAndView getMyCart() {
+		logger.info("getMyCart()");
+		mv = pServ.getMyCart();
+		return mv;
+	}
+	//4. 장바구니 저장하기
 	@GetMapping("saveCart")
 	public String saveMyCart(CartDto myCart, RedirectAttributes rttr) {
-		logger.info("saveMyCart");
+		logger.info("saveMyCart()");
 		
-		String view = proServ.saveMyCart(myCart, rttr);
-		
+		String view = pServ.saveMyCart(myCart, rttr);
 		return view;
-	} // saveMyCart end
+	}
 	
-	//__________ 장바구니 페이지
-	@GetMapping("myCart")
-	public ModelAndView getMycart() {
-		logger.info("myCart");
-		
-		mv = proServ.getMyCart();
-		
-		return mv;
-	} // getMycart end
-	
-} // class end
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

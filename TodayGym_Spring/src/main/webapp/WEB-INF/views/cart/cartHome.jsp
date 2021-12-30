@@ -73,33 +73,18 @@
 						</tr>
 					</thead>
 					<tbody class="cart_body">
+						<c:forEach var="mycart" items="${mycart}">
 						<tr>
 							<td class="tbody_td11"> <input class="checkbox" type="checkbox" checked name="chk"> </td>
 							<td class="tbody_td11">DB사진</td>
-							<td class="tbody_td11">DB제품이름</td>
+							<td class="tbody_td11">${mycart.p_subcate}</td>
 							<td class="tbody_td1"> <button class="buttonx" type="button"><img src="resources/img/cart/x.png"></button></td>
-							<td class="tbody_td1">DB옵션</td>
-							<td class="tbody_td1">DB금액</td>
+							<td class="tbody_td1">${mycart.o_month}</td>
+							<td class="tbody_td1">${mycart.o_price}원</td>
 							<td class="tbody_td11"> </td>
+							
 						</tr>
-						<tr>
-							<td class="tbody_td11"> <input class="checkbox" type="checkbox" checked name="chk"> </td>
-							<td class="tbody_td11">DB사진</td>
-							<td class="tbody_td11">DB제품이름</td>
-							<td class="tbody_td1"> <button class="buttonx" type="button"><img src="resources/img/cart/x.png"></button></td>
-							<td class="tbody_td1">DB옵션</td>
-							<td class="tbody_td1">DB금액</td>
-							<td class="tbody_td11"> </td>
-						</tr>
-						<tr>
-							<td class="tbody_td11"> <input class="checkbox" type="checkbox" checked name="chk"> </td>
-							<td class="tbody_td11">DB사진</td>
-							<td class="tbody_td11">DB제품이름</td>
-							<td class="tbody_td1"> <button class="buttonx" type="button"><img src="resources/img/cart/x.png"></button></td>
-							<td class="tbody_td1">DB옵션</td>
-							<td class="tbody_td1">DB금액</td>
-							<td class="tbody_td11"> </td>
-						</tr>
+						</c:forEach>
 					</tbody>
 				</table>
 			</div>	
@@ -116,8 +101,8 @@
 						<div class="cart_price">
 							<dl class="cart_price_sub">
 								<dt>총 상품금액</dt>
-								<dd>
-									<span>0</span>
+								<dd>					
+									<span>0</span>									
 									<span>원</span>
 								</dd>
 							</dl>

@@ -24,12 +24,12 @@
 		 	</div>
 		 	<div class="buy_info">
 		 		<div class="buy_imfo_img">
-		 			<img src="${bDto.b_img}">
+		 			<img src="${dInfo.p_img}">
 		 		</div>
 		 		<div class="buy_info_rightbar">
 			 		<fieldset class="buy_fieldset">
 			 		<div class="buy_info_top">
-			 			<h2 class="buy_info_h2">${bDto.b_cate}  ${bDto.b_subcate} </h2>
+			 			<h2 class="buy_info_h2">${dInfo.p_cate}  ${dInfo.p_subcate} </h2>
 			 			<div class="buy_info_title">
 			 				<span class="buy_info_sale">10%</span>
 			 				<div class="buy_info_price">
@@ -43,7 +43,7 @@
 			 		</fieldset>	
 			 		<fieldset class="buy_info_sub2">
 			 			<div class="buy_hr">
-			 				<span>회원</span>
+			 				<span>${mb.m_id}</span>
 			 				<span>님 만을 위한 혜택</span>
 			 			</div> 			
 			 			<hr>
@@ -76,15 +76,15 @@
 			 					 			
 			 		</div>			
 		 		</div>	
-		 		<form action="cartInsert" method="post">
-		 			<select class="buy_select_contants" name="">
-			 			<c:forEach var="pList" items="${pList}">
-			 				<option disabled selected>&nbsp;&nbsp;&nbsp;${pList.b_subcate}</option>		
-			 				<option value="${pList.p_term}_${pList.p_price}">&nbsp;&nbsp;&nbsp;${pList.p_term} : ${pList.p_price}원</option>		 				
+		 		<form action="saveCart" method="get">
+		 			<select class="buy_select_contants" name="buy_select_contants">
+			 			<c:forEach var="oList" items="${oList}">
+			 				<option disabled selected>&nbsp;&nbsp;&nbsp;${oList.o_code}</option>		
+			 				<option value="${oList.o_code}_${oList.o_month}_${oList.o_price}">&nbsp;&nbsp;&nbsp;${oList.o_month} : ${oList.o_price}원</option>		 				
 			 			</c:forEach>
 			 		</select>	
-		 			<input type="button" value="💳구매하기" class="nextbutton1" onclick="goCart()">
-		 			<input type="button" value="🛒장바구니" class="nextbutton2" onclick="goCart()">
+		 			<input type="submit" value="💳구매하기" class="nextbutton1">	 	
+		 			<input type="submit" value="🛒장바구니" class="nextbutton2" name="op_code" id="op_code">
 		 		</form>
 		 		<div class="total_info">
 					<div class="buy_price_hidden">
@@ -119,7 +119,7 @@
 					<table class="buy_table_info">
 						<tr>
 							<th>상품번호</th>
-							<td colspan="3">TgHealth001</td>
+							<td colspan="3">${dInfo.p_code}</td>
 							<th>상품종류</th>
 							<td>회원권</td>
 						</tr>
@@ -243,15 +243,10 @@
 		$(".buy_select_contants").on("change", function() {
 			var m = $(".buy_select_contants").val();
 			varr = m.split("_");
-			$(".buy_price2").html(varr[0]);
-			$("#total_price").html(varr[1] + "원");
+			$("#op_code").attr('value', varr[0]);
+			$(".buy_price2").html(varr[1]);
+			$("#total_price").html(varr[2] + "원");			
 		});
-
 	});
-
-	function goCart() {
-		console.log(varr);
-		location.href = './cartHome?type=' + varr[0] + '&price=' + varr[1];
-	}
 </script>
 </html>

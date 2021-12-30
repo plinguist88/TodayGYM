@@ -5,8 +5,7 @@ import lombok.Data;
 @Data
 public class OptionDto {
 	private String o_code;
-	private String p_code;
 	private String o_month;
 	private String o_price;
-	
-} // class end
+	private String p_code;
+}
