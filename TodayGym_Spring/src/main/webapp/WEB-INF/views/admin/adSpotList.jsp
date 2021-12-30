@@ -46,12 +46,12 @@
 				<tbody class="spotListPrint">
 					<c:forEach items="${sList}" var="sList">
 						<tr>
-							<td>${sList.s_code }</td>
+							<td><a href="adSpotDetailMove.ad?s_code=${sList.s_code }">${sList.s_code }</a></td>
 							<td>${sList.s_name }</td>
 							<td>${sList.s_phone }</td>
-							<td><a href="#">${sList.s_addr }</a></td>
+							<td>${sList.s_addr }</td>
 							<td>${sList.s_content }</td>
-							<td><a href="adSpotDetailMove.ad?s_code=${sList.s_code }">
+							<td><a href="#spotImages">
 									<button class="spotImages">지점 사진</button>
 							</a></td>
 						</tr>
