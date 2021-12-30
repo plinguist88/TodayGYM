@@ -9,5 +9,8 @@
 	<select id="getContents" parameterType="String" resultType="com.project.todaygym.dto.priceDto">
 		SELECT * FROM buydetail WHERE b_code = #{b_code}
 	</select>
-	
+	<!-- 2. 카트 정보 넣기 -->
+	<insert id="cartInsert" parameterType="com.project.todaygym.dto.priceDto">
+		INSERT INTO buydetail VALUES (#{b_code}, #{b_subcate}, #{b_img}, #{p_term}, #{p_price})
+	</insert>
 </mapper>
