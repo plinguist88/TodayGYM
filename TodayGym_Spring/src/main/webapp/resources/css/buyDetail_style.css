@@ -148,14 +148,19 @@
 }
 .buy_select_contants{
 	width: 750px;
-	height: 50px;
+	height: 70px;
 	font-size: 25px;
+	float: right;
+	border: 1px solid #a6a6a6;
+	margin-top: 20px;
 }
 .buy_select_contants option{
 	font-size: 20px;
 }
 .buy_price_hidden{
-	margin-top: 40px;
+	margin-top: 30px;
+	width: 750px;
+	float: right;
 }
 .buy_price_hidden span{
 	margin: 40px;
@@ -176,6 +181,8 @@ span.buy_price2{
 }
 .buy_price {
 	margin-top: 40px;
+	width: 750px;
+	float: right;
 }
 .buy_price div{
 	float: left;
@@ -226,7 +233,7 @@ span.buy_price2{
 	margin: 0 auto;
 	text-align: center;
 	float: none;
-	margin-top: 450px;
+	margin-top: 600px;
 }
 .buy_detail fieldset{
 	border: 1px solid #ceeff2;

@@ -73,34 +73,34 @@
 			 		<hr>
 			 		<div class="buy_select">
 			 			
-			 			<select class="buy_select_contants" name="">
+			 					 			
+			 		</div>			
+		 		</div>	
+		 		<form action="cartInsert" method="post">
+		 			<select class="buy_select_contants" name="">
 			 			<c:forEach var="pList" items="${pList}">
 			 				<option disabled selected>&nbsp;&nbsp;&nbsp;${pList.b_subcate}</option>		
 			 				<option value="${pList.p_term}_${pList.p_price}">&nbsp;&nbsp;&nbsp;${pList.p_term} : ${pList.p_price}원</option>		 				
 			 			</c:forEach>
-			 			</select>			 			
-			 		</div>
-			 		<div class="buy_price_hidden">
-			 			<hr>
-			 			<div>
-				 			<span class="buy_price1">옵션명</span>
-				 			<span class="buy_price2"></span>
-				 			
-			 			</div>
-			 			<hr>
-			 		</div>
-			 		<div class="buy_price">
-			 			<div>총 상품 금액</div>
-			 			<span id="total_price">원</span>
-			 		</div>			
-		 		</div>	
-		 		<form action="" method="post">
+			 		</select>	
 		 			<input type="button" value="💳구매하기" class="nextbutton1" onclick="goCart()">
-		 		</form>	 
-		 		<form action="" method="post">
 		 			<input type="button" value="🛒장바구니" class="nextbutton2" onclick="goCart()">
-		 		</form>	 		
-		 	</div>		 	
+		 		</form>
+		 		<div class="total_info">
+					<div class="buy_price_hidden">
+						<hr>
+						<div>
+							<span class="buy_price1">옵션명</span> <span class="buy_price2"></span>
+	
+						</div>
+						<hr>
+					</div>
+					<div class="buy_price">
+						<div>총 상품 금액</div>
+						<span id="total_price">원</span>
+					</div>
+				</div>
+			</div>		 	
 		</section>
 		<section class="buy_detail">
 			<div>
