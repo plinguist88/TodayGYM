@@ -63,47 +63,6 @@ public class AdMemService {
 		}
 		return mList;
 	}
-	/*public ModelAndView getAdmemList(Integer pageNum) {
-		mv = new ModelAndView();
-
-		int num = (pageNum == null)? 1 : pageNum;
-
-		Map<String, Integer> mmap = 
-				new HashMap<String, Integer>();
-		mmap.put("num", num);
-		mmap.put("lcnt", listCnt);
-
-		List<MemberDto> mList = adMDao.getMList(mmap);
-
-		mv.addObject("mList", mList);
-
-		String pageHtml	= getPaging(num);
-		mv.addObject("pagin", pageHtml);
-
-		session.setAttribute("pageNum", num);
-
-		mv.setViewName("admin/adMem");
-
-		return mv;
-	}
-
-
-	private String getPaging(int num) {
-		String pageHtml = null;
-
-		//전체 글 개수 구하기(DAO)
-		int maxNum = adMDao.getMemberCnt();
-		//한 페이지에 보여질 페이지 번호 개수
-		int pageCnt = 2;
-		String listName = "list";
-
-		adPagingUtil paging = new adPagingUtil(maxNum, num, listCnt, 
-				pageCnt, listName);
-
-		pageHtml = paging.makePaging();
-
-		return pageHtml;
-	}*/
 
 	//회원 상세정보 이동 및 출력
 	public ModelAndView getAdMemDetail(String m_id) {

@@ -38,6 +38,7 @@
 					</thead>
 					<!-- List Contents -->
 					<tbody>
+						<!-- 임시 링크 -->
 						<tr>
 							<td><a href="adTicketDetailMove.ad" class="ticketNum">T001</a></td>
 							<td><a href="#">유저A</a></td>
@@ -46,14 +47,17 @@
 							<td>21.12.20 ~ 22.03.19</td>
 							<td><button class="button ticketOn">사용</button></td>
 						</tr>
-						<tr>
-							<td>T002</td>
-							<td>유저B</td>
-							<td>수영</td>
-							<td>초고속 자유형 특강</td>
-							<td>21.07.30 ~ 21.10.29</td>
-							<td><button class="button ticketOff">만료</button></td>
-						</tr>
+						<c:forEach items="${tList}" var="tlist">
+							<tr>
+								<td><a href="./adTicketDetailMove.ad?t-no=${tlist.t_no}"
+									class="ticketNum">${tlist.t_no}</a></td>
+								<td>${tlist.m_id}</td>
+								<td>${tlist.p_cate}</td>
+								<td>${tlist.p_title}</td>
+								<td>${tlist.p_date}</td>
+								<td><button class="button ticketOff">만료</button></td>
+							</tr>
+						</c:forEach>
 					</tbody>
 				</table>
 				<!-- List Search -->
@@ -62,8 +66,8 @@
 						<select class="adTicket-sselct" name="searchType">
 							<option selected value="t_no">티켓번호</option>
 							<option value="m_id">회원ID</option>
-							<option value="#">종목</option>
-							<option value="#">상품명</option>
+							<option value="p_cate">종목</option>
+							<option value="p_title">상품명</option>
 						</select> <input type="text" name="keyword" value=""></input>
 						<button type="button" onclick="getTicketList()"
 							class="adTicket-sbtn">검색</button>
