@@ -69,10 +69,10 @@
 					<div class="alert alert-danger" id="alert-danger">비밀번호가 일치하지 않습니다.</div>
 					<input type="text" class="login-input" title="이름" name="m_name" placeholder="이름"> 
 					<input type="text" class="login-input" title="이메일" name="m_email" placeholder="메일 ex)asd@gmail.com"> 
-					<input type="text" class="phone-input" title="연락처" name="m_phone1" id="m_phone1" size="10" placeholder="010"> 
-					<input type="text" class="phone-input" title="연락처" name="m_phone2" id="m_phone2" size="10" placeholder="0000">
-					<input type="text" class="phone-input" title="연락처" name="m_phone3" id="m_phone3" size="10" placeholder="0000">
-					<input type="text" class="login-input" title="생일" name="m_birth" placeholder="생일 ex)930101"> 
+					<input type="text" class="phone-input" title="연락처" name="m_phone1" id="m_phone1" maxlength="3" placeholder="010"> 
+					<input type="text" class="phone-input" title="연락처" name="m_phone2" id="m_phone2" maxlength="4" placeholder="0000">
+					<input type="text" class="phone-input" title="연락처" name="m_phone3" id="m_phone3" maxlength="4" placeholder="0000">
+					<input type="text" class="login-input" title="생일" name="m_birth" maxlength="6" placeholder="생일 ex)930101"> 
 					<input type="submit" class="login-btn" value="가입">
 				</form>
 			</div>
