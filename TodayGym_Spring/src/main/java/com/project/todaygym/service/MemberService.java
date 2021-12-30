@@ -11,6 +11,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dao.MemberDao;
 import com.project.todaygym.dto.MemberDto;
+import com.project.todaygym.dto.MemberFormDto;
 
 @Service
 public class MemberService {
@@ -42,11 +43,29 @@ public class MemberService {
 	//가입 성공시 첫페이지로 이동. 실패 시 회원가입페이지로 이동.
 	//성공 시 가입성공 메시지, 실패 시 가입 실패 메시지 전달.
 	@Transactional
-	public String memberInsert(MemberDto member, 
+	public String memberInsert(MemberFormDto memberForm, 
 			RedirectAttributes rttr) {
 		String view = null;
 		String msg = null;
 
+		String m_id = memberForm.getM_id();
+		String m_pw = memberForm.getM_pw(); 
+		String m_name = memberForm.getM_name();
+		String m_email = memberForm.getM_email();
+		String m_phone1 = memberForm.getM_phone1();
+		String m_phone2 = memberForm.getM_phone2();
+		String m_phone3 = memberForm.getM_phone3();
+		String m_birth = memberForm.getM_birth();
+		
+		MemberDto member = new MemberDto();
+		
+		member.setM_id(m_id);
+		member.setM_pw(m_pw);
+		member.setM_name(m_name);
+		member.setM_email(m_email);
+		member.setM_phone(m_phone1 + m_phone2 + m_phone3);
+		member.setM_birth(m_birth);
+		
 		//비밀번호 암호화 처리
 		//Spring Security에서 제공하는 암호화 인코더 사용
 		BCryptPasswordEncoder pwdEncoder = new BCryptPasswordEncoder();

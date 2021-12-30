@@ -1,6 +1,7 @@
 package com.project.todaygym.dao;
 
 import com.project.todaygym.dto.MemberDto;
+import com.project.todaygym.dto.MemberFormDto;
 
 public interface MemberDao {
 		//아이디 중복 체크용

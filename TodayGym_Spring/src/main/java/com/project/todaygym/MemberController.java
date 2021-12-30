@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dto.MemberDto;
+import com.project.todaygym.dto.MemberFormDto;
 import com.project.todaygym.service.MemberService;
 
 @Controller
@@ -48,11 +49,11 @@ public class MemberController {
 	}
 	
 	@PostMapping("memInsert")
-	public String memberInsert(MemberDto member,
+	public String memberInsert(MemberFormDto memberForm,
 			RedirectAttributes rttr) {
 		logger.info("memberInsert()");
 		
-		String view = mServ.memberInsert(member, rttr);
+		String view = mServ.memberInsert(memberForm, rttr);
 		
 		return view;
 	}

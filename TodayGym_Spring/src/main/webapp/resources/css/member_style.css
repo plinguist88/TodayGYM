@@ -84,7 +84,9 @@ body{
     border-top-right-radius: 0;
 }
 
-.login-form .login-input {
+
+
+.login-form .login-input{
 	position: relative;
     height: auto;
     box-sizing: border-box;
@@ -92,7 +94,7 @@ body{
     font-size: 16px;
 }
 
-.login-input {
+.login-input{
 	display: block;
     width: 100%;
     line-height: 1.5;
@@ -138,6 +140,14 @@ body{
 	padding: 10px 16px;
 	font-size: 18px;
 	line-height: 1.5;
+}
+
+.phone-input{
+	display: inline-block;
+	text-align: center;
+	width: 154px;
+	height: 30px;
+	font-size: 16px;
 }
 
 /* join style */
