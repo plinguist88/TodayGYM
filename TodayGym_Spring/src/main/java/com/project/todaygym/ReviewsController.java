@@ -36,11 +36,8 @@ public class ReviewsController {
 	public String reviewWriteAct(ReviewDto rdto, RedirectAttributes rttr) {
 		logger.info("reviewWriteAct()");
 		
-		rdto.setM_id("test0312");
 		rdto.setR_score(3);
 		System.out.println(rdto);
-		
-		
 		
 		String view = tServe.WriteAct(rdto , rttr);
 		return view;

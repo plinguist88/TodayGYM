@@ -4,12 +4,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dao.ReviewDao;
+import com.project.todaygym.dto.MemberDto;
 import com.project.todaygym.dto.ReviewDto;
 
 @Service
@@ -17,6 +20,9 @@ public class ReviewService {
 
 	@Autowired
 	private ReviewDao rdao;
+	
+	@Autowired
+	private HttpSession session;
 	
 	private ModelAndView mv;
 	
@@ -27,7 +33,11 @@ public class ReviewService {
 
 		String view = null;
 		String msg = null;
-
+		
+		MemberDto getMember = (MemberDto)session.getAttribute("mb");			
+		String getLoginId = getMember.getM_id();
+		
+		rdto.setM_id(getLoginId);
 
 		try {
 			rdao.WriteInsert(rdto);

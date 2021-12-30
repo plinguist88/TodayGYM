@@ -37,7 +37,7 @@
 					</div>
 					<div class="review_container">
 						<div class="review_sub">
-							<input class="input_title" type="text" value="제목을 입력하세요"
+							<input class="input_title" type="text" placeholder="제목을 입력하세요"
 								name="r_title">
 						</div>
 						<div class="review_content">

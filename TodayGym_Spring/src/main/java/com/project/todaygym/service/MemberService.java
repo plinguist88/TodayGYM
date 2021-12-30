@@ -57,7 +57,7 @@ public class MemberService {
 
 		try {
 			mDao.memberInsert(member);			
-			view = "redirect:/";
+			view = "redirect:home";
 			msg = "가입 성공";
 		} catch (Exception e) {
 			//e.printStackTrace();
