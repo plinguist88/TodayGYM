@@ -30,7 +30,11 @@ table {
 	
 	border-collapse: collapse;
 	
-	background-color: #fff;
+	background-color: #f2f2f2;
+}
+
+table input{
+	background-color: #f2f2f2;
 }
 
 table thead th h1{
@@ -126,3 +130,5 @@ table tfoot td.regSubmit input{
 table tfoot td.regSubmit input:hover{
 	background-color: #ff6666;
 }
+
+table tbody .regImage

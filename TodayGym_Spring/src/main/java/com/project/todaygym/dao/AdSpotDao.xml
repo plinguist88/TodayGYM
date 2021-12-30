@@ -8,13 +8,13 @@
 		resultType="com.project.todaygym.dto.SpotDto">
 		SELECT * FROM SPOT_TB ORDER BY s_code DESC
 	</select>
-	
+
 	<!-- 지점 번호 검색 -->
 	<select id="spotNextNumber" parameterType="String"
 		resultType="String">
 		SELECT max(s_code) FROM SPOT_TB
 	</select>
-	
+
 	<!-- 지점 등록 -->
 	<insert id="spotInsert"
 		parameterType="com.project.todaygym.dto.SpotDto">
@@ -23,10 +23,22 @@
 		(#{s_code},#{s_name},#{s_phone},#{s_addr},
 		#{s_content})
 	</insert>
-	
-	<!-- 지점 상세 -->
-	<select id="spotOneSelect" parameterType="String"
-		resultType="com.project.todaygym.dto.SpotDto">
-		SELECT * FROM SPOT_TB WHERE s_code=#{s_code}
+
+	<!-- 지점 이미지 등록 -->
+	<insert id="spotImageInsert"
+		parameterType="com.project.todaygym.dto.SpotImageDto"
+		useGeneratedKeys="true" keyProperty="simg_no">
+		<selectKey keyProperty="simg_no" resultType="Integer"
+			order="BEFORE">
+			SELECT SIMG_SEQ.NEXTVAL FROM DUAL
+		</selectKey>
+		INSERT INTO SIMG_TB VALUES
+		(#{simg_no},#{s_code},#{simg_ori},#{simg_sys})
+	</insert>
+
+	<!-- 지점 이미지 목록 -->
+	<select id="spotImageSelect" parameterType="String"
+		resultType="com.project.todaygym.dto.SpotImageDto">
+		SELECT * FROM SIMG_TB WHERE s_code=#{s_code}
 	</select>
 </mapper>

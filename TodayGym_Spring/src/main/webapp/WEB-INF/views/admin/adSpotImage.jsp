@@ -5,9 +5,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin Spot Detail</title>
+<title>Admin Spot Image</title>
 <link type="text/css" rel="stylesheet"
-	href="resources/css/adSpotDetail_style.css">
+	href="resources/css/adSpotImage_style.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="module"
@@ -18,21 +18,13 @@
 <body>
 	<div class="content-admin">
 		<div class="content">
-			<!-- Admin Spot Detail Start  -->
-			<table>
-				<thead>
-					<th></th>
-				</thead>
-				<tbody>
-				
-				</tbody>
-			</table>
-			${spotDto.s_code }
-			${spotDto.s_name }
-			${spotDto.s_phone }
-			${spotDto.s_addr }
-			${spotDto.s_content }
-			<!-- Admin Spot Detail End  -->
+			<!-- Admin Spot Image Start  -->
+			<c:forEach items="${pathList}" var="pathList">
+				<img src="${pathList }" />
+			</c:forEach>
+			 <input type="button" value="취소"
+								onclick="window.close()" />
+			<!-- Admin Spot Image End  -->
 		</div>
 	</div>
 </body>

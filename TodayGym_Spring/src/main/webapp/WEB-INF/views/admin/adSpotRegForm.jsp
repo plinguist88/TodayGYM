@@ -37,15 +37,16 @@
 								readonly /></td>
 							<td class="regImage" rowspan="5">
 								<div>
-									<label for="s_images"> 이미지 올리기 </label>
+									<label for="s_images">이미지 올리기</label>
 								</div>
 								<div>
-									<input type="file" name="s_images[]" id="s_images"
+									<input type="file" name="s_images" id="s_images"
 										accept="image/*" onchange="showFileList()" multiple />
 								</div>
 								<div>
-									<ul class="fileList"></ul>
+									<ul id="fileList"></ul>
 								</div>
+								<div id="preView"></div>
 							</td>
 						</tr>
 						<tr>
@@ -93,10 +94,17 @@
 		src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<script src="resources/JavaScript/apiKakaoAddress.js"></script>
 	<script type="text/javascript">
-		function showFileList(){
-			var s_images = document.getElementById('s_images').files;
-			
-			console.log(s_images);
+		function showFileList() {
+			var s_images = document.getElementById('s_images');
+			var files = s_images.files;
+			var file = '';
+			var fileNameList = '';
+
+			for (var i = 0; i < files.length; i++) {
+				file = files[i]
+				fileNameList += '<li>' + file.name + '</li>';
+			}
+			document.getElementById('fileList').innerHTML = fileNameList;
 		}
 	</script>
 </body>

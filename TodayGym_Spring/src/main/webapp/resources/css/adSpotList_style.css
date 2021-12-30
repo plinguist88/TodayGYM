@@ -66,12 +66,12 @@ body {
 	border-bottom: 1px solid #fff;
 }
 
-.listTable .spotListPrint td a {
+.listTable .spotImageList td a {
 	text-decoration: none;
 	color: #000;
 }
 
-.listTable .spotImages {
+.listTable .spotImage {
 	border-style: none;
 	background-color: #000;
 	color: #fff;
