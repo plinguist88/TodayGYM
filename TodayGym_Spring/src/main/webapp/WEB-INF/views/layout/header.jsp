@@ -19,7 +19,7 @@
 		<ul>
 			<li><a href="home">HOME</a></li>
 			<li><a href="">ABOUT</a></li>
-			<li><a href="buyHome">PROGRAM</a></li>
+			<li><a href="product">PROGRAM</a></li>
 			<li><a href="spotHome">SPOT</a></li>
 			<li><a href="review">REVIEW</a></li>
 		</ul>

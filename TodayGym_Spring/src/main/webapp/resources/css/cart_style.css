@@ -71,8 +71,8 @@ header {
 	border: none;
 	cursor: pointer;
 }
-.cart_body{
-	height: 600px;
+.cart_body tr{
+	height: 200px;
 }
 .tbody_td1{
 	border-top: 1px solid #cacbd4;
@@ -135,6 +135,9 @@ header {
 .cart_price_sub{
 	float: left;
 	margin: 0px 30px;
+}
+.cart_price_sub dd{
+	margin-left: 0px;
 }
 .cart_price_sub dt{
 	font-size: 20px;

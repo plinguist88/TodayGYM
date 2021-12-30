@@ -19,11 +19,11 @@
 		<section>
 			<div class="content-cart">
 				<div class="cart-form">
-					<c:forEach var="myCart" items="${myCart}">
-						<div>장바구니 번호 : ${myCart.c_code}</div>
-						<div>제목 : ${myCart.p_title}</div>
-						<div>수강기간 : ${myCart.o_month}</div>
-						<div>가격 : ${myCart.o_price}</div>
+					<c:forEach var="mycart" items="${mycart}">
+						<div>장바구니 번호 : ${mycart.c_code}</div>
+						<div>제목 : ${mycart.p_subcate}</div>
+						<div>수강기간 : ${mycart.o_month}</div>
+						<div>가격 : ${mycart.o_price}</div>
 					</c:forEach>
 				</div>
 				<button onclick="location.href='./myOrder?m_id=${mb.m_id}'">주문하기</button>

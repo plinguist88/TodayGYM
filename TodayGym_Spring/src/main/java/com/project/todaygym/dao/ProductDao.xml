@@ -1,46 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
 <mapper namespace="com.project.todaygym.dao.ProductDao">
-
-	<!-- 상품 리스트 가져오기 -->
-	<select id="getProductList"
-		resultType="com.project.todaygym.dto.ProductDto">
+	<!-- 1. 구매메인 상품정보 가져오기 -->
+	<select id="getProductList" resultType="com.project.todaygym.dto.ProductDto">
 		SELECT * FROM P
 	</select>
-
-	<!-- 상품 상세 가져오기 -->
-	<select id="getProductSelect" parameterType="String"
-		resultType="com.project.todaygym.dto.ProductDto">
-		SELECT * FROM P WHERE p_code=#{p_code}
+	<!-- 2. 구매상세 정보 출력하기 -->
+	<select id="getProductSelect" parameterType="String" resultType="com.project.todaygym.dto.ProductDto">
+		SELECT * FROM P WHERE p_code = #{p_code}
 	</select>
-
-	<!-- 상품 옵션 가져오기 -->
-	<select id="getOptionSelect" parameterType="String"
-		resultType="com.project.todaygym.dto.OptionDto">
-		SELECT * FROM O WHERE p_code=#{getCode}
+	<!-- 3. 구매상세 옵션가져오기 -->
+	<select id="getOptionSelect" parameterType="String" resultType="com.project.todaygym.dto.OptionDto">
+		SELECT * FROM O WHERE p_code = #{getCode}
 	</select>
-
-	<!-- 장바구니에 저장하기 -->
-	<insert id="myCartInsert"
-		parameterType="com.project.todaygym.dto.CartDto"
-		useGeneratedKeys="true" keyProperty="c_code">
-		<selectKey keyProperty="c_code" resultType="Integer"
-			order="BEFORE">
+	<!-- 4. 장바구니에 저장하기 -->
+	<insert id="myCartInsert" parameterType="com.project.todaygym.dto.CartDto" useGeneratedKeys="true" keyProperty="c_code">
+		<selectKey keyProperty="c_code" resultType="Integer" order="BEFORE">
 			SELECT CART_SEQ.NEXTVAL FROM DUAL
 		</selectKey>
-		INSERT INTO C VALUES
-		(${c_code},#{m_id},#{p_code},#{op_code})
+		INSERT INTO C VALUES (${c_code}, #{m_id}, #{p_code}, #{op_code})
 	</insert>
-
-	<select id="getMyCart" parameterType="String"
+	<!-- 5. 장바구니 가져오기 id값 -->
+	<select id="getMyCart" parameterType="String" 
 		resultType="com.project.todaygym.dto.MyCartDto">
-		SELECT A.C_CODE, A.M_ID, B.P_TITLE, C.O_MONTH, C.O_PRICE
+		SELECT A.C_CODE, A.M_ID, B.P_SUBCATE, C.O_MONTH, C.O_PRICE
 		FROM CART_TB A, PRODUCT_TB B, OPTION_TB C
 		WHERE A.P_CODE = B.P_CODE AND A.OP_CODE = C.O_CODE
 		AND A.M_ID = #{getId}
 		ORDER BY A.C_CODE DESC
 	</select>
-
 </mapper>
