@@ -64,7 +64,6 @@
 
 .navbar .navbar_sign ul li {
 	list-style: none;
-	width: 60px;
 	text-align: center;
 }
 
@@ -76,9 +75,6 @@
 
 .navbar .navbar_sign ul li a:hover {
 	background-color: #fff;
-}
-
-.navbar .navbar_sign ul li a:hover abbr .navbar_icon ion-icon{
 	color: #000;
 }
 

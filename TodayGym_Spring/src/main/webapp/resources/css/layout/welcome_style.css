@@ -21,6 +21,7 @@ body {
 }
 
 .content a {
+	height: 360px;
 	text-decoration: none;
 	color: #fff;
 }
@@ -31,8 +32,34 @@ body {
 	color: #fff;
 }
 
-.content a h1:hover {
-	box-shadow: 0.3em 0.3em 1em #fff
+.content a h1:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 60%;
+	width: 0;
+	height: 5px;
+	background-color: #fff;
+	transition: all 1s;
+}
+
+.content a h1:before {
+	content: "";
+	position: absolute;
+	right: 50%;
+	bottom: 60%;
+	width: 0;
+	height: 5px;
+	background-color: #fff;
+	transition: all 1s;
+}
+
+.content a h1:hover:after {
+	width: 18%;
+}
+
+.content a h1:hover:before {
+	width: 18%;
 }
 
 .content p {
