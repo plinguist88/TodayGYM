@@ -3,13 +3,10 @@
 
 /******************************** branch area ******************************/
 
-
-header {
-	position: sticky;
-	top: 0px;
+body{
+	margin: 0;
+	padding: 0;
 }
-
-
 
 .spot_sub_image{
 	margin-top: 60px;
@@ -21,9 +18,8 @@ header {
 }
 .spot_sub_content{
 	text-align: center;
-	z-index: 1;
 	position: relative;
-	bottom: 230px;
+	bottom: 260px;
 	color: white;
 }
 h1{
