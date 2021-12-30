@@ -26,6 +26,7 @@
 						<div>가격 : ${myCart.o_price}</div>
 					</c:forEach>
 				</div>
+				<button onclick="location.href='./myOrder?m_id=${mb.m_id}'">주문하기</button>
 			</div>
 		</section>
 		<footer>

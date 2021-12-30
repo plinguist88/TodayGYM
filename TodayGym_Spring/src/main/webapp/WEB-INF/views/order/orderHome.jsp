@@ -24,37 +24,22 @@
 							<b>주문/결제</b>
 						</div>
 						<div class="myOrder-header-orderseq">
-							<b>주문/결제</b> > 완료
+							장바구니 > <b>주문/결제</b> > 완료
 						</div>
 					</div>
 					<div class="myOrder-contents">
 						<div class="myOrder-contents-title">
-							<div class="contents-title-cate">종류</div>
-							<div class="contents-title-title">이름</div>
+							<div class="contents-title-cate">장바구니 번호</div>
+							<div class="contents-title-title">회원권</div>
 							<div class="contents-title-term">수강기간</div>
 							<div class="contents-title-price">가격</div>
 						</div>
 						<div class="myOrder-contents-orderlist">
-							<div class="contents-orderlist-cate">종류</div>
-							<div class="contents-orderlist-title">이름</div>
-							<div class="contents-orderlist-term">수강기간</div>
-							<div class="contents-orderlist-price">가격</div>
-							<hr>
-							<div class="contents-orderlist-cate">종류</div>
-							<div class="contents-orderlist-title">이름</div>
-							<div class="contents-orderlist-term">수강기간</div>
-							<div class="contents-orderlist-price">가격</div>
-							<hr>
-							<div class="contents-orderlist-cate">종류</div>
-							<div class="contents-orderlist-title">이름</div>
-							<div class="contents-orderlist-term">수강기간</div>
-							<div class="contents-orderlist-price">가격</div>
-							<hr>
 							<c:forEach var="myOrder" items="${myOrder}">
-								<div class="contents-orderlist-cate">종류</div>
-								<div class="contents-orderlist-title">이름</div>
-								<div class="contents-orderlist-term">수강기간</div>
-								<div class="contents-orderlist-price">가격</div>
+								<div class="contents-orderlist-cate">${myOrder.c_code}</div>
+								<div class="contents-orderlist-title">${myOrder.p_title}</div>
+								<div class="contents-orderlist-term">${myOrder.o_month}</div>
+								<div class="contents-orderlist-price">${myOrder.o_price}</div>
 								<hr>
 							</c:forEach>
 						</div>

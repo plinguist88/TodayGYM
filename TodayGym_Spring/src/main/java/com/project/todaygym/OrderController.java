@@ -21,10 +21,10 @@ public class OrderController {
 
 	//__________ 겔제 페이지
 	@GetMapping("myOrder")
-	public ModelAndView myOrderMove() {
+	public ModelAndView myOrderMove(String m_id) {
 		logger.info("myOrderMove()");
 		
-		mv = orderServ.getMyOrderAndInfo();
+		mv = orderServ.getMyCartAndInfo(m_id);
 		
 		return mv;
 	} // myOrderMove end

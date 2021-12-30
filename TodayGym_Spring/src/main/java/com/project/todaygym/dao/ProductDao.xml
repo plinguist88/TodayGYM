@@ -40,6 +40,7 @@
 		FROM CART_TB A, PRODUCT_TB B, OPTION_TB C
 		WHERE A.P_CODE = B.P_CODE AND A.OP_CODE = C.O_CODE
 		AND A.M_ID = #{getId}
+		ORDER BY A.C_CODE DESC
 	</select>
 
 </mapper>
