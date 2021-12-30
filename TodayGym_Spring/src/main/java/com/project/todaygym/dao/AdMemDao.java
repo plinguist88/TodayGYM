@@ -8,7 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.project.todaygym.dto.MemberDto;
 
-public interface AdminMemDao {
+public interface AdMemDao {
 
 	//전체 회원 정보 가져오기
 	public List<MemberDto> getMList(Map<String, String> mmap);

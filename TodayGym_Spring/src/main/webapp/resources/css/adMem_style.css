@@ -66,6 +66,7 @@ h1{
 }
 
 .admem-listtitle td {
+	padding: 10px;
 	text-align: center;
 	margin: 0;
 	border-bottom: 2px inset #c0c0c0;

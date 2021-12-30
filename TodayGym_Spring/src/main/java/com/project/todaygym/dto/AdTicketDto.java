@@ -3,7 +3,7 @@ package com.project.todaygym.dto;
 import lombok.Data;
 
 @Data
-public class AdTicketDTO {
+public class AdTicketDto {
 	private int t_no;
 	private String p_no;
 	private char t_use;

@@ -14,7 +14,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.project.todaygym.dao.AdminMemDao;
+import com.project.todaygym.dao.AdMemDao;
 import com.project.todaygym.dto.MemberDto;
 import com.project.todaygym.util.adPagingUtil;
 
@@ -22,10 +22,10 @@ import lombok.extern.java.Log;
 
 @Service
 @Log
-public class adMemService {
+public class AdMemService {
 
 	@Autowired
-	private AdminMemDao adMDao;
+	private AdMemDao adMDao;
 
 	private HttpSession session;
 

@@ -21,54 +21,55 @@
 			<jsp:include page="../layout/adSidebar.jsp" />
 		</div>
 		<div class="content">
-			<!-- Admin Ticket List Start  -->
-			<table class="listTable">
-				<!-- List Title -->
-				<thead>
-					<tr>
-						<th colspan="6"><h1>회원권</h1></th>
-					</tr>
-					<tr class="listSpace">
-						<td></td>
-					</tr>
-					<tr class="listTitle">
-						<td>번호</td>
-						<td>이름</td>
-						<td>종목</td>
-						<td>상품명</td>
-						<td>사용기간</td>
-						<td>만료여부</td>
-					</tr>
-				</thead>
-				<!-- List Contents -->
-				<tbody>
-					<tr>
-						<td><a href="adTicketDetailMove.ad" class="ticketNum">T001</a></td>
-						<td><a href="#">유저A</a></td>
-						<td>헬스</td>
-						<td><a href="#">빡빡이와 함께하는 해피헬스</a></td>
-						<td>21.12.20 ~ 22.03.19</td>
-						<td><button class="button ticketOn">사용</button></td>
-					</tr>
-					<tr>
-						<td>T002</td>
-						<td>유저B</td>
-						<td>수영</td>
-						<td>초고속 자유형 특강</td>
-						<td>21.07.30 ~ 21.10.29</td>
-						<td><button class="button ticketOff">만료</button></td>
-					</tr>
-				</tbody>
+			<div class="content-adticket">
+				<!-- Admin Ticket List Start  -->
+				<h1>회원권</h1>
+				<table class="listTable">
+					<!-- List Title -->
+					<thead>
+						<tr class="listTitle">
+							<th>번호</th>
+							<th>이름</th>
+							<th>종목</th>
+							<th>상품명</th>
+							<th>사용기간</th>
+							<th>사용여부</th>
+						</tr>
+					</thead>
+					<!-- List Contents -->
+					<tbody>
+						<tr>
+							<td><a href="adTicketDetailMove.ad" class="ticketNum">T001</a></td>
+							<td><a href="#">유저A</a></td>
+							<td>헬스</td>
+							<td><a href="#">빡빡이와 함께하는 해피헬스</a></td>
+							<td>21.12.20 ~ 22.03.19</td>
+							<td><button class="button ticketOn">사용</button></td>
+						</tr>
+						<tr>
+							<td>T002</td>
+							<td>유저B</td>
+							<td>수영</td>
+							<td>초고속 자유형 특강</td>
+							<td>21.07.30 ~ 21.10.29</td>
+							<td><button class="button ticketOff">만료</button></td>
+						</tr>
+					</tbody>
+				</table>
 				<!-- List Search -->
-				<tfoot>
-					<tr>
-						<td>검색조건</td>
-						<td colspan="4">검색내용</td>
-						<td>검색</td>
-					</tr>
-				</tfoot>
-			</table>
-			<!-- Admin Ticket List End  -->
+				<form name="adsearch-form" autocomplete="off">
+					<div class="adTicket-search">
+						<select class="adTicket-sselct" name="searchType">
+							<option selected value="t_no">티켓번호</option>
+							<option value="m_id">회원ID</option>
+							<option value="#">종목</option>
+							<option value="#">상품명</option>
+						</select> <input type="text" name="keyword" value=""></input>
+						<button type="button" onclick="getTicketList()"
+							class="adTicket-sbtn">검색</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 </body>
