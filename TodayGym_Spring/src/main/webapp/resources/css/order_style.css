@@ -1,10 +1,9 @@
 @charset "UTF-8";
 
 /******************************** order area ******************************/
-
-header {
-	position: sticky;
-	top: 0px;
+body {
+	margin: 0;
+	padding: 0;
 }
 
 .wrap {
@@ -15,9 +14,29 @@ li {
 	list-style: none;
 }
 
+.myOrder_title {
+	margin-top: 60px;
+	height: 400px;
+}
+
+.title_img {
+	width: 100%;
+	height: 400px;
+}
+
+.title_contents {
+	text-align: center;
+	position: relative;
+	bottom: 260px;
+	font-size: 50px;
+	line-height: 1.4;
+	font-weight: 600;
+	color: white;
+}
+
 /******************************** orderHome area ******************************/
 .content-myOrder {
-	height: 1200px;
+	height: auto;
 	background-color: #FFFFFF;
 }
 
@@ -25,7 +44,7 @@ li {
 	width: 1200px;
 	height: 100%;
 	margin: 0 auto;
-	padding: 100px 0 50px 0;
+	padding: 50px 0 50px 0;
 }
 
 /******************************** myOrder-header area */
@@ -48,7 +67,7 @@ li {
 /******************************** myOrder-contents area */
 .myOrder-contents {
 	width: 1200px;
-	height: 1200px;
+	height: auto;
 }
 
 /******************************** myOrder-contents-title area */
@@ -59,7 +78,7 @@ li {
 }
 
 .contents-title-cate {
-	float:left;
+	float: left;
 	width: 200px;
 	height: 50px;
 	line-height: 50px;
@@ -67,7 +86,7 @@ li {
 }
 
 .contents-title-title {
-	float:left;
+	float: left;
 	width: 500px;
 	height: 50px;
 	line-height: 50px;
@@ -75,7 +94,7 @@ li {
 }
 
 .contents-title-term {
-	float:left;
+	float: left;
 	width: 250px;
 	height: 50px;
 	line-height: 50px;
@@ -83,7 +102,7 @@ li {
 }
 
 .contents-title-price {
-	float:left;
+	float: left;
 	width: 250px;
 	height: 50px;
 	line-height: 50px;
@@ -98,41 +117,41 @@ li {
 }
 
 .contents-orderlist-cate {
-	float:left;
+	float: left;
 	width: 200px;
-	height: 100px;
-	line-height: 100px;
+	height: 80px;
+	line-height: 80px;
 	text-align: center;
 }
 
 .contents-orderlist-title {
-	float:left;
+	float: left;
 	width: 500px;
-	height: 100px;
-	line-height: 100px;
+	height: 80px;
+	line-height: 80px;
 	text-align: center;
 }
 
 .contents-orderlist-term {
-	float:left;
+	float: left;
 	width: 250px;
-	height: 100px;
-	line-height: 100px;
+	height: 80px;
+	line-height: 80px;
 	text-align: center;
 }
 
 .contents-orderlist-price {
-	float:left;
+	float: left;
 	width: 250px;
-	height: 100px;
-	line-height: 100px;
+	height: 80px;
+	line-height: 80px;
 	text-align: center;
 }
 
 /******************************** myOrder-contents-user area */
 .myOrder-contents-user {
 	width: 1200px;
-	height: 250px;
+	height: 500px;
 }
 
 .contents-user-title {
@@ -144,37 +163,47 @@ li {
 
 .contents-user-info {
 	width: 1200px;
-	height: 150px;
+	height: 300px;
 }
 
 .user-info {
 	float: left;
 	width: 600px;
-	hight: 150px;
-}
-.info-name {
-	width: 300px;
-	height: 50px;
-	line-height: 50px;
+	hight: 300px;
 }
 
-.info-email {
-	width: 300px;
-	height: 50px;
-	line-height: 50px;
-}
-
-.info-phone {
-	width: 300px;
-	height: 50px;
-	line-height: 50px;
+.info-contents {
+	width: 600px;
+	height: 100px;
+	line-height: 100px;
+	font-size: 25px;
+	color: gray;
 }
 
 .user-payment {
 	float: left;
 	width: 600px;
-	hight: 150px;
+	hight: 300px;
+}
+.payment-title {
+	float: left;
+	width: 600px;
+	height: 150px;
 	line-height: 150px;
 	text-align: center;
-	
+	font-size: 25px;
+}
+
+.payment-contents {
+	float: left;
+	width: 600px;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+}
+
+.btn-payment {
+	width: 300px;
+	height: 60px;
+	font-size: 30px;
 }

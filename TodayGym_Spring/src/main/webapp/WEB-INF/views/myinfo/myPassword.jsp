@@ -16,6 +16,10 @@
 		<header>
 			<jsp:include page="../layout/header.jsp" />
 		</header>
+		<div class="myPage_title">
+			<img class="title_img" src="resources/img/spot/gray.jpg">
+			<div class="title_contents">비밀번호 변경</div>
+		</div>
 		<section>
 			<div class="content-myPage">
 				<div class="myPage-form">

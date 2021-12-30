@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>주문/결제</title>
+<title>결제하기</title>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link type="text/css" rel="stylesheet"
@@ -16,6 +16,10 @@
 		<header>
 			<jsp:include page="../layout/header.jsp" />
 		</header>
+		<div class="myOrder_title">
+			<img class="title_img" src="resources/img/spot/gray.jpg">
+			<div class="title_contents">결제하기</div>
+		</div>
 		<section>
 			<div class="content-myOrder">
 				<div class="myOrder-form">
@@ -49,11 +53,16 @@
 							</div>
 							<div class="contents-user-info">
 								<div class="user-info">
-									<div class="info-name">이름 : ${myInfo.m_id}</div>
-									<div class="info-email">이메일 : ${myInfo.m_email}</div>
-									<div class="info-phone">전화번호 : ${myInfo.m_phone}</div>
+									<div class="info-contents">이름 : ${myInfo.m_name}</div>
+									<div class="info-contents">이메일 : ${myInfo.m_email}</div>
+									<div class="info-contents">전화번호 : ${myInfo.m_phone}</div>
 								</div>
-								<div class="user-payment">은행</div>
+								<div class="user-payment">
+									<div class="payment-title">게좌이체 : 투짐은행</div>
+									<div class="payment-contents">
+										<button class="btn-payment" onclick="location.href='./payProc?m_id=${mb.m_id}'">결제하기</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
