@@ -21,7 +21,8 @@
 	<div class="content-admin">
 		<div class="content">
 			<!-- Admin Spot Register Form Start  -->
-			<form action="adSpotRegAction.ad" name="spotFormDto" method="post">
+			<form action="adSpotRegAction.ad" name="spotFormDto" method="post"
+				enctype="multipart/form-data">
 				<table>
 					<thead>
 						<tr>
@@ -32,29 +33,43 @@
 						<tr>
 							<td class="regTitle">지점 번호</td>
 							<td class="regContent"><input type="text" name="s_code"
-								id="s_code" class="regInput" size="4" placeholder="자동 입력" readonly /></td>
-							<td class="regImage" rowspan="5">이미지 등록 공간</td>
+								id="s_code" class="regInput" size="4" placeholder="자동 입력"
+								readonly /></td>
+							<td class="regImage" rowspan="5">
+								<div>
+									<label for="s_images"> 이미지 올리기 </label>
+								</div>
+								<div>
+									<input type="file" name="s_images[]" id="s_images"
+										accept="image/*" onchange="showFileList()" multiple />
+								</div>
+								<div>
+									<ul class="fileList"></ul>
+								</div>
+							</td>
 						</tr>
 						<tr>
 							<td class="regTitle">지점 이름</td>
 							<td class="regContent"><input type="text" name="s_name"
-								id="s_name" class="regInput" size="30" placeholder="예)인천연수점, 인천송도점..." required /></td>
+								id="s_name" class="regInput" size="30"
+								placeholder="예)인천연수점, 인천송도점..." required /></td>
 						</tr>
 						<tr>
 							<td class="regTitle">연락처</td>
-							<td class="regContent">
-								<input type="text" name="s_phone1" id="s_phone1" class="regInput" size="3" required/> -
-								<input type="text" name="s_phone2" id="s_phone2" class="regInput" size="3" required/> -
-								<input type="text" name="s_phone3" id="s_phone3" class="regInput" size="3" required/>
-							</td>
+							<td class="regContent"><input type="text" name="s_phone1"
+								id="s_phone1" class="regInput" size="3" required /> - <input
+								type="text" name="s_phone2" id="s_phone2" class="regInput"
+								size="3" required /> - <input type="text" name="s_phone3"
+								id="s_phone3" class="regInput" size="3" required /></td>
 						</tr>
 						<tr>
 							<td class="regTitle">주소</td>
-							<td class="regContent">
-								<input type="button" class="btnKakaoApi"onclick="apiKakaoAddress()" value="주소 검색"><br>
-								<input type="text" name="s_addr1" id="s_addr1" class="regInput" size="30" placeholder="도로명주소" required> 
-								<input type="text" name="s_addr2" id="s_addr2" class="regInput" size="30" placeholder="상세주소"> 
-							</td>
+							<td class="regContent"><input type="button"
+								class="btnKakaoApi" onclick="apiKakaoAddress()" value="주소 검색"><br>
+								<input type="text" name="s_addr1" id="s_addr1" class="regInput"
+								size="30" placeholder="도로명주소" required> <input
+								type="text" name="s_addr2" id="s_addr2" class="regInput"
+								size="30" placeholder="상세주소"></td>
 						</tr>
 						<tr>
 							<td class="regTitle">기타</td>
@@ -64,8 +79,9 @@
 					</tbody>
 					<tfoot>
 						<tr>
-							<td class="regSubmit" colspan="3"><input type="submit" value="등록" /> <input
-								type="button" value="취소" onclick="location.href='adSpotMove.ad';"/></td>
+							<td class="regSubmit" colspan="3"><input type="submit"
+								value="등록" /> <input type="button" value="취소"
+								onclick="location.href='adSpotMove.ad';" /></td>
 						</tr>
 					</tfoot>
 				</table>
@@ -76,5 +92,12 @@
 	<script
 		src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<script src="resources/JavaScript/apiKakaoAddress.js"></script>
+	<script type="text/javascript">
+		function showFileList(){
+			var s_images = document.getElementById('s_images').files;
+			
+			console.log(s_images);
+		}
+	</script>
 </body>
 </html>
