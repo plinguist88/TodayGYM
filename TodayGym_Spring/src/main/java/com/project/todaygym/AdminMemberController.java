@@ -24,16 +24,16 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dto.MemberDto;
-import com.project.todaygym.service.adMemService;
+import com.project.todaygym.service.AdMemService;
 
 @Controller
-public class AdminController { //관리자 컨트롤러
+public class AdminMemberController { //관리자 컨트롤러
 	
 	private static final Logger logger = 
-			LoggerFactory.getLogger(AdminController.class);
+			LoggerFactory.getLogger(AdminMemberController.class);
 	
 	@Autowired
-	private adMemService adMServ;
+	private AdMemService adMServ;
 	
 	private ModelAndView mv;
 	
