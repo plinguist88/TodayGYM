@@ -24,10 +24,11 @@
 						<div>분야 : ${info.p_cate}</div>
 						<div>제목 : ${info.p_title}</div>
 						<select id="selectOption" onchange="optionChange()">
+							<option></option>
 							<c:forEach var="option" items="${option}">
 								<option
 									value="${option.o_code}_${option.o_month}_${option.o_price}">
-									수강기간 : "${option.o_month}" 가격 : ${option.o_price}</option>
+									수강기간 : ${option.o_month}, 가격 : ${option.o_price}</option>
 							</c:forEach>
 						</select>
 						<div class="getCode"></div>

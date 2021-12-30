@@ -1,24 +1,26 @@
 package com.project.todaygym.service;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.project.todaygym.dao.OrderDao;
-import com.project.todaygym.dto.OrderDto;
+import com.project.todaygym.dao.MemberDao;
+import com.project.todaygym.dao.ProductDao;
+import com.project.todaygym.dto.MemberDto;
+import com.project.todaygym.dto.MyCartDto;
 
 @Service
 public class OrderService {
 	
-	/*
 	@Autowired
-	private CartDao cDao;
+	private ProductDao pDao;
 	
 	@Autowired
 	private MemberDao mDao;
-	*/
 	
 	@Autowired
 	private HttpSession session;
@@ -26,19 +28,16 @@ public class OrderService {
 	private ModelAndView mv;
 	
 	//__________ 결제 페이지
-	public ModelAndView getMyOrderAndInfo() {
+	public ModelAndView getMyCartAndInfo(String m_id) {
 		
 		mv = new ModelAndView();
 		
-		String id = (String)session.getAttribute("id");
+		List<MyCartDto> myCart= pDao.getMyCart(m_id);
 		
-		/*
-		MemberDto myInfo = mDao.myInfoSelect(id);
-		List<CartDto> myOrderList = cDao.myOrderSelect(id);
+		MemberDto myInfo = (MemberDto)session.getAttribute("mb");
 		
-		mv.addObject("myOrder", myOrderList);
-		mv.addObject("myInfo", myInfo);		
-		*/
+		mv.addObject("myOrder", myCart);
+		mv.addObject("myInfo", myInfo);	
 		
 		mv.setViewName("order/orderHome");
 		
