@@ -134,7 +134,7 @@
 				</div>
 			<div class="cart_button">
 				<span class="cart_back" onclick="location.href='./buyHome'">계속하기</span>
-				<span class="ordermove" onclick="location.href=''">결제하기</span>
+				<span class="ordermove" onclick="location.href='./myOrder?m_id=${mb.m_id}'">결제하기</span>
 			</div>
 		</section>
 		<footer>
