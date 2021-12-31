@@ -4,26 +4,9 @@ import lombok.Data;
 
 @Data
 public class AdTicketDto {
-	private int t_no;
-	private String p_no;
-	private char t_use;
-	
-	public int getT_no() {
-		return t_no;
-	}
-	public void setT_no(int t_no) {
-		this.t_no = t_no;
-	}
-	public String getP_no() {
-		return p_no;
-	}
-	public void setP_no(String p_no) {
-		this.p_no = p_no;
-	}
-	public char getT_use() {
-		return t_use;
-	}
-	public void setT_use(char t_use) {
-		this.t_use = t_use;
-	}
+	private int t_no; //회원권 번호(PK)
+	private String m_id; //구매자 아이디(FK)
+	private String p_code;//상품 코드(FK)
+	private String o_code;//가격 정보(FK)
+	private char t_use; //사용 여부
 }

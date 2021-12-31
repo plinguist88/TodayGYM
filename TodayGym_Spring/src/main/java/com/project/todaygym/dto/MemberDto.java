@@ -14,7 +14,7 @@ public class MemberDto {
 	private String m_email;
 	private String m_phone;
 	private String m_birth;
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm",
+	@JsonFormat(pattern = "yyyy-MM-dd",
 			timezone = "Asia/Seoul")
 	private Timestamp m_joindate;
 	private String m_point;
