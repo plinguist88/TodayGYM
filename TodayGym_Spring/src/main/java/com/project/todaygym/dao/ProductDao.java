@@ -19,4 +19,6 @@ public interface ProductDao {
 	public void myCartInsert(CartDto myCart);
 	//5. 장바구니 가져오기
 	public List<MyCartDto> getMyCart(String getId);
+	
+	public void deleteMyCart(String m_id);
 }

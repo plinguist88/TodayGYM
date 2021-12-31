@@ -7,6 +7,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dao.MemberDao;
 import com.project.todaygym.dao.ProductDao;
@@ -20,12 +21,11 @@ public class OrderService {
 	private ProductDao pDao;
 	
 	@Autowired
-	private MemberDao mDao;
-	
-	@Autowired
 	private HttpSession session;
 	
 	private ModelAndView mv;
+	
+	//________________________________________ 결제
 	
 	//__________ 결제 페이지
 	public ModelAndView getMyCartAndInfo(String m_id) {
@@ -43,5 +43,25 @@ public class OrderService {
 		
 		return mv;
 	} // getOrderAndInfo end
+
+	//__________ 결제실행
+	public String paymentProcess(String m_id, RedirectAttributes rttr) {
+		String view = null;
+		String alert = null;
+		
+		try {
+			pDao.deleteMyCart(m_id);
+			view = "redirect:order/orderComplete";
+			alert = "결제완료! 회원권을 발급했습니다. 감사합니다.!";
+		} catch (Exception e) {
+			// e.printStackTrace();
+			view = "redirect:order/orderHome";
+			alert = "결제에 실패했습니다. 관리자에게 문의하세요.";
+		}
+		
+		rttr.addFlashAttribute("alert", alert);
+		
+		return view;
+	} // paymentProcess end
 	
 } // class end
