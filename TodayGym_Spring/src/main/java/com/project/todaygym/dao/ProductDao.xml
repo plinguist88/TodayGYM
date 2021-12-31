@@ -31,9 +31,32 @@
 		ORDER BY A.C_CODE DESC
 	</select>
 	
-	<!-- 결제완료 장바구니 리스트 삭제 -->
-	<delete id="deleteMyCart" parameterType="String">
-		DELETE FROM C WHERE m_id=#{m_id}
+	
+	
+	
+	
+	
+	
+	<!-- Order area -->
+	
+	<!-- 장바구니 결제 갯수 가져오기 -->
+	<select id="getTotalCartCnt" parameterType="String" resultType="Integer">
+		SELECT COUNT(*) FROM C WHERE m_id=#{m_id}
+	</select>
+	
+	<!-- 장바구니 코드 최솟값 가져오기 -->
+	<select id="getCartCode" parameterType="String" resultType="Integer">
+		SELECT MIN(C_CODE) FROM C WHERE m_id=#{m_id}
+	</select>
+	
+	<!-- 장바구니 해당코드 데이터 가져오기 -->
+	<select id="getCartList" parameterType="Integer" resultType="com.project.todaygym.dto.CartDto">
+		SELECT * FROM C WHERE c_code=#{Ccode}
+	</select>
+	
+	<!-- 장바구니 삭제하기 -->
+	<delete id="deleteCart" parameterType="Integer">
+		DELETE FROM C WHERE c_code=#{Ccode}
 	</delete>
 	
 </mapper>
