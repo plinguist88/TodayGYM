@@ -49,12 +49,12 @@
 						</tr>
 						<c:forEach items="${tList}" var="tlist">
 							<tr>
-								<td><a href="./adTicketDetailMove.ad?t-no=${tlist.t_no}"
+								<td><a href="./adTicketDetailMove.ad?t_no=${tlist.t_no}"
 									class="ticketNum">${tlist.t_no}</a></td>
-								<td>${tlist.m_id}</td>
+								<td><a href="./adMemDetailMove?m_id=${tlist.m_id}">${tlist.m_name}</a></td>
 								<td>${tlist.p_cate}</td>
-								<td>${tlist.p_title}</td>
-								<td>${tlist.p_date}</td>
+								<td>${tlist.p_subcate}</td>
+								<td>구매날짜</td>
 								<td><button class="button ticketOff">만료</button></td>
 							</tr>
 						</c:forEach>
