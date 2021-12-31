@@ -75,7 +75,7 @@ header {
 	padding-top: 0px;
 }
 .cart_body tr{
-	height: 200px;
+	height: 180px;
 }
 .tbody_td1{
 	border-top: 1px solid #cacbd4;
@@ -84,15 +84,25 @@ header {
 }
 .tbody_td11{
 	border-top: 1px solid #cacbd4;
+	font-weight: bold;
+	text-align: left;
 }
 .tbody_td11 img{
 	width: 150px;
-	height: 200px;
+	height: 150px;
+}
+#point{
+	margin-bottom: 0px;
+}
+#point img{
+	width: 50px;
+	height: 20px;
 }
 .checkbox{
 	cursor: pointer;
 	width: 20px;
 	height: 20px;
+	margin-right: 50px;
 }
 .cart_delete{
 	width: 80%;
