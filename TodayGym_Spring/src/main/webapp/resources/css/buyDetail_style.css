@@ -84,7 +84,8 @@
 	color: #a6a6a6;
 }
 .buy_info_sub2 span{
-	margin: 20px;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 .buy_hr{
 	margin: 20px;

@@ -123,7 +123,7 @@
 							<th>상품번호</th>
 							<td colspan="3">${dInfo.p_code}</td>
 							<th>상품종류</th>
-							<td>회원권</td>
+							<td>${dInfo.p_subcate}</td>
 						</tr>
 						<tr>
 							<th>발행국가</th>
