@@ -73,15 +73,14 @@ public class AdSpotRegService {
 		
 		//이미지 파일 처리 서비스
 		String path = "C:\\Users\\alstj\\git\\TodayGym\\TodayGym_Spring\\src\\main\\webapp\\resources\\img\\admin\\";
+		String savePath = "C:\\Users\\pling\\Documents\\GitHub\\TodayGym\\TodayGym_Spring\\src\\main\\webapp\\resources\\img\\admin\\";
 		
 		for(MultipartFile mf : fileList) {
 			String simg_ori = mf.getOriginalFilename();
-			String simg_sys = path + System.currentTimeMillis() + simg_ori;
+			String simg_sys = savePath + System.currentTimeMillis() + simg_ori;
 
 			try {
 				mf.transferTo(new File(simg_sys));
-				
-				System.out.println("여기 문제" + s_code);
 				
 				spotImageDto = new SpotImageDto();
 				
@@ -101,11 +100,9 @@ public class AdSpotRegService {
 		if(result > 0) {
 			System.out.println("지점 등록 성공");
 			mv.setViewName("redirect:/adSpotMove.ad");
-			mv.addObject("msg", "지점 등록 성공");
 		} else {
 			System.out.println("지점 등록 실패");
 			mv.setViewName("admin/adSpotRegForm");
-			mv.addObject("msg", "지점 등록 실패");
 		}
 		return mv;
 	}

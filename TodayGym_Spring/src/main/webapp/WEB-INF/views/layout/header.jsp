@@ -39,7 +39,7 @@
 									class="navbar_icon"><ion-icon name="stats-chart-outline"></ion-icon>관리자페이지</span></abbr></a></li>
 					</c:if>
 					<c:if test="${sessionScope.mb.m_id != 'admin'}">
-						<li><a href="product"><abbr title="장바구니"><span
+						<li><a href="myCart"><abbr title="장바구니"><span
 									class="navbar_icon"><ion-icon name="cart-outline"></ion-icon>장바구니</span></abbr></a></li>
 					</c:if>
 					<li><a href="myInfo"><abbr title="마이페이지"><span

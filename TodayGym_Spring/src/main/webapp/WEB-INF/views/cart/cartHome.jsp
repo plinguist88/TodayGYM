@@ -76,10 +76,10 @@
 						<c:forEach var="mycart" items="${mycart}">
 						<tr>
 							<td class="tbody_td11"> <input class="checkbox" type="checkbox" checked name="chk"> </td>
-							<td class="tbody_td11">DB사진</td>
-							<td class="tbody_td11">${mycart.p_subcate}</td>
+							<td class="tbody_td11"> <img src="${mycart.p_img}"></td>
+							<td class="tbody_td11"><p id="point"><img src="resources/img/buy/buyDetail/buypoint.png"></p> ${mycart.p_subcate}</td>
 							<td class="tbody_td1"> <button class="buttonx" type="button"><img src="resources/img/cart/x.png"></button></td>
-							<td class="tbody_td1">${mycart.o_month}</td>
+							<td class="tbody_td1">${mycart.o_month} 이용권</td>
 							<td class="tbody_td1">${mycart.o_price}원</td>
 							<td class="tbody_td11"> </td>
 							
