@@ -43,16 +43,16 @@
 					</tr>
 				</thead>
 				<!-- Spot List Contents -->
-				<tbody class="spotListPrint">
+				<tbody class="spotImageList">
 					<c:forEach items="${sList}" var="sList">
 						<tr>
-							<td><a href="adSpotDetailMove.ad?s_code=${sList.s_code }">${sList.s_code }</a></td>
+							<td>${sList.s_code }</td>
 							<td>${sList.s_name }</td>
 							<td>${sList.s_phone }</td>
 							<td>${sList.s_addr }</td>
 							<td>${sList.s_content }</td>
-							<td><a href="#spotImages">
-									<button class="spotImages">지점 사진</button>
+							<td><a href="adSpotImageMove.ad?s_code=${sList.s_code }" onclick="window.open(this.href,'spotImage','width=500, height=800'); return false;">
+									<button class="spotImage">지점 사진</button>
 							</a></td>
 						</tr>
 					</c:forEach>

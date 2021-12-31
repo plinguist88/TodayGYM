@@ -1,23 +1,32 @@
 package com.project.todaygym.service;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.project.todaygym.dao.AdSpotDao;
 import com.project.todaygym.dto.SpotDto;
 import com.project.todaygym.dto.SpotFormDto;
+import com.project.todaygym.dto.SpotImageDto;
 
 @Service
 public class AdSpotRegService {
 
 	private ModelAndView mv;
 	private SpotDto spotDto;
+	private SpotImageDto spotImageDto;
 	
 	@Autowired
 	private AdSpotDao adSpotDao;
 	
-	public ModelAndView getAdSpotReg(SpotFormDto spotFormDto) {
+	public ModelAndView getAdSpotReg(SpotFormDto spotFormDto, MultipartHttpServletRequest mhr) {
 		
 		mv = new ModelAndView();
 		
@@ -59,6 +68,35 @@ public class AdSpotRegService {
 		spotDto.setS_content(s_content);
 		
 		int result = adSpotDao.spotInsert(spotDto);
+		
+		List<MultipartFile> fileList = mhr.getFiles("s_images");
+		
+		//이미지 파일 처리 서비스
+		String path = "C:\\Users\\pling\\Documents\\GitHub\\TodayGym\\TodayGym_Spring\\src\\main\\webapp\\resources\\img\\admin\\";
+		
+		for(MultipartFile mf : fileList) {
+			String simg_ori = mf.getOriginalFilename();
+			String simg_sys = path + System.currentTimeMillis() + simg_ori;
+
+			try {
+				mf.transferTo(new File(simg_sys));
+				
+				System.out.println("여기 문제" + s_code);
+				
+				spotImageDto = new SpotImageDto();
+				
+				spotImageDto.setS_code(s_code);
+				spotImageDto.setSimg_ori(simg_ori);
+				spotImageDto.setSimg_sys(simg_sys);
+				
+				adSpotDao.spotImageInsert(spotImageDto);
+				
+			} catch (IllegalStateException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+		}
 		
 		if(result > 0) {
 			System.out.println("지점 등록 성공");
