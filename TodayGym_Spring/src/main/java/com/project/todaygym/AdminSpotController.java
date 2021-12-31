@@ -56,7 +56,7 @@ public class AdminSpotController {
 		return mv;
 	}
 	
-	//지점 등록
+	//지점 및 이미지 등록
 	@PostMapping("adSpotRegAction.ad")
 	@ResponseBody
 	public ModelAndView adSpotRegAction(SpotFormDto spotFormDto, MultipartHttpServletRequest mhr) {
@@ -69,7 +69,7 @@ public class AdminSpotController {
 		return mv;
 	}
 	
-	//지점 상세정보로 이동
+	//지점 이미지로 이동
 	@GetMapping("adSpotImageMove.ad")
 	public ModelAndView adSpotImageMove(String s_code) {
 		Logger.info("adSpotImageMove()");
