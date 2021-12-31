@@ -25,7 +25,7 @@
 	<!-- 5. 장바구니 가져오기 id값 -->
 	<select id="getMyCart" parameterType="String" 
 		resultType="com.project.todaygym.dto.MyCartDto">
-		SELECT A.C_CODE, A.M_ID, B.P_SUBCATE, C.O_MONTH, C.O_PRICE
+		SELECT A.C_CODE, A.M_ID, B.P_SUBCATE, B.P_IMG, C.O_MONTH, C.O_PRICE
 		FROM CART_TB A, PRODUCT_TB B, OPTION_TB C
 		WHERE A.P_CODE = B.P_CODE AND A.OP_CODE = C.O_CODE
 		AND A.M_ID = #{getId}

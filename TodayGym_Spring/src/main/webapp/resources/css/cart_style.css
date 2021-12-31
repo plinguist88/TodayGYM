@@ -8,10 +8,11 @@ header {
 	top: 0px;
 }
 .cart_section{
-	height: 1500px;
+	height: auto;
 	width: 80%;
 	margin: 0 auto;
 	margin-top: 100px;
+	margin-bottom: 100px;
 }
 .cart_title{
 	padding-bottom: 20px;
@@ -70,6 +71,8 @@ header {
 	background-size: cover;
 	border: none;
 	cursor: pointer;
+	padding-left: 0px;
+	padding-top: 0px;
 }
 .cart_body tr{
 	height: 200px;
@@ -81,6 +84,10 @@ header {
 }
 .tbody_td11{
 	border-top: 1px solid #cacbd4;
+}
+.tbody_td11 img{
+	width: 150px;
+	height: 200px;
 }
 .checkbox{
 	cursor: pointer;
