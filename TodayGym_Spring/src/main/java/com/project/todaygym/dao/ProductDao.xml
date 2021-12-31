@@ -31,4 +31,10 @@
 		AND A.M_ID = #{getId}
 		ORDER BY A.C_CODE DESC
 	</select>
+	
+	<!-- 결제완료 장바구니 리스트 삭제 -->
+	<delete id="deleteMyCart" parameterType="String">
+		DELETE FROM C WHERE m_id=#{m_id}
+	</delete>
+	
 </mapper>

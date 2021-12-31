@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.service.OrderService;
 
@@ -18,8 +19,11 @@ public class OrderController {
 	private OrderService orderServ;
 
 	private ModelAndView mv;
-
-	//__________ 겔제 페이지
+	
+	
+	//________________________________________ 결제
+	
+	//__________ 결제 페이지
 	@GetMapping("myOrder")
 	public ModelAndView myOrderMove(String m_id) {
 		logger.info("myOrderMove()");
@@ -28,5 +32,15 @@ public class OrderController {
 		
 		return mv;
 	} // myOrderMove end
+	
+	//__________ 결제실행
+	@GetMapping("payProc")
+	public String payProc(String m_id, RedirectAttributes rttr) {
+		logger.info("payProc");
+		
+		String view = orderServ.paymentProcess(m_id, rttr);
 
+		return view;
+	} // payProc end
+	
 } // class end
