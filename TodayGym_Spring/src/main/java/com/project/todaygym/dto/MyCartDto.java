@@ -9,4 +9,5 @@ public class MyCartDto {
 	private String p_subcate;
 	private String o_month;
 	private String o_price;
+	private String p_img;
 }

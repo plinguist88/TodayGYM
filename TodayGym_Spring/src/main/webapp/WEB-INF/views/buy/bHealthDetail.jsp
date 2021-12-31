@@ -78,12 +78,14 @@
 		 		</div>	
 		 		<form action="saveCart" method="get">
 		 			<select class="buy_select_contants" name="buy_select_contants">
+		 					<option selected>-</option>
 			 			<c:forEach var="oList" items="${oList}">
-			 				<option disabled selected>&nbsp;&nbsp;&nbsp;${oList.o_code}</option>		
+			 				<option disabled>&nbsp;&nbsp;&nbsp;${oList.o_code}</option>		
 			 				<option value="${oList.o_code}_${oList.o_month}_${oList.o_price}">&nbsp;&nbsp;&nbsp;${oList.o_month} : ${oList.o_price}원</option>		 				
 			 			</c:forEach>
 			 		</select>	 	
-		 			<input type="submit" value="🛒장바구니" class="nextbutton2" name="op_code" id="op_code">
+		 			<input type="text" name="op_code" id="op_code" class="hidden">
+		 			<input type="submit" value="🛒장바구니" class="nextbutton2">
 		 		</form>
 		 			<input type="submit" value="💳구매하기" class="nextbutton1" name="op_code" id="op_code" onclick="location.href='./myOrder?m_id=${mb.m_id}'">	
 		 		<div class="total_info">

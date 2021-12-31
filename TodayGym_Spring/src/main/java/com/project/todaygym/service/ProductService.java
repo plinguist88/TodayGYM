@@ -41,14 +41,12 @@ public class ProductService {
 	//2. 구매상세 페이지 넘기기
 	public ModelAndView getProductDetail(String p_code) {
 		mv = new ModelAndView();
-		String getCode = null;
 		
 		ProductDto detailInfo = pDao.getProductSelect(p_code);
+
+		session.setAttribute("pCode", p_code);
 		
-		getCode = (String)detailInfo.getP_code();
-		session.setAttribute("pCode", getCode);
-		
-		List<OptionDto> oList = pDao.getOptionSelect(getCode);
+		List<OptionDto> oList = pDao.getOptionSelect(p_code);
 		mv.addObject("dInfo", detailInfo);
 		mv.addObject("oList", oList);
 		mv.setViewName("buy/bHealthDetail");
