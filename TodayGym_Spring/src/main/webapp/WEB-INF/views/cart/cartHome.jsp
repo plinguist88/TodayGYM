@@ -81,8 +81,7 @@
 							<td class="tbody_td1"> <button class="buttonx" type="button"><img src="resources/img/cart/x.png"></button></td>
 							<td class="tbody_td1">${mycart.o_month} 이용권</td>
 							<td class="tbody_td1">${mycart.o_price}원</td>
-							<td class="tbody_td11"> </td>
-							
+							<td class="tbody_td11"> </td>							
 						</tr>
 						</c:forEach>
 					</tbody>
@@ -101,8 +100,10 @@
 						<div class="cart_price">
 							<dl class="cart_price_sub">
 								<dt>총 상품금액</dt>
-								<dd>					
-									<span>0</span>									
+								<dd>
+									<c:forEach var="mycart" items="${mycart}">					
+									<span>${mycart.o_price}</span>	
+									</c:forEach>								
 									<span>원</span>
 								</dd>
 							</dl>
@@ -128,7 +129,9 @@
 					</div>
 					<div class="cart_cal_sub2">
 						<span>총 주문금액</span>
-						<span class="total">0</span>
+						<c:forEach var="mycart" items="${mycart}">
+						<span class="total">${mycart.o_price}</span>
+						</c:forEach>
 						<span class="total">원</span>
 					</div>
 				</div>
@@ -142,4 +145,7 @@
 		</footer>
 	</div>
 </body>
+<script type="text/javascript">
+	
+</script>
 </html>
