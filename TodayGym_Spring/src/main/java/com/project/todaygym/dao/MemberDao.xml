@@ -25,6 +25,11 @@
 		SELECT * FROM M WHERE m_id=#{id}
 	</select>
 	
+	<!-- 아이디 찾기 -->
+	<select id="emailSearchSelect" parameterType="String" resultType="String">
+		SELECT m_id FROM M WHERE m_email = #{m_email}
+	</select>
+	
 	
 	
 	

@@ -1,8 +1,10 @@
 package com.project.todaygym.dao;
 
-import com.project.todaygym.dto.MemberDto;
-import com.project.todaygym.dto.MemberFormDto;
+import org.apache.ibatis.annotations.Mapper;
 
+import com.project.todaygym.dto.MemberDto;
+
+@Mapper
 public interface MemberDao {
 		//아이디 중복 체크용
 		public int idCheck(String id);
@@ -16,6 +18,10 @@ public interface MemberDao {
 		public void mPointUpdate(String id);
 		
 		
+		//________________________________________ memberSearch area
+		
+		
+		public String emailSearchSelect(String m_email);
 		
 		
 		
