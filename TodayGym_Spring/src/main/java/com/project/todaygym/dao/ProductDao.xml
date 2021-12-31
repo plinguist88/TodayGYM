@@ -32,13 +32,13 @@
 		ORDER BY A.C_CODE DESC
 	</select>
 	
-	<delete id="deleteMyCart" parameterType="String">
 	
 	
 	
 	
 	
 	
+	<!-- Order area -->
 	
 	<!-- 장바구니 결제 갯수 가져오기 -->
 	<select id="getTotalCartCnt" parameterType="String" resultType="Integer">
