@@ -20,5 +20,20 @@ public interface ProductDao {
 	//5. 장바구니 가져오기
 	public List<MyCartDto> getMyCart(String getId);
 	
-	public void deleteMyCart(String m_id);
+	
+	
+	//________________________________________ Order area
+	
+	//__________ 장바구니 결제 갯수 가져오기
+	public int getTotalCartCnt(String m_id);
+	
+	//__________ 장바구니 코드 최솟값 가져오기
+	public int getCartCode(String m_id);
+	
+	//__________ 장바구니 해당코드 데이터 가져오기
+	public CartDto getCartList(Integer getCartCode);
+		
+	//__________ 장바구니 삭제하기
+	public void deleteCart(Integer Ccode);
+	
 }

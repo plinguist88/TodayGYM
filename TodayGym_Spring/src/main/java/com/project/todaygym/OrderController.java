@@ -20,25 +20,24 @@ public class OrderController {
 
 	private ModelAndView mv;
 	
-	
-	//________________________________________ 결제
+	//________________________________________ 결제하기
 	
 	//__________ 결제 페이지
 	@GetMapping("myOrder")
 	public ModelAndView myOrderMove(String m_id) {
 		logger.info("myOrderMove()");
 		
-		mv = orderServ.getMyCartAndInfo(m_id);
+		mv = orderServ.getMyOrder(m_id);
 		
 		return mv;
-	} // myOrderMove end
+	} // getMyOrder end
 	
 	//__________ 결제실행
 	@GetMapping("payProc")
 	public String payProc(String m_id, RedirectAttributes rttr) {
 		logger.info("payProc");
 		
-		String view = orderServ.paymentProcess(m_id, rttr);
+		String view = orderServ.payProc(m_id, rttr);
 
 		return view;
 	} // payProc end

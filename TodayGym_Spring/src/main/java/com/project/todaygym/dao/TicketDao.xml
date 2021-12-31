@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.project.todaygym.dao.TicketDao">
+	<!-- 회원권 발급하기 -->
+	<insert id="issueClass"
+		parameterType="com.project.todaygym.dto.TicketDto"
+		useGeneratedKeys="true" keyProperty="t_no">
+
+		<selectKey keyProperty="t_no" resultType="Integer"
+			order="BEFORE">
+			SELECT TICKET_SEQ.NEXTVAL FROM DUAL
+		</selectKey>
+		INSERT INTO T
+		VALUES (${t_no}, #{m_id}, #{p_code}, #{o_code}, SYSDATE, DEFAULT)
+	</insert>
+
+</mapper>
