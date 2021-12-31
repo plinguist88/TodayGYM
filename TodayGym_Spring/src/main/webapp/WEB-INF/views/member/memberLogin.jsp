@@ -7,6 +7,14 @@
 <title>LOGIN</title>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/member_style.css">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(function(){
+		$("#memberSearch_btn").click(function(){
+			location.href="memberSearch.do";
+		})
+	})
+</script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">
@@ -38,7 +46,7 @@
 					<input type="text" class="login-input" name="m_id" autofocus required placeholder="아이디">
 					 <input type="password" class="login-input" name="m_pw" placeholder="비밀번호" required>
 					<input type="submit" class="login-btn" value="로그인">
-					<input type="button" class="search-btn" value="ID / PASSWORD 찾기">
+					<input type="button" class="search-btn" id="memberSearch_btn" value="ID / PASSWORD 찾기">
 				</form>
 			</div>
 		</section>
