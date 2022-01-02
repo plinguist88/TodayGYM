@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/**************************************************************/
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.detailfull {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 60px;
+	background-color: red;
+
+}
+.detailcontents{
+	display: flex;
+	width: 980px;
+	height: 400px;
+	background-color: blue;
+}
+.detail_img{
+	width:500px;
+	height:300px;
+	background-color: orange;
+}
+.userbox{
+	width:400px;
+	height:300px;
+	background-color: white;
+	margin-left: 50px;
+}
+.detail_lower{
+	display: flex;
+	width:980px;
+	height:100px;
+	background-color: white;
+}
+.detail_modify button{
+	width:150px;
+	height:30px;
+	margin-left: 610px;   
+}
+.detail_delete button{
+	width:150px;
+	height:30px;
+}
+.detail_user{
+	display:flex;
+}
+
+.detail_user2{
+	width:300px;
+	margin-left: 40px;
+}
+.detail_select{
+	display: flex;
+}
+.detail_select2{
+	background-color: black;
+	width:74%;
+	margin-left: 40px;
+}
+.detail_title{
+	display: flex;
+}
+.detail_title2{
+	width:74%;
+	margin-left: 40px;
+}
+.detail_content2{
+	background-color: purple;
+	width:100%;
+	height: 100%;
+}

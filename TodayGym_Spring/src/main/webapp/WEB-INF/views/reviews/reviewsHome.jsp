@@ -60,7 +60,7 @@
 							
 							<tr>
 								<td>${list.r_no}</td>
-								<td>${list.r_title}</td>
+								<td><a href="reviewsDetail">${list.r_title}</a></td>
 								<td>${list.m_id}</td>
 								<td>${list.r_date }</td>
 								<%-- <td>${list.r_score }</td> --%>
