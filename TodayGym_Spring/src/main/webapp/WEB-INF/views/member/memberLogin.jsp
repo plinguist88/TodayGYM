@@ -10,17 +10,11 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script>
 	$(function(){
-		$("#memberSearchId_btn").click(function(){
+		$("#memberSearch_btn").click(function(){
 			location.href="memberSearchId.do";
 		})
 	})
 </script>
-<script>
-	$(function(){
-		$("#memberSearchPw_btn").click(function(){
-			location.href="memberSearchPw.do";
-		})
-	})
 </script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -53,8 +47,7 @@
 					<input type="text" class="login-input" name="m_id" autofocus required placeholder="아이디">
 					 <input type="password" class="login-input" name="m_pw" placeholder="비밀번호" required>
 					<input type="submit" class="login-btn" value="로그인">
-					<input type="button" class="searchId-btn" id="memberSearchId_btn" value="ID 찾기">
-					<input type="button" class="searchPw-btn" id="memberSearchPw_btn" value="PASSWORD 찾기">
+					<input type="button" class="search-btn" id="memberSearch_btn" value="ID 찾기">
 				</form>
 			</div>
 		</section>
