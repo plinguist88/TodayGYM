@@ -19,4 +19,11 @@
 		SELECT * FROM REVIEW_TB ORDER BY r_no DESC
 	</select>
 	
+	<select id="getDetail" parameterType="String" resultType="com.project.todaygym.dto.ReviewDto">
+		SELECT * FROM REVIEW_TB WHERE r_title = #{r_title}
+	</select>
+	
+	<delete id="reviewsDelete" parameterType="Integer">
+		DELETE FROM REVIEW_TB WHERE r_no = #{r_no}
+	</delete>
 </mapper>
