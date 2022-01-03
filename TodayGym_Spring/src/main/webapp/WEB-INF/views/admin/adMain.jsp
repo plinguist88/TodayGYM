@@ -22,7 +22,16 @@
 		</div>
 		<div class="content">
 			<!-- Admin Overview Start  -->
-			<div class="Overview-Member">Overview-Member</div>
+			<div class="Overview-Member">
+				<div>
+					<table>
+						<tr>
+							<th>총원</th>
+							<td>00</td>
+						</tr>
+					</table>
+				</div>
+			</div>
 			<div class="Overview-Ticket">Overview-Ticket</div>
 			<div class="Overview-Spot">Overview-Spot</div>
 			<div class="Overview-Review">Overview-Review</div>
