@@ -82,11 +82,11 @@ public class ProductService {
 		try {
 			pDao.myCartInsert(myCart);
 			view = "redirect:myCart";
-			alert = "장바구니에 담았습니다";
+			rttr.addFlashAttribute("msg", "회원권을 장바구니에 담았습니다");
 		}catch (Exception e) {
 			e.printStackTrace();
 			view = "redirect:detail";
-			alert = "장바구니에 담을 수 없습니다. 관리자에게 문의하세요.";
+			rttr.addFlashAttribute("msg", "장바구니 담기 실패. 관리자에게 문의하세요");
 		}
 		rttr.addFlashAttribute("alert", alert);
 		
@@ -101,11 +101,11 @@ public class ProductService {
 		try {
 			pDao.cartDelete(cCode);
 			view = "redirect:myCart";
-			rttr.addFlashAttribute("msg", "삭제 성공");
+			rttr.addFlashAttribute("msg", "회원권 삭제 성공");
 		}catch (Exception e) {
 			e.printStackTrace();
 			view = "redirect:myCart";
-			rttr.addFlashAttribute("msg", "삭제 실패");
+			rttr.addFlashAttribute("msg", "회원권 삭제 실패. 관리자에게 문의하세요");
 		}
 		return view;
 	}

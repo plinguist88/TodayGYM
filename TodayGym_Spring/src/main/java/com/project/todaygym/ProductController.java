@@ -50,7 +50,7 @@ public class ProductController {
 		return view;
 	}
 	//5. 장바구니 삭제하기
-	@GetMapping("delete")
+	@GetMapping("cartDelete")
 	public String CartDelete(int cCode, RedirectAttributes rttr) {
 		String view = pServ.cartDelete(cCode, rttr);
 		return view;

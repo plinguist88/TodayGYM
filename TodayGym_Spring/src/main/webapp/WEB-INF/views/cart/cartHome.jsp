@@ -86,9 +86,9 @@
 							<td class="tbody_td11"> <img src="${mycart.p_img}"></td>
 							<td class="tbody_td11"><p id="point"><img src="resources/img/buy/buyDetail/buypoint.png"></p> ${mycart.p_subcate}</td>
 							<td class="tbody_td1"> <button class="buttonx" type="button" onclick="delCheck(${mycart.c_code})"><img src="resources/img/cart/x.png"></button></td>
-							<td class="tbody_td1">${mycart.o_month} 이용권</td>
+							<td class="tbody_td1"><span class="tTitle">${mycart.o_month} 이용권</span></td>
 							<td class="tbody_td1">
-							<fmt:formatNumber type="number" maxFractionDigits="3" value="${mycart.o_price}"/>원							
+							<span class="tPrice"><fmt:formatNumber type="number" maxFractionDigits="3" value="${mycart.o_price}"/>원</span>							
 							</td>
 							<td class="tbody_td11"> </td>							
 						</tr>
@@ -101,7 +101,7 @@
 						<input class="checkbox" type="checkbox" checked id="chkall2">
 					</div>
 					<div class="deletebuttonarea">
-						<input class="deletebutton" type="button" value="선택상품 삭제">
+						<input class="deletebutton" type="button" value="선택상품 삭제">				
 					</div>
 				</div>
 				<div class="cart_calculator">
@@ -146,7 +146,7 @@
 						<c:forEach var="mycart" items="${mycart}">
 						<c:set var="total" value="${total + mycart.o_price}" />						
 						</c:forEach>	
-						<span>
+						<span class="fPrice">
 						<fmt:formatNumber type="number" maxFractionDigits="3" value="${total}" />			
 						</span>								
 						<span>원</span>
@@ -164,11 +164,14 @@
 </body>
 <script type="text/javascript">
 	function delCheck(c_code) {
-		var conf = confirm("삭제하시겠습니까?");
+		var conf = confirm("해당 회원권을 장바구니에서 삭제하시겠습니까?");
 		
 		if(conf == true){
-			location.href='./delete?cCode=' + c_code;
+			location.href='./cartDelete?cCode=' + c_code;
 		}
 	}
+	
+	
+	
 </script>
 </html>

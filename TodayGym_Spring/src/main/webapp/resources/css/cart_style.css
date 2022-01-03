@@ -208,9 +208,17 @@ header {
 	background-color: #00c63a;
 	color: white;
 }
-
-
-
+.tPrice{
+	font-weight: bold;
+	color: #0abe16;
+}
+.tTitle{
+	font-weight: bold;
+}
+.fPrice{
+	font-weight: bold;
+	color: #0abe16;
+}
 
 
 
