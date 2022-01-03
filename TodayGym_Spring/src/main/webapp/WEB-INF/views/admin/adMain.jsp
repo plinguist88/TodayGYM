@@ -40,11 +40,11 @@
 						</tr>
 						<c:forEach var="tt" items="${total}">
 							<tr>
-								<td>${tt.10total}</td>
+<%-- 							<td>${tt.10total}</td>
 								<td>${tt.20total}</td>
 								<td>${tt.30total}</td>
 								<td>${tt.40total}</td>
-								<td>${tt.50total}</td>
+								<td>${tt.50total}</td> --%>
 							</tr>
 						</c:forEach>
 					</table>
