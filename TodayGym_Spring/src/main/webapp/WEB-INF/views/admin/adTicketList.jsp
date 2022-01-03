@@ -38,7 +38,7 @@
 					</thead>
 					<!-- List Contents -->
 					<tbody>
-						<!-- 임시 링크 -->
+						<!-- 임시 
 						<tr>
 							<td><a href="adTicketDetailMove.ad" class="ticketNum">T001</a></td>
 							<td><a href="#">유저A</a></td>
@@ -46,7 +46,8 @@
 							<td><a href="#">빡빡이와 함께하는 해피헬스</a></td>
 							<td>21.12.20 ~ 22.03.19</td>
 							<td><button class="button ticketOn">사용</button></td>
-						</tr>
+						</tr>링크 -->
+						
 						<c:forEach items="${tList}" var="tlist">
 							<tr>
 								<td><a href="./adTicketDetailMove.ad?t_no=${tlist.t_no}"
