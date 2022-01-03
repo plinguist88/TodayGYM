@@ -1,6 +1,7 @@
 package com.project.todaygym.dto;
 
 import java.security.Timestamp;
+import java.sql.Date;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -13,8 +14,6 @@ public class ReviewDto {
 	private String r_title;
 	private String r_contents;
 	private String m_id;
-	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss" ,
-			timezone = "Asia/Seoul")
-	private Timestamp r_date;
+	private Date r_date;
 	private int r_score;
 }
