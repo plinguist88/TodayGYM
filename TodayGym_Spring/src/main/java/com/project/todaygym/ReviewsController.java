@@ -71,7 +71,7 @@ public class ReviewsController {
 	}
 	
 	//delete 삭제하기
-	@GetMapping("delete")
+	@GetMapping("reviewsdelete")
 	public ModelAndView reviewsDelete(Integer pageNum, Integer r_no) {
 		logger.info("reviewsDelete()");
 		String msg = tServe.reviewsDelete(r_no);
