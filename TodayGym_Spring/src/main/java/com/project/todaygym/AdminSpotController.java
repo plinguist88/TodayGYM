@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.project.todaygym.dto.SpotFormDto;
+import com.project.todaygym.service.AdSpotDeleteService;
 import com.project.todaygym.service.AdSpotImageService;
 import com.project.todaygym.service.AdSpotListService;
 import com.project.todaygym.service.AdSpotRegService;
@@ -31,6 +32,9 @@ public class AdminSpotController {
 	
 	@Autowired
 	private AdSpotImageService adSpotImageService;
+	
+	@Autowired
+	private AdSpotDeleteService adSpotDeleteService;
 
 	//지점 관리로 이동
 	@GetMapping("adSpotMove.ad")
@@ -77,6 +81,29 @@ public class AdminSpotController {
 		mv = new ModelAndView();
 		
 		mv = adSpotImageService.getSpotImage(s_code);
+		
+		return mv;
+	}
+	
+	//지점 삭제로 이동
+	@GetMapping("adSpotDeleteMove.ad")
+	public ModelAndView adSpotDeleteMove(String s_code) {
+		Logger.info("adSpotDeleteMove()");
+		
+		mv = new ModelAndView();
+		
+		mv.addObject("s_code", s_code);
+		mv.setViewName("admin/adSpotDelete");
+		
+		return mv;
+	}
+	
+	@GetMapping("adSpotDeleteAction.ad")
+	public ModelAndView adSpotDeleteAction(String s_code) {
+		Logger.info("adSpotDeleteAction()");
+		
+		mv = new ModelAndView();
+		mv = adSpotDeleteService.getAdSpotDelete(s_code);
 		
 		return mv;
 	}

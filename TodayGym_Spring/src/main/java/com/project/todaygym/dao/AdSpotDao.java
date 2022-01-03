@@ -20,4 +20,6 @@ public interface AdSpotDao {
 	public int spotImageInsert(SpotImageDto spotImageDto);
 	//지점 이미지 목록
 	public List<SpotImageDto> spotImageSelect(String s_code);
+	//지점 삭제
+	public int spotDelete(String s_code);
 }

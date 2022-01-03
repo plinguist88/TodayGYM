@@ -12,11 +12,11 @@ import lombok.extern.java.Log;
 public class AdMainService {
 	
 	@Autowired
-	private AdMainDao amDao;
+	private AdMainDao adMainDao;
 	
 	//총원 구하기
 	public String adMemCnt(int num) {
-		int tCnt = amDao.totalCnt;
+		int tCnt = adMainDao.totalCnt();
 		
 		return null;
 	}
