@@ -38,20 +38,20 @@
 		<section>
 			<form>
 				<fieldset >
-					
+					<c:forEach items="${sList}" var ="sList">
 					<div class=spot_container>
 						<div class=spot_image1>
 							<img class=z_img src="resources/img/spot/x.jpg">
 						</div>
 
 						<div class=spot_content>
-							<h4 class="spot_name">연수점</h4>
+							<h4 class="spot_name">${sList.s_name}</h4>
 							<div class=spot_info>
 								<ul class=info_list>
 									<li><strong>지점</strong></li>
-									<li class=li_point><span>연수점</span></li>
+									<li class=li_point><span>${sList.s_name}</span></li>
 									<li><strong>위치</strong></li>
-									<li class=li_point><span>인천광역시 연수구 새말로6</span></li>
+									<li class=li_point><span>${sList.s_addr}</span></li>
 								</ul>
 							</div>
 							<div class=spot_btn>
@@ -67,10 +67,11 @@
 							</div>
 						</div>
 					</div>
+					</c:forEach>
 				</fieldset>
 			</form>
 		</section>
-		
+		<!--  
 		<section>
 			<form>
 				<fieldset>
@@ -218,7 +219,7 @@
 			</form>
 		</section>
 		
-
+-->
 
 
 
