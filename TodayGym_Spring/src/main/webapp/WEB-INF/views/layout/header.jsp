@@ -35,7 +35,7 @@
 				</c:when>
 				<c:when test="${sessionScope.mb.m_id != null}">
 					<c:if test="${sessionScope.mb.m_id == 'admin'}">
-						<li><a href="adMainMove.ad"><abbr title="관리자페이지"><span
+						<li><a href="adMainMove.ad?side=0"><abbr title="관리자페이지"><span
 									class="navbar_icon"><ion-icon name="stats-chart-outline"></ion-icon>관리자페이지</span></abbr></a></li>
 					</c:if>
 					<c:if test="${sessionScope.mb.m_id != 'admin'}">

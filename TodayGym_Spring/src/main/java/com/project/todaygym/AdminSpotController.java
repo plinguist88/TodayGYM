@@ -34,7 +34,7 @@ public class AdminSpotController {
 
 	//지점 관리로 이동
 	@GetMapping("adSpotMove.ad")
-	public ModelAndView adSpotMove(@RequestParam(value="side", defaultValue = "1") String side) {
+	public ModelAndView adSpotMove(String side) {
 		Logger.info("adSpotMove()");
 
 		mv = new ModelAndView();
