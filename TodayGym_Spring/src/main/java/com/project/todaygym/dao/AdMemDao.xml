@@ -11,23 +11,7 @@
 		FROM MEMBER_TB
 		ORDER BY m_name
 	</select>
-	<!-- <select id="getMList" parameterType="HashMap"
-	resultType="com.project.todaygym.dto.MemberDto">
-	<![CDATA[
-		SELECT * FROM MEMBER_TB
-		WHERE RONUM >= (#{num} * #{lcnt}) - (#{lcnt} - 1)  
-			AND RONUM <= #{num} * #{lcnt}
-	]]>
-	</select> -->
-	
-	<select id="getBoardCnt" resultType="Integer">
-		SELECT COUNT(*) FROM MEMBER_TB
-	</select>
-	
-	<select id="getMemCnt" resultType="Integer">
-		SELECT COUNT(*) FROM MEMBER_TB
-	</select>
-	
+
 	<select id="getMDetail" parameterType="String"
 		resultType="com.project.todaygym.dto.MemberDto">
 		SELECT * FROM MEMBER_TB WHERE m_id = #{m_id}
