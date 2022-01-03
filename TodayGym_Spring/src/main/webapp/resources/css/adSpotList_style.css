@@ -32,11 +32,16 @@ body {
 	border: 1px solid #000;
 }
 
-.listTable .listRegMove td {
+.listTable .listNav td {
 	height: 50px;
 }
 
-.listTable .listRegMove td input {
+.listTable .listNav .listNavContainer{
+	display: flex;
+	justify-content: space-between;
+}
+
+.listTable .listNav td a input{
 	width: 100px;
 	height: 30px;
 	margin: 5px;
@@ -48,7 +53,7 @@ body {
 	cursor: pointer;
 }
 
-.listTable .listRegMove td input:hover {
+.listTable .listNav td a input:hover {
 	border: 1px solid #fff;
 	box-sizing: border-box;
 }

@@ -28,10 +28,15 @@
 					<tr>
 						<th colspan="6"><h1>TodayGYM 지점</h1></th>
 					</tr>
-					<tr class="listRegMove">
-						<td colspan="5"><a href="adSpotRegFormMove.ad"> <input
-								type="button" value="지점 등록" />
-						</a></td>
+					<tr class="listNav">
+						<td colspan="6">
+							<div class="listNavContainer">
+							<a href="adSpotRegFormMove.ad"> 
+								<input type="button" class="spotInsertBtn" value="지점 등록" />
+							</a>
+								<jsp:include page="../layout/adSearchSpot.jsp" />
+							</div>
+						</td>
 					</tr>
 					<tr class="listTitle">
 						<td>지점 번호</td>
@@ -51,7 +56,8 @@
 							<td>${sList.s_phone }</td>
 							<td>${sList.s_addr }</td>
 							<td>${sList.s_content }</td>
-							<td><a href="adSpotImageMove.ad?s_code=${sList.s_code }" onclick="window.open(this.href,'spotImage','width=500, height=800'); return false;">
+							<td><a href="adSpotImageMove.ad?s_code=${sList.s_code }"
+								onclick="window.open(this.href,'spotImage','width=500, height=800'); return false;">
 									<button class="spotImage">지점 사진</button>
 							</a></td>
 						</tr>

@@ -27,6 +27,13 @@
 				<table class="listTable">
 					<!-- List Title -->
 					<thead>
+						<tr class="listNav">
+							<td colspan="6">
+								<div class="listNavContainer">
+									<jsp:include page="../layout/adSearchTicket.jsp" />
+								</div>
+							</td>
+						</tr>
 						<tr class="listTitle">
 							<th>번호</th>
 							<th>이름</th>
@@ -60,19 +67,6 @@
 						</c:forEach>
 					</tbody>
 				</table>
-				<!-- List Search -->
-				<form name="adsearch-form" autocomplete="off">
-					<div class="adTicket-search">
-						<select class="adTicket-sselct" name="searchType">
-							<option selected value="t_no">티켓번호</option>
-							<option value="m_id">회원ID</option>
-							<option value="p_cate">종목</option>
-							<option value="p_title">상품명</option>
-						</select> <input type="text" name="keyword" value=""></input>
-						<button type="button" onclick="getTicketList()"
-							class="adTicket-sbtn">검색</button>
-					</div>
-				</form>
 			</div>
 		</div>
 	</div>
