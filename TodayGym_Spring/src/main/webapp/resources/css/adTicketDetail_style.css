@@ -1,51 +1,58 @@
 @charset "UTF-8";
 
 /* Common */
-
-body{
+body {
 	margin: 0;
 	padding: 0;
 }
 
-.content-admin{
+.content-admin {
 	width: 100%;
 	height: 100vh;
-	
 	display: flex;
-	
-	background-color: #fff;
+	background: #fff;
 }
 
-.content{
+.content {
 	width: 100%;
 	height: 100vh;
-	
-	background-color: #fcfcfc;
+	background: #fcfcfc;
+	text-align: center;
 }
 
+h1{
+	border: 3px solid #0c0c0c;
+	border-radius: 3px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #0c0c0c;
+	color: #fcfcfc;
+}
+
+.content-admem {
+	width: 80%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
 /* Ticket Detail */
 
 .detailTable{
-	position: relative;
-	top: 60px;
-	
-	heigth: 100vh;
-	
-	margin: auto;
-	
-	border-collapse: collapse;
+	width: 100%;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .detailTable th{
-	border: 1px solid #000;
+	border-bottom: 5px double #0c0c0c;
 }
 
 .detailTable tbody td{
 	padding: 10px;
-	
 	text-align: center;
-	
-	border: 1px solid #000;
+	margin: 0;
+	border-bottom: 2px inset #c0c0c0;
 }
 
 .detailTable tbody td.detailTitle{
