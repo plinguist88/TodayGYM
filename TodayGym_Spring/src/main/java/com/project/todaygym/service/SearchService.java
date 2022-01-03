@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.project.todaygym.dao.MemberDao;
 
 @Service
-public class SearchIdService {
+public class SearchService {
 	
 	private ModelAndView mv;
 	
@@ -29,7 +29,7 @@ public class SearchIdService {
 		mv = new ModelAndView();
 		
 		mv.addObject("searchId", searchId);
-		mv.setViewName("member/memberSearch");
+		mv.setViewName("member/memberSearchId");
 		
 		return mv;
 	}

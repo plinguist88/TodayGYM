@@ -16,7 +16,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.project.todaygym.dto.MemberDto;
 import com.project.todaygym.dto.MemberFormDto;
 import com.project.todaygym.service.MemberService;
-import com.project.todaygym.service.SearchIdService;
+import com.project.todaygym.service.SearchService;
 
 @Controller
 public class MemberController {
@@ -29,20 +29,21 @@ public class MemberController {
 	private MemberService mServ;
 
 	@Autowired
-	private SearchIdService searchIdService;
-
-
+	private SearchService searchService;
+	
+	
+	
 	// 아이디 찾기 폼
-	@GetMapping("/memberSearch.do")
-	public String memberSearch(){
+	@GetMapping("/memberSearchId.do")
+	public String memberSearchId(){
 
-		return "member/memberSearch";
+		return "member/memberSearchId";
 	}
 
 	@GetMapping("/searchId.do")
 	public ModelAndView searchId(@RequestParam("email") String m_email) {
 
-		mv = searchIdService.getSearchId(m_email);
+		mv = searchService.getSearchId(m_email);
 
 		return mv;
 	}
