@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,7 +82,10 @@
 							<td class="tbody_td11"><p id="point"><img src="resources/img/buy/buyDetail/buypoint.png"></p> ${mycart.p_subcate}</td>
 							<td class="tbody_td1"> <button class="buttonx" type="button"><img src="resources/img/cart/x.png"></button></td>
 							<td class="tbody_td1">${mycart.o_month} 이용권</td>
-							<td class="tbody_td1">${mycart.o_price}원</td>
+							<td class="tbody_td1">
+							<fmt:formatNumber type="number" maxFractionDigits="3" value="${mycart.o_price}"/>
+							원
+							</td>
 							<td class="tbody_td11"> </td>							
 						</tr>
 						</c:forEach>
@@ -101,9 +106,15 @@
 							<dl class="cart_price_sub">
 								<dt>총 상품금액</dt>
 								<dd>
-									<c:forEach var="mycart" items="${mycart}">					
-									<span>${mycart.o_price}</span>	
-									</c:forEach>								
+								
+
+									<c:set var="total" value="0"/>
+									<c:forEach var="mycart" items="${mycart}">
+									<c:set var="total" value="${total + mycart.o_price}" />						
+									</c:forEach>	
+									<span>
+									<fmt:formatNumber type="number" maxFractionDigits="3" value="${total}" />			
+									</span>		
 									<span>원</span>
 								</dd>
 							</dl>
@@ -129,14 +140,18 @@
 					</div>
 					<div class="cart_cal_sub2">
 						<span>총 주문금액</span>
+						<c:set var="total" value="0"/>
 						<c:forEach var="mycart" items="${mycart}">
-						<span class="total">${mycart.o_price}</span>
-						</c:forEach>
-						<span class="total">원</span>
+						<c:set var="total" value="${total + mycart.o_price}" />						
+						</c:forEach>	
+						<span>
+						<fmt:formatNumber type="number" maxFractionDigits="3" value="${total}" />			
+						</span>								
+						<span>원</span>
 					</div>
 				</div>
 			<div class="cart_button">
-				<span class="cart_back" onclick="location.href='./buyHome'">계속하기</span>
+				<span class="cart_back" onclick="location.href='./product'">계속하기</span>
 				<span class="ordermove" onclick="location.href='./myOrder?m_id=${mb.m_id}'">결제하기</span>
 			</div>
 		</section>
