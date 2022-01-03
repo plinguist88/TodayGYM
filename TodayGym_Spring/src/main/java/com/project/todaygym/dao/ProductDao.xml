@@ -30,8 +30,10 @@
 		WHERE A.P_CODE = B.P_CODE AND A.OP_CODE = C.O_CODE AND A.M_ID = #{getId}
 		ORDER BY A.C_CODE DESC
 	</select>
-	
-	
+	<!-- 6. 장바구니 삭제하기 -->
+	<delete id="cartDelete" parameterType="Integer">
+		DELETE FROM c WHERE c_code = #{c_code}
+	</delete>
 	
 	
 	

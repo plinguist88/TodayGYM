@@ -43,7 +43,12 @@
 				else $("#chkall2").prop("checked", true); 
 			});
 		});
-		
+		$(function () {
+			var msg = "${msg}";
+			if(msg != ""){
+				alert(msg)
+			}
+		})
 	</script>
 </head>
 <body>
@@ -80,11 +85,10 @@
 							<td class="tbody_td11"> <input class="checkbox" type="checkbox" checked name="chk"> </td>
 							<td class="tbody_td11"> <img src="${mycart.p_img}"></td>
 							<td class="tbody_td11"><p id="point"><img src="resources/img/buy/buyDetail/buypoint.png"></p> ${mycart.p_subcate}</td>
-							<td class="tbody_td1"> <button class="buttonx" type="button"><img src="resources/img/cart/x.png"></button></td>
+							<td class="tbody_td1"> <button class="buttonx" type="button" onclick="delCheck(${mycart.c_code})"><img src="resources/img/cart/x.png"></button></td>
 							<td class="tbody_td1">${mycart.o_month} 이용권</td>
 							<td class="tbody_td1">
-							<fmt:formatNumber type="number" maxFractionDigits="3" value="${mycart.o_price}"/>
-							원
+							<fmt:formatNumber type="number" maxFractionDigits="3" value="${mycart.o_price}"/>원							
 							</td>
 							<td class="tbody_td11"> </td>							
 						</tr>
@@ -105,9 +109,7 @@
 						<div class="cart_price">
 							<dl class="cart_price_sub">
 								<dt>총 상품금액</dt>
-								<dd>
-								
-
+								<dd>							
 									<c:set var="total" value="0"/>
 									<c:forEach var="mycart" items="${mycart}">
 									<c:set var="total" value="${total + mycart.o_price}" />						
@@ -161,6 +163,12 @@
 	</div>
 </body>
 <script type="text/javascript">
-	
+	function delCheck(c_code) {
+		var conf = confirm("삭제하시겠습니까?");
+		
+		if(conf == true){
+			location.href='./delete?cCode=' + c_code;
+		}
+	}
 </script>
 </html>

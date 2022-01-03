@@ -7,6 +7,7 @@ import javax.websocket.Session;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -89,6 +90,23 @@ public class ProductService {
 		}
 		rttr.addFlashAttribute("alert", alert);
 		
+		return view;
+	}
+	
+	//5. 장바구니 삭제하기
+	@Transactional
+	public String cartDelete(int cCode, RedirectAttributes rttr) {
+		String view = null;
+		
+		try {
+			pDao.cartDelete(cCode);
+			view = "redirect:myCart";
+			rttr.addFlashAttribute("msg", "삭제 성공");
+		}catch (Exception e) {
+			e.printStackTrace();
+			view = "redirect:myCart";
+			rttr.addFlashAttribute("msg", "삭제 실패");
+		}
 		return view;
 	}
 }
