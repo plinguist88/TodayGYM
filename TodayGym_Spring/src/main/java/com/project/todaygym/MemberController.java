@@ -30,13 +30,29 @@ public class MemberController {
 
 	@Autowired
 	private SearchIdService searchIdService;
+	
+	// 비밀번호 찾기 폼
+		@GetMapping("/memberSearchPw.do")
+		public String memberSearchPw(){
+
+			return "member/memberSearchPw";
+		}
+
+		@GetMapping("/searchPw.do")
+		public ModelAndView searchPw(@RequestParam("name") String m_name, @RequestParam("email") String m_email) {
+
+			mv = searchIdService.getSearcPw(m_name);
+			mv = searchIdService.getSearcPw(m_email);
+
+			return mv;
+		}
 
 
 	// 아이디 찾기 폼
-	@GetMapping("/memberSearch.do")
-	public String memberSearch(){
+	@GetMapping("/memberSearchId.do")
+	public String memberSearchId(){
 
-		return "member/memberSearch";
+		return "member/memberSearchId";
 	}
 
 	@GetMapping("/searchId.do")

@@ -7,29 +7,24 @@ import org.springframework.web.servlet.ModelAndView;
 import com.project.todaygym.dao.MemberDao;
 
 @Service
-public class SearchIdService {
+public class SearchPwService {
 	
 	private ModelAndView mv;
 	
 	@Autowired
 	private MemberDao mDao;
 	
-	public ModelAndView getSearchId(String m_email) {
+	public ModelAndView getSearchPw(String m_name, String m_email) {
 		
-		System.out.println(m_email);
+		String searchPw = new String();
 		
-		String searchId = new String();
+		searchPw = mDao.nameSearchSelect(m_name);
+		searchPw = mDao.emailSearchSelect(m_email);
 		
-		System.out.println("memberDao 전" + searchId);
-		
-		searchId = mDao.emailSearchSelect(m_email);
-
-		System.out.println("memberDao 후" +searchId);
-	
 		mv = new ModelAndView();
 		
-		mv.addObject("searchId", searchId);
-		mv.setViewName("member/memberSearchId");
+		mv.addObject("searchPw", searchPw);
+		mv.setViewName("member/memberSearchPw");
 		
 		return mv;
 	}

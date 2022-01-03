@@ -30,6 +30,14 @@
 		SELECT m_id FROM M WHERE m_email = #{m_email}
 	</select>
 	
+	<!-- 비밀번호 찾기 -->
+	<select id="nameSearchSelect" parameterType="String" resultType="String">
+		SELECT m_pw FROM M WHERE m_name = #{m_name}
+	</select>
+	<select id="emailSearchSelect" parameterType="String" resultType="String">
+		SELECT m_pw FROM M WHERE m_email = #{m_email}
+	</select>
+	
 	
 	
 	

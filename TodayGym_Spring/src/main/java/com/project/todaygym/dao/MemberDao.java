@@ -20,7 +20,7 @@ public interface MemberDao {
 		
 		//________________________________________ memberSearch area
 		
-		
+		public String nameSearchSelect(String m_name); 
 		public String emailSearchSelect(String m_email);
 		
 		

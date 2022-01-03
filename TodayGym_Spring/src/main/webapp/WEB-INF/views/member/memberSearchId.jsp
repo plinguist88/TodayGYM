@@ -21,9 +21,9 @@
 					<input class="input" type="text" id="email" name="email" required>
 				</p>
 				<p class="center">
-					<button type="submit" id=search class="serach_btn">find</button>
+					<button type="submit" id=search class="serachId_btn">find</button>
 				</p>
-				<p>${searchId }</p>
+				<p>${searchId}</p>
 			</div>
 		</form>
 	</div>
