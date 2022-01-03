@@ -49,6 +49,12 @@ public class ProductController {
 		String view = pServ.saveMyCart(myCart, rttr);
 		return view;
 	}
+	//5. 장바구니 삭제하기
+	@GetMapping("delete")
+	public String CartDelete(int cCode, RedirectAttributes rttr) {
+		String view = pServ.cartDelete(cCode, rttr);
+		return view;
+	}
 	
 }
 
