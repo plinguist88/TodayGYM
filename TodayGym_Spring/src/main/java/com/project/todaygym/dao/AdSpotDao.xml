@@ -41,4 +41,12 @@
 		resultType="com.project.todaygym.dto.SpotImageDto">
 		SELECT * FROM SIMG_TB WHERE s_code=#{s_code}
 	</select>
+
+	<!-- 지점 삭제 -->
+	<delete id="spotDelete" parameterType="String">
+		BEGIN
+		DELETE FROM SIMG_TB WHERE s_code=#{s_code};
+		DELETE FROM SPOT_TB WHERE s_code=#{s_code};
+		END;
+	</delete>
 </mapper>

@@ -26,14 +26,14 @@
 				<!-- Spot List Title -->
 				<thead>
 					<tr>
-						<th colspan="6"><h1>TodayGYM 지점</h1></th>
+						<th colspan="7"><h1>TodayGYM 지점</h1></th>
 					</tr>
 					<tr class="listNav">
-						<td colspan="6">
+						<td colspan="7">
 							<div class="listNavContainer">
-							<a href="adSpotRegFormMove.ad"> 
-								<input type="button" class="spotInsertBtn" value="지점 등록" />
-							</a>
+								<a href="adSpotRegFormMove.ad"> <input type="button"
+									class="spotInsertBtn" value="지점 등록" />
+								</a>
 								<jsp:include page="../layout/adSearchSpot.jsp" />
 							</div>
 						</td>
@@ -45,6 +45,7 @@
 						<td>주소</td>
 						<td>기타</td>
 						<td>지점 이미지</td>
+						<td>삭제</td>
 					</tr>
 				</thead>
 				<!-- Spot List Contents -->
@@ -60,6 +61,10 @@
 								onclick="window.open(this.href,'spotImage','width=500, height=800'); return false;">
 									<button class="spotImage">지점 사진</button>
 							</a></td>
+							<td><a href="adSpotDeleteMove.ad?s_code=${sList.s_code }"
+								onclick="window.open(this.href, 'Admin Spot Delete', 'width=500, height=200, top=400, left=900, scrollbars=no, location=no, toolbars=no, status=no'); return false;"><button>
+										<ion-icon name="trash"></ion-icon>
+									</button></a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

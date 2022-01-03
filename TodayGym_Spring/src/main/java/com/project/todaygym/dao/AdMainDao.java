@@ -1,11 +1,10 @@
 package com.project.todaygym.dao;
 
-import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
 
-import com.project.todaygym.dto.MemberDto;
-
-public class AdMainDao {
+@Mapper
+public interface AdMainDao {
 	
-	//총원 구하기
-	public int totalCnt;
+	//회원 전체 인원수
+	public int totalCnt();
 }
