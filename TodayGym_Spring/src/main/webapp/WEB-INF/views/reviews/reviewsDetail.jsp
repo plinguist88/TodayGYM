@@ -23,11 +23,11 @@
 				<div class="detailcontents">
 					<div class="detail_img">12</div>
 					<div class="userbox">
-						<div class="detail_user">작성자<div class ="detail_user2"></div></div>
-						<div class="detail_select">운동종목<div class ="detail_select2"></div></div>
-						<div class="detail_title">제목<div class ="detail_title2"></div></div>
+						<div class="detail_user">작성자<div class ="detail_user2">${rDto.m_id }</div></div>
+						<div class="detail_select">운동종목<div class ="detail_select2">${rDto.r_cate }</div></div>
+						<div class="detail_title">제목<div class ="detail_title2">${rDto.r_title }</div></div>
 						<div class="detail_content">내용</div>
-						<div class="detail_content2"></div>
+						<div class="detail_content2">${rDto.r_contents }</div>
 					</div>
 				</div>
 
@@ -40,7 +40,7 @@
 						<button>수정</button>
 					</div>
 					<div class="detail_delete">
-						<button>삭제</button>
+						<a href="delete?r_no=${rDto.r_no}"><button>삭제</button></a>
 					</div>
 
 				</div>

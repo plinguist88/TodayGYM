@@ -10,6 +10,15 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/reviews_style.css">
+<script type="text/javascript">
+$(function(){
+	var msg = "${msg}";
+	
+	if(msg != ""){
+		alert(msg);
+	}
+});
+</script>
 </head>
 <body>
 	<div class="wrap">
@@ -60,7 +69,7 @@
 							
 							<tr>
 								<td>${list.r_no}</td>
-								<td><a href="reviewsDetail">${list.r_title}</a></td>
+								<td><a href="reviewsDetail?r_title=${list.r_title}">${list.r_title}</a></td>
 								<td>${list.m_id}</td>
 								<td>${list.r_date }</td>
 								<%-- <td>${list.r_score }</td> --%>

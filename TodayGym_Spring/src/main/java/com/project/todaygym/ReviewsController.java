@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -21,10 +23,12 @@ public class ReviewsController {
 	
 	
 	@Autowired
-	ReviewService tServe;
+	private ReviewService tServe;
 	
 	private ModelAndView mv;
 	
+	
+	//글쓰기 이동 
 	@GetMapping("reviewsWrite")
 	public String reviewsWrite() {
 		logger.info("reviewsWrite()");
@@ -32,6 +36,7 @@ public class ReviewsController {
 	}
 	
 	
+	//글작성 한것을 리스트로 넘기기
 	@PostMapping("reviewWriteAct")
 	public String reviewWriteAct(ReviewDto rdto, RedirectAttributes rttr) {
 		logger.info("reviewWriteAct()");
@@ -40,8 +45,11 @@ public class ReviewsController {
 		System.out.println(rdto);
 		
 		String view = tServe.WriteAct(rdto , rttr);
-		return view;
+		return view;		
 	}
+	
+	
+	//데이터베이스에 있는 목록을 가져오기  
 	@GetMapping("review")
 	public ModelAndView reviewList(Integer pageNum) {
 		
@@ -51,4 +59,26 @@ public class ReviewsController {
 		
 		return mv;
 	}
+	
+	//detail 가져오기
+	@GetMapping("reviewsDetail")
+	public ModelAndView reviewsDetail(String r_title) {
+		logger.info("reviewsDetail()");
+	
+		mv = tServe.getReviewDetail(r_title);
+		
+		return mv;
+	}
+	
+	//delete 삭제하기
+	@GetMapping("delete")
+	public ModelAndView reviewsDelete(Integer pageNum, Integer r_no) {
+		logger.info("reviewsDelete()");
+		String msg = tServe.reviewsDelete(r_no);
+		mv = tServe.getReviewList(pageNum);
+		
+		mv.addObject("msg", msg);
+		return mv;
+	}
+	
 }
