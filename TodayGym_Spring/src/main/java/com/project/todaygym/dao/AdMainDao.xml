@@ -4,7 +4,7 @@
 
 <mapper namespace="com.project.todaygym.dao.AdMainDao">
 
-	<select id="totalCnt" parameterType="Integer">
+	<select id="totalCnt" resultType="Integer">
 		SELECT COUNT(*) FROM MEMBER_TB;
 	</select>
 

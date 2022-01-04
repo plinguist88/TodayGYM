@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.project.todaygym.service.AdMainService;
 
@@ -17,13 +18,15 @@ public class AdminMainController {
 	@Autowired
 	private AdMainService adMainServ;
 	
+	private ModelAndView mv;
+	
 	@GetMapping("/adMainCnt")
-	public String adMainCnt(Integer num) {
+	public ModelAndView adMainCnt() {
 		
 		logger.info("adMainCnt()");
 		
-		String cnt = adMainServ.adMemCnt(num);
+		mv = adMainServ.adMemCnt();
 		
-		return cnt;
+		return mv;
 	}
 }
