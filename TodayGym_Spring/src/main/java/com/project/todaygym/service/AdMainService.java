@@ -3,6 +3,7 @@ package com.project.todaygym.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.project.todaygym.dao.AdMainDao;
 
@@ -14,10 +15,17 @@ public class AdMainService {
 	@Autowired
 	private AdMainDao adMainDao;
 	
+	private ModelAndView mv;
+	
 	//총원 구하기
-	public String adMemCnt(int num) {
-		int tCnt = adMainDao.totalCnt();
+	public ModelAndView adMemCnt() {
+		mv = new ModelAndView();
 		
-		return null;
+		int cnt = adMainDao.totalCnt();
+		
+		mv.addObject("cnt", cnt);
+		mv.setViewName("admin/adMain");
+		
+		return mv;
 	}
 }

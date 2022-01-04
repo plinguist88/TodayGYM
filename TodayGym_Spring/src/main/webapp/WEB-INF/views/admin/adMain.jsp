@@ -25,28 +25,30 @@
 			<div class="Overview-Member">
 				<div>
 					<table>
-						<tr>
-							<th>총원</th>
-							<td>00</td>
-						</tr>
+							<tr>
+								<th>총원</th>
+								<td>${cnt.totalCnt}</td>
+							</tr>
 					</table>
 					<table>
-						<tr>
-							<th>10대</th>
-							<th>20대</th>
-							<th>30대</th>
-							<th>40대</th>
-							<th>50대 이상</th>
-						</tr>
-						<c:forEach var="tt" items="${total}">
+						<thead>
 							<tr>
-<%-- 							<td>${tt.10total}</td>
-								<td>${tt.20total}</td>
-								<td>${tt.30total}</td>
-								<td>${tt.40total}</td>
-								<td>${tt.50total}</td> --%>
+								<th>10대</th>
+								<th>20대</th>
+								<th>30대</th>
+								<th>40대</th>
+								<th>50대 이상</th>
 							</tr>
-						</c:forEach>
+						</thead>
+						<tbody>
+							<tr>
+								<td>00</td>
+								<td>00</td>
+								<td>00</td>
+								<td>00</td>
+								<td>00</td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 			</div>
