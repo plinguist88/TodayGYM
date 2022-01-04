@@ -72,7 +72,7 @@
 					<input type="text" class="phone-input" title="연락처" name="m_phone1" id="m_phone1" maxlength="3" placeholder="010"> 
 					<input type="text" class="phone-input" title="연락처" name="m_phone2" id="m_phone2" maxlength="4" placeholder="0000">
 					<input type="text" class="phone-input" title="연락처" name="m_phone3" id="m_phone3" maxlength="4" placeholder="0000">
-					<input type="text" class="login-input" title="생일" name="m_birth" maxlength="6" placeholder="생일 ex)930101"> 
+					<input type="date" class="login-input" title="생일" name="m_birth" placeholder="생일 ex)930101"> 
 					<input type="submit" class="login-btn" value="가입">
 				</form>
 			</div>
