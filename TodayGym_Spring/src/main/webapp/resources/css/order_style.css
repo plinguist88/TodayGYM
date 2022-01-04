@@ -185,6 +185,7 @@ li {
 	width: 600px;
 	hight: 300px;
 }
+
 .payment-title {
 	float: left;
 	width: 600px;
@@ -206,4 +207,59 @@ li {
 	width: 300px;
 	height: 60px;
 	font-size: 30px;
+}
+
+/******************************** orderComplete area ******************************/
+.content-orderComplete {
+	height: 600px;
+	background-color: #FFFFFF;
+}
+
+.orderComplete-form {
+	width: 1200px;
+	height: 600px;
+	margin: 0 auto;
+	padding: 50px 0 50px 0;
+}
+
+.orderComplete-contents {
+	width: 1200px;
+	height: 200px;
+	margin: 0 auto;
+	font-size: 30px;
+	line-height: 200px;
+	text-align: center;
+}
+
+.orderComplete-btn {
+	width: 1200px;
+	height: 300px;
+}
+
+.orderComplete-btn-title {
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.orderComplete-btn-click {
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.btn-myclass {
+	width: 200px;
+	height: 80px;
+	margin: 0 50px 0 0;
+	font-size: 20px;
+}
+
+.btn-main {
+	width: 200px;
+	height: 80px;
+	margin: 0 0 0 50px;
+	font-size: 20px;
 }

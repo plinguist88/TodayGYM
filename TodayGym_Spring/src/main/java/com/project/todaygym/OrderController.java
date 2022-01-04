@@ -30,7 +30,7 @@ public class OrderController {
 		mv = orderServ.getMyOrder(m_id);
 		
 		return mv;
-	} // getMyOrder end
+	} // myOrderMove end
 	
 	//__________ 결제실행
 	@GetMapping("payProc")
@@ -38,8 +38,16 @@ public class OrderController {
 		logger.info("payProc");
 		
 		String view = orderServ.payProc(m_id, rttr);
-
+		
 		return view;
 	} // payProc end
+	
+	//__________ 결제성공
+	@GetMapping("orderComplete")
+	public String orderCompleteMove() {
+		logger.info("orderCompleteMove()");
+		
+		return "order/orderComplete";
+	} // orderCompleteMove end
 	
 } // class end

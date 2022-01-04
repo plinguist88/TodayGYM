@@ -88,7 +88,7 @@
 							<td class="tbody_td1"> <button class="buttonx" type="button" onclick="delCheck(${mycart.c_code})"><img src="resources/img/cart/x.png"></button></td>
 							<td class="tbody_td1"><span class="tTitle">${mycart.o_month} 이용권</span></td>
 							<td class="tbody_td1">
-							<span class="tPrice"><fmt:formatNumber type="number" maxFractionDigits="3" value="${mycart.o_price}"/>원</span>							
+							<span class="tPrice"><fmt:formatNumber type="number" maxFractionDigits="3" value="${mycart.o_price}"/>원</span>				
 							</td>
 							<td class="tbody_td11"> </td>							
 						</tr>
@@ -115,7 +115,7 @@
 									<c:set var="total" value="${total + mycart.o_price}" />						
 									</c:forEach>	
 									<span>
-									<fmt:formatNumber type="number" maxFractionDigits="3" value="${total}" />			
+									<fmt:formatNumber type="number" maxFractionDigits="3" value="${total}" />
 									</span>		
 									<span>원</span>
 								</dd>
@@ -147,7 +147,7 @@
 						<c:set var="total" value="${total + mycart.o_price}" />						
 						</c:forEach>	
 						<span class="fPrice">
-						<fmt:formatNumber type="number" maxFractionDigits="3" value="${total}" />			
+						<fmt:formatNumber type="number" maxFractionDigits="3" value="${total}" />
 						</span>								
 						<span>원</span>
 					</div>
