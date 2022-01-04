@@ -1,9 +1,6 @@
 package com.project.todaygym.service;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import javax.servlet.http.HttpSession;
 
@@ -79,11 +76,11 @@ public class OrderService {
 				pDao.deleteCart(getCcode);
 				
 			} // for end
-			view = "redirect:order/orderComplete";
+			view = "redirect:orderComplete";
 			alert = "결제완료! 회원권을 발급했습니다. 감사합니다.!";
 		} catch (Exception e) {
 			// e.printStackTrace();
-			view = "redirect:order/orderHome";
+			view = "redirect:myOrder";
 			alert = "결제에 실패했습니다. 관리자에게 문의하세요.";
 		}
 		
