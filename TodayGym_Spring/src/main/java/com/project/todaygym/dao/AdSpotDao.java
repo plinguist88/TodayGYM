@@ -8,6 +8,9 @@ import com.project.todaygym.dto.SpotDto;
 import com.project.todaygym.dto.SpotImageDto;
 
 @Mapper
+//우리는 보통 Interface를 매퍼로 등록하기 위해 
+//@Mapper 어노테이션을 사용합니다.
+
 public interface AdSpotDao {
 	
 	//지점 전체 목록
@@ -22,4 +25,6 @@ public interface AdSpotDao {
 	public List<SpotImageDto> spotImageSelect(String s_code);
 	//지점 삭제
 	public int spotDelete(String s_code);
+	//해당지점 정보 출력 
+	public List<SpotDto> spotDetailInfo(String s_code);
 }

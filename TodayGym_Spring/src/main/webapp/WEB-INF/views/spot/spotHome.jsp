@@ -56,7 +56,7 @@
 							</div>
 							<div class=spot_btn>
 								<div>
-									<a class=detail_btn href="spotDetail" target="">상세히
+									<a class=detail_btn href="spotDetail?s_code=${sList.s_code}" target="">상세히
 										보기</a>
 								</div>
 								<div>

@@ -49,4 +49,12 @@
 		DELETE FROM SPOT_TB WHERE s_code=#{s_code};
 		END;
 	</delete>
+	
+	<!-- 해당지점 정보 출력 -->
+	<!--아이디 값은 adSpotDao에 있는 spotDetailInfo 인터페이스랑 같게해야하나? -->
+	<select id="spotDetailInfo" 
+	parameterType="String"
+	resultType="com.project.todaygym.dto.SpotDto">
+	SELECT * FROM SPOT_TB WHERE s_code =#{s_code, jdbcType=VARCHAR}
+	</select>
 </mapper>
