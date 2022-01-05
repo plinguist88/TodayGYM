@@ -31,7 +31,7 @@
 							<p>수강내역에서 회원권을 확인 할 수 있습니다.</p>
 						</div>
 						<div class="orderComplete-btn-click">
-							<button type="button" onclick="location.href='myClass'" class="btn-myclass">수강내역</button>
+							<button type="button" onclick="location.href='myInfo'" class="btn-myclass">수강내역</button>
 							<button type="button" onclick="location.href='home'" class="btn-main">메인화면</button>
 						</div>
 					</div>
