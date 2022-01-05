@@ -6,7 +6,6 @@ body{
 	margin: 0;
 	padding: 0;
 }
-
 .reivewfull{
 	position: relative ;
 	top: 80px;	
@@ -101,16 +100,31 @@ a{
 }
 
 .pageing_menu{
-	margin-left: 1000px;
+	margin-left: 1280px;
 	margin-top: 10px;
 	border: 1px solid grey;
+	width: 150px;
+	height: 50px;
 }
 .td_list td{
 	text-align: center;
 	border: 1px solid grey ;
 }
-table{
+.table_review{
 	border-collapse: collapse;
+	font-size: 0.9em;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	text-align: center;
+	border:2px solid #ffebb5;
 }
-
-
+.table_review thead tr{
+	 background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    text-align: center;
+}
+.table_review th,
+.table_review td{
+	padding:12px 15px;
+}
