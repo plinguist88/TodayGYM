@@ -21,7 +21,7 @@ import com.project.todaygym.service.AdSpotRegService;
 @Controller
 public class AdminSpotController {
 
-	private final Logger Logger = LoggerFactory.getLogger(AdminSpotController.class);
+	private static final Logger Logger = LoggerFactory.getLogger(AdminSpotController.class);
 
 	private ModelAndView mv;
 
