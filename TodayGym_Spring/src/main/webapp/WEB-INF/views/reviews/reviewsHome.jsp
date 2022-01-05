@@ -29,7 +29,7 @@ $(function(){
 			<div class="reivewfull">
 				<div class="reviewmain">
 					<div class="board_name">
-						<h3>이용후기 게시판</h3>
+						<h2>이용후기 게시판</h2>
 					</div>
 					<div class="review_menu">
 						<button class="menu_h">
@@ -48,41 +48,37 @@ $(function(){
 				</div>
 				<div class="table_full">
 					<div class="low">
-						<table class="table table-striped"
-							style="border: 1px solid #dddddd">
+						<table class="table_review">
 							<thead>
 								<tr>
-									<th class="column_number"
-										style="background-color: #eeeeee; text-align: center;">번호</th>
-									<th class="column_title"
-										style="background-color: #eeeeee; text-align: center;">제목</th>
-									<th class="column_id"
-										style="background-color: #eeeeee; text-align: center;">작성자</th>
-									<th class="column_day"
-										style="background-color: #eeeeee; text-align: center;">작성일</th>
-									<th class="column_score"
-										style="background-color: #eeeeee; text-align: center;">별점</th>
+									<th class="column_number">번호</th>
+									<th class="column_cate">종목</th>
+									<th class="column_title">제목</th>
+									<th class="column_id">작성자(ID)</th>
+									<th class="column_day">작성일</th>
+									<th class="column_score">별점</th>
 								</tr>
 							</thead>
 							<c:forEach var="list" items="${rList}">
-							<tbody class="td_list">
-							
-							<tr>
-								<td>${list.r_no}</td>
-								<td><a href="reviewsDetail?r_title=${list.r_title}">${list.r_title}</a></td>
-								<td>${list.m_id}</td>
-								<td>${list.r_date }</td>
-								<%-- <td>${list.r_score }</td> --%>
-								</tr>	
-										
-							</tbody>
+								<tbody class="td_list">
+
+									<tr>
+										<td>${list.r_no}</td>
+										<td>${list.r_cate}</td>
+										<td><a href="reviewsDetail?r_title=${list.r_title}">${list.r_title}</a></td>
+										<td>${list.m_id}</td>
+										<td>${list.r_date }</td>
+										<%-- <td>${list.r_score }</td> --%>
+									</tr>
+
+								</tbody>
 							</c:forEach>
 						</table>
 					</div>
 				</div>
 				<div class="pageing">
 					<button class="pageing_menu">
-						<a href="reviewsWrite">글쓰기</a>
+						<a href="reviewsWrite" style="font-size: 25px">글쓰기</a>
 					</button>
 				</div>
 
