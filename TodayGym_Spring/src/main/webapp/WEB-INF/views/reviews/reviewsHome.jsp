@@ -69,7 +69,7 @@ $(function(){
 							
 							<tr>
 								<td>${list.r_no}</td>
-								<td><a href="reviewsDelete?r_title=${list.r_title}">${list.r_title}</a></td>
+								<td><a href="reviewsDetail?r_title=${list.r_title}">${list.r_title}</a></td>
 								<td>${list.m_id}</td>
 								<td>${list.r_date }</td>
 								<%-- <td>${list.r_score }</td> --%>
