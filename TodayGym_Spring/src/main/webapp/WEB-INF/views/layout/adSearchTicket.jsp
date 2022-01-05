@@ -8,7 +8,7 @@
 		<select class="adSearchSelect" name="adSearchSelect">
 			<option selected value="">----선택----</option>
 			<option value="t_no">회원권 번호</option>
-			<option value="b_cate">회원권 종류</option>
+			<option value="b_cate">회원권 종목</option>
 			<option value="m_id">회원 이름</option>
 		</select> <input type="text" class="keyword" name="keyword" />
 		<button type="button" class="adSearchBtn" onclick="adSearch()">검색</button>

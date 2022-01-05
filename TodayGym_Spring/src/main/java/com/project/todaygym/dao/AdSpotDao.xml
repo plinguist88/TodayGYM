@@ -8,8 +8,17 @@
 		resultType="com.project.todaygym.dto.SpotDto">
 		SELECT * FROM SPOT_TB ORDER BY s_code DESC
 	</select>
-
-	<!-- 지점 번호 검색 -->
+	<!-- 지점 코드 검색 목록 -->
+	<select id="spotCodeSearchSelect" parameterType="String"
+		resultType="com.project.todaygym.dto.SpotDto">
+		SELECT * FROM SPOT_TB Where s_code=#{keyword} ORDER BY s_code DESC
+	</select>
+	<!-- 지점 이름 검색 목록 -->
+	<select id="spotNameSearchSelect"
+		resultType="com.project.todaygym.dto.SpotDto">
+		SELECT * FROM SPOT_TB Where s_name=#{keyword} ORDER BY s_code DESC
+	</select>
+	<!-- 지점 등록 자동번호 검색 -->
 	<select id="spotNextNumber" parameterType="String"
 		resultType="String">
 		SELECT max(s_code) FROM SPOT_TB

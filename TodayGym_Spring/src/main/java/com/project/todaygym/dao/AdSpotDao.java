@@ -15,7 +15,11 @@ public interface AdSpotDao {
 	
 	//지점 전체 목록
 	public List<SpotDto> spotAllSelect();
-	//지점 번호 검색
+	//지점 코드 검색 목록
+	public List<SpotDto> spotCodeSearchSelect(String keyword);
+	//지점 이름 검색 목록
+	public List<SpotDto> spotNameSearchSelect(String keyword);
+	//지점 등록 자동번호 검색
 	public String spotNextNumber();
 	//지점 등록
 	public int spotInsert(SpotDto spotDto);

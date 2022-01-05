@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.project.todaygym.dto.SpotFormDto;
+import com.project.todaygym.service.AdSearchSpotListService;
 import com.project.todaygym.service.AdSpotDeleteService;
 import com.project.todaygym.service.AdSpotImageService;
 import com.project.todaygym.service.AdSpotListService;
@@ -26,6 +27,9 @@ public class AdminSpotController {
 
 	@Autowired
 	private AdSpotListService adSpotListService;
+	
+	@Autowired
+	private AdSearchSpotListService adSearchSpotList;
 	
 	@Autowired
 	private AdSpotRegService adSpotRegService;
@@ -44,6 +48,18 @@ public class AdminSpotController {
 		mv = new ModelAndView();
 		
 		mv = adSpotListService.getAdSpotList(side);
+
+		return mv;
+	}
+	
+	//지점 검색으로 이동
+	@GetMapping("adSearchSpotList.ad")
+	public ModelAndView adSearchSpotList(String side, String adSearchSelect, String keyword) {
+		Logger.info("adSearchSpotList()");
+
+		mv = new ModelAndView();
+		
+		mv = adSearchSpotList.getAdSearchSpotList(side, adSearchSelect, keyword);
 
 		return mv;
 	}

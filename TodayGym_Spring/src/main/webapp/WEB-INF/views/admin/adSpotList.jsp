@@ -49,7 +49,7 @@
 					</tr>
 				</thead>
 				<!-- Spot List Contents -->
-				<tbody class="spotImageList">
+				<tbody class="spotList">
 					<c:forEach items="${sList}" var="sList">
 						<tr>
 							<td>${sList.s_code }</td>

@@ -21,54 +21,43 @@
 			<jsp:include page="../layout/adSidebar.jsp" />
 		</div>
 		<div class="content">
-			<div class="content-adticket">
-				<!-- Admin Ticket List Start  -->
-				<h1>회원권</h1>
-				<table class="listTable">
-					<!-- List Title -->
-					<thead>
-						<tr class="listNav">
-							<td colspan="6">
-								<div class="listNavContainer">
-									<jsp:include page="../layout/adSearchTicket.jsp" />
-								</div>
-							</td>
-						</tr>
-						<tr class="listTitle">
-							<th>번호</th>
-							<th>이름</th>
-							<th>종목</th>
-							<th>상품명</th>
-							<th>사용기간</th>
-							<th>사용여부</th>
-						</tr>
-					</thead>
-					<!-- List Contents -->
-					<tbody>
-						<!-- 임시 
+			<!-- Admin Ticket List Start  -->
+			<table class="listTable">
+				<!-- Ticket List Title -->
+				<thead>
+					<tr>
+						<th colspan="6"><h1>TodayGYM 회원권</h1></th>
+					</tr>
+					<tr class="listNav">
+						<td colspan="6">
+							<div class="listNavContainer">
+								<jsp:include page="../layout/adSearchTicket.jsp" />
+							</div>
+						</td>
+					</tr>
+					<tr class="listTitle">
+						<td>회원권 번호</td>
+						<td>회원 이름</td>
+						<td>회원권 종목</td>
+						<td>회원권 이름</td>
+						<td>사용기간</td>
+						<td>사용여부</td>
+					</tr>
+				</thead>
+				<!-- Ticket List Contents -->
+				<tbody class="ticketList">
+					<c:forEach items="${tList}" var="tlist">
 						<tr>
-							<td><a href="adTicketDetailMove.ad" class="ticketNum">T001</a></td>
-							<td><a href="#">유저A</a></td>
-							<td>헬스</td>
-							<td><a href="#">빡빡이와 함께하는 해피헬스</a></td>
-							<td>21.12.20 ~ 22.03.19</td>
+							<td><a href="adTicketDetailMove.ad?t_no=${tlist.t_no}">${tlist.t_no}</a></td>
+							<td><a href="adMemDetailMove?m_id=${tlist.m_id}">${tlist.m_name}</a></td>
+							<td>${tlist.p_cate}</td>
+							<td>${tlist.p_subcate}</td>
+							<td>${tlist.p_date}</td>
 							<td><button class="button ticketOn">사용</button></td>
-						</tr>링크 -->
-						
-						<c:forEach items="${tList}" var="tlist">
-							<tr>
-								<td><a href="./adTicketDetailMove.ad?t_no=${tlist.t_no}"
-									class="ticketNum">${tlist.t_no}</a></td>
-								<td><a href="./adMemDetailMove?m_id=${tlist.m_id}">${tlist.m_name}</a></td>
-								<td>${tlist.p_cate}</td>
-								<td>${tlist.p_subcate}</td>
-								<td>구매날짜</td>
-								<td><button class="button ticketOff">만료</button></td>
-							</tr>
-						</c:forEach>
-					</tbody>
-				</table>
-			</div>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
 		</div>
 	</div>
 </body>

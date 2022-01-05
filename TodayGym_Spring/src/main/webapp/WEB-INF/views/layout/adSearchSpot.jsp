@@ -1,17 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<script src="resources/JavaScript/jquery.serializeObject.js"></script>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/adSearch_style.css">
-<form id="adSearchForm" class="adSearchForm" name="adSearchForm"
-	autocomplete="off">
+<form action="adSearchSpotList.ad" id="adSearchForm" class="adSearchForm" name="adSearchForm"
+	autocomplete="off" method="get">
 	<div class="adSearchContainer">
+		<input type="hidden" name="side" value="3" />
 		<select class="adSearchSelect" name="adSearchSelect">
 			<option selected value="">----선택----</option>
-			<option value="s_code">번호</option>
-			<option value="s_name">이름</option>
-			<option value="s_phone">연락처</option>
-			<option value="s_addr">주소</option>
-		</select> <input type="text" class="keyword" name="keyword" />
-		<button type="button" class="adSearchBtn" onclick="adSearch()">검색</button>
+			<option value="s_code">지점 번호</option>
+			<option value="s_name">지점 이름</option>
+		</select> <input type="text" class="keyword" name="keyword"/>
+		<button type="submit">검색</button>
 	</div>
 </form>
