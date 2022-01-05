@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,10 +41,13 @@
 						<div class="myPage-myClass-contents">
 							<c:forEach var="myClass" items="${myClass}">
 								<div class="myClass-contents">
-									<div class="contents-img">이미지파일</div>
+									<div class="contents-img"><img src="${myClass.p_img}" width="100%" height="100%"></div>
 									<div class="contents-info">
-										<div class="contents-info-title">제목 : ${myClass.b_title}</div>
-										<div class="contents-info-item">수강기간 : ${myClass.b_month}</div>
+										<div class="contents-info-title">${myClass.p_subcate}</div>
+										<div class="contents-info-item">
+											<div class="item-month">수강기간 : ${myClass.o_month}</div>
+											<div class="item-issuedate">발급날짜 : <fmt:formatDate value="${myClass.t_issuedate}" pattern="yyyy-MM-dd"/></div>
+										</div>
 									</div>
 								</div>
 							</c:forEach>

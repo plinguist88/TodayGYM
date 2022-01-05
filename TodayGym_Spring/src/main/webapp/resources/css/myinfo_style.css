@@ -57,9 +57,27 @@ li {
 .myPage-list-user {
 	width: 298px;
 	height: 300px;
-	padding: 20px 20px;
 	border: 1px solid gray;
 	box-sizing: border-box;
+}
+
+.user-img {
+	width: 298px;
+	height: 200px;
+	margin: 0 auto;
+	text-align:center;
+}
+
+.user-img-logo {
+	width: 280px;
+	height: 200px;
+}
+
+.user-name {
+	height: 100px;
+	text-align: center;
+	font-size: 20px;
+	line-height: 100px;
 }
 
 .myPage-list-contents {
@@ -116,12 +134,21 @@ li {
 
 .myInfo-contents {
 	width: 600px;
-	height: 50px;
+	height: 70px;
 	margin-bottom: 30px;
-	padding: 0 100px;
+	padding: 0 50px;
+	font-size: 20px;
+	line-height: 70px;
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+
+.input-box {
+	width: 350px;
+	height: 50px;
 	font-size: 20px;
 	line-height: 50px;
-	border: 1px solid black;
+	border: 0px solid black;
 	box-sizing: border-box;
 }
 
@@ -215,7 +242,7 @@ li {
 }
 
 .myPage-myClass-contents-null {
-	display: block;
+	display: none;
 	width: 600px;
 	margin: 0 auto;
 	text-align: center;
@@ -223,13 +250,13 @@ li {
 
 
 .myPage-myClass-contents {
-	display: none;
-	width: 600px;
+	display: block;
+	width: 700px;
 	margin: 0 auto;
 }
 
 .myClass-contents {
-	width: 600px;
+	width: 700px;
 	height: 150px;
 	margin-bottom: 30px;
 }
@@ -245,13 +272,13 @@ li {
 
 .contents-info {
 	float: right;
-	width: 440px;
+	width: 540px;
 	height: 150px;
 }
 
 .contents-info-title {
 	float: left;
-	width: 440px;
+	width: 540px;
 	height: 70px;
 	margin-bottom: 10px;
 	padding: 0 20px;
@@ -263,7 +290,7 @@ li {
 
 .contents-info-item {
 	float: left;
-	width: 440px;
+	width: 540px;
 	height: 70px;
 	padding: 0 20px;
 	font-size: 16px;
@@ -272,6 +299,15 @@ li {
 	box-sizing: border-box;
 }
 
+.item-month {
+	float: left;
+	width: 200px;
+}
+
+.item-issuedate {
+	float: left;
+	width: 200px;
+}
 /******************************** myResign area ******************************/
 .myPage-myResign {
 	float: right;

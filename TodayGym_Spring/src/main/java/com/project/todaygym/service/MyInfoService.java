@@ -1,9 +1,7 @@
 package com.project.todaygym.service;
 
 import java.sql.Timestamp;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
@@ -15,27 +13,22 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dao.MemberDao;
-import com.project.todaygym.dao.MyInfoDao;
+import com.project.todaygym.dao.TicketDao;
 import com.project.todaygym.dto.MemberDto;
 import com.project.todaygym.dto.MyClassDto;
-import com.project.todaygym.util.MyClassPagingUtil;
-
-import lombok.extern.java.Log;
 
 @Service
 public class MyInfoService {
-
 
 	@Autowired
 	private MemberDao mDao;
 	
 	@Autowired
-	private MyInfoDao myDao;
+	private TicketDao tiDao;
 
 	@Autowired
 	private HttpSession session;
 	
-	private int listCnt = 2;
 
 	private ModelAndView mv;
 	
@@ -164,48 +157,21 @@ public class MyInfoService {
 	//________________________________________ 수강내역
 
 	//__________ 수강내역 페이지
-	public ModelAndView getMyClass(Integer pageNum) {
+	public ModelAndView getMyClass() {
 		
 		// 변수 선언 및 초기화
 		mv = new ModelAndView();
 		
-		/*
-		int num = (pageNum == null) ? 1 : pageNum;
-		
 		// Database 연동 구역
-		Map<String, Integer> myClassPageMap = new HashMap<String, Integer>();
-		myClassPageMap.put("num", num);
-		myClassPageMap.put("listCnt", listCnt);
-		
-		List<MyClassDto> myClassList = myDao.myClassListSelect(myClassPageMap);
-		
-		String myClassPageHtml = getMyClassPaging(num);
+		String getId = (String)session.getAttribute("id");
+		List<MyClassDto> myClass = tiDao.myClassListSelect(getId);
 		
 		// JSP 페이지 데이터 전송
-		mv.addObject("myClass", myClassList);		
-		mv.addObject("myClassPage", myClassPageHtml);
-		*/
-		
+		mv.addObject("myClass", myClass);
 		mv.setViewName("myinfo/myClass");
 				
 		return mv;
 	} // getMyClass end
-	
-	//__________ 수강내역 페이징 처리
-	public String getMyClassPaging(int pageNum) {
-		
-		// 변수 선언 및 초기화
-		String myClassPageHtml = null;
-		int myClassMaxNum = myDao.myClassMaxSelect();
-		int pageCnt = 2;
-		String urlName = "myClass";
-		
-		// MyClassPagingUtil 연동 구역
-		MyClassPagingUtil myClassPaging = new MyClassPagingUtil(myClassMaxNum, pageNum, listCnt, pageCnt, urlName);
-		myClassPageHtml = myClassPaging.makeMyClassPaging();
-		
-		return myClassPageHtml;
-	} // getMyClassPaging end
 	
 	//________________________________________ 회원탈퇴
 
