@@ -15,7 +15,7 @@ import com.project.todaygym.service.AdTicketListService;
 @Controller
 public class AdminTicketController {
 
-	private final Logger Logger = 
+	private static final Logger Logger = 
 			LoggerFactory.getLogger(AdminTicketController.class);
 	
 	@Autowired
