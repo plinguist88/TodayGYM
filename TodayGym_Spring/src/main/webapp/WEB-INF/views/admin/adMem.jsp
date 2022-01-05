@@ -9,6 +9,8 @@
 <title>관리자 회원관리 페이지</title>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/adMem_style.css">
+<link type="text/css" rel="stylesheet"
+	href="resources/css/adSearch_style.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="module"
@@ -16,74 +18,68 @@
 <script nomodule
 	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="resources/JavaScript/jquery.serializeObject.js"></script>
-<script type="text/javascript">
-	
-</script>
 </head>
 <body>
-	<div class="wrap">
-		<section>
-			<div class="content-admin">
-				<div class="content-adSidebar">
-					<jsp:include page="../layout/adSidebar.jsp" />
-				</div>
-
-				<div class="content">
-					<div class="content-admem">
-						<table class="admem-table-total">
-							<thead>
-								<tr>
-									<th>회원총원</th>
-									<td>nn</td>
-								</tr>
-							</thead>
-						</table>
-
-						<h1>회원 목록</h1>
-						<table class="admem-listtitle">
-							<thead>
-								<tr>
-									<th>가입일자</th>
-									<th>이 름</th>
-									<th>아이디</th>
-									<th>생년월일</th>
-									<th></th>
-								</tr>
-							</thead>
-							<tbody class="admem-mlist">
-								<c:forEach items="${mList}" var="mb">
-									<tr>
-										<td>${mb.m_joindate}</td>
-										<td>${mb.m_name}</td>
-										<td>${mb.m_id}</td>
-										<td>${mb.m_birth}</td>
-										<td><button class="admem-dtbtn" type="button"
-												onclick="movehref('${mb.m_id}')">상세보기</button></td>
-									</tr>
-								</c:forEach>
-							</tbody>
-						</table>
-						<!-- 회원 검색 -->
-						<form name="adsearch-form" autocomplete="off">
-							<div class="admem-search">
-								<select class="admem-sselct" name="searchType">
-									<option selected value="">검색 선택</option>
-									<option value="m_name">이름</option>
-									<option value="m_id">아이디</option>
-								</select> <input type="text" name="keyword" value=""></input>
-								<button type="button" onclick="getSearchList()"
-									class="admem-sbtn">검색</button>
+	<div class="content-admin">
+		<div class="content-adSidebar">
+			<jsp:include page="../layout/adSidebar.jsp" />
+		</div>
+		<div class="content">
+			<!-- Admin Member List Start -->
+			<table class="listTable">
+				<!-- Member List Title -->
+				<thead>
+					<tr>
+						<th colspan="5"><h1>TodayGYM 회원</h1></th>
+					</tr>
+					<tr class="listNav">
+						<td colspan="7">
+							<div class="listNavContainer">
+								<p>회원 총 인원 : nn</p>
+								<form name="adSearchForm" autocomplete="off">
+									<div class="adSearchContainer">
+										<select class="adSearchSelect" name="searchType">
+											<option selected value="">검색 선택</option>
+											<option value="m_name">이름</option>
+											<option value="m_id">아이디</option>
+										</select> <input type="text" class="keyword" name="keyword" value=""></input>
+										<button class="adSearchBtn" onclick="getSearchList()">검색</button>
+									</div>
+								</form>
 							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
+						</td>
+					</tr>
+					<tr class="listTitle">
+						<td>가입일자</td>
+						<td>회원 이름</td>
+						<td>회원 아이디</td>
+						<td>생년월일</td>
+						<td>상세정보</td>
+					</tr>
+				</thead>
+				<!-- Member List Contents -->
+				<tbody class="memberList">
+					<c:forEach items="${mList}" var="mb">
+						<tr>
+							<td>${mb.m_joindate}</td>
+							<td>${mb.m_name}</td>
+							<td>${mb.m_id}</td>
+							<td>${mb.m_birth}</td>
+							<td><a href="./adMemDetailMove?m_id=${mb.m_id}"><button
+										class="adSearchBtn">
+										<ion-icon name="reader-outline"></ion-icon>
+									</button></a></td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+			<!-- Admin Member List End -->
+		</div>
 	</div>
 </body>
 <script type="text/javascript">
 	function getSearchList() {
-		var formdata = $("form[name=adsearch-form]").serializeObject();
+		var formdata = $("form[name=adSearchForm]").serializeObject();
 		console.log(formdata);
 		$
 				.ajax({
@@ -94,7 +90,7 @@
 					success : function(result) {
 						console.log(result);
 						//테이블 초기화
-						$('.admem-listtitle > tbody').empty();
+						$('.listTable > tbody').empty();
 						if (result.length >= 1) {
 							result
 									.forEach(function(mb) {
@@ -103,19 +99,15 @@
 										str += "<td>" + mb.m_name + "</td>";
 										str += "<td>" + mb.m_id + "</td>";
 										str += "<td>" + mb.m_birth + "</td>";
-										str += "<td><button class='admem-dtbtn' type='button' onclick='movehref(\""
+										str += "<td><a href='./adMemDetailMove?m_id="
 												+ mb.m_id
-												+ "\")'>상세보기</button></td>";
-										st = "</tr>"
-										$('.admem-listtitle').append(str);
+												+ "'><button class='adSearchBtn'><ion-icon name='reader-outline'></ion-icon></button></td>";
+										str += "</tr>"
+										$('.listTable').append(str);
 									})
 						}
 					}
 				})
-	}
-
-	function movehref(id) {
-		location.href = "./adMemDetailMove?m_id=" + id;
 	}
 </script>
 </html>

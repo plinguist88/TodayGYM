@@ -10,13 +10,13 @@ body {
 	width: 100%;
 	height: 100vh;
 	display: flex;
-	background: #fff;
+	background-color: #fff;
 }
 
 .content {
 	width: 100%;
 	height: 100vh;
-	background: #fcfcfc;
+	background-color: #fcfcfc;
 }
 
 /****************************adMem area****************************/

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-.adSearchContainer .adSearchSelect{
+.adSearchContainer .adSearchSelect {
 	width: 100px;
 	height: 30px;
 	margin: 5px;
@@ -12,19 +12,16 @@
 	cursor: pointer;
 }
 
-.adSearchContainer .keyword{
+.adSearchContainer .keyword {
 	height: 1.5rem;
 	line-height: 1.5rem;
-	
 	border-style: none;
 	border-bottom: 3px solid #000;
-	
 	font-size: 1.5rem;
-	
 	background-color: #fcfcfc;
 }
 
-.adSearchContainer .keyword:focus{
+.adSearchContainer .keyword:focus {
 	outline: none;
 }
 
