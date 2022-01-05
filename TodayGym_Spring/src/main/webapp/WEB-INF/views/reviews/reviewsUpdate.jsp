@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>reviewsUpdate</title>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/reviewsDetail.css">
 </head>
@@ -18,7 +18,7 @@
 		<section>
 			<div class="detailfull">
 				<div class="detailname">
-					<h2>이용후기 상세</h2>
+					<h2>글 수정</h2>
 				</div>
 				<div class="detailcontents">
 					<div class="detail_img">12</div>
@@ -37,10 +37,10 @@
 					<h3>별점</h3>
 				</div>
 					<div class="detail_modify">
-						<a href="reviewsUpdate"><button>수정</button></a>
+						<button>수정</button>
 					</div>
 					<div class="detail_delete">
-						<a href="reviewsDelete?r_no=${rDto.r_no}"><button>삭제</button></a>
+						<a href="reviewsDelete?r_no=${rDto.r_no}"><button class="delbtn" onclick="delCheck()">삭제</button></a>
 					</div>
 
 				</div>
@@ -52,4 +52,5 @@
 		</footer>
 	</div>
 </body>
+
 </html>
