@@ -23,6 +23,8 @@ public class AdSpotImageService {
 	public ModelAndView getSpotImage(String s_code) {
 		
 		spotImageDto = new ArrayList<SpotImageDto>();
+		
+		
 		pathList = new ArrayList<String>();
 		
 		spotImageDto = adSpotDao.spotImageSelect(s_code);

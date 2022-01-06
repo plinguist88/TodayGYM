@@ -38,7 +38,7 @@ body {
 
 .listTable .listNav .listNavContainer {
 	display: flex;
-	justify-content: space-between;
+	justify-content: right;
 }
 
 .listTable .listNav td a input {

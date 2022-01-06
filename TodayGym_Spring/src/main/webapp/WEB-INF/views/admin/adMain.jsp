@@ -25,10 +25,10 @@
 			<div class="Overview-Member">
 				<div>
 					<table>
-							<tr>
-								<th>총원</th>
-								<td>${cnt}</td>
-							</tr>
+						<tr>
+							<th>총원</th>
+							<td>${cnt}</td>
+						</tr>
 					</table>
 					<table>
 						<thead>
@@ -52,9 +52,21 @@
 					</table>
 				</div>
 			</div>
-			<div class="Overview-Ticket">Overview-Ticket</div>
-			<div class="Overview-Spot">Overview-Spot</div>
-			<div class="Overview-Review">Overview-Review</div>
+			<div class="Overview-Ticket">총 회원권 : ${totalTicket }</div>
+			<div class="Overview-Spot">
+				<div>
+					<p>총 지점 : ${totalSpot }</p>
+					<div class="spotOverview">
+						<c:forEach items="${spotOverviewList }" var="spotOverviewList">
+							<div>
+								<img src="${spotOverviewList.simg_sys }" />
+								<p>${spotOverviewList.s_name }</p>
+							</div>
+						</c:forEach>
+					</div>
+				</div>
+			</div>
+			<div class="Overview-Review">총 리뷰 : ${totalReview }</div>
 			<!-- Admin Overview End  -->
 		</div>
 	</div>

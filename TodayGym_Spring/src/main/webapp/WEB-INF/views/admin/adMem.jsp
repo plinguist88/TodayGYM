@@ -35,13 +35,12 @@
 					<tr class="listNav">
 						<td colspan="7">
 							<div class="listNavContainer">
-								<p>회원 총 인원 : nn</p>
 								<form name="adSearchForm" autocomplete="off">
 									<div class="adSearchContainer">
 										<select class="adSearchSelect" name="searchType">
-											<option selected value="">검색 선택</option>
-											<option value="m_name">이름</option>
-											<option value="m_id">아이디</option>
+											<option selected value="">----선택----</option>
+											<option value="m_name">회원 이름</option>
+											<option value="m_id">회원 아이디</option>
 										</select> <input type="text" class="keyword" name="keyword" value=""></input>
 										<button class="adSearchBtn" onclick="getSearchList()">검색</button>
 									</div>

@@ -26,5 +26,23 @@
 		having year > 0
 
 	</select>
-
+	
+	<!-- 회원권 전체 수 -->
+	<select id="totalTicket" resultType="Integer">
+		SELECT COUNT(*) FROM TICKET_TB
+	</select>
+	
+	<!-- 지점 전체 수 -->
+	<select id="totalSpot" resultType="Integer">
+		SELECT COUNT(*) FROM SPOT_TB
+	</select>
+	
+	<!-- 지점 오버뷰 -->
+	<select id="spotOverviewSelect" resultType="com.project.todaygym.dto.SpotOverviewDto">
+		SELECT s_code, simg_sys FROM SPOT_TB, SIMG_TB WHERE SPOT_TB.s_code = SIMG_TB.s_code ORDER BY s_code
+	</select>
+	<!-- 리뷰 전체 수 -->
+	<select id="totalReview" resultType="Integer">
+		SELECT COUNT(*) FROM REVIEW_TB
+	</select>
 </mapper>
