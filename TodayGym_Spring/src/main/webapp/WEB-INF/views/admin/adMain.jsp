@@ -23,33 +23,25 @@
 		<div class="content">
 			<!-- Admin Overview Start  -->
 			<div class="Overview-Member">
-				<div>
-					<table>
+				<div class="ov-member">
+					<div class="ov-member-cnt">
+						<table class="ov-member-cnt-tb">
 							<tr>
 								<th>총원</th>
 								<td>${cnt}</td>
 							</tr>
-					</table>
-					<table>
-						<thead>
-							<tr>
-								<th>10대</th>
-								<th>20대</th>
-								<th>30대</th>
-								<th>40대</th>
-								<th>50대 이상</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>00</td>
-								<td>00</td>
-								<td>00</td>
-								<td>00</td>
-								<td>00</td>
-							</tr>
-						</tbody>
-					</table>
+						</table>
+					</div>
+					<div class="ov-member-group">
+						<table class="ov-member-group-tb">
+							<c:forEach items="${agDto}" var="agDto">
+								<tr>
+									<th>${agDto.year}</th>
+									<td>${agDto.agnum}</td>
+								</tr>
+							</c:forEach>
+						</table>
+					</div>
 				</div>
 			</div>
 			<div class="Overview-Ticket">Overview-Ticket</div>

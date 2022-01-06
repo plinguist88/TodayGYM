@@ -20,15 +20,43 @@ body {
 }
 
 /* Overview */
+
+/*member*/
 .Overview-Member {
 	position: relative;
 	top: 0;
 	left: 0;
 	width: 50%;
 	height: 50%;
-	background: red;
+	background: #fcfcfc;
 }
 
+.ov-member{
+	padding: 10px;
+}
+.ov-member-cnt {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.ov-member-cnt-tb {
+	border: 1px solid #000;
+}
+.ov-member-group{
+	width: 100%;
+}
+.ov-member-group-tb{
+	width: 100%;
+	height: 200px;
+	text-align: center;
+}
+.ov-member-group-tb th{
+	border: 1px solid #000;
+	width: 40%;
+}
+..ov-member-group-tb td{
+	border: 1px solid #000;
+}
+/*ticket*/
 .Overview-Ticket {
 	position: relative;
 	top: -50%;
@@ -38,6 +66,7 @@ body {
 	background: green;
 }
 
+/*spot*/
 .Overview-Spot {
 	position: relative;
 	top: -50%;
@@ -47,6 +76,7 @@ body {
 	background: blue;
 }
 
+/*review*/
 .Overview-Review {
 	position: relative;
 	top: -100%;
