@@ -9,6 +9,7 @@ import lombok.Data;
 
 @Data
 public class ReviewDto {
+	private int ronum;
 	private int r_no;
 	private String r_cate;
 	private String r_title;
