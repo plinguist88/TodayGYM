@@ -22,7 +22,7 @@ public class OrderController {
 	
 	//________________________________________ 결제하기
 	
-	//__________ 결제 페이지
+	//__________ 장바구니 결제 페이지
 	@GetMapping("myOrder")
 	public ModelAndView myOrderMove(String m_id) {
 		logger.info("myOrderMove()");
@@ -32,12 +32,32 @@ public class OrderController {
 		return mv;
 	} // myOrderMove end
 	
-	//__________ 결제실행
+	//__________ 장바구니 결제 실행
 	@GetMapping("payProc")
 	public String payProc(String m_id, RedirectAttributes rttr) {
 		logger.info("payProc");
 		
 		String view = orderServ.payProc(m_id, rttr);
+		
+		return view;
+	} // payProc end
+	
+	//__________ 구매하기 결제 페이지
+	@GetMapping("directOrder")
+	public ModelAndView directOrderMove(String product, String option) {
+		logger.info("directOrderMove()");
+		
+		mv = orderServ.directOrder(product, option);
+		
+		return mv;
+	} // myOrderMove end
+	
+	//__________ 구매하기 결제 실행
+	@GetMapping("directPayProc")
+	public String directPayProc(RedirectAttributes rttr) {
+		logger.info("payProc");
+		
+		String view = orderServ.directPayProc(rttr);
 		
 		return view;
 	} // payProc end
