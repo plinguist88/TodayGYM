@@ -6,23 +6,25 @@
 
 	<!-- 총원 구하기 -->
 	<select id="totalCnt" resultType="Integer">
-		SELECT COUNT(*) FROM MEMBER_TB;
+		SELECT COUNT(*) FROM MEMBER_TB
 	</select>
 
 	<!-- 나이대 별 출력 -->
+	
 	<select id="ageGroup" parameterType="String"
 		resultType="com.project.todaygym.dto.AgeGroupDto">
 		select year, count(*) as cnt
 		from
 		(
-		select floor((to_char(sysdate, 'yyyy') -
+		select
+		floor((to_char(sysdate, 'yyyy') -
 		to_char(to_date(substr(m_birth,0,4),'rrrr'),'yyyy')) / 10) * 10 as
 		year
 		from m
 		)
 		group by year
 		having year > 0
-		;
+
 	</select>
 
 </mapper>
