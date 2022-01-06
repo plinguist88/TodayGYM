@@ -48,7 +48,7 @@ public class AdminMemberController { //관리자 컨트롤러
 	}
 	
 	//회원 검색
-	@GetMapping(value = "/getSearchList", produces = "application/json; ")
+	@GetMapping(value = "/getSearchList", produces = "application/json; charset=utf-8")
 	@ResponseBody
 	private List<MemberDto> getSearchList(String searchType, String keyword) {
 		logger.info("getSearchList() - t:" + searchType + ", k:" + keyword);
