@@ -51,7 +51,7 @@ public class HomeController {
 		mv = adCheckIdService.getAdCheckId(req);
 		
 		if(mv.getViewName().equals("admin/adMain")) {
-			mv = adMainServ.adMemCnt();
+			mv = adMainServ.adMemCnt(mv);
 		}
 		
 		return mv;

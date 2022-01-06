@@ -18,13 +18,11 @@ public class AdMainService {
 	private ModelAndView mv;
 	
 	//총원 구하기
-	public ModelAndView adMemCnt() {
-		mv = new ModelAndView();
+	public ModelAndView adMemCnt(ModelAndView mv) {
 		
 		int cnt = adMainDao.totalCnt();
 		
 		mv.addObject("cnt", cnt);
-		mv.setViewName("admin/adMain");
 		
 		return mv;
 	}

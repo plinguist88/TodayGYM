@@ -27,7 +27,7 @@
 					<table>
 							<tr>
 								<th>총원</th>
-								<td>${cnt.cnt}</td>
+								<td>${cnt}</td>
 							</tr>
 					</table>
 					<table>

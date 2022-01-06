@@ -11,7 +11,7 @@ import com.project.todaygym.service.AdMainService;
 
 @Controller
 public class AdminMainController {
-	
+/*	
 	private static final Logger logger = 
 			LoggerFactory.getLogger(AdminMainController.class);
 	
@@ -29,4 +29,5 @@ public class AdminMainController {
 		
 		return mv;
 	}
+	*/
 }
