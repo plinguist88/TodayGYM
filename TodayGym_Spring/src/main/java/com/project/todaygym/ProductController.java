@@ -49,13 +49,19 @@ public class ProductController {
 		String view = pServ.saveMyCart(myCart, rttr);
 		return view;
 	}
-	//5. 장바구니 삭제하기
+	//5. 장바구니 개별삭제
 	@GetMapping("cartDelete")
 	public String CartDelete(int cCode, RedirectAttributes rttr) {
 		String view = pServ.cartDelete(cCode, rttr);
 		return view;
 	}
-	
+	//6. 장바구니 전체삭제
+	@GetMapping("cartTDel")
+	public String cartTDel(RedirectAttributes rttr) {
+		logger.info("cartTDel()");
+		String view = pServ.cartTDel(rttr);
+		return view;
+	}
 }
 
 

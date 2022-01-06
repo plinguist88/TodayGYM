@@ -19,9 +19,10 @@ public interface ProductDao {
 	public void myCartInsert(CartDto myCart);
 	//5. 장바구니 가져오기
 	public List<MyCartDto> getMyCart(String getId);
-	//6. 장바구니 삭제하기
+	//6. 장바구니 개별삭제하기
 	public boolean cartDelete(Integer c_code);
-	
+	//7. 장바구니 전체삭제하기
+	public boolean cartTDel();
 	
 	//________________________________________ Order area
 	

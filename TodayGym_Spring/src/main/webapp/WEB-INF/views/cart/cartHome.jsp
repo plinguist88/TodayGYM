@@ -102,6 +102,7 @@
 					</div>
 					<div class="deletebuttonarea">
 						<input class="deletebutton" type="button" value="선택상품 삭제">				
+						<input class="deletebutton" type="button" value="전체상품 삭제" onclick="cartTDel()">	
 					</div>
 				</div>
 				<div class="cart_calculator">
@@ -170,7 +171,13 @@
 			location.href='./cartDelete?cCode=' + c_code;
 		}
 	}
-	
+	function cartTDel() {
+		var conf = confirm("전체상품을 장바구니에서 삭제하시겠습니까?");
+		
+		if(conf == true){
+			location.href='./cartTDel?=';
+		}
+	}
 	
 	
 </script>
