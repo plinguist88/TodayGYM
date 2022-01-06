@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.project.todaygym.service.AdCheckIdService;
+import com.project.todaygym.service.AdMainService;
 
 @Controller
 public class HomeController {
@@ -20,6 +21,9 @@ public class HomeController {
 	
 	@Autowired
 	private AdCheckIdService adCheckIdService;
+	
+	@Autowired
+	private AdMainService adMainServ;
 	
 	// 시작페이지로 이동
 	@GetMapping("/")
@@ -45,6 +49,10 @@ public class HomeController {
 		mv = new ModelAndView();
 		
 		mv = adCheckIdService.getAdCheckId(req);
+		
+		if(mv.getViewName().equals("admin/adMain")) {
+			mv = adMainServ.adMemCnt();
+		}
 		
 		return mv;
 	}
