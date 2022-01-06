@@ -13,7 +13,7 @@
 	
 	<select id="ageGroup" parameterType="String"
 		resultType="com.project.todaygym.dto.AgeGroupDto">
-		select year, count(*) as cnt
+		select year, count(*) as agnum
 		from
 		(
 		select
@@ -24,7 +24,7 @@
 		)
 		group by year
 		having year > 0
-
+		order by year
 	</select>
 
 </mapper>
