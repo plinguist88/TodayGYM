@@ -162,6 +162,10 @@ public class MyInfoService {
 		// 변수 선언 및 초기화
 		mv = new ModelAndView();
 		
+		MemberDto getMember = (MemberDto)session.getAttribute("mb");			
+		String getLoginId = getMember.getM_id();
+		session.setAttribute("id", getLoginId);
+		
 		// Database 연동 구역
 		String getId = (String)session.getAttribute("id");
 		List<MyClassDto> myClass = tiDao.myClassListSelect(getId);

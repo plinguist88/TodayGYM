@@ -61,4 +61,11 @@
 		DELETE FROM C WHERE c_code=#{Ccode}
 	</delete>
 	
+	<!-- 구매하기 상품 가져오기 -->
+	<select id="getDirectCart" parameterType="HashMap" resultType="com.project.todaygym.dto.MyCartDto">
+        SELECT A.P_SUBCATE, A.P_IMG, B.O_MONTH, B.O_PRICE
+		FROM PRODUCT_TB A, OPTION_TB B
+		WHERE A.P_CODE = B.P_CODE AND A.P_CODE = #{p_code} AND B.O_CODE = #{o_code}
+	</select>
+	
 </mapper>

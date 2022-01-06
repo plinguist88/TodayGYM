@@ -1,6 +1,7 @@
 package com.project.todaygym.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import com.project.todaygym.dto.CartDto;
 import com.project.todaygym.dto.MyCartDto;
@@ -36,5 +37,9 @@ public interface ProductDao {
 		
 	//__________ 장바구니 삭제하기
 	public void deleteCart(Integer Ccode);
+	
+	//__________ 구매하기 상품 가져오기
+	public MyCartDto getDirectCart(Map<String, String> dMap);
+	
 	
 }
