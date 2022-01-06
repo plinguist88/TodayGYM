@@ -18,7 +18,7 @@ public class AdMainService {
 	private ModelAndView mv;
 	
 	//총원 구하기
-	public ModelAndView adMemCnt(ModelAndView mv) {
+	public ModelAndView getOverview(ModelAndView mv) {
 		
 		int cnt = adMainDao.totalCnt();
 		
