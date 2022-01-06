@@ -12,6 +12,8 @@ public interface ProductDao {
 	
 	//1. 구매메인 상품 리스트 출력하기
 	public List<ProductDto> getProductList();
+	//1-1. 구매메인상품구분 리스트 출력하기
+	public List<ProductDto> getCate(String p_cate);
 	//2. 구매 상세 상품 정보 출력하기
 	public ProductDto getProductSelect(String p_code);
 	//3. 구매 상세 옵션 가져오기

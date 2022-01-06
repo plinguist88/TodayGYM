@@ -31,6 +31,12 @@
 					<p>다양한 프로그램으로 맞춤형 프로세스를 제공하여 고객님의 니즈를 충족시켜드립니다</p>
 				</div>
 			</div>	
+			<ul class="buy_cate">			
+				<li class="on"><a href="product?p_cate=HEALTH" style="background-image: url('resources/img/spot/gray.jpg');"> 헬 스 </a></li>
+				<li><a href="product?p_cate=SWIM" style="background-image: url('resources/img/spot/gray.jpg');"> 수 영 </a></li>
+				<li><a href="product?p_cate=CLIMB" style="background-image: url('resources/img/spot/gray.jpg');">클라이밍</a></li>
+				<li><a href="product?p_cate=CROSSFIT" style="background-image: url('resources/img/spot/gray.jpg');">크로스핏</a></li>
+			</ul>
 			<div class="buy_cate_sub">				
 				<c:forEach var="pList" items="${pList}">
 					<div class="health_cate">
