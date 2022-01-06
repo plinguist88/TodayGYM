@@ -103,6 +103,11 @@
 								<th>센터 번호</th>
 								<td>${sList.s_phone}</td>
 							</tr>
+							
+							<tr>
+								<th>기타 사항</th>
+								<td>${sList.s_content}</td>
+							</tr>
 
 
 							<tr class="tr_map">
