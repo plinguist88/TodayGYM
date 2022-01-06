@@ -76,9 +76,9 @@
 			 					 			
 			 		</div>			
 		 		</div>	
-		 		<form action="saveCart" method="get">
+		 		<form action="saveCart" method="get" onsubmit="return goAction()">
 		 			<select class="buy_select_contants" name="buy_select_contants">
-		 					<option selected>-</option>
+		 					<option selected value="0">${dInfo.p_subcate}</option>
 			 			<c:forEach var="oList" items="${oList}">
 			 				<option disabled>&nbsp;&nbsp;&nbsp;${oList.o_code}</option>		
 			 				<option value="${oList.o_code}_${oList.o_month}_${oList.o_price}">&nbsp;&nbsp;&nbsp;${oList.o_month} : ${oList.o_price}원</option>		 				
@@ -257,6 +257,14 @@
 		
 		location.href = './directOrder?product=' + getProduct + '&option=' + varr[0];
 		
+	}
+	function goAction(){
+		var sel = $(".buy_select_contants").val();
+		if(sel != 0){
+			return true;
+		}
+		alert("옵션을 선택해주세요");
+		return false;
 	}
 </script>
 </html>
