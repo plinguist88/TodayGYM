@@ -32,9 +32,14 @@ public class ProductService {
 	
 	
 	//1. 구매메인페이지
-	public ModelAndView getProductList() {
+	public ModelAndView getProductList(String p_cate) {
 		mv = new ModelAndView();
-		List<ProductDto> pList = pDao.getProductList();
+		List<ProductDto> pList;
+		if(p_cate == null) {
+			pList = pDao.getProductList();
+		}else {
+			pList = pDao.getCate(p_cate);
+		}
 		mv.addObject("pList", pList);
 		mv.setViewName("buy/buyHome");
 		return mv;

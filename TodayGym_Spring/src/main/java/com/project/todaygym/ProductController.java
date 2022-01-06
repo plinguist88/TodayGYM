@@ -22,9 +22,9 @@ public class ProductController {
 	
 	//1. 구매메인페이지
 	@GetMapping("product")
-	public ModelAndView productMove() {
+	public ModelAndView productMove(String p_cate) {
 		logger.info("productMove()");
-		mv = pServ.getProductList();
+		mv = pServ.getProductList(p_cate);
 		return mv;
 	}
 	//2. 구매상세페이지

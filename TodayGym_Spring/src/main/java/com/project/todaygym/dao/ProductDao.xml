@@ -7,6 +7,10 @@
 	<select id="getProductList" resultType="com.project.todaygym.dto.ProductDto">
 		SELECT * FROM P
 	</select>
+	<!-- 1-1.구매메인 개별 상품정보 가져오기 -->
+	<select id="getCate" parameterType="String" resultType="com.project.todaygym.dto.ProductDto">
+		SELECT * FROM p WHERE p_cate = #{p_cate}
+	</select>
 	<!-- 2. 구매상세 정보 출력하기 -->
 	<select id="getProductSelect" parameterType="String" resultType="com.project.todaygym.dto.ProductDto">
 		SELECT * FROM P WHERE p_code = #{p_code}
