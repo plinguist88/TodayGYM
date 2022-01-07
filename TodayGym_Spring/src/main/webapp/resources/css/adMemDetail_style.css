@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/* Common */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.content-admin {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	background-color: #fff;
+}
+
+.content {
+	width: 100%;
+	height: 100vh;
+	background-color: #fcfcfc;
+}
+
+/***********************************adMemDetail area*****************************************/
+.detailTable {
+	width: 70%;
+	height: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+}
+
+.detailTable .top h1{
+	margin: 0;
+	padding: 1rem;
+	font-size: 5rem;
+	border-bottom: 5px double #000;
+}
+
+.detailTable .bottom th{
+	border-bottom: 3px solid #000;
+	font-size: x-large;
+}
+.detailTable .bottom td{
+	font-size: x-large;
+	text-align: center;
+}
+
+.detailTable .detailList{
+	width: 100%;
+	font-size: large;
+	text-align: center;
+}
+.detailTable .detailList th{
+	border-bottom: 3px solid #000;
+}
+
+.detailBtn {
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	text-align: center;
+}
+
+.detailBtn button {
+	font-size: larger;
+	border-radius: 3px;
+	background-color: #0c0c0c;
+	color: #fcfcfc;
+}

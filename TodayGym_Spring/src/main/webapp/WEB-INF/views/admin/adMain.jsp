@@ -25,19 +25,21 @@
 			<div class="Overview-Member">
 				<div class="ov-member">
 					<div class="ov-member-cnt">
+						<h1>회원관리 Overview</h1>
 						<table class="ov-member-cnt-tb">
 							<tr>
 								<th>총원</th>
-								<td>${cnt}</td>
+								<td>${cnt} 명</td>
 							</tr>
 						</table>
 					</div>
 					<div class="ov-member-group">
+					<h3>연령대별 회원 현황</h3>
 						<table class="ov-member-group-tb">
 							<c:forEach items="${agDto}" var="agDto">
 								<tr>
-									<th>${agDto.year}</th>
-									<td>${agDto.agnum}</td>
+									<th>${agDto.year} 대 회원</th>
+									<td>${agDto.agnum} 명</td>
 								</tr>
 							</c:forEach>
 						</table>
