@@ -27,22 +27,4 @@ public interface ProductDao {
 	//7. 장바구니 전체삭제하기
 	public boolean cartTDel();
 	
-	//________________________________________ Order area
-	
-	//__________ 장바구니 결제 갯수 가져오기
-	public int getTotalCartCnt(String m_id);
-	
-	//__________ 장바구니 코드 최솟값 가져오기
-	public int getCartCode(String m_id);
-	
-	//__________ 장바구니 해당코드 데이터 가져오기
-	public CartDto getCartList(Integer getCartCode);
-		
-	//__________ 장바구니 삭제하기
-	public void deleteCart(Integer Ccode);
-	
-	//__________ 구매하기 상품 가져오기
-	public MyCartDto getDirectCart(Map<String, String> dMap);
-	
-	
 }
