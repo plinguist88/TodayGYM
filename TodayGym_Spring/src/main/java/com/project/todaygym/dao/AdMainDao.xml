@@ -39,8 +39,9 @@
 	
 	<!-- 지점 오버뷰 -->
 	<select id="spotOverviewSelect" resultType="com.project.todaygym.dto.SpotOverviewDto">
-		SELECT s_code, simg_sys FROM SPOT_TB, SIMG_TB WHERE SPOT_TB.s_code = SIMG_TB.s_code ORDER BY s_code
+		SELECT SPOT_TB.s_name, SIMG_TB.simg_sys FROM SPOT_TB, SIMG_TB WHERE SPOT_TB.s_code = SIMG_TB.s_code ORDER BY s_name
 	</select>
+	
 	<!-- 리뷰 전체 수 -->
 	<select id="totalReview" resultType="Integer">
 		SELECT COUNT(*) FROM REVIEW_TB

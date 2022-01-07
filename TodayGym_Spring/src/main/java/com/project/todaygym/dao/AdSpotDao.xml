@@ -8,21 +8,23 @@
 		resultType="com.project.todaygym.dto.SpotDto">
 		SELECT * FROM SPOT_TB ORDER BY s_code DESC
 	</select>
-	
+
 	<!-- 지점 코드 검색 목록 -->
 	<select id="spotCodeSearchSelect" parameterType="String"
 		resultType="com.project.todaygym.dto.SpotDto">
-		SELECT * FROM SPOT_TB Where UPPER(s_code)=UPPER(#{keyword}) ORDER BY
+		SELECT * FROM SPOT_TB Where UPPER(s_code)=UPPER(#{keyword})
+		ORDER BY
 		s_code DESC
 	</select>
-	
+
 	<!-- 지점 이름 검색 목록 -->
 	<select id="spotNameSearchSelect"
 		resultType="com.project.todaygym.dto.SpotDto">
-		SELECT * FROM SPOT_TB Where UPPER(s_name)=UPPER(#{keyword}) ORDER BY
+		SELECT * FROM SPOT_TB Where UPPER(s_name)=UPPER(#{keyword})
+		ORDER BY
 		s_code DESC
 	</select>
-	
+
 	<!-- 지점 등록 자동번호 검색 -->
 	<select id="spotNextNumber" parameterType="String"
 		resultType="String">
@@ -56,6 +58,19 @@
 		SELECT * FROM SIMG_TB WHERE s_code=#{s_code}
 	</select>
 
+	<!-- 지점 하나 정보 -->
+	<select id="spotOneSelect" parameterType="String"
+		resultType="com.project.todaygym.dto.SpotDto">
+		SELECT * FROM SPOT_TB WHERE s_code=#{s_code}
+	</select>
+
+	<!-- 지점 수정 -->
+	<update id="spotUpdate"
+		parameterType="com.project.todaygym.dto.SpotDto">
+		UPDATE SPOT_TB SET s_name=#{s_name},s_phone=#{s_phone},
+		s_addr=#{s_addr},s_content=#{s_content} WHERE s_code=#{s_code}
+	</update>
+
 	<!-- 지점 삭제 -->
 	<delete id="spotDelete" parameterType="String">
 		BEGIN
@@ -69,6 +84,7 @@
 	<!--아이디 값은 adSpotDao에 있는 spotDetailInfo 인터페이스랑 같게해야하나? -->
 	<select id="spotDetailInfo" parameterType="String"
 		resultType="com.project.todaygym.dto.SpotDto">
-		SELECT * FROM SPOT_TB WHERE s_code =#{s_code, jdbcType=VARCHAR}
+		SELECT * FROM SPOT_TB WHERE s_code =#{s_code,
+		jdbcType=VARCHAR}
 	</select>
 </mapper>

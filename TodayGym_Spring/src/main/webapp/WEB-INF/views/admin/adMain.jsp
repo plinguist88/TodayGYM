@@ -52,21 +52,29 @@
 					</table>
 				</div>
 			</div>
-			<div class="Overview-Ticket">총 회원권 : ${totalTicket }</div>
-			<div class="Overview-Spot">
+			<div class="Overview-Ticket">
 				<div>
-					<p>총 지점 : ${totalSpot }</p>
-					<div class="spotOverview">
-						<c:forEach items="${spotOverviewList }" var="spotOverviewList">
-							<div>
-								<img src="${spotOverviewList.simg_sys }" />
-								<p>${spotOverviewList.s_name }</p>
-							</div>
-						</c:forEach>
-					</div>
+					<span class="total">TodayGYM 회원권 수 : ${totalTicket }</span>
 				</div>
 			</div>
-			<div class="Overview-Review">총 리뷰 : ${totalReview }</div>
+			<div class="Overview-Spot">
+				<div>
+					<span class="total">TodayGYM 지점 수 : ${totalSpot }</span>
+				</div>
+				<div class="spotOverview">
+					<c:forEach items="${spotOverviewList }" var="spotOverviewList">
+						<div class="spotOverviewContent">
+							<img src="${spotOverviewList.simg_sys }" />
+							<p>${spotOverviewList.s_name }</p>
+						</div>
+					</c:forEach>
+				</div>
+			</div>
+			<div class="Overview-Review">
+				<div>
+					<span class="total">TodayGYM 리뷰 수 : ${totalReview }</span>
+				</div>
+			</div>
 			<!-- Admin Overview End  -->
 		</div>
 	</div>

@@ -6,17 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.project.todaygym.dto.SpotFormDto;
-import com.project.todaygym.service.AdSearchSpotListService;
-import com.project.todaygym.service.AdSpotDeleteService;
-import com.project.todaygym.service.AdSpotImageService;
-import com.project.todaygym.service.AdSpotListService;
-import com.project.todaygym.service.AdSpotRegService;
+
+import com.project.todaygym.service.AdSpotService;
 
 @Controller
 public class AdminSpotController {
@@ -24,21 +19,10 @@ public class AdminSpotController {
 	private static final Logger Logger = LoggerFactory.getLogger(AdminSpotController.class);
 
 	private ModelAndView mv;
-
-	@Autowired
-	private AdSpotListService adSpotListService;
 	
+	//관리자 지점 서비스 클래스
 	@Autowired
-	private AdSearchSpotListService adSearchSpotList;
-	
-	@Autowired
-	private AdSpotRegService adSpotRegService;
-	
-	@Autowired
-	private AdSpotImageService adSpotImageService;
-	
-	@Autowired
-	private AdSpotDeleteService adSpotDeleteService;
+	private AdSpotService adSpotService;
 
 	//지점 관리로 이동
 	@GetMapping("adSpotMove.ad")
@@ -47,7 +31,7 @@ public class AdminSpotController {
 
 		mv = new ModelAndView();
 		
-		mv = adSpotListService.getAdSpotList(side);
+		mv = adSpotService.getAdSpotList(side);
 
 		return mv;
 	}
@@ -59,7 +43,7 @@ public class AdminSpotController {
 
 		mv = new ModelAndView();
 		
-		mv = adSearchSpotList.getAdSearchSpotList(side, adSearchSelect, keyword);
+		mv = adSpotService.getAdSearchSpotList(side, adSearchSelect, keyword);
 
 		return mv;
 	}
@@ -78,13 +62,12 @@ public class AdminSpotController {
 	
 	//지점 및 이미지 등록
 	@PostMapping("adSpotRegAction.ad")
-	@ResponseBody
 	public ModelAndView adSpotRegAction(SpotFormDto spotFormDto, MultipartHttpServletRequest mhr) {
 		Logger.info("adSpotRegAction()");
 		
 		mv = new ModelAndView();
 		
-		mv = adSpotRegService.getAdSpotReg(spotFormDto, mhr);
+		mv = adSpotService.setAdSpotReg(spotFormDto, mhr);
 
 		return mv;
 	}
@@ -96,7 +79,33 @@ public class AdminSpotController {
 		
 		mv = new ModelAndView();
 		
-		mv = adSpotImageService.getSpotImage(s_code);
+		mv = adSpotService.getSpotImage(s_code);
+		
+		return mv;
+	}
+	
+	//지점 수정으로 이동
+	@GetMapping("adSpotUpdateFormMove.ad")
+	public ModelAndView adSpotUpdateFormMove(String s_code) {
+		Logger.info("adSpotUpdateFormMove()");
+		
+		mv = new ModelAndView();
+		
+		mv = adSpotService.getAdSpotOne(s_code);
+
+		mv.setViewName("admin/adSpotUpdateForm");
+		
+		return mv;
+	}
+	
+	//지점 수정
+	@PostMapping("adSpotUpdateAction.ad")
+	public ModelAndView adSpotUpdateAction(SpotFormDto spotFormDto) {
+		Logger.info("adSpotUpdateAction()");
+		
+		mv = new ModelAndView();
+		
+		mv = adSpotService.setAdSpotUpdate(spotFormDto);
 		
 		return mv;
 	}
@@ -114,12 +123,13 @@ public class AdminSpotController {
 		return mv;
 	}
 	
+	//지점 삭제
 	@GetMapping("adSpotDeleteAction.ad")
 	public ModelAndView adSpotDeleteAction(String s_code) {
 		Logger.info("adSpotDeleteAction()");
 		
 		mv = new ModelAndView();
-		mv = adSpotDeleteService.getAdSpotDelete(s_code);
+		mv = adSpotService.getAdSpotDelete(s_code);
 		
 		return mv;
 	}

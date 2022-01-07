@@ -39,6 +39,8 @@ public class AdMainService {
 		spotOverviewList = new ArrayList<SpotOverviewDto>();
 		spotOverviewList = adMainDao.spotOverviewSelect();
 		
+		System.out.println("SpotOverviewList before for : " + spotOverviewList);
+		
 		for(SpotOverviewDto sod : spotOverviewList) {
 			String allPath = sod.getSimg_sys();
 			
@@ -47,7 +49,7 @@ public class AdMainService {
 			sod.setSimg_sys(resourcePath);
 		}
 		
-		System.out.println("SpotOverviewList : " + spotOverviewList);
+		System.out.println("SpotOverviewList after for : " + spotOverviewList);
 		mv.addObject("spotOverviewList", spotOverviewList);
 		
 		//리뷰 전체 수

@@ -14,19 +14,31 @@ body {
 }
 
 .content {
-	width: 100%;
+	margin: auto;
+	width: 80%;
 	height: 100vh;
 	background-color: #fcfcfc;
 }
 
 /* Overview */
+.content span.total {
+	padding: 0 10px;
+	font-size: 1.5rem;
+	border: 1px solid #000;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	
+	background-color: #000;
+	color: #fff;
+}
+
 .Overview-Member {
 	position: relative;
 	top: 0;
 	left: 0;
 	width: 50%;
 	height: 50%;
-	background: red;
+	background-color: #fcfcfc;
 }
 
 .Overview-Ticket {
@@ -35,7 +47,7 @@ body {
 	left: 50%;
 	width: 50%;
 	height: 50%;
-	background: green;
+	background-color: #fcfcfc;
 }
 
 .Overview-Spot {
@@ -44,7 +56,30 @@ body {
 	left: 0;
 	width: 50%;
 	height: 50%;
-	background: #fcfcfc;
+	background-color: #fcfcfc;
+	
+	overflow-x: hidden;
+}
+
+.Overview-Spot .spotOverview{
+	display: flex;
+	flex-wrap: nowrap;
+	
+}
+
+.Overview-Spot .spotOverview .spotOverviewContent{
+	display: inline-block;
+}
+
+.Overview-Spot .spotOverview .spotOverviewContent img{
+	width: 20vw;
+	height: 40vh;
+}
+
+.Overview-Spot .spotOverview .spotOverviewContent p{
+	margin: 0;
+	text-align: center;
+	font-size: 1.5rem;
 }
 
 .Overview-Review {
@@ -53,5 +88,5 @@ body {
 	left: 50%;
 	width: 50%;
 	height: 50%;
-	background: yellow;
+	background-color: #fcfcfc;
 }

@@ -45,7 +45,7 @@
 						<td>주소</td>
 						<td>기타</td>
 						<td>지점 이미지</td>
-						<td>삭제</td>
+						<td>수정 / 삭제</td>
 					</tr>
 				</thead>
 				<!-- Spot List Contents -->
@@ -61,7 +61,9 @@
 								onclick="window.open(this.href,'spotImage','width=500, height=800'); return false;">
 									<button class="spotImage">지점 사진</button>
 							</a></td>
-							<td><a href="adSpotDeleteMove.ad?s_code=${sList.s_code }"
+							<td><a href="adSpotUpdateFormMove.ad?s_code=${sList.s_code }"><button>
+										<ion-icon name="pencil-outline"></ion-icon>
+									</button></a> / <a href="adSpotDeleteMove.ad?s_code=${sList.s_code }"
 								onclick="window.open(this.href, 'Admin Spot Delete', 'width=500, height=200, top=400, left=900, scrollbars=no, location=no, toolbars=no, status=no'); return false;"><button>
 										<ion-icon name="trash"></ion-icon>
 									</button></a></td>

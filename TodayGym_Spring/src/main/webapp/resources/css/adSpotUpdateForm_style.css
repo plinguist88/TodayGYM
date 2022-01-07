@@ -46,7 +46,7 @@ table thead th h1{
 	border-bottom: 5px double #000;
 }
 
-table tbody td.regTitle{
+table tbody td.updateTitle{
 	width: 10%;
 	
 	text-align: center;
@@ -54,13 +54,26 @@ table tbody td.regTitle{
 	font-size: 1.5rem;
 }
 
-table tbody td.regContent{
+table tbody td.updateContent{
 	width: 40%;
-	
-	border-right: 1px solid #000;
 }
 
-table tbody td.regContent .regInput{
+table tbody td.updateContent > div{
+	margin: 20px, 0;
+	
+	text-align: right;
+}
+
+table tbody td.updateContent .oriData{	
+	font-size: 1.5rem;
+	
+	border-radius: 10px;
+	
+	background-color: #000;
+	color: #fff;
+}
+
+table tbody td.updateContent .updateInput{
 	height: 1.5rem;
 	line-height: 1.5rem;
 	
@@ -70,11 +83,11 @@ table tbody td.regContent .regInput{
 	font-size: 1.5rem;
 }
 
-table tbody td.regContent #s_code{
+table tbody td.updateContent #s_code{
 	border-style: none;
 }
 
-table tbody td.regContent .btnKakaoApi{
+table tbody td.updateContent .btnKakaoApi{
 	width: 100px;
 	height: 50px;
 	
@@ -89,15 +102,15 @@ table tbody td.regContent .btnKakaoApi{
 	color: #fff;
 }
 
-table tbody td.regContent .btnKakaoApi:hover{
+table tbody td.updateContent .btnKakaoApi:hover{
 	background-color: #6666ff
 }
 
-table tbody td.regContent input:focus{
+table tbody td.updateContent input:focus{
 	outline: none;
 }
 
-table tbody td.regImage{
+table tbody td.updateImage{
 	width: 50%;
 }
 
@@ -105,11 +118,11 @@ table tfoot tr{
 	border-top: 5px double #000;
 }
 
-table tfoot td.regSubmit{
+table tfoot td.updateSubmit{
 	text-align: center;
 }
 
-table tfoot td.regSubmit input{
+table tfoot td.updateSubmit input{
 	width: 100px;
 	height: 50px;
 	
@@ -127,6 +140,6 @@ table tfoot td.regSubmit input{
 	cursor: pointer;
 }
 
-table tfoot td.regSubmit input:hover{
+table tfoot td.updateSubmit input:hover{
 	background-color: #ff6666;
 }
