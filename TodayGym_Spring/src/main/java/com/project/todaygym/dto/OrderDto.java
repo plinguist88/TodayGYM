@@ -1,15 +1,12 @@
 package com.project.todaygym.dto;
 
-import java.sql.Timestamp;
-
 import lombok.Data;
 
 @Data
 public class OrderDto {
 	
-	private int p_no;
-	private String c_code;
-	private int p_total;
-	private Timestamp p_date;
+	private int od_code;
+	private String m_id;
+	private int c_code;
 	
 } // class end

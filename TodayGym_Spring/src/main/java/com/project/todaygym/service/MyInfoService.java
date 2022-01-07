@@ -1,6 +1,5 @@
 package com.project.todaygym.service;
 
-import java.sql.Timestamp;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -40,16 +39,12 @@ public class MyInfoService {
 		// 변수 선언 및 초기화
 		mv = new ModelAndView();
 		
-		MemberDto getMember = (MemberDto)session.getAttribute("mb");			
-		String getLoginId = getMember.getM_id();
-		session.setAttribute("id", getLoginId);
-		
-		// Database 연동 구역
-		String getId = (String)session.getAttribute("id");
-		MemberDto getMyInfo = mDao.memberSelect(getId);
+		MemberDto myInfo = (MemberDto)session.getAttribute("mb");			
+		String getMid = myInfo.getM_id();
+		session.setAttribute("id", getMid);
 		
 		// JSP 페이지 데이터 전송
-		mv.addObject("myInfo", getMyInfo);
+		mv.addObject("myInfo", myInfo);
 		mv.setViewName("myinfo/myInfo");
 
 		return mv;
@@ -66,19 +61,15 @@ public class MyInfoService {
 		// Database 연동 구역
 		String getId = (String)session.getAttribute("id");
 		MemberDto getMyInfo = mDao.memberSelect(getId);
-		session.setAttribute("join", getMyInfo.getM_joindate());
-		session.setAttribute("point", getMyInfo.getM_point());
-		Timestamp getJoin = (Timestamp)session.getAttribute("join");
-		String getPoint = (String)session.getAttribute("point");
 		
 		myInfo.setM_id(getId);
-		myInfo.setM_joindate(getJoin);
-		myInfo.setM_point(getPoint);
+		myInfo.setM_joindate(getMyInfo.getM_joindate());
+		myInfo.setM_point(getMyInfo.getM_point());
 		
 		// JSP 페이지 데이터 전송
 		try {
 			mDao.myInfoUpdate(myInfo);
-			view = "redirect:myInfo";
+			view = "redirect:home";
 			alert = "회원정보를 업데이트 했습니다!";
 
 		} catch (Exception e) {
@@ -162,13 +153,11 @@ public class MyInfoService {
 		// 변수 선언 및 초기화
 		mv = new ModelAndView();
 		
-		MemberDto getMember = (MemberDto)session.getAttribute("mb");			
-		String getLoginId = getMember.getM_id();
-		session.setAttribute("id", getLoginId);
+		MemberDto myInfo = (MemberDto)session.getAttribute("mb");			
+		String getMid = myInfo.getM_id();
 		
 		// Database 연동 구역
-		String getId = (String)session.getAttribute("id");
-		List<MyClassDto> myClass = tiDao.myClassListSelect(getId);
+		List<MyClassDto> myClass = tiDao.classListSelect(getMid);
 		
 		// JSP 페이지 데이터 전송
 		mv.addObject("myClass", myClass);
@@ -187,10 +176,10 @@ public class MyInfoService {
 		String getId = (String)session.getAttribute("id");
 		
 		// Database 연동 구역
-		MemberDto getMyInfo = mDao.memberSelect(getId);
+		MemberDto myInfo = mDao.memberSelect(getId);
 		
 		// JSP 페이지 데이터 전송
-		mv.addObject("myInfo", getMyInfo);
+		mv.addObject("myInfo", myInfo);
 		mv.setViewName("myinfo/myResign");
 
 		return mv;

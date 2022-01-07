@@ -90,6 +90,7 @@ li {
 	float: left;
 	width: 500px;
 	height: 50px;
+	font-size: 20px;
 	line-height: 50px;
 	text-align: center;
 }
@@ -98,6 +99,7 @@ li {
 	float: left;
 	width: 250px;
 	height: 50px;
+	font-size: 20px;
 	line-height: 50px;
 	text-align: center;
 }
@@ -106,6 +108,7 @@ li {
 	float: left;
 	width: 250px;
 	height: 50px;
+	font-size: 20px;
 	line-height: 50px;
 	text-align: center;
 }
@@ -137,6 +140,7 @@ li {
 	width: 500px;
 	height: 200px;
 	margin-bottom: 10px;
+	font-size: 30px;
 	line-height: 200px;
 	text-align: center;
 }
@@ -146,6 +150,7 @@ li {
 	width: 250px;
 	height: 200px;
 	margin-bottom: 10px;
+	font-size: 30px;
 	line-height: 200px;
 	text-align: center;
 }
@@ -155,6 +160,7 @@ li {
 	width: 250px;
 	height: 200px;
 	margin-bottom: 10px;
+	font-size: 30px;
 	line-height: 200px;
 	text-align: center;
 }
