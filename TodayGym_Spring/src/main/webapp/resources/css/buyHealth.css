@@ -8,8 +8,9 @@ li{
 	list-style: none;
 }
 .buy_section{
-	height: 2800px;
+	height: auto;
 	margin-top: 60px;
+	margin-bottom: 200px;
 }
 .section_info{
 	width: 100%;
@@ -41,6 +42,7 @@ li{
 	justify-content: center;
 	flex-wrap: wrap;
 	flex-direction: row;
+	margin-top: 60px;
 }
 .img{
 	width: 300px;
@@ -87,7 +89,7 @@ li{
 	padding: 0;
 	display: flex;
 	justify-content: center;
-	margin: 45px 0 20px 0;
+	margin: 90px 0 20px 0;
 }
 .buy_cate li a{
 	padding: 5px 35px;
@@ -98,7 +100,7 @@ li{
 	margin: 0 20px;
 	border: 5px solid black;
 	border-radius: 10px;
-	background-color: black;
+	background-size: contain;
 }
 .buy_cate li :active {
 	position: relative;
