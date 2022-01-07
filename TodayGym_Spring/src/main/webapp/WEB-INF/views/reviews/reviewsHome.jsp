@@ -65,7 +65,10 @@
 								<td><a href="reviewsDetail?r_title=${list.r_title}">${list.r_title}</a></td>
 								<td>${list.m_id}</td>
 								<td>${list.r_date }</td>
-								<%-- <td>${list.r_score }</td> --%>
+
+								<td><c:forEach begin="1" end="${list.r_score }">
+										<span>★</span>
+									</c:forEach></td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -75,7 +78,8 @@
 		<div class="pageing" style="text-align: center; margin-top: 10px;">
 			<div class="rvpaging">${paging}</div>
 			<button class="pageing_menu">
-				<a href="reviewsWrite" style="font-size: 25px" border="2px solid skyblue" >글쓰기</a>
+				<a href="reviewsWrite" style="font-size: 25px"
+					border="2px solid skyblue">글쓰기</a>
 			</button>
 		</div>
 	</div>
