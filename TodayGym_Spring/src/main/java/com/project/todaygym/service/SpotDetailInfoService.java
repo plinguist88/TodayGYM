@@ -40,8 +40,6 @@ public class SpotDetailInfoService {
 		//sList라는 깡통에 adSpotDao클래스에 있는 spotDetailInfo라는 인터페이스 사용
 		SpotDto spot = adSpotDao.spotDetailInfo(s_code);
 		
-		simList = new ArrayList<SpotImageDto>();
-		
 		simList = adSpotDao.spotDetailImg(s_code);
 		
 		for(SpotImageDto sid : simList) {
