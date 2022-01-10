@@ -231,9 +231,14 @@ li {
 	float: right;
 	width: 898px;
 	height: 800px;
-	padding: 30px 30px;
 	border: 1px solid gray;
 	box-sizing: border-box;
+}
+
+.myPage-myClass- {
+	width: 100%;
+	height: 600px;
+	padding: 50px 0 0 0;
 }
 
 .myPage-myClass-title {
@@ -308,6 +313,33 @@ li {
 	float: left;
 	width: 200px;
 }
+
+.myPage-myClass-paging {
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+.myPage-myClass-pageHtml {
+	margin: 0 auto;
+	color: black;
+	text-decoration: none;
+	text-align: center;
+}
+
+.pageHtml-pno {
+	font-size: 25px;
+	color: black;
+	text-decoration: none;
+}
+
+.pageHtml-pno:visited{
+	font-size: 25px;
+	color: black;
+	text-decoration: none;
+}
+
 /******************************** myResign area ******************************/
 .myPage-myResign {
 	float: right;

@@ -11,9 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.project.todaygym.dao.MemberDao;
 import com.project.todaygym.dao.OrderDao;
-import com.project.todaygym.dao.ProductDao;
 import com.project.todaygym.dao.TicketDao;
 import com.project.todaygym.dto.CartDto;
 import com.project.todaygym.dto.MemberDto;
@@ -38,7 +36,7 @@ public class OrderService {
 	//________________________________________ 결제하기
 
 	//__________ 장바구니 결제 페이지
-	public ModelAndView cartOrder(List<String> c_code) {
+	public ModelAndView cartOrder(List<Integer> c_code) {
 		
 		// 변수 선언 및 초기화
 		mv = new ModelAndView();
@@ -56,7 +54,7 @@ public class OrderService {
 		
 		for(i = 0; i < getListSize; i++) {
 			
-			getCcode = Integer.parseInt(c_code.get(i));
+			getCcode = c_code.get(i);
 			order.setM_id(getMid);
 			order.setC_code(getCcode);
 			

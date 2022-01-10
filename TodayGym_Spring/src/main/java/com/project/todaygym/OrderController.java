@@ -27,7 +27,7 @@ public class OrderController {
 	
 	//__________ 장바구니 결제 페이지
 	@GetMapping("cartOrder")
-	public ModelAndView cartOrderMove(@RequestParam List<String> chk) {
+	public ModelAndView cartOrderMove(@RequestParam List<Integer> chk) {
 		logger.info("cartOrderMove()");
 		
 		mv = orderServ.cartOrder(chk);
