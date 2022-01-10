@@ -54,7 +54,7 @@
 						<div class="swiper-wrapper">
 							<c:forEach items="${simList}" var="sim">
 								<div class="swiper-slide">
-									<img src="${sim.simg_sys }" />
+									<img src="${sim.simg_sys}" />
 								</div>
 							</c:forEach>
 						</div>
