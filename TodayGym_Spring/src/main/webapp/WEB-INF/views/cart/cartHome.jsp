@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/fmt" prefix = "fmt"%>
-
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,42 +13,64 @@
 <link type="text/css" rel="stylesheet"
 	href="resources/css/cart_style.css">
 	<script type="text/javascript">
-		//전체선택
-		$(document).ready(function() {
-			$("#chkall").click(function() {
-				if($("#chkall").is(":checked")) $("input[name=chk]").prop("checked", true);
-				else $("input[name=chk]").prop("checked", false);
-			});
-			
-			$("input[name=chk]").click(function() {
-				var total = $("input[name=chk]").length;
-				var checked = $("input[name=chk]:checked").length;
-				
-				if(total != checked) $("#chkall").prop("checked", false);
-				else $("#chkall").prop("checked", true); 
-			});
-		});
-		//전체선택(삭제)
-		$(document).ready(function() {
-			$("#chkall2").click(function() {
-				if($("#chkall2").is(":checked")) $("input[name=chk]").prop("checked", true);
-				else $("input[name=chk]").prop("checked", false);
-			});
-			
-			$("input[name=chk]").click(function() {
-				var total = $("input[name=chk]").length;
-				var checked = $("input[name=chk]:checked").length;
-				
-				if(total != checked) $("#chkall2").prop("checked", false);
-				else $("#chkall2").prop("checked", true); 
-			});
-		});
 		$(function () {
 			var msg = "${msg}";
 			if(msg != ""){
 				alert(msg)
 			}
 		})
+		//전체선택
+		$(document).ready(function () {
+			var allItem = ${pList};
+			console.log(allItem);
+			
+			var sum = 0;
+			allItem.forEach(elem => sum+=elem);
+			console.log(sum.toLocaleString("ko-kr"));
+			$("#tot").html(sum.toLocaleString("ko-kr"));
+			$(".fPrice").html(sum.toLocaleString("ko-kr"));
+			
+			$("#chkall").click(function () {
+				if($("#chkall").is(":checked")){
+					allItem.forEach(elem => sum+=elem);
+					$("input[name=chk]").prop("checked", true);
+					$("#tot").html(sum.toLocaleString("ko-kr"));
+					$(".fPrice").html(sum.toLocaleString("ko-kr"));
+				}else{
+					sum = 0;
+					$("input[name=chk]").prop("checked", false);
+					$("#tot").html("0");
+					$(".fPrice").html("0");
+				}
+			});
+			
+			$("input[name=chk]").click(function() {
+				var total = $("input[name=chk]").length;
+				var checked = $("input[name=chk]:checked").length;
+				var idx = $("input[name=chk]").index(this);
+				console.log("total : " + total);
+				console.log("idx : " + idx);
+				console.log("allItem[idx] : " + allItem[idx]);
+				console.log("checked : " + checked);
+				console.log("idx : " + idx);
+				
+				if(this.checked == false){
+					sum -= allItem[idx];
+				}else if(this.checked == true){
+					sum += allItem[idx];
+				}
+				console.log("sum : " + sum);
+				
+				$("#tot").html(sum.toLocaleString("ko-kr"));
+				$(".fPrice").html(sum.toLocaleString("ko-kr"));
+				
+				if(total != checked)
+					$("#chkall").prop("checked", false);
+				else
+					$("#chkall").prop("checked", true);
+			});
+		});
+		
 	</script>
 </head>
 <body>
@@ -110,13 +132,7 @@
 							<dl class="cart_price_sub">
 								<dt>총 상품금액</dt>
 								<dd>							
-									<c:set var="total" value="0"/>
-									<c:forEach var="mycart" items="${mycart}">
-									<c:set var="total" value="${total + mycart.o_price}" />						
-									</c:forEach>	
-									<span>
-									<fmt:formatNumber type="number" maxFractionDigits="3" value="${total}" />
-									</span>		
+									<span id="tot"></span>		
 									<span>원</span>
 								</dd>
 							</dl>
@@ -142,13 +158,7 @@
 					</div>
 					<div class="cart_cal_sub2">
 						<span>총 주문금액</span>
-						<c:set var="total" value="0"/>
-						<c:forEach var="mycart" items="${mycart}">
-						<c:set var="total" value="${total + mycart.o_price}" />						
-						</c:forEach>	
-						<span class="fPrice">
-						<fmt:formatNumber type="number" maxFractionDigits="3" value="${total}" />
-						</span>								
+						<span class="fPrice"></span>								
 						<span>원</span>
 					</div>
 				</div>

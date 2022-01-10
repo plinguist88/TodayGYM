@@ -1,5 +1,6 @@
 package com.project.todaygym.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -67,7 +68,13 @@ public class ProductService {
 		String getId = member.getM_id();
 		
 		List<MyCartDto> myCart = pDao.getMyCart(getId);
+		List<String> cartPrice = new ArrayList<String>();
+		for(int i = 0; i < myCart.size(); i++) {
+			cartPrice.add(myCart.get(i).getO_price());
+		}
 		mv.addObject("mycart", myCart);
+		mv.addObject("pList", cartPrice);
+		
 		mv.setViewName("cart/cartHome");
 		return mv;
 	}
