@@ -26,18 +26,14 @@
 				<div>
 					<span class="total">TodayGYM 회원 총원 : ${cnt}</span>
 				</div>
-				<div class="group">
-					<table>
-						<tbody class="tbody">
-							<c:forEach items="${agDto}" var="agDto">
-								<tr>
-									<th>${agDto.year}대회원</th>
-									<td>${agDto.agnum}명</td>
-								</tr>
-							</c:forEach>
-						</tbody>
-					</table>
-				</div>
+				<table class="group">
+					<c:forEach items="${agDto}" var="agDto">
+						<tr>
+							<th>${agDto.year}대회원</th>
+							<td>${agDto.agnum}명</td>
+						</tr>
+					</c:forEach>
+				</table>
 			</div>
 			<div class="Overview-Ticket">
 				<div>

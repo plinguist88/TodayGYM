@@ -45,11 +45,10 @@ body {
 	width: 100%;
 	height: 70%;
 	text-align: center;
-	margin: 20px;
 }
 
-.Overview-Member .tbody th{
-	width: 40%;
+.Overview-Member .group tbody{
+	width: 100%;
 }
 
 .Overview-Member .group td {
