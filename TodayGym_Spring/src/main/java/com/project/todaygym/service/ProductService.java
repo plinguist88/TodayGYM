@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dao.MemberDao;
+import com.project.todaygym.dao.OrderDao;
 import com.project.todaygym.dao.ProductDao;
 import com.project.todaygym.dto.CartDto;
 import com.project.todaygym.dto.MemberDto;
@@ -24,6 +25,10 @@ import com.project.todaygym.dto.ProductDto;
 public class ProductService {
 	@Autowired
 	private ProductDao pDao;
+	
+	@Autowired
+	private OrderDao oDao;
+	
 	private ModelAndView mv;
 	@Autowired
 	private HttpSession session;
@@ -111,6 +116,7 @@ public class ProductService {
 		String view = null;
 		
 		try {
+			oDao.orderDelete(cCode);
 			pDao.cartDelete(cCode);
 			view = "redirect:myCart";
 			rttr.addFlashAttribute("msg", "회원권 삭제 성공");
@@ -126,7 +132,11 @@ public class ProductService {
 	public String cartTDel(RedirectAttributes rttr) {
 		String view = null;
 		
+		MemberDto myInfo = (MemberDto)session.getAttribute("mb");
+		String getMid = myInfo.getM_id();
+		
 		try {
+			oDao.orderListDelete(getMid);
 			pDao.cartTDel();
 			view = "redirect:myCart";
 			rttr.addFlashAttribute("msg", "장바구니 전체 삭제 성공.");
