@@ -45,80 +45,81 @@
 		<!--                        배경 제목                  -->
 
 		<section>
-		
-			<form>
-				<fieldset>
-					<c:forEach items="${sList}" var="sList">
-						<legend>
-							<u>${sList.s_name}</u>
-						</legend>
-						<div class="container">
-							<div class="swiper mySwiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img src="resources/img/spotdetail/q.jpg" />
-									</div>
-									<div class="swiper-slide">
-										<img src="resources/img/spotdetail/t.jpg" />
-									</div>
-									<div class="swiper-slide">
-										<img src="resources/img/spotdetail/r.jpg" />3
-									</div>
-									<div class="swiper-slide">
-										<img src="resources/img/spotdetail/t.jpg" />
-									</div>
-									<div class="swiper-slide">Slide 5</div>
-									<div class="swiper-slide">Slide 6</div>
-									<div class="swiper-slide">Slide 7</div>
-									<div class="swiper-slide">Slide 8</div>
-									<div class="swiper-slide">Slide 9</div>
+			<fieldset>
+				<legend>
+					<u>${spot.s_name}</u>
+				</legend>
+				<div class="container">
+					<div class="swiper mySwiper">
+						<div class="swiper-wrapper">
+							<c:forEach items="${simList}" var="sim">
+								<div class="swiper-slide">
+									<img src="${sim.simg_sys }" />
 								</div>
-								<div class="swiper-button-next"></div>
-								<div class="swiper-button-prev"></div>
-							</div>
+							</c:forEach>
 						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
 
-						<script src="resources/JavaScript/spotdetail.js"></script>
-					</c:forEach>
-				</fieldset>
-			</form>
-		
+				<script src="resources/JavaScript/spotdetail.js"></script>
 
-		
+			</fieldset>
+
+
+
+
 			<div>
-				
-					<table>
-						<c:forEach items="${sList}" var="sList">
-							<tr>
-								<th>센터</th>
-								<td>${sList.s_name}</td>
-							</tr>
 
-							<tr>
-								<th>센터 주소</th>
-								<td>${sList.s_addr}</td>
-							</tr>
+				<table>
 
-							<tr>
-								<th>센터 번호</th>
-								<td>${sList.s_phone}</td>
-							</tr>
-							
-							<tr>
-								<th>기타 사항</th>
-								<td>${sList.s_content}</td>
-							</tr>
+					<tr>
+						<th>센터</th>
+						<td>${spot.s_name}</td>
+					</tr>
 
+					<tr>
+						<th>센터 주소</th>
+						<td>${spot.s_addr}</td>
+					</tr>
 
-							<tr class="tr_map">
-								<th>지도</th>
-								<td class="td_map"><div id="map"
-										style="width: 100%; height: 100%;"></div></td>
-							</tr>
+					<tr>
+						<th>센터 번호</th>
+						<td>${spot.s_phone}</td>
+					</tr>
+
+					<tr>
+						<th>기타 사항</th>
+						<td>${spot.s_content}</td>
+					</tr>
 
 
+					<tr class="tr_map">
+						<th>지도</th>
+						<td class="td_map"><div id="map"
+								style="width: 100%; height: 100%;"></div></td>
+					</tr>
 
-							<script>
+
+
+
+
+				</table>
+
+
+			</div>
+		</section>
+
+
+		<!--               바디 끝                                      -->
+
+		<footer>
+			<jsp:include page="../layout/footer.jsp" />
+		</footer>
+	</div>
+</body>
+<script>
 								var mapContainer = document
 										.getElementById('map'), // 지도를 표시할 div 
 								mapOption = {
@@ -138,7 +139,7 @@
 								// 주소로 좌표를 검색합니다
 								geocoder
 										.addressSearch(
-												'${sList.s_addr}',
+												'${spot.s_addr}',
 												function(result, status) {
 
 													// 정상적으로 검색이 완료됐으면 
@@ -158,7 +159,7 @@
 														// 인포윈도우로 장소에 대한 설명을 표시합니다
 														var infowindow = new kakao.maps.InfoWindow(
 																{
-																	content : '<div style="width:150px;text-align:center;padding:6px 0;">TODAYGYM${sList.s_name}</div>'
+																	content : '<div style="width:150px;text-align:center;padding:6px 0;">TODAYGYM${spot.s_name}</div>'
 																});
 														infowindow.open(map,
 																marker);
@@ -168,21 +169,4 @@
 													}
 												});
 							</script>
-
-
-						</c:forEach>
-					</table>
-
-				
-			</div>
-		</section>
-
-
-		<!--               바디 끝                                      -->
-
-		<footer>
-			<jsp:include page="../layout/footer.jsp" />
-		</footer>
-	</div>
-</body>
 </html>
