@@ -57,7 +57,7 @@ public class SpotDetailInfoService {
 		
 		mv = new ModelAndView();
 		//mv라는 깡통 ModelAndView로 형태로 초기화 	
-		mv.addObject("sList", spot);
+		mv.addObject("spot", spot);
 		//mv에 있는 addObject라는 객체안에 sList라는 데이터를 넣는당.
 		//addObject("변수명", 파라미터)
 		mv.addObject("simList", simList);
