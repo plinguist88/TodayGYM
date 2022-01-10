@@ -1,6 +1,5 @@
 package com.project.todaygym.service;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.project.todaygym.dao.AdMainDao;
 import com.project.todaygym.dto.SpotOverviewDto;
+import com.project.todaygym.dto.AgeGroupDto;
 
 import lombok.extern.java.Log;
 
@@ -21,9 +21,10 @@ public class AdMainService {
 	
 	private List<SpotOverviewDto> spotOverviewList;
 	
-	
+	//Overview 처리
 	public ModelAndView getOverview(ModelAndView mv) {
-		//회원 전체 수
+		
+		//총원 구하기
 		int cnt = adMainDao.totalCnt();
 		mv.addObject("cnt", cnt);
 		
@@ -55,6 +56,10 @@ public class AdMainService {
 		//리뷰 전체 수
 		int totalReview = adMainDao.totalReview();
 		mv.addObject("totalReview", totalReview);
+		
+		//연령대 구하기
+		List<AgeGroupDto> agDto = adMainDao.ageGroup();
+		mv.addObject("agDto", agDto);
 		
 		return mv;
 	}

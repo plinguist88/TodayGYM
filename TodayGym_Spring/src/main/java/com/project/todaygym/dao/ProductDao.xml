@@ -7,6 +7,10 @@
 	<select id="getProductList" resultType="com.project.todaygym.dto.ProductDto">
 		SELECT * FROM P
 	</select>
+	<!-- 1-1.구매메인 개별 상품정보 가져오기 -->
+	<select id="getCate" parameterType="String" resultType="com.project.todaygym.dto.ProductDto">
+		SELECT * FROM p WHERE p_cate = #{p_cate}
+	</select>
 	<!-- 2. 구매상세 정보 출력하기 -->
 	<select id="getProductSelect" parameterType="String" resultType="com.project.todaygym.dto.ProductDto">
 		SELECT * FROM P WHERE p_code = #{p_code}
@@ -30,35 +34,13 @@
 		WHERE A.P_CODE = B.P_CODE AND A.OP_CODE = C.O_CODE AND A.M_ID = #{getId}
 		ORDER BY A.C_CODE DESC
 	</select>
-	<!-- 6. 장바구니 삭제하기 -->
+	<!-- 6. 장바구니 개별삭제하기 -->
 	<delete id="cartDelete" parameterType="Integer">
 		DELETE FROM c WHERE c_code = #{c_code}
 	</delete>
-	
-	
-	
-	
-	
-	<!-- Order area -->
-	
-	<!-- 장바구니 결제 갯수 가져오기 -->
-	<select id="getTotalCartCnt" parameterType="String" resultType="Integer">
-		SELECT COUNT(*) FROM C WHERE m_id=#{m_id}
-	</select>
-	
-	<!-- 장바구니 코드 최솟값 가져오기 -->
-	<select id="getCartCode" parameterType="String" resultType="Integer">
-		SELECT MIN(C_CODE) FROM C WHERE m_id=#{m_id}
-	</select>
-	
-	<!-- 장바구니 해당코드 데이터 가져오기 -->
-	<select id="getCartList" parameterType="Integer" resultType="com.project.todaygym.dto.CartDto">
-		SELECT * FROM C WHERE c_code=#{Ccode}
-	</select>
-	
-	<!-- 장바구니 삭제하기 -->
-	<delete id="deleteCart" parameterType="Integer">
-		DELETE FROM C WHERE c_code=#{Ccode}
+	<!-- 7. 장바구니 전체삭제하기 -->
+	<delete id="cartTDel">
+		DELETE FROM C
 	</delete>
-	
+
 </mapper>

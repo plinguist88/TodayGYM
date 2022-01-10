@@ -76,9 +76,9 @@
 			 					 			
 			 		</div>			
 		 		</div>	
-		 		<form action="saveCart" method="get">
+		 		<form action="saveCart" method="get" onsubmit="return goAction()">
 		 			<select class="buy_select_contants" name="buy_select_contants">
-		 					<option selected>-</option>
+		 					<option selected value="0">${dInfo.p_subcate}</option>
 			 			<c:forEach var="oList" items="${oList}">
 			 				<option disabled>&nbsp;&nbsp;&nbsp;${oList.o_code}</option>		
 			 				<option value="${oList.o_code}_${oList.o_month}_${oList.o_price}">&nbsp;&nbsp;&nbsp;${oList.o_month} : ${oList.o_price}원</option>		 				
@@ -87,7 +87,7 @@
 		 			<input type="text" name="op_code" id="op_code" class="hidden">
 		 			<input type="submit" value="🛒장바구니" class="nextbutton2">
 		 		</form>
-		 			<input type="submit" value="💳구매하기" class="nextbutton1" name="op_code" id="op_code" onclick="location.href='./myOrder?m_id=${mb.m_id}'">	
+		 			<input type="button" value="💳구매하기" class="nextbutton1" onclick="goCart()">
 		 		<div class="total_info">
 					<div class="buy_price_hidden">
 						<hr>
@@ -239,7 +239,7 @@
 <script type="text/javascript">
 	//제품 정보 표시
 	var varr;
-
+		
 	$(function() {
 
 		$(".buy_select_contants").on("change", function() {
@@ -250,5 +250,21 @@
 			$("#total_price").html(varr[2] + "원");			
 		});
 	});
+	
+	function goCart() {
+		
+		var getProduct = "${dInfo.p_code}";
+		
+		location.href = './directOrder?product=' + getProduct + '&option=' + varr[0];
+		
+	}
+	function goAction(){
+		var sel = $(".buy_select_contants").val();
+		if(sel != 0){
+			return true;
+		}
+		alert("옵션을 선택해주세요");
+		return false;
+	}
 </script>
 </html>

@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>회원 관리 상세페이지</title>
 <link type="text/css" rel="stylesheet"
-	href="resources/css/adMem_style.css">
+	href="resources/css/adMemDetail_style.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="module"
@@ -34,61 +34,51 @@
 				<div class="content-adSidebar">
 					<jsp:include page="../layout/adSidebar.jsp" />
 				</div>
-
 				<div class="content">
-					<div class="content-admem">
-						<h1>회원 상세</h1>
-						<table class="adDetail-main">
-							<thead>
-								<tr>
-									<th>이름</th>
-									<td>${memdto.m_name}</td>
-								</tr>
-								<tr>
-									<th>가입일자</th>
-									<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
-											value="${memdto.m_joindate}" /></td>
-								</tr>
-							</thead>
-						</table>
-
-						<table class="adDetail-sub">
-							<thead>
-								<tr>
-									<th>아이디</th>
-									<td>${memdto.m_id}</td>
-								</tr>
-								<tr>
-									<th>생년월일</th>
-									<td>${memdto.m_birth}</td>
-								</tr>
-								<tr>
-									<th>연락처</th>
-									<td>${memdto.m_phone}</td>
-								</tr>
-								<tr>
-									<th>E-mail</th>
-									<td>${memdto.m_email}</td>
-								</tr>
-								<tr>
-									<th>보유 회원권</th>
-									<td>---</td>
-								</tr>
-								<tr>
-									<th>보유 포인트</th>
-									<td>${memdto.m_point}</td>
-								</tr>
-							</thead>
-						</table>
-						<!-- 회원 수정 버튼 -->
-						<div class="adDetail-btn">
-							<button class="adbtn-upbtn"
-								onclick="location.href='./adMemUpdateMove?m_id=${memdto.m_id}'">
-								수정</button>
-							<button class="adbtn-delbtn"
-								onclick="location.href='./adMemDelAct?m_id=${memdto.m_id}'">
-								삭제</button>
-						</div>
+					<table class="detailTable">
+						<thead class="top">
+							<tr>
+								<th colspan="5"><h1>회원 상세</h1></th>
+							</tr>
+						</thead>
+						<thead class="bottom">
+							<tr>
+								<th>이름</th>
+								<td>${memdto.m_name}</td>
+								<th>가입일자</th>
+								<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm"
+										value="${memdto.m_joindate}" /></td>
+							</tr>
+						</thead>
+						<tbody class=detailList>
+							<tr>
+								<th>아이디</th>
+								<td>${memdto.m_id}</td>
+								<th>생년월일</th>
+								<td>${memdto.m_birth}</td>
+							</tr>
+							<tr>
+								<th>연락처</th>
+								<td>${memdto.m_phone}</td>
+								<th>E-mail</th>
+								<td>${memdto.m_email}</td>
+							</tr>
+							<tr>
+								<th>보유 회원권</th>
+								<td>---</td>
+								<th>보유 포인트</th>
+								<td>${memdto.m_point}</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- 회원 수정 버튼 -->
+					<div class="detailBtn">
+						<button class="adbtn-upbtn"
+							onclick="location.href='./adMemUpdateMove?m_id=${memdto.m_id}'">
+							수정</button>
+						<button class="adbtn-delbtn"
+							onclick="location.href='./adMemDelAct?m_id=${memdto.m_id}'">
+							삭제</button>
 					</div>
 				</div>
 			</div>

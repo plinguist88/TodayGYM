@@ -32,6 +32,7 @@ body {
 	color: #fff;
 }
 
+/*member*/
 .Overview-Member {
 	position: relative;
 	top: 0;
@@ -41,6 +42,43 @@ body {
 	background-color: #fcfcfc;
 }
 
+.ov-member{
+	padding: 10px;
+}
+.ov-member-cnt {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.ov-member-cnt h1{
+	margin: 3px;
+}
+.ov-member-cnt-tb {
+	float: right;
+	width: 30%;
+	text-align: center;
+	border-bottom: 5px double #000;
+}
+.ov-member-group{
+	width: 100%;
+	margin-top: 50px;
+}
+.ov-member-group h3{
+	/*margin-top: 30px;*/
+}
+.ov-member-group-tb{
+	width: 100%;
+	height: 200px;
+	text-align: center;
+	border-top: 5px double #000;
+}
+.ov-member-group-tb th{
+	width: 40%;
+	border-bottom: 2px solid #cfcfcf;
+}
+.ov-member-group-tb td{
+	border-bottom: 2px solid #cfcfcf;
+}
+/*ticket*/
 .Overview-Ticket {
 	position: relative;
 	top: -50%;
@@ -50,6 +88,7 @@ body {
 	background-color: #fcfcfc;
 }
 
+/*spot*/
 .Overview-Spot {
 	position: relative;
 	top: -50%;
@@ -82,6 +121,7 @@ body {
 	font-size: 1.5rem;
 }
 
+/*review*/
 .Overview-Review {
 	position: relative;
 	top: -100%;

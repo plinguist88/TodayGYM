@@ -32,9 +32,14 @@ public class ProductService {
 	
 	
 	//1. 구매메인페이지
-	public ModelAndView getProductList() {
+	public ModelAndView getProductList(String p_cate) {
 		mv = new ModelAndView();
-		List<ProductDto> pList = pDao.getProductList();
+		List<ProductDto> pList;
+		if(p_cate == null) {
+			pList = pDao.getProductList();
+		}else {
+			pList = pDao.getCate(p_cate);
+		}
 		mv.addObject("pList", pList);
 		mv.setViewName("buy/buyHome");
 		return mv;
@@ -93,7 +98,7 @@ public class ProductService {
 		return view;
 	}
 	
-	//5. 장바구니 삭제하기
+	//5. 장바구니 개별삭제하기
 	@Transactional
 	public String cartDelete(int cCode, RedirectAttributes rttr) {
 		String view = null;
@@ -106,6 +111,22 @@ public class ProductService {
 			e.printStackTrace();
 			view = "redirect:myCart";
 			rttr.addFlashAttribute("msg", "회원권 삭제 실패. 관리자에게 문의하세요");
+		}
+		return view;
+	}
+	//6. 장바구니 전체삭제하기
+	@Transactional
+	public String cartTDel(RedirectAttributes rttr) {
+		String view = null;
+		
+		try {
+			pDao.cartTDel();
+			view = "redirect:myCart";
+			rttr.addFlashAttribute("msg", "장바구니 전체 삭제 성공.");
+		}catch (Exception e) {
+			e.printStackTrace();
+			view = "redirect:myCart";
+			rttr.addFlashAttribute("msg", "장바구니 전체 삭제 실패. 관리자에게 문의바랍니다.");
 		}
 		return view;
 	}

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>reviewsDetail</title>
 <link type="text/css" rel="stylesheet"
 	href="resources/css/reviewsDetail.css">
 </head>
@@ -34,16 +34,23 @@
 
 				<div class="detail_lower">
 				<div class="star_score">
-					<h3>별점</h3>
+					<h1>별점: 
+						<c:forEach begin="1" end="${rDto.r_score }">
+										<span>★</span>
+						</c:forEach>	
+					</h1>
 				</div>
-					<div class="detail_modify">
-						<a href="reviewsUpdate"><button>수정</button></a>
+				</div>
+				
+				<div class="button_R">
+				<div class="detail_modify">
+						<a href="reviewsUpdate?r_no=${rDto.r_no}"><button>수정</button></a>
 					</div>
 					<div class="detail_delete">
 						<a href="reviewsDelete?r_no=${rDto.r_no}"><button>삭제</button></a>
 					</div>
-
 				</div>
+				
 			</div>
 		</section>
 

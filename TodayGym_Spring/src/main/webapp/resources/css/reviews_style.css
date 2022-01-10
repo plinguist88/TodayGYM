@@ -5,26 +5,27 @@
 body{
 	margin: 0;
 	padding: 0;
+	background-color: #E6FFE6;
 }
 .reivewfull{
-	position: relative ;
-	top: 80px;	
+	position: relative;
+	top: 60px;
+	left: 0;
 	width: 100%;
 	height: 100vh;
-	background-color: white;
+	background-color: #E6FFE6;
 
 }
 .reviewmain{
 	width: 100%;
 	height: 130px;
-	background-color: grey;	
 }
 
 .board_name{
 	text-align: center;
 }
 
-.board_name h3{
+.board_name h2{
 	margin: 0;
 }
 
@@ -42,31 +43,35 @@ body{
 .menu_h{
 	width:70px;
     height:30px;
-    border: 1px solid skyblue ;
+    border: 2px solid skyblue ;
     background-color: white;
     border-radius:5px;
+    font-weight: bold;
  
 }
 .menu_s{
 	width:70px;
     height:30px;
-    border: 1px solid skyblue ;
+    border: 2px solid skyblue ;
     background-color: white;
     border-radius:5px;
+    font-weight: bold;
 }
 .menu_c{
 	width:70px;
     height:30px;
-    border: 1px solid skyblue ;
+    border: 2px solid skyblue ;
     background-color: white;
     border-radius:5px;
+    font-weight: bold;
 }
 .menu_c2{
 	width:70px;
     height:30px;
-    border: 1px solid skyblue ;
+    border: 2px solid skyblue ;
     background-color: white;
     border-radius:5px;
+    font-weight: bold;
 }
 a{
 	text-decoration: none;
@@ -81,6 +86,7 @@ a{
 	justify-content: center;
 	align-items: center;
 	list-style: none;
+	background-color: #E6FFE6;
 }
  
 .column_number{
@@ -100,12 +106,13 @@ a{
 }
 
 .pageing_menu{
-	margin-left: 1280px;
 	margin-top: 10px;
-	border: 1px solid grey;
+	border: 3px solid solidblue;
 	width: 150px;
 	height: 50px;
+	margin-left: 750px;
 }
+
 .td_list td{
 	text-align: center;
 	border: 1px solid grey ;
@@ -116,9 +123,10 @@ a{
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 	text-align: center;
 	border:2px solid #ffebb5;
+	background-color: white;
 }
 .table_review thead tr{
-	 background-color: #009879;
+	background-color: #009879;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
@@ -128,3 +136,26 @@ a{
 .table_review td{
 	padding:12px 15px;
 }
+.rvpaging{
+	width: 200px;
+	margin: 0px auto;
+	opacity:0.8;
+	text-align: center;
+}
+.rvpaging .pno{
+	background-color: #efefef;
+	margin: 3px;
+	border: 1px solid #6c6c6c;
+	border-radius: 3px;
+	line-height: 1.5;
+	font-size: 15px;
+	height: 20px;
+}
+.rvpaging>a{
+	text-decoration: none;
+}	
+.rvpaging>a:visited{
+	color:#575757;
+}
+
+

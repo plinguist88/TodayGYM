@@ -68,6 +68,7 @@
 			 	<li>단순변심으로 인한 주문취소 및 변경 시 교환 환불이 어려울 수 있으니 꼭 다시 확인해 주시기 바랍니다.</li>
 			 </ul>
 			</div>
+			<form action="./cartOrder" method="get">
 			<div class="cart_info_table">
 				<table class="table_title">
 					<thead class="cart_head">
@@ -82,7 +83,7 @@
 					<tbody class="cart_body">
 						<c:forEach var="mycart" items="${mycart}">
 						<tr>
-							<td class="tbody_td11"> <input class="checkbox" type="checkbox" checked name="chk"> </td>
+							<td class="tbody_td11"> <input class="checkbox" type="checkbox" checked name="chk" value="${mycart.c_code}"> </td>
 							<td class="tbody_td11"> <img src="${mycart.p_img}"></td>
 							<td class="tbody_td11"><p id="point"><img src="resources/img/buy/buyDetail/buypoint.png"></p> ${mycart.p_subcate}</td>
 							<td class="tbody_td1"> <button class="buttonx" type="button" onclick="delCheck(${mycart.c_code})"><img src="resources/img/cart/x.png"></button></td>
@@ -98,10 +99,9 @@
 			</div>	
 				<div class="cart_delete">
 					<div class="checkboxarea">
-						<input class="checkbox" type="checkbox" checked id="chkall2">
 					</div>
 					<div class="deletebuttonarea">
-						<input class="deletebutton" type="button" value="선택상품 삭제">				
+						<input class="deletebutton" type="button" value="전체상품 삭제" onclick="cartTDel()">	
 					</div>
 				</div>
 				<div class="cart_calculator">
@@ -154,8 +154,9 @@
 				</div>
 			<div class="cart_button">
 				<span class="cart_back" onclick="location.href='./product'">계속하기</span>
-				<span class="ordermove" onclick="location.href='./myOrder?m_id=${mb.m_id}'">결제하기</span>
+				<input type="submit" value="결제하기" class="ordermove">
 			</div>
+			</form>
 		</section>
 		<footer>
 			<jsp:include page="../layout/footer.jsp" />
@@ -170,7 +171,13 @@
 			location.href='./cartDelete?cCode=' + c_code;
 		}
 	}
-	
+	function cartTDel() {
+		var conf = confirm("전체상품을 장바구니에서 삭제하시겠습니까?");
+		
+		if(conf == true){
+			location.href='./cartTDel?=';
+		}
+	}
 	
 	
 </script>
