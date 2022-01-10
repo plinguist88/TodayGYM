@@ -31,5 +31,7 @@ public interface AdSpotDao {
 	//지점 삭제
 	public int spotDelete(String s_code);
 	//해당지점 정보 출력 
-	public List<SpotDto> spotDetailInfo(String s_code);
+	public SpotDto spotDetailInfo(String s_code);
+	//해당 이미지 정보 출력 
+	public List<SpotImageDto> spotDetailImg(String simg_no);
 }
