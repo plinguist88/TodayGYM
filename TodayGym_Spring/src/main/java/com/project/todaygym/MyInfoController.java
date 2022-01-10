@@ -81,10 +81,10 @@ public class MyInfoController {
 
 	//__________ 수강내역 페이지
 	@GetMapping("myClass")
-	public ModelAndView myClassMove() {
+	public ModelAndView myClassMove(Integer pageNum) {
 		logger.info("myClassMove()");
 		
-		mv = myServ.getMyClass();
+		mv = myServ.getMyClass(pageNum);
 		
 		return mv;
 	} // myClassMove end

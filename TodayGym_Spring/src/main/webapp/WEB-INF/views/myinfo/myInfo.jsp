@@ -23,15 +23,11 @@
 		<section>
 			<div class="content-myPage">
 				<div class="myPage-form">
-					<%-- myPage 좌측 메뉴바 --%>
 					<jsp:include page="myPageSide.jsp" />
-					<%-- myPage 우측 페이지 전체내용 --%>
 					<div class="myPage-myInfoUpdate">
-						<%-- 우측 페이지 타이틀 --%>
 						<div class="myPage-myInfoUpdate-title">
 							<h2>회원정보 수정 || My Info Update</h2>
 						</div>
-						<%-- 우측 페이지 상세내용 --%>
 						<div class="myPage-myInfoUpdate-contents">
 							<form action="./myInfoUpdateProc" method="post" name="myInfoUpdateForm" onsubmit="return emptyCheck()">
 								<div class="myInfo-contents">아이디 : ${myInfo.m_id}</div>
@@ -45,9 +41,7 @@
 								</div>
 							</form>
 						</div>
-						<%-- 우측 페이지 상세내용 end --%>
 					</div>
-					<%-- myPage 우측 페이지 전체내용 end --%>
 				</div>
 			</div>
 		</section>

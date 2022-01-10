@@ -1,6 +1,8 @@
 package com.project.todaygym.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
@@ -15,6 +17,8 @@ import com.project.todaygym.dao.MemberDao;
 import com.project.todaygym.dao.TicketDao;
 import com.project.todaygym.dto.MemberDto;
 import com.project.todaygym.dto.MyClassDto;
+import com.project.todaygym.dto.MyClassPageDto;
+import com.project.todaygym.util.MyClassPagingUtil;
 
 @Service
 public class MyInfoService {
@@ -148,23 +152,51 @@ public class MyInfoService {
 	//________________________________________ 수강내역
 
 	//__________ 수강내역 페이지
-	public ModelAndView getMyClass() {
+	public ModelAndView getMyClass(Integer pageNum) {
 		
 		// 변수 선언 및 초기화
 		mv = new ModelAndView();
 		
+		int start = (pageNum == null) ? 1 : pageNum;
 		MemberDto myInfo = (MemberDto)session.getAttribute("mb");			
 		String getMid = myInfo.getM_id();
 		
+		MyClassPageDto pageDto = new MyClassPageDto();
+		
+		pageDto.setM_id(getMid);
+		pageDto.setStart(start);
+		pageDto.setListCnt(3);
+		
+		String pageHtml = getPaging(start, getMid);
+		
 		// Database 연동 구역
-		List<MyClassDto> myClass = tiDao.classListSelect(getMid);
+		List<MyClassDto> myClass = tiDao.classListSelect(pageDto);
+		
 		
 		// JSP 페이지 데이터 전송
 		mv.addObject("myClass", myClass);
+		mv.addObject("pageHtml", pageHtml);
 		mv.setViewName("myinfo/myClass");
 				
 		return mv;
 	} // getMyClass end
+	
+	//__________ 수강내역 페이징 처리
+	private String getPaging(int num, String m_id) {
+		String pageHtml = null;
+		
+		int maxNum = tiDao.allTicketSelect(m_id);
+		
+		int pageCnt = 5;
+		String listName = "myClass";
+		
+		MyClassPagingUtil paging = new MyClassPagingUtil(maxNum, num, 3, pageCnt, listName);
+		
+		pageHtml = paging.makePaging();
+		
+		return pageHtml;
+	} // getPaging end
+	
 	
 	//________________________________________ 회원탈퇴
 

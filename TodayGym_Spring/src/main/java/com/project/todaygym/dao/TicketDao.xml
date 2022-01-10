@@ -23,14 +23,21 @@
 	<!-- 마이페이지 -->
 	
 	<!-- 수강내역 가져오기 -->
-	<select id="classListSelect" parameterType="String" resultType="com.project.todaygym.dto.MyClassDto">
+	<select id="classListSelect" parameterType="com.project.todaygym.dto.MyClassPageDto" resultType="com.project.todaygym.dto.MyClassDto">
 		
-		SELECT C.P_IMG, C.P_CATE, C.P_SUBCATE, D.O_MONTH, A.T_ISSUEDATE, A.T_USE
-		FROM TICKET_TB A, MEMBER_TB B, PRODUCT_TB C, OPTION_TB D
-		WHERE A.M_ID = B.M_ID AND A.P_CODE = C.P_CODE AND A.O_CODE = D.O_CODE
-		AND A.M_ID = #{m_id}
-		ORDER BY A.T_ISSUEDATE DESC
+		<![CDATA[
+        SELECT * FROM TICKETLIST_1
+        WHERE RONUM >= (#{start} * #{listCnt}) - (#{listCnt} - 1) AND RONUM <= #{start} * #{listCnt}
+        AND m_id=#{m_id}
+		]]>
+
+	</select>
+	
+	<!-- 전체 회원권 수 가져오기 -->
+	<select id="allTicketSelect" parameterType="String" resultType="Integer">
 		
+		SELECT COUNT(*) FROM T WHERE m_id=#{m_id}
+	
 	</select>
 
 </mapper>
