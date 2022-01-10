@@ -24,53 +24,19 @@
 			<!-- Admin Overview Start  -->
 			<div class="Overview-Member">
 				<div>
+					<span class="total">TodayGYM 회원 총원 : ${cnt}</span>
+				</div>
+				<div class="group">
 					<table>
-						<tr>
-							<th>총원</th>
-							<td>${cnt}</td>
-						</tr>
-					</table>
-					<table>
-						<thead>
-							<tr>
-								<th>10대</th>
-								<th>20대</th>
-								<th>30대</th>
-								<th>40대</th>
-								<th>50대 이상</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>00</td>
-								<td>00</td>
-								<td>00</td>
-								<td>00</td>
-								<td>00</td>
-							</tr>
-						</tbody>
-					</table>
-				<div class="ov-member">
-					<div class="ov-member-cnt">
-						<h1>회원관리 Overview</h1>
-						<table class="ov-member-cnt-tb">
-							<tr>
-								<th>총원</th>
-								<td>${cnt} 명</td>
-							</tr>
-						</table>
-					</div>
-					<div class="ov-member-group">
-					<h3>연령대별 회원 현황</h3>
-						<table class="ov-member-group-tb">
+						<tbody class="tbody">
 							<c:forEach items="${agDto}" var="agDto">
 								<tr>
-									<th>${agDto.year} 대 회원</th>
-									<td>${agDto.agnum} 명</td>
+									<th>${agDto.year}대회원</th>
+									<td>${agDto.agnum}명</td>
 								</tr>
 							</c:forEach>
-						</table>
-					</div>
+						</tbody>
+					</table>
 				</div>
 			</div>
 			<div class="Overview-Ticket">
@@ -97,6 +63,7 @@
 				</div>
 			</div>
 			<!-- Admin Overview End  -->
+
 		</div>
 	</div>
 </body>
