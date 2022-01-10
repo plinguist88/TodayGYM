@@ -92,5 +92,6 @@
 	parameterType="String"
 	resultType="com.project.todaygym.dto.SpotImageDto">
 	SELECT * FROM SPOT_TB, SIMG_TB WHERE SPOT_TB.s_code = SIMG_TB.s_code
+	AND SPOT_TB.s_code=#{s_code}
 	</select>
 </mapper>
