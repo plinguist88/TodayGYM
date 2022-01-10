@@ -15,7 +15,7 @@ body {
 
 .content {
 	margin: auto;
-	width: 80%;
+	width: 100%;
 	height: 100vh;
 	background-color: #fcfcfc;
 }
@@ -27,7 +27,6 @@ body {
 	border: 1px solid #000;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 15px;
-	
 	background-color: #000;
 	color: #fff;
 }
@@ -42,42 +41,21 @@ body {
 	background-color: #fcfcfc;
 }
 
-.ov-member{
-	padding: 10px;
-}
-.ov-member-cnt {
+.Overview-Member .group {
 	width: 100%;
-	margin-bottom: 10px;
-}
-.ov-member-cnt h1{
-	margin: 3px;
-}
-.ov-member-cnt-tb {
-	float: right;
-	width: 30%;
+	height: 70%;
 	text-align: center;
-	border-bottom: 5px double #000;
+	margin: 20px;
 }
-.ov-member-group{
-	width: 100%;
-	margin-top: 50px;
-}
-.ov-member-group h3{
-	/*margin-top: 30px;*/
-}
-.ov-member-group-tb{
-	width: 100%;
-	height: 200px;
-	text-align: center;
-	border-top: 5px double #000;
-}
-.ov-member-group-tb th{
+
+.Overview-Member .tbody th{
 	width: 40%;
-	border-bottom: 2px solid #cfcfcf;
 }
-.ov-member-group-tb td{
-	border-bottom: 2px solid #cfcfcf;
+
+.Overview-Member .group td {
+	
 }
+
 /*ticket*/
 .Overview-Ticket {
 	position: relative;
@@ -96,26 +74,24 @@ body {
 	width: 50%;
 	height: 50%;
 	background-color: #fcfcfc;
-	
 	overflow-x: hidden;
 }
 
-.Overview-Spot .spotOverview{
+.Overview-Spot .spotOverview {
 	display: flex;
 	flex-wrap: nowrap;
-	
 }
 
-.Overview-Spot .spotOverview .spotOverviewContent{
+.Overview-Spot .spotOverview .spotOverviewContent {
 	display: inline-block;
 }
 
-.Overview-Spot .spotOverview .spotOverviewContent img{
+.Overview-Spot .spotOverview .spotOverviewContent img {
 	width: 20vw;
 	height: 40vh;
 }
 
-.Overview-Spot .spotOverview .spotOverviewContent p{
+.Overview-Spot .spotOverview .spotOverviewContent p {
 	margin: 0;
 	text-align: center;
 	font-size: 1.5rem;
