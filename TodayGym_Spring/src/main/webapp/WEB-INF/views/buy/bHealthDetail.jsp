@@ -252,7 +252,10 @@
 	});
 	
 	function goCart() {
-		
+		var selectOk = document.getElementById("op_code").value;
+		if(selectOk == ""){
+			alert("옵션을 선택해주세요");
+		}
 		var getProduct = "${dInfo.p_code}";
 		
 		location.href = './directOrder?product=' + getProduct + '&option=' + varr[0];
