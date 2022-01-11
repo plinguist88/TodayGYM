@@ -246,16 +246,8 @@ li {
 	text-align: center;
 }
 
-.myPage-myClass-contents-null {
-	display: none;
-	width: 600px;
-	margin: 0 auto;
-	text-align: center;
-}
-
-
 .myPage-myClass-contents {
-	display: block;
+	dispaly: block;
 	width: 700px;
 	margin: 0 auto;
 }

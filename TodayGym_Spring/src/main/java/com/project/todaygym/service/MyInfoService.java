@@ -1,8 +1,6 @@
 package com.project.todaygym.service;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
@@ -68,7 +66,7 @@ public class MyInfoService {
 		
 		myInfo.setM_id(getId);
 		myInfo.setM_joindate(getMyInfo.getM_joindate());
-		myInfo.setM_point(getMyInfo.getM_point());
+		myInfo.setM_level(getMyInfo.getM_level());
 		
 		// JSP 페이지 데이터 전송
 		try {

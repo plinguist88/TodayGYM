@@ -222,14 +222,14 @@ li {
 
 .btn-payment {
 	width: 300px;
-	height: 60px;
+	height: 80px;
 	background-color: white;
 	font-size: 30px;
 }
 
 .btn-payment:hover{
 	width: 300px;
-	height: 60px;
+	height: 80px;
 	color: white;
 	background-color: black;
 	font-size: 30px;
@@ -277,15 +277,35 @@ li {
 }
 
 .btn-myclass {
-	width: 200px;
+	width: 300px;
 	height: 80px;
 	margin: 0 50px 0 0;
-	font-size: 20px;
+	background-color: white;
+	font-size: 30px;
+}
+
+.btn-myclass:hover{
+	width: 300px;
+	height: 80px;
+	margin: 0 50px 0 0;
+	color: white;
+	background-color: black;
+	font-size: 30px;
 }
 
 .btn-main {
-	width: 200px;
+	width: 300px;
 	height: 80px;
 	margin: 0 0 0 50px;
-	font-size: 20px;
+	background-color: white;
+	font-size: 30px;
+}
+
+.btn-main:hover{
+	width: 300px;
+	height: 80px;
+	margin: 0 0 0 50px;
+	color: white;
+	background-color: black;
+	font-size: 30px;
 }

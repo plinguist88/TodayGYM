@@ -13,6 +13,7 @@ public class MyClassDto {
 	private String p_cate;
 	private String p_subcate;
 	private String o_month;
+	private String m_id;
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm",
 			timezone = "Asia/Seoul")
 	private Timestamp t_issuedate;
