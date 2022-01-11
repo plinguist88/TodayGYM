@@ -149,28 +149,4 @@ public class ReviewService {
 		mv.setViewName("updateFrm");
 		return mv;
 	}
-	
-	
-	/*
-	 * @Transactional public String reviewsUpdate(MultipartHttpServletRequest multi,
-	 * RedirectAttributes rttr) { String view = null;
-	 * 
-	 * String rno = multi.getParameter("r_no"); String rtitle =
-	 * multi.getParameter("r_title"); String contents =
-	 * multi.getParameter("r_contents"); String cate = multi.getParameter("r_cate");
-	 * String score = multi.getParameter("r_score"); String id =
-	 * multi.getParameter("m_id");
-	 * 
-	 * contents = contents.trim();
-	 * 
-	 * log.info("reviewsUpdate() t: " + rtitle + ", c:" + contents);
-	 * 
-	 * ReviewDto rdto = new ReviewDto();
-	 * 
-	 * rdto.setR_no(Integer.parseInt(rno)); rdto.setR_title(rtitle);
-	 * rdto.setR_contents(contents); rdto.setM_id(id); rdto.setR_cate(cate);
-	 * 
-	 * 
-	 * view = "redirect:contents?rno=" + rno; return view; }
-	 */
 }

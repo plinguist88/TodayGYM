@@ -45,15 +45,15 @@
 								name="r_contents"></textarea>
 						</div>
 						<div class="review_star space-x-4 mx-auto" name="r_contents">
-							<input type="radio" id="5-stars" name="rating" value="5"
+							<input type="radio" id="5-stars" name="r_score" value="5"
 								v-model="ratings" /> <label for="5-stars" class="star pr-4">★</label>
-							<input type="radio" id="4-stars" name="rating" value="4"
+							<input type="radio" id="4-stars" name="r_score" value="4"
 								v-model="ratings" /> <label for="4-stars" class="star">★</label>
-							<input type="radio" id="3-stars" name="rating" value="3"
+							<input type="radio" id="3-stars" name="r_score" value="3"
 								v-model="ratings" /> <label for="3-stars" class="star">★</label>
-							<input type="radio" id="2-stars" name="rating" value="2"
+							<input type="radio" id="2-stars" name="r_score" value="2"
 								v-model="ratings" /> <label for="2-stars" class="star">★</label>
-							<input type="radio" id="1-star" name="rating" value="1"
+							<input type="radio" id="1-star" name="r_score" value="1"
 								v-model="ratings" /> <label for="1-star" class="star">★</label>
 						</div>
 						<div class="review_file">
