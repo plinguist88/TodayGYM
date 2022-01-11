@@ -5,15 +5,15 @@
 body{
 	margin: 0;
 	padding: 0;
-	background-color: #E6FFE6;
+	background-color: white;
 }
 .reivewfull{
 	position: relative;
 	top: 60px;
 	left: 0;
 	width: 100%;
-	height: 100vh;
-	background-color: #E6FFE6;
+	height: auto;
+	background-color: white;
 
 }
 .reviewmain{
@@ -22,11 +22,22 @@ body{
 }
 
 .board_name{
+	position:relative;
 	text-align: center;
+	width:100%;
+	height:400px;
+	font-size: 20px;
+	
 }
 
-.board_name h2{
+
+.board_name h1{
 	margin: 0;
+	color:white;
+	text-align: center;
+	font-weight: bold;
+	position: relative;
+	top:170px;
 }
 
 .review_menu{
@@ -41,37 +52,44 @@ body{
 }
 
 .menu_h{
-	width:70px;
-    height:30px;
+	width:150px;
+    height:40px;
     border: 2px solid skyblue ;
-    background-color: white;
     border-radius:5px;
     font-weight: bold;
- 
+}
+.menu_h a {
+	color: white;
 }
 .menu_s{
-	width:70px;
-    height:30px;
+	width:150px;
+    height:40px;
     border: 2px solid skyblue ;
-    background-color: white;
     border-radius:5px;
     font-weight: bold;
+}
+.menu_s a{
+	color:white;
 }
 .menu_c{
-	width:70px;
-    height:30px;
-    border: 2px solid skyblue ;
-    background-color: white;
+	width:150px;
+    height:40px;
+    border: 2px solid skyblue;
     border-radius:5px;
     font-weight: bold;
 }
+.menu_c a{
+	color:white;
+}
 .menu_c2{
-	width:70px;
-    height:30px;
+	width:150px;
+    height:40px;
     border: 2px solid skyblue ;
-    background-color: white;
     border-radius:5px;
     font-weight: bold;
+}
+.menu_c2 a{
+	color:white;
 }
 a{
 	text-decoration: none;
@@ -86,7 +104,7 @@ a{
 	justify-content: center;
 	align-items: center;
 	list-style: none;
-	background-color: #E6FFE6;
+	background-color: white;
 }
  
 .column_number{
@@ -110,12 +128,17 @@ a{
 	border: 3px solid solidblue;
 	width: 150px;
 	height: 50px;
-	margin-left: 750px;
+	position: relative;
+	
 }
 
 .td_list td{
 	text-align: center;
 	border: 1px solid grey ;
+	background-color: #dcdcdc;
+}
+.td_list td span{
+	color:#FFD228;
 }
 .table_review{
 	border-collapse: collapse;
@@ -158,4 +181,20 @@ a{
 	color:#575757;
 }
 
+.pageing_menu{
+	border: 1px solid;
+	border-radius: 5px;
+	float: right;
+}
+.pageing_menu a{
+	color:white;
+}
+.button_class{
+	width: 959px;
+	margin: 0 auto;
+	
+}
+.footer_class{
+	margin-top: 150px;
+}
 

@@ -25,21 +25,23 @@
 		<jsp:include page="../layout/header.jsp" />
 	</header>
 	<div class="reivewfull">
-		<div class="reviewmain">
-			<div class="board_name">
-				<h2>이용후기 게시판</h2>
+	<div class="board_name" style="background-image: url('resources/img/reviews/gray.jpg');">
+				<h1>이용후기 게시판</h1>
 			</div>
-			<div class="review_menu">
-				<button class="menu_h">
+	
+		<div class="reviewmain">
+		
+			<div class="review_menu" >
+				<button class="menu_h" style="background-image: url('resources/img/reviews/gray.jpg');">
 					<a href="">헬스</a>
 				</button>
-				<button class="menu_s">
+				<button class="menu_s" style="background-image: url('resources/img/reviews/gray.jpg');">
 					<a href="">수영</a>
 				</button>
-				<button class="menu_c">
+				<button class="menu_c" style="background-image: url('resources/img/reviews/gray.jpg');">
 					<a href="">크로스핏</a>
 				</button>
-				<button class="menu_c2">
+				<button class="menu_c2" style="background-image: url('resources/img/reviews/gray.jpg');">
 					<a href="">클라이밍</a>
 				</button>
 			</div>
@@ -74,16 +76,19 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
+		
 		<div class="pageing" style="text-align: center; margin-top: 10px;">
-			<div class="rvpaging">${paging}</div>
-			<button class="pageing_menu">
+			<div class="rvpaging">${paging}</div>		
+		</div>
+		<div class= "button_class">
+			<button class="pageing_menu" style="background-image: url('resources/img/reviews/gray.jpg');" >
 				<a href="reviewsWrite" style="font-size: 25px"
 					border="2px solid skyblue">글쓰기</a>
 			</button>
 		</div>
+		</div>
 	</div>
-	<footer>
+	<footer class="footer_class">
 		<jsp:include page="../layout/footer.jsp" />
 	</footer>
 </body>
