@@ -17,7 +17,7 @@ public class MemberDto {
 	@JsonFormat(pattern = "yyyy-MM-dd",
 			timezone = "Asia/Seoul")
 	private Timestamp m_joindate;
-	private String m_level;
+	private int m_level;
 	
 	//검색필터
 	private String type;

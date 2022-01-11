@@ -19,12 +19,12 @@ public class AdCheckIdService {
 
 		if(session != null) {
 			mDto = (MemberDto) session.getAttribute("mb");
-			String m_id = mDto.getM_id();
+			int m_level = mDto.getM_level();
 			
 			mv = new ModelAndView();
 			
-			if(m_id.equals("admin")) {
-				mv.addObject("m_id", m_id);
+			if(m_level == 1) {
+				mv.addObject("m_level", m_level);
 				mv.setViewName("admin/adMain");
 			} else {
 				mv.setViewName("admin/home");
