@@ -17,37 +17,19 @@ public class AdminTicketController {
 
 	private static final Logger Logger = 
 			LoggerFactory.getLogger(AdminTicketController.class);
-	
+
 	@Autowired
 	private AdTicketListService adTServ;
-	
+
 	private ModelAndView mv;
-	
+
 	//회원권 관리 이동 및 리스트 출력
 	@GetMapping("adTicketMove.ad")
 	public ModelAndView adTicketList() {
 		Logger.info("adTicketList()");
-		
+
 		mv = adTServ.getAdTicketList();
-		
+
 		return mv;
 	}
-	
-	//회원권 상세 페이지 이동
-	/*@GetMapping("adTicketDetailMove.ad")
-	public String adTicketDetailMove() {
-	Logger.info("adTicketDetailMove()");
-		
-		return "admin/adTicketDetail";
-	}*/
-	
-	//회원권 상세 페이지 이동
-//	@GetMapping("adTicketDetailMove.ad")
-//	public ModelAndView adTicketDetailMove2(int t_no) {
-//		Logger.info("adTicketDetailMove()");
-//		
-//		mv = adTServ.getTicketDetail(t_no);
-//		
-//		return mv;
-//	}
 }

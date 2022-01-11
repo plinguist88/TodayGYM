@@ -19,36 +19,25 @@ import com.project.todaygym.util.adPagingUtil;
 
 @Service
 public class AdTicketListService {
-	
+
 	@Autowired
 	private AdTicketDao adTDao;
-	
+
 	@Autowired
 	private HttpSession session;
-	
+
 	private ModelAndView mv;
-	
+
 	//회원권 관리 및 리스트 출력
 	public ModelAndView getAdTicketList() {
 		mv = new ModelAndView();
-		
+
 		List<MyClassDto> tDto = adTDao.getTicketList();
-		
+
 		mv.addObject("tDto", tDto);
-		
+
 		mv.setViewName("admin/adTicketList");
-		
+
 		return mv;
 	}
-	
-	/*public ModelAndView getTicketDetail(int t_no) {
-		mv = new ModelAndView();
-		
-		AdTicketDto ticket = adTDao.getTDetail(t_no);
-		
-		mv.addObject("ticket", ticket);
-		mv.setViewName("admin/adTicketDetail");
-		
-		return mv;
-	}*/
 }
