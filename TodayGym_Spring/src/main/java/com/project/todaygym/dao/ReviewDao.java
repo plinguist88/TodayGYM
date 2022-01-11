@@ -13,7 +13,7 @@ public interface ReviewDao {
 	//전체 리뷰 게시글 개수 구하기
 	public int reviewsCnt();
 	//게시글 저장 
-	public void WriteInsert(ReviewDto tdto);
+	public void WriteInsert(ReviewDto rdto);
 	//게시글 목록 가져오기
 	public List<ReviewDto> getList(Map<String , Integer> pmap);
 	//디테일 가져오기

@@ -11,7 +11,7 @@
 	<![CDATA[
 	SELECT * FROM RV_VIEW_1
 	WHERE RONUM >=(#{num} * #{lcnt}) - (#{lcnt} - 1)  
-			AND RONUM <= #{num} * #{lcnt}
+			AND RONUM <= #{num} * #{lcnt} ORDER BY RONUM DESC
 		]]>
 
 	</select>
@@ -33,9 +33,6 @@
 		(#{r_no},#{r_cate},#{r_title},#{r_contents}
 		,#{m_id},SYSDATE,#{r_score})
 	</insert>
-	<!-- <select id="getList" resultType="com.project.todaygym.dto.ReviewDto"> 
-		SELECT * FROM REVIEW_TB ORDER BY r_no DESC </select> -->
-
 	<select id="getDetail" parameterType="String"
 		resultType="com.project.todaygym.dto.ReviewDto">
 		SELECT * FROM REVIEW_TB WHERE r_title = #{r_title}

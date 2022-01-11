@@ -40,10 +40,7 @@ public class ReviewsController {
 	@PostMapping("reviewWriteAct")
 	public String reviewWriteAct(ReviewDto rdto, RedirectAttributes rttr) {
 		logger.info("reviewWriteAct()");
-		
-		rdto.setR_score(3);
-		System.out.println(rdto);
-		
+		System.out.println("=====================" + rdto);
 		String view = tServe.WriteAct(rdto , rttr);
 		return view;		
 	}
@@ -71,7 +68,7 @@ public class ReviewsController {
 	}
 	
 	//delete 삭제하기
-	@GetMapping("reviewsdelete")
+	@GetMapping("reviewsDelete")
 	public ModelAndView reviewsDelete(Integer pageNum, Integer r_no) {
 		logger.info("reviewsDelete()");
 		String msg = tServe.reviewsDelete(r_no);
