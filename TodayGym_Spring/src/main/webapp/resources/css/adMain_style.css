@@ -15,8 +15,8 @@ body {
 
 .content {
 	margin: auto;
-	width: 100%;
-	height: 100vh;
+	width: 80%;
+	height: 80vh;
 	background-color: #fcfcfc;
 }
 
@@ -48,7 +48,7 @@ body {
 	margin: 30px;
 }
 
-.Overview-Member .group tbody{
+.Overview-Member .group tbody {
 	width: 100%;
 }
 
@@ -58,7 +58,8 @@ body {
 	color: #fcfcfc;
 	border-radius: 7px;
 }
-.Overview-Member .group td{
+
+.Overview-Member .group td {
 	width: 60%;
 	border: 2px solid #000;
 	border-radius: 7px;
@@ -86,17 +87,21 @@ body {
 
 .Overview-Spot .spotOverview {
 	display: flex;
-	flex-wrap: nowrap;
 	overflow-x: auto;
 }
 
 .Overview-Spot .spotOverview .spotOverviewContent {
 	display: inline-block;
+	margin: 10px;
+	border: 3px solid #000;
+	border-radius: 20px;
 }
 
 .Overview-Spot .spotOverview .spotOverviewContent img {
 	width: 20vw;
-	height: 40vh;
+	height: 30vh;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
 }
 
 .Overview-Spot .spotOverview .spotOverviewContent p {
