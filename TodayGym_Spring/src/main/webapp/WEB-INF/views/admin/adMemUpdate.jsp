@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>회원정보 수정 페이지</title>
 <link type="text/css" rel="stylesheet"
-	href="resources/css/adMem_style.css">
+	href="resources/css/adMemUpdate_style.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="module"
@@ -35,32 +35,29 @@
 				<form action="./adMemUpdateAct" class="content" method="post"
 					enctype="multipart/form-data"
 					onkeydown="return event.key != 'Enter';">
-					<div class="content-admemUp">
-						<h2>회원 정보 수정</h2>
-						<table class="adUpdate-main">
-							<thead>
+					<div class="content">
+						<table class="updateTable">
+							<thead class="top">
+								<tr>
+									<th colspan="5"><h1>회원 정보 수정</h1></th>
+								</tr>
+							</thead>
+							<thead class="bottom">
 								<tr>
 									<th>이름</th>
 									<td><input type="text" class="admem-up-write"
 										name="m_name" autofocus placeholder="이름"
 										value="${memdto.m_name}" required></td>
-								</tr>
-								<tr>
 									<th>가입일자</th>
 									<td>${memdto.m_joindate}</td>
 								</tr>
 							</thead>
-						</table>
-
-						<table class="adUpdate-sub">
-							<thead>
+							<tbody class="updateList">
 								<tr>
 									<th>아이디</th>
 									<td>${memdto.m_id}<input type="hidden" name="m_id"
 										value="${memdto.m_id}">
 									</td>
-								</tr>
-								<tr>
 									<th>생년월일</th>
 									<td><input type="text" class="admem-up-write"
 										name="m_birth" autofocus placeholder="생년월일"
@@ -69,10 +66,8 @@
 								<tr>
 									<th>연락처</th>
 									<td><input type="text" class="admem-up-write"
-										name="m_phone" autofocus placeholder="연락처"
+										name="m_phone" autofocus maxlength="11" placeholder="연락처"
 										value="${memdto.m_phone}" required></td>
-								</tr>
-								<tr>
 									<th>E-mail</th>
 									<td><input type="text" class="admem-up-write"
 										name="m_email" autofocus placeholder="E-mail"
@@ -81,18 +76,14 @@
 								<tr>
 									<th>보유 회원권</th>
 									<td>null</td>
-								</tr>
-								<tr>
 									<th>보유 포인트</th>
 									<td>${memdto.m_point}</td>
 								</tr>
-							</thead>
+							</tbody>
 						</table>
-					</div>
-
-					<!-- 수정 완료 버튼 -->
-					<div class="admem-btnarea">
-						<input class="admem-btnarea-upendbtn" type="submit" value="수정 완료">
+						<div class="updateBtn">
+							<button class="upBtn" type="submit">수정 완료</button>
+						</div>
 					</div>
 				</form>
 			</div>
