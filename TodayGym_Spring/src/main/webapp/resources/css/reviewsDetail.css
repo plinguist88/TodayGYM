@@ -11,14 +11,12 @@ body{
 	justify-content: center;
 	align-items: center;
 	margin-top: 60px;
-	background-color: red;
-
 }
 .detailcontents{
-	display: flex;
+	display: flex;	
 	width: 980px;
 	height: 400px;
-	background-color: blue;
+	background-color: #dcdcdc;
 }
 .detail_img{
 	width:500px;
@@ -26,10 +24,15 @@ body{
 	background-color: orange;
 }
 .userbox{
-	width:400px;
 	height:300px;
+	width:390px;
 	background-color: white;
 	margin-left: 50px;
+}
+.detail_box{
+	border-radius: 3px;
+	border: 2px solid ;
+	background-color:#009879; 
 }
 .detail_lower{
 	display: flex;
@@ -38,30 +41,41 @@ body{
 	background-color: white;
 }
 
+.user_box{
+	display: flex;
+}
 .detail_user{
-	display:flex;
+	float: left;
+	width:150px; 
 }
 
 .detail_user2{
-	width:300px;
-	margin-left: 40px;
+	float: right;
+	width:150px;	
+}
+.select_box{
+	display: flex;
 }
 .detail_select{
-	display: flex;
+	float: left;
+	width:150px; 
 }
 .detail_select2{
-	width:74%;
-	margin-left: 40px;
+	float: right;
+	width:150px; 
 }
-.detail_title{
+.titile_box{
 	display: flex;
 }
+.detail_title{
+	float: left;
+	width:150px;
+}
 .detail_title2{
-	width:74%;
-	margin-left: 40px;
+	float: right;
+	width:150px;
 }
 .detail_content2{
-	background-color: purple;
 	width:100%;
 	height: 100%;
 }
@@ -77,9 +91,20 @@ body{
 	width: 130px;
 	height: 60px;
 }
+.detail_modify a{
+	color: white;
+}
 .detail_delete button{
 	width: 130px;
 	height: 60px;
-	margin-left: 10px;
+	margin-left: 10px;	
 }
-
+.detail_delete a{
+	color: white;
+}
+h1 span{
+	color:#FFD228;
+}
+.footer_box{
+	margin-top: 100px;
+}
