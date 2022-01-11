@@ -9,6 +9,7 @@ import lombok.Data;
 @Data
 public class MyClassDto {
 	
+	private int t_no;
 	private String p_img;
 	private String p_cate;
 	private String p_subcate;

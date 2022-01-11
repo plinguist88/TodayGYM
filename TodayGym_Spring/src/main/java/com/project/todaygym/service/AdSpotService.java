@@ -119,7 +119,7 @@ public class AdSpotService {
 		List<MultipartFile> fileList = mhr.getFiles("s_images");
 
 		//이미지 파일 처리 서비스
-		String savePath = "C:\\Users\\Hi\\gitRepository\\TodayGym\\TodayGym_Spring\\src\\main\\webapp\\resources\\img\\admin\\";
+		String savePath = "C:\\Users\\pling\\Documents\\GitHub\\TodayGym\\TodayGym_Spring\\src\\main\\webapp\\resources\\img\\admin\\"
 
 		for(MultipartFile mf : fileList) {
 			String simg_ori = mf.getOriginalFilename();

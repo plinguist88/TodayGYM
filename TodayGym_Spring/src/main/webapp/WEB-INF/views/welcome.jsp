@@ -34,8 +34,6 @@
 					<span class="second">00</span> <span>Seconds</span>
 				</div>
 			</div>
-			<br> <br> <br> <br> <br> <br> <br>
-			<!-- <a href="adMainMove.ad">임시링크 : 관리자</a> -->
 		</div>
 	</div>
 	<script type="text/javascript">

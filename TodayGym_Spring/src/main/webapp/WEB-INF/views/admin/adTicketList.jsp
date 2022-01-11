@@ -46,13 +46,14 @@
 				</thead>
 				<!-- Ticket List Contents -->
 				<tbody class="ticketList">
-					<c:forEach items="${tList}" var="tlist">
+					<c:forEach items="${tDto}" var="tList">
 						<tr>
-							<td><a href="adTicketDetailMove.ad?t_no=${tlist.t_no}">${tlist.t_no}</a></td>
+							<td><a href="adTicketDetailMove.ad?t_no=${tList.t_no}">${tList.t_no}</a></td>
 							<td><a href="adMemDetailMove?m_id=${tlist.m_id}">${tlist.m_name}</a></td>
-							<td>${tlist.p_cate}</td>
-							<td>${tlist.p_subcate}</td>
-							<td>${tlist.p_date}</td>
+							<td>${tList.p_cate}</td>
+							<td>${tList.p_subcate}</td>
+							<td>${tList.t_issuedate}</td>
+							<td>${tList.t_use}</td>
 							<td><button class="button ticketOn">사용</button></td>
 						</tr>
 					</c:forEach>

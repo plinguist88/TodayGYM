@@ -18,7 +18,7 @@
 	<div class="navbar_menu">
 		<ul>
 			<li><a href="home">HOME</a></li>
-			<li><a href="">ABOUT</a></li>
+			<li><a href="about">ABOUT</a></li>
 			<li><a href="product">PROGRAM</a></li>
 			<li><a href="spotHome">SPOT</a></li>
 			<li><a href="review">REVIEW</a></li>

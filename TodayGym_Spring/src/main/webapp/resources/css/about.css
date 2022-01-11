@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+*{
+	margin : 0px 0px;
+}
+li{
+	list-style: none;
+}
+.main_section{
+	height: 2000px;
+	margin-top: 60px;
+	margin-bottom: 200px;
+}
+.section_info{
+	width: 100%;
+	height: 400px;
+	margin: 0 auto;
+}
+.section_info_img{
+	width: 100%;
+	margin: 0 auto;
+}
+.infoimg{
+	width: 100%;
+	height: 400px;
+}
+.section_info_title{
+	text-align: center;
+	position: relative;
+	bottom: 260px;
+	color: white;
+	font-size: 40px;
+}
+.section_info_title p{
+	font-size: 20px;	
+}
+.main_header{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 60px;
+}
+.main_header h1{
+	font-size: 35px;
+}
+.main_header img{
+	width: 255px;
+	height: 2px;
+	position: relative;
+	top: -10px;
+}
+.main_header1{
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 20px;	
+	margin-bottom: 60px;
+}
+.main_header1 div{
+	font-size: 22px;
+}
+.main_section_right img{
+	width: 380px;
+	height: 500px;
+}
+.main_section_center{
+	width: 1100px;
+	margin: 0 auto;
+}
+.main_section_left{
+	float: left;
+	width: 60%;
+}
+.left_p1{
+	color: #b22000;
+	font-size: 30px;
+	font-weight: bold;
+}
+.left_p2{
+	font-size: 30px;
+	margin-top: 5px;
+}
+.left_p3{
+	margin-top: 50px;
+	font-size: 18px;
+	line-height: 32px;
+	font-family: sans-serif;
+}
+.left_p3 strong{
+	color: red;
+}
+.main_section_right{
+	float: right;
+	width: 30%;
+}
+
+.right_p1 p{
+	float: right;
+	position: relative;
+	left: 50px;
+	margin-top: 10px;
+	font-size: 20px;
+}
+.section2{
+	width: 1200px;
+	height: 600px;
+	margin: 0 auto;
+	margin-top: 700px;
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    background-color: #eee;
+    padding-top: 60px;
+}
+.section2_main{
+	height: 600px;
+}
+.section2_main li{
+	float: left;
+	width: 33%;
+}
+.section2_main img{
+	width: 347.8px;
+	height: 250px;
+}
+.section2_main p{
+	width: 80%;
+}
+.main_div div{
+	width: 300px;
+}
+.back_white{
+	background-color: white;
+	margin-right: 35px;
+	height: 250px;
+}
+.paddingall{
+	padding: 20px;
+	line-height: 25px;
+}
+.back_white h2{
+	padding: 20px;
+	
+}

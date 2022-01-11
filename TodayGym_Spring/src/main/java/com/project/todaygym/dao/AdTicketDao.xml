@@ -4,17 +4,8 @@
 
 <mapper namespace="com.project.todaygym.dao.AdTicketDao">
 
-	<select id="getAdTList" parameterType="HashMap"
-		resultType="com.project.todaygym.dto.AdTicketDto">
-		<![CDATA[
-		SELECT * FROM TICKET_TB
-		WHERE RONUM >= (#{num} * #{lCnt}) - (#{lCnt} - 1)  
-			AND RONUM <= #{num} * #{lCnt}
-		]]>
-	</select>
-	
-	<select id="getTicketLCnt" resultType="Integer">
-		SELECT COUNT(*) FROM TICKET_TB
+	<select id="getTicketList" resultType="com.project.todaygym.dto.MyClassDto">
+		select * from ticketlist_1
 	</select>
 
 </mapper>
