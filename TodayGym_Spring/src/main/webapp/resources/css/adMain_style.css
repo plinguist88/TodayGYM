@@ -73,12 +73,12 @@ body {
 	width: 50%;
 	height: 50%;
 	background-color: #fcfcfc;
-	overflow-x: hidden;
 }
 
 .Overview-Spot .spotOverview {
 	display: flex;
 	flex-wrap: nowrap;
+	overflow-x: auto;
 }
 
 .Overview-Spot .spotOverview .spotOverviewContent {
