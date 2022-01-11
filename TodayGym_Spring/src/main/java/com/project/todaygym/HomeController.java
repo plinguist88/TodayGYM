@@ -56,4 +56,10 @@ public class HomeController {
 		
 		return mv;
 	}
+	// about 페이지로 이동
+	@GetMapping("about")
+	public String about() {
+		logger.info("about()");
+		return "about";
+	}
 } // class end
