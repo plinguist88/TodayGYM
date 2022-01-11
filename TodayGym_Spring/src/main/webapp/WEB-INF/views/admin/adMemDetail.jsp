@@ -67,7 +67,7 @@
 								<th>보유 회원권</th>
 								<td>---</td>
 								<th>보유 포인트</th>
-								<td>${memdto.m_point}</td>
+								<td>${memdto.m_level}</td>
 							</tr>
 						</tbody>
 					</table>

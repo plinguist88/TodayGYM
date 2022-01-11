@@ -31,6 +31,4 @@
 		<beans:property name="maxInMemorySize" value="10000000"/>
 	</beans:bean><!-- size 단위는 byte. 현재 설정은 10mb -->
 	
-	
-	
 </beans:beans>
