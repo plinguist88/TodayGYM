@@ -34,4 +34,8 @@ public interface AdSpotDao {
 	public SpotDto spotDetailInfo(String s_code);
 	//해당 이미지 정보 출력 
 	public List<SpotImageDto> spotDetailImg(String s_code);
+	
+	
+	//해당지점 이미지 출력 
+	public SpotImageDto spotHomeImg(String s_code);
 }

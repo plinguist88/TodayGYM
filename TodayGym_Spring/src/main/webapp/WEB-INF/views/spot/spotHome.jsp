@@ -38,10 +38,10 @@
 		<section>
 			<form>
 				<fieldset >
-					<c:forEach items="${sList}" var ="sList">
+					<c:forEach items="${sList}" var ="sList" varStatus="st">
 					<div class=spot_container>
 						<div class=spot_image1>
-							<img class=z_img src="resources/img/spot/x.jpg">
+							<img class=z_img src="${imgList[st.index].simg_sys}">
 						</div>
 
 						<div class=spot_content>
