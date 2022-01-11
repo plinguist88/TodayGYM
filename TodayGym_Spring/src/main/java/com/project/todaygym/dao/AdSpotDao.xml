@@ -87,11 +87,19 @@
 		SELECT * FROM SPOT_TB WHERE s_code =#{s_code,
 		jdbcType=VARCHAR}
 	</select>
-	
-	<select id="spotDetailImg"
-	parameterType="String"
-	resultType="com.project.todaygym.dto.SpotImageDto">
-	SELECT * FROM SPOT_TB, SIMG_TB WHERE SPOT_TB.s_code = SIMG_TB.s_code
-	AND SPOT_TB.s_code=#{s_code}
+
+	<select id="spotDetailImg" parameterType="String"
+		resultType="com.project.todaygym.dto.SpotImageDto">
+		SELECT * FROM SPOT_TB, SIMG_TB WHERE SPOT_TB.s_code = SIMG_TB.s_code
+		AND SPOT_TB.s_code=#{s_code}
+	</select>
+
+	<select id="spotHomeImg" parameterType="String"
+		resultType="com.project.todaygym.dto.SpotImageDto">
+		select simg_ori, simg_sys from simg_tb
+		where simg_no =	(
+			select min(simg_no) from simg_tb
+			where s_code = #{s_code}
+		)
 	</select>
 </mapper>
