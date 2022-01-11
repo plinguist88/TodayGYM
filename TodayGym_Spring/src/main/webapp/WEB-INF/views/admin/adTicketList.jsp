@@ -40,7 +40,7 @@
 						<td>회원 이름</td>
 						<td>회원권 종목</td>
 						<td>회원권 이름</td>
-						<td>사용기간</td>
+						<td>구매날짜</td>
 						<td>사용여부</td>
 					</tr>
 				</thead>
@@ -48,13 +48,12 @@
 				<tbody class="ticketList">
 					<c:forEach items="${tDto}" var="tList">
 						<tr>
-							<td><a href="adTicketDetailMove.ad?t_no=${tList.t_no}">${tList.t_no}</a></td>
-							<td><a href="adMemDetailMove?m_id=${tlist.m_id}">${tlist.m_name}</a></td>
+							<td>${tList.t_no}</td>
+							<td><a href="adMemDetailMove?m_id=${tList.m_id}">${tList.m_name}</a></td>
 							<td>${tList.p_cate}</td>
 							<td>${tList.p_subcate}</td>
 							<td>${tList.t_issuedate}</td>
-							<td>${tList.t_use}</td>
-							<td><button class="button ticketOn">사용</button></td>
+							<td><button class="button ticketOn">${tList.t_use}</button></td>
 						</tr>
 					</c:forEach>
 				</tbody>
