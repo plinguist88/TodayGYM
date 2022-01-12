@@ -26,9 +26,12 @@
 	<select id="classListSelect" parameterType="com.project.todaygym.dto.MyClassPageDto" resultType="com.project.todaygym.dto.MyClassDto">
 		
 		<![CDATA[
-        SELECT * FROM TICKETLIST_1
-        WHERE RONUM >= (#{start} * #{listCnt}) - (#{listCnt} - 1) AND RONUM <= #{start} * #{listCnt}
-        AND m_id=#{m_id}
+		
+		SELECT * FROM
+		(SELECT ROWNUM AS RONUM, T_NO, M_ID, T_ISSUEDATE, T_USE, M_NAME, P_IMG, P_CATE, P_SUBCATE, O_MONTH FROM
+		(SELECT * FROM TICKETLIST WHERE m_id=#{m_id} ORDER BY T_NO DESC))
+		WHERE RONUM >= (#{start} * #{listCnt}) - (#{listCnt} - 1) AND RONUM <= #{start} * #{listCnt}
+		
 		]]>
 
 	</select>
