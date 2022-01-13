@@ -32,19 +32,25 @@
 
 		<div class="reviewmain">
 			<div class="review_menu">
-				<button class="menu_h" value="헬스"
+			
+				<button class="menu" value="전체"
+					style="background-image: url('resources/img/reviews/gray.jpg');">
+					<a href="review">전체</a>
+				
+				</button>
+				<button class="menu" value="헬스"
 					style="background-image: url('resources/img/reviews/gray.jpg');">
 					<a href="review?r_cate=헬스">헬스</a>
 				</button>
-				<button class="menu_s"
+				<button class="menu"
 					style="background-image: url('resources/img/reviews/gray.jpg');">
 					<a href="review?r_cate=수영">수영</a>
 				</button>
-				<button class="menu_c"
+				<button class="menu"
 					style="background-image: url('resources/img/reviews/gray.jpg');">
 					<a href="review?r_cate=크로스핏">크로스핏</a>
 				</button>
-				<button class="menu_c2"
+				<button class="menu"
 					style="background-image: url('resources/img/reviews/gray.jpg');">
 					<a href="review?r_cate=클라이밍">클라이밍</a>
 				</button>
