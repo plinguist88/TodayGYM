@@ -4,14 +4,13 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-image: url("../../img/admin/adMainBackground.jpg");
 }
 
 .content-admin {
 	width: 100%;
 	height: 100vh;
 	display: flex;
-	background-color: #fff;
+	background-color: #fcfcfc;
 }
 
 .content {
