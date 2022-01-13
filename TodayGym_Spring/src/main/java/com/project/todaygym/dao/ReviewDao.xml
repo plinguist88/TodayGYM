@@ -74,14 +74,24 @@
 	
 	
 	
-	<select id="getDetail" parameterType="String"
+	<select id="getDetail" parameterType="Integer"
 		resultType="com.project.todaygym.dto.ReviewDto">
-		SELECT * FROM REVIEW_TB WHERE r_title = #{r_title}
+		SELECT * FROM REVIEW_TB WHERE r_no = #{r_no}
 	</select>
+	
+	<select id="getImage" parameterType="Integer"
+		resultType="com.project.todaygym.dto.ReviewImageDto">
+		SELECT * FROM RIMG_TB WHERE r_no = #{r_no}
+	</select>
+	
+	
 
 	<delete id="reviewsDelete" parameterType="Integer">
-		DELETE FROM REVIEW_TB
-		WHERE r_no = #{r_no}
+		BEGIN
+		DELETE FROM RIMG_TB
+		WHERE r_no=#{r_no};
+		DELETE FROM REVIEW_TB WHERE r_no=#{r_no};
+		END;
 	</delete>
 
 	<update id="reviesUpdate"
