@@ -6,34 +6,58 @@
 	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
-	
+
+	<!-- 메일보내기 -->
+	<!-- gmail설정 -->
+	<bean id="mailSender2"
+		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="kitae14@gmail.com" /> <!-- 자신의 이메일 아이디 -->
+		<property name="password" value="leeki2486~!" /> <!-- 자신의 비밀번호 -->
+		<!-- 보안연결 TLS과 관련된 설정 -->
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.transport.protocol">smtp</prop>
+				<prop key="mail.debug">true</prop>
+				<prop key="mail.smtp.ssl.trust">smtp.gmail.com</prop>
+				<prop key="mail.smtp.ssl.protocols">TLSv1.2</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	
+
 	<!-- DB 처리용 객체(dataSource) -->
-	<bean id="dataSource" 
+	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
-			value="net.sf.log4jdbc.DriverSpy"/>
+			value="net.sf.log4jdbc.DriverSpy" />
 		<property name="url"
-			value="jdbc:log4jdbc:oracle:thin:@localhost:1521:xe"/>
-		<property name="username" value="togym"/>
-		<property name="password" value="1234"/>
+			value="jdbc:log4jdbc:oracle:thin:@localhost:1521:xe" />
+		<property name="username" value="togym" />
+		<property name="password" value="1234" />
 	</bean>
-	
+
 	<!-- mybatis 처리 객체 -->
 	<bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource"/>
+		<property name="dataSource" ref="dataSource" />
 	</bean>
-	
+
 	<!-- 트랜잭션 처리용 bean 작성 -->
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="dataSource"/>
+		<property name="dataSource" ref="dataSource" />
 	</bean>
-	
-	<tx:annotation-driven/>
-	
-	<mybatis-spring:scan base-package="com.project.todaygym.dao"/>
-		
+
+	<tx:annotation-driven />
+
+	<mybatis-spring:scan
+		base-package="com.project.todaygym.dao" />
+
 </beans>
