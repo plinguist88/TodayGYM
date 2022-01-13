@@ -23,7 +23,8 @@
 			<form action="reviewWriteAct" method="post" name="rdto" enctype="multipart/form-data">
 				<div class="review_full">
 
-					<div class="review_title">
+					<div class="review_title"
+					style="background-image: url('resources/img/reviews/gray.jpg');">
 						<h1>글쓰기</h1>
 					</div>
 					<div class="review_event">
@@ -61,8 +62,8 @@
 							<input type="file" name="r_image" value="파일선택">
 						</div>
 						<div class="review_button">
-							<input id="ohgvva" type="submit" value="작성완료"> <input
-								id="ohgvva2" type="button" value="취소">
+							<input type="submit" value="작성완료"> 
+							<a href="review"><input type="button" value="취소"></a>
 						</div>
 					</div>
 				</div>

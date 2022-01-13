@@ -1,171 +1,151 @@
 @charset "UTF-8";
 
 /******************************** reviews area ******************************/
-
-body{
+body {
 	margin: 0;
 	padding: 0;
 	background-color: white;
 }
-.reivewfull{
+
+.reivewfull {
 	position: relative;
 	top: 60px;
 	left: 0;
 	width: 100%;
 	height: auto;
 	background-color: white;
-
 }
-.reviewmain{
+
+.reviewmain {
 	width: 100%;
 	height: 130px;
 }
 
-.board_name{
-	position:relative;
+.board_name {
+	position: relative;
 	text-align: center;
-	width:100%;
-	height:400px;
+	width: 100%;
+	height: 400px;
 	font-size: 20px;
-	
 }
 
-
-.board_name h1{
+.board_name h1 {
 	margin: 0;
-	color:white;
+	color: white;
 	text-align: center;
 	font-weight: bold;
 	position: relative;
-	top:170px;
+	top: 170px;
 }
 
-.review_menu{
-	display:flex;
+.review_menu {
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	list-style: none;
 }
 
-.review_menu button{
+.review_menu button {
 	margin: 20px;
 }
 
-.menu_h{
-	width:150px;
-    height:40px;
-    border: 2px solid skyblue ;
-    border-radius:5px;
-    font-weight: bold;
+.menu {
+	width: 150px;
+	height: 40px;
+	border: 2px solid skyblue;
+	border-radius: 5px;
+	font-weight: bold;
 }
-.menu_h a {
+
+.menu a {
 	color: white;
 }
-.menu_s{
-	width:150px;
-    height:40px;
-    border: 2px solid skyblue ;
-    border-radius:5px;
-    font-weight: bold;
-}
-.menu_s a{
-	color:white;
-}
-.menu_c{
-	width:150px;
-    height:40px;
-    border: 2px solid skyblue;
-    border-radius:5px;
-    font-weight: bold;
-}
-.menu_c a{
-	color:white;
-}
-.menu_c2{
-	width:150px;
-    height:40px;
-    border: 2px solid skyblue ;
-    border-radius:5px;
-    font-weight: bold;
-}
-.menu_c2 a{
-	color:white;
-}
-a{
+
+a {
 	text-decoration: none;
-	color:#5a5a5a;
+	color: #5a5a5a;
 }
-.table_full{
+
+.table_full {
 	background-color: white;
 }
-.low{
+
+.low {
 	width: 100%;
-	display:flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	list-style: none;
 	background-color: white;
 }
- 
-.column_number{
-	width: 120px; 
-}
-.column_title{
-	width: 240px; 
-}
-.column_id{
-	width: 120px; 
-}
-.column_day{
-	width: 120px; 
-}
-.column_score{
-	width: 120px; 
+
+.column_number {
+	width: 120px;
 }
 
-.pageing_menu{
+.column_title {
+	width: 240px;
+}
+
+.column_id {
+	width: 120px;
+}
+
+.column_day {
+	width: 120px;
+}
+
+.column_score {
+	width: 120px;
+}
+
+.pageing_menu {
 	margin-top: 10px;
 	border: 3px solid solidblue;
 	width: 150px;
 	height: 50px;
 	position: relative;
-	
 }
 
-.td_list td{
+.td_list td {
 	text-align: center;
-	border: 1px solid grey ;
+	border: 1px solid grey;
 	background-color: #dcdcdc;
 }
-.td_list td span{
-	color:#FFD228;
+
+.td_list td span {
+	color: #FFD228;
 }
-.table_review{
+
+.table_review {
 	border-collapse: collapse;
 	font-size: 0.9em;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 	text-align: center;
-	border:2px solid #ffebb5;
+	border: 2px solid #ffebb5;
 	background-color: white;
 }
-.table_review thead tr{
+
+.table_review thead tr {
 	background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
-    text-align: center;
-}
-.table_review th,
-.table_review td{
-	padding:12px 15px;
-}
-.rvpaging{
-	width: 200px;
-	margin: 0px auto;
-	opacity:0.8;
+	color: #ffffff;
+	text-align: left;
+	font-weight: bold;
 	text-align: center;
 }
-.rvpaging .pno{
+
+.table_review th, .table_review td {
+	padding: 12px 15px;
+}
+
+.rvpaging {
+	width: 200px;
+	margin: 0px auto;
+	opacity: 0.8;
+	text-align: center;
+}
+
+.rvpaging .pno {
 	background-color: #efefef;
 	margin: 3px;
 	border: 1px solid #6c6c6c;
@@ -174,27 +154,30 @@ a{
 	font-size: 15px;
 	height: 20px;
 }
-.rvpaging>a{
+
+.rvpaging>a {
 	text-decoration: none;
-}	
-.rvpaging>a:visited{
-	color:#575757;
 }
 
-.pageing_menu{
+.rvpaging>a:visited {
+	color: #575757;
+}
+
+.pageing_menu {
 	border: 1px solid;
 	border-radius: 5px;
 	float: right;
 }
-.pageing_menu a{
-	color:white;
-}
-.button_class{
-	width: 959px;
-	margin: 0 auto;
-	
-}
-.footer_class{
-	margin-top: 150px;
+
+.pageing_menu a {
+	color: white;
 }
 
+.button_class {
+	width: 959px;
+	margin: 0 auto;
+}
+
+.footer_class {
+	margin-top: 150px;
+}
