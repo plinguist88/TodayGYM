@@ -17,7 +17,7 @@
 		<jsp:include page="layout/header.jsp" />
 	</header>
 	<div class="content_main">
-		<video autoplay="true" loop="true" muted="muted">
+		<video autoplay="autoplay" loop="loop" muted="muted">
 			<source src="resources/videos/home.mp4" type="video/mp4">
 		</video>
 	</div>

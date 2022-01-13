@@ -11,8 +11,6 @@ import com.project.todaygym.dao.AdMainDao;
 import com.project.todaygym.dto.SpotOverviewDto;
 import com.project.todaygym.dto.AgeGroupDto;
 
-import lombok.extern.java.Log;
-
 @Service
 public class AdMainService {
 	

@@ -4,34 +4,26 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.project.todaygym.dao.AdMemDao;
 import com.project.todaygym.dto.MemberDto;
-import com.project.todaygym.util.adPagingUtil;
 
 import lombok.extern.java.Log;
 
 @Service
 @Log
 public class AdMemService {
+	
+	private ModelAndView mv;
 
 	@Autowired
 	private AdMemDao adMDao;
-
-	private HttpSession session;
-
-	private ModelAndView mv;
-
-	private int listCnt = 10;
 
 	//회원관리 이동 및 회원 리스트 출력	
 	public ModelAndView getAdmemList(String m_id) {
@@ -145,17 +137,6 @@ public class AdMemService {
 			act = "redirect:adMemDetailMove?m_id" + m_id;
 			rda.addFlashAttribute("msg", "삭제 실패");
 		}
-
 		return act;
 	}
-
 }
-
-
-
-
-
-
-
-
-

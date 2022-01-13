@@ -91,7 +91,7 @@ var code = ""; //이메일전송 인증번호 저장위한 코드
 		</header>
 
 		<div class="sub_image">
-			<image class="gray_image" src="resources/img/spot/gray.jpg">
+			<img class="gray_image" src="resources/img/spot/gray.jpg" />
 			<div class="sub_content">
 				<h1>JOIN</h1>
 			</div>

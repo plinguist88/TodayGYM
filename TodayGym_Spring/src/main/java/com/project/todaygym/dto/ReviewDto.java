@@ -1,9 +1,6 @@
 package com.project.todaygym.dto;
 
-import java.security.Timestamp;
 import java.sql.Date;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Data;
 

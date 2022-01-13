@@ -93,8 +93,7 @@
 			<div class="button_class">
 				<button class="pageing_menu"
 					style="background-image: url('resources/img/reviews/gray.jpg');">
-					<a href="reviewsWrite" style="font-size: 25px"
-						border="2px solid skyblue">글쓰기</a>
+					<a href="reviewsWrite" style="font-size: 25px; border: 2px solid skyblue">글쓰기</a>
 				</button>
 			</div>
 		</div>

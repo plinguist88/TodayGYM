@@ -11,6 +11,6 @@
 			<option value="b_cate">회원권 종목</option>
 			<option value="m_id">회원 이름</option>
 		</select> <input type="text" class="keyword" name="keyword" />
-		<button type="type" class="adSearchBtn">검색</button>
+		<button type="button" class="adSearchBtn">검색</button>
 	</div>
 </form>

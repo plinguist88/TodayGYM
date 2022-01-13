@@ -6,8 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -15,27 +13,21 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.project.todaygym.dto.ReviewDto;
 import com.project.todaygym.service.ReviewService;
 
-
-
-
 @Controller
 public class ReviewsController {	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
 	
 	@Autowired
 	private ReviewService tServe;
 	
 	private ModelAndView mv;
 	
-	
-	//글쓰기 이동 
+	//글쓰기 이동
 	@GetMapping("reviewsWrite")
 	public String reviewsWrite() {
 		logger.info("reviewsWrite()");
 		return "reviews/reviewsWrite";
 	}
-	
 	
 	//글작성 한것을 리스트로 넘기기
 	@PostMapping("reviewWriteAct")
@@ -80,5 +72,4 @@ public class ReviewsController {
 		mv.addObject("msg", msg);
 		return mv;
 	}
-	
 }

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
-import javax.websocket.Session;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.project.todaygym.dao.MemberDao;
 import com.project.todaygym.dao.OrderDao;
 import com.project.todaygym.dao.ProductDao;
 import com.project.todaygym.dto.CartDto;
@@ -23,19 +21,15 @@ import com.project.todaygym.dto.ProductDto;
 
 @Service
 public class ProductService {
-	@Autowired
-	private ProductDao pDao;
-	
-	@Autowired
-	private OrderDao oDao;
 	
 	private ModelAndView mv;
+	
+	@Autowired
+	private ProductDao pDao;
+	@Autowired
+	private OrderDao oDao;
 	@Autowired
 	private HttpSession session;
-	@Autowired
-	private MemberDao mDao;
-	
-	
 	
 	//1. 구매메인페이지
 	public ModelAndView getProductList(String p_cate) {

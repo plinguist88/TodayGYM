@@ -17,7 +17,7 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 		<div class="sub_image">
-			<image class="gray_image" src="resources/img/spot/gray.jpg">
+			<img class="gray_image" src="resources/img/spot/gray.jpg" />
 			<div class="sub_content">
 				<h1>아이디 찾기</h1>
 			</div>

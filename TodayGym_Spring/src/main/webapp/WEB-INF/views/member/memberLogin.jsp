@@ -15,7 +15,6 @@
 		})
 	})
 </script>
-</script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">
@@ -36,7 +35,7 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 		<div class="sub_image">
-			<image class="gray_image" src="resources/img/spot/gray.jpg">
+			<img class="gray_image" src="resources/img/spot/gray.jpg" />
 			<div class="sub_content">
 			<h1>LOGIN</h1>
 			</div>

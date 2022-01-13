@@ -1,7 +1,6 @@
 package com.project.todaygym.dao;
 
 import java.util.List;
-import java.util.Map;
 
 import com.project.todaygym.dto.CartDto;
 import com.project.todaygym.dto.MyCartDto;
