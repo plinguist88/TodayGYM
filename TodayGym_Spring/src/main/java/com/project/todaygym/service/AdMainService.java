@@ -21,12 +21,15 @@ public class AdMainService {
 	
 	private List<SpotOverviewDto> spotOverviewList;
 	
-	//Overview 처리
 	public ModelAndView getOverview(ModelAndView mv) {
 		
-		//총원 구하기
+		//회원 전체 수
 		int cnt = adMainDao.totalCnt();
 		mv.addObject("cnt", cnt);
+		
+		//연령대 구하기
+		List<AgeGroupDto> agDto = adMainDao.ageGroup();
+		mv.addObject("agDto", agDto);
 		
 		//회원권 전체 수
 		int totalTicket = adMainDao.totalTicket();
@@ -40,8 +43,7 @@ public class AdMainService {
 		spotOverviewList = new ArrayList<SpotOverviewDto>();
 		spotOverviewList = adMainDao.spotOverviewSelect();
 		
-		System.out.println("SpotOverviewList before for : " + spotOverviewList);
-		
+		//지점 이미지 경로 변환
 		for(SpotOverviewDto sod : spotOverviewList) {
 			String allPath = sod.getSimg_sys();
 			
@@ -51,15 +53,12 @@ public class AdMainService {
 		}
 		
 		System.out.println("SpotOverviewList after for : " + spotOverviewList);
+		
 		mv.addObject("spotOverviewList", spotOverviewList);
 		
 		//리뷰 전체 수
 		int totalReview = adMainDao.totalReview();
 		mv.addObject("totalReview", totalReview);
-		
-		//연령대 구하기
-		List<AgeGroupDto> agDto = adMainDao.ageGroup();
-		mv.addObject("agDto", agDto);
 		
 		return mv;
 	}

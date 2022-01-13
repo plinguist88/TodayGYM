@@ -48,8 +48,10 @@ public class HomeController {
 		
 		mv = new ModelAndView();
 		
+		//아이디 관리자 권한 확인
 		mv = adCheckIdService.getAdCheckId(req);
 		
+		//관리자 확인 후 관리자 오버뷰 이동
 		if(mv.getViewName().equals("admin/adMain")) {
 			mv = adMainServ.getOverview(mv);
 		}

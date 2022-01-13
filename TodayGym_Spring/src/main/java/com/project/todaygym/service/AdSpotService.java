@@ -19,7 +19,7 @@ import com.project.todaygym.dto.SpotImageDto;
 @Service
 public class AdSpotService {
 	
-	private String s_code, s_name, s_phone1, s_phone2, s_phone3, s_addr1, s_addr2,s_content;
+	private String s_code, s_name, s_phone1, s_phone2, s_phone3, s_addr1, s_addr2, s_content;
 
 	private SpotDto sDto;
 	private SpotImageDto spotImageDto;
@@ -88,6 +88,7 @@ public class AdSpotService {
 
 		s_code = adSpotDao.spotNextNumber();
 
+		//3개로 나누어 받은 연락처를 1개의 변수로 변환
 		if(s_code == null) {
 			s_code = "S01";
 		} else {
@@ -119,6 +120,7 @@ public class AdSpotService {
 		List<MultipartFile> fileList = mhr.getFiles("s_images");
 
 		//이미지 파일 처리 서비스
+		//저장 경로
 		String savePath = "C:\\Users\\pling\\Documents\\GitHub\\TodayGym\\TodayGym_Spring\\src\\main\\webapp\\resources\\img\\admin\\";
 
 		for(MultipartFile mf : fileList) {

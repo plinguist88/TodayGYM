@@ -10,6 +10,6 @@
 <h1>Error 500!!</h1>
 <p>Error Type : <%= exception.getClass().getName() %> </p>
 <p>Error Message : <%= exception.getMessage() %> </p>
-<a href = "home"><button value="Welcome">HOME</button></a>
+<a href = "home"><button type="button">HOME</button></a>
 </body>
 </html>
