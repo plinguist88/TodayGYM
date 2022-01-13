@@ -19,8 +19,48 @@
 		}
 	});
 </script>
+<script type="text/javascript">
+var code = ""; //이메일전송 인증번호 저장위한 코드
+	/* 인증번호 이메일 전송 */
+	$(function() {
+		$(".mail_check_button").click(function() {
+			var email = $("#mail_input").val(); // 입력한 이메일
+			var cehckBox = $(".mail_check_input");        // 인증번호 입력란
+		    var boxWrap = $(".mail_check_input_box");    // 인증번호 입력란 박스
 
- <script type="text/javascript">
+			$.ajax({
+
+				type : "GET",
+				url : "mailCheck?email=" + email,
+				success : function(data) {
+					console.log("data : " + data);
+					cehckBox.attr("disabled",false);
+		            boxWrap.attr("id", "mail_check_input_box_true");
+		            code = data;
+
+				}
+
+			});
+		});
+		
+		/* 인증번호 비교 */
+			$(".mail_check_input").blur(function() {
+				var inputCode = $(".mail_check_input").val(); // 입력코드    
+				var checkResult = $("#mail_check_input_box_warn"); // 비교 결과
+				
+				if(inputCode == code){                            // 일치할 경우
+			        checkResult.html("인증번호가 일치합니다.");
+			        checkResult.attr("class", "correct");        
+			    } else {                                            // 일치하지 않을 경우
+			        checkResult.html("인증번호를 다시 확인해주세요.");
+			        checkResult.attr("class", "incorrect");
+			    }    
+
+			});
+	});
+</script>
+
+<script type="text/javascript">
 	 $(function(){
 		 $("#alert-success").hide();
 		 $("#alert-danger").hide();
@@ -39,8 +79,9 @@
 				}
 			 }
 		 });
-	 });
-	 </script>
+	
+	});
+</script>
 
 </head>
 <body>
@@ -68,7 +109,15 @@
 					<div class="alert alert-success" id="alert-success">비밀번호 일치</div>
 					<div class="alert alert-danger" id="alert-danger">비밀번호가 일치하지 않습니다.</div>
 					<input type="text" class="login-input" title="이름" name="m_name" placeholder="이름"> 
-					<input type="text" class="login-input" title="이메일" name="m_email" placeholder="메일 ex)asd@gmail.com"> 
+					<input type="text" class="login-input" id="mail_input" title="이메일" name="m_email" placeholder="메일 ex)asd@gmail.com"> 
+					<div class="wrap">
+					<input type="button" class="mail_check_button" value="인증번호 전송">
+						<div class="mail_check_input_box">
+							<input class="mail_check_input" placeholder="인증번호 확인">
+						</div>
+						<div class="clearfix"></div>
+                    	<span id="mail_check_input_box_warn"></span>
+					</div>
 					<input type="text" class="phone-input" title="연락처" name="m_phone1" id="m_phone1" maxlength="3" placeholder="010"> 
 					<input type="text" class="phone-input" title="연락처" name="m_phone2" id="m_phone2" maxlength="4" placeholder="0000">
 					<input type="text" class="phone-input" title="연락처" name="m_phone3" id="m_phone3" maxlength="4" placeholder="0000">

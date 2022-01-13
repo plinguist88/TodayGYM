@@ -86,7 +86,7 @@ body{
 
 
 
-.login-form .login-input{
+.login-form .login-input {
 	position: relative;
     height: auto;
     box-sizing: border-box;
@@ -94,7 +94,7 @@ body{
     font-size: 16px;
 }
 
-.login-input{
+.login-input {
 	display: block;
     width: 100%;
     line-height: 1.5;
@@ -177,7 +177,44 @@ body{
 	color: red;
 }
 
+.correct{
+    color : blue;
+}
+.incorrect{
+    color : red;
+}
+.mail_check_button {
+	display: block;
+	width: 99%;
+	padding: 10px 16px;
+	margin: 4px;
+	font-size: 18px;
+	line-height: 1.5;
+	border-radius: 6px;
+	color: #fff;
+	background-color: black;
+	border-color: black;	
+}
 
+.mail_check_input{
+	margin-bottom: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+	position: relative;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+	display: block;
+    width: 100%;
+    line-height: 1.5;
+    color: #555;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
 
 
 /* memberSearchId style */
