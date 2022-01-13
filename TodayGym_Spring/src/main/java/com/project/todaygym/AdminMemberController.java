@@ -22,10 +22,10 @@ public class AdminMemberController { //관리자 컨트롤러
 	private static final Logger logger = 
 			LoggerFactory.getLogger(AdminMemberController.class);
 	
+	private ModelAndView mv;
+	
 	@Autowired
 	private AdMemService adMServ;
-	
-	private ModelAndView mv;
 	
 	//회원관리 페이지 이동
 	@GetMapping("/adMemMove")

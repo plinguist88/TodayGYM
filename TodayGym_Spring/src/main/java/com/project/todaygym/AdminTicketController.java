@@ -12,18 +12,18 @@ import com.project.todaygym.service.AdTicketListService;
 @Controller
 public class AdminTicketController {
 
-	private static final Logger Logger = 
+	private static final Logger logger = 
 			LoggerFactory.getLogger(AdminTicketController.class);
 
+	private ModelAndView mv;
+	
 	@Autowired
 	private AdTicketListService adTServ;
-
-	private ModelAndView mv;
 
 	//회원권 관리 이동 및 리스트 출력
 	@GetMapping("adTicketMove.ad")
 	public ModelAndView adTicketList() {
-		Logger.info("adTicketList()");
+		logger.info("adTicketList()");
 
 		mv = adTServ.getAdTicketList();
 

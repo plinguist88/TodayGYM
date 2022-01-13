@@ -16,7 +16,7 @@ import com.project.todaygym.service.AdSpotService;
 @Controller
 public class AdminSpotController {
 
-	private static final Logger Logger = LoggerFactory.getLogger(AdminSpotController.class);
+	private static final Logger logger = LoggerFactory.getLogger(AdminSpotController.class);
 
 	private ModelAndView mv;
 	
@@ -27,7 +27,7 @@ public class AdminSpotController {
 	//지점 관리로 이동
 	@GetMapping("adSpotMove.ad")
 	public ModelAndView adSpotMove(String side) {
-		Logger.info("adSpotMove()");
+		logger.info("adSpotMove()");
 
 		mv = new ModelAndView();
 		
@@ -39,7 +39,7 @@ public class AdminSpotController {
 	//지점 검색으로 이동
 	@GetMapping("adSearchSpotList.ad")
 	public ModelAndView adSearchSpotList(String side, String adSearchSelect, String keyword) {
-		Logger.info("adSearchSpotList()");
+		logger.info("adSearchSpotList()");
 
 		mv = new ModelAndView();
 		
@@ -51,7 +51,7 @@ public class AdminSpotController {
 	//지점 등록으로 이동
 	@GetMapping("adSpotRegFormMove.ad")
 	public ModelAndView adSpotRegFormMove() {
-		Logger.info("adSpotRegFormMove()");
+		logger.info("adSpotRegFormMove()");
 
 		mv = new ModelAndView();
 
@@ -63,7 +63,7 @@ public class AdminSpotController {
 	//지점 및 이미지 등록
 	@PostMapping("adSpotRegAction.ad")
 	public ModelAndView adSpotRegAction(SpotFormDto spotFormDto, MultipartHttpServletRequest mhr) {
-		Logger.info("adSpotRegAction()");
+		logger.info("adSpotRegAction()");
 		
 		mv = new ModelAndView();
 		
@@ -75,7 +75,7 @@ public class AdminSpotController {
 	//지점 이미지로 이동
 	@GetMapping("adSpotImageMove.ad")
 	public ModelAndView adSpotImageMove(String s_code) {
-		Logger.info("adSpotImageMove()");
+		logger.info("adSpotImageMove()");
 		
 		mv = new ModelAndView();
 		
@@ -87,7 +87,7 @@ public class AdminSpotController {
 	//지점 수정으로 이동
 	@GetMapping("adSpotUpdateFormMove.ad")
 	public ModelAndView adSpotUpdateFormMove(String s_code) {
-		Logger.info("adSpotUpdateFormMove()");
+		logger.info("adSpotUpdateFormMove()");
 		
 		mv = new ModelAndView();
 		
@@ -101,7 +101,7 @@ public class AdminSpotController {
 	//지점 수정
 	@PostMapping("adSpotUpdateAction.ad")
 	public ModelAndView adSpotUpdateAction(SpotFormDto spotFormDto) {
-		Logger.info("adSpotUpdateAction()");
+		logger.info("adSpotUpdateAction()");
 		
 		mv = new ModelAndView();
 		
@@ -113,7 +113,7 @@ public class AdminSpotController {
 	//지점 삭제로 이동
 	@GetMapping("adSpotDeleteMove.ad")
 	public ModelAndView adSpotDeleteMove(String s_code) {
-		Logger.info("adSpotDeleteMove()");
+		logger.info("adSpotDeleteMove()");
 		
 		mv = new ModelAndView();
 		
@@ -126,7 +126,7 @@ public class AdminSpotController {
 	//지점 삭제
 	@GetMapping("adSpotDeleteAction.ad")
 	public ModelAndView adSpotDeleteAction(String s_code) {
-		Logger.info("adSpotDeleteAction()");
+		logger.info("adSpotDeleteAction()");
 		
 		mv = new ModelAndView();
 		mv = adSpotService.getAdSpotDelete(s_code);

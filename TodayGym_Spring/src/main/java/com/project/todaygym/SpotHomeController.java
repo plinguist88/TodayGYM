@@ -13,7 +13,7 @@ import com.project.todaygym.service.SpotListService;
 @Controller
 public class SpotHomeController{
 	
-	private final Logger logger = LoggerFactory.getLogger(SpotHomeController.class);
+	private static final Logger logger = LoggerFactory.getLogger(SpotHomeController.class);
 	
 	private ModelAndView mv;
 	
