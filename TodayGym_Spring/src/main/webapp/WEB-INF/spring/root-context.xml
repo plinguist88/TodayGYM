@@ -9,8 +9,7 @@
 
 	<!-- 메일보내기 -->
 	<!-- gmail설정 -->
-	<bean id="mailSender2"
-		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+	<bean id="mailSender2" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 		<property name="host" value="smtp.gmail.com" />
 		<property name="port" value="587" />
 		<property name="username" value="kitae14@gmail.com" /> <!-- 자신의 이메일 아이디 -->

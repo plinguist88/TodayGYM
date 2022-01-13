@@ -16,21 +16,24 @@ public class AdCheckIdService {
 	public ModelAndView getAdCheckId(HttpServletRequest req) {
 
 		HttpSession session = req.getSession();
-
-		if(session != null) {
-			mDto = (MemberDto) session.getAttribute("mb");
+		System.out.println("session : " + session);
+		
+		mDto = (MemberDto) session.getAttribute("mb");
+		System.out.println("mDto : " + mDto);
+	
+		mv = new ModelAndView();
+		
+		if(mDto != null) {
 			int m_level = mDto.getM_level();
-			
-			mv = new ModelAndView();
 			
 			if(m_level == 1) {
 				mv.addObject("m_level", m_level);
 				mv.setViewName("admin/adMain");
 			} else {
-				mv.setViewName("admin/home");
+				mv.setViewName("home");
 			}
 		} else {
-			mv.setViewName("admin/home");
+			mv.setViewName("home");
 		}
 		return mv;
 	}
