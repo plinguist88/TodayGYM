@@ -48,11 +48,11 @@ public class ReviewsController {
 	
 	//데이터베이스에 있는 목록을 가져오기  
 	@GetMapping("review")
-	public ModelAndView reviewList(Integer pageNum) {
+	public ModelAndView reviewList(Integer pageNum, String r_cate ) {
 		
 		logger.info("reviewList()");
-		
-		mv = tServe.getReviewList(pageNum);
+		System.out.println("[목록] = " + r_cate);
+		mv = tServe.getReviewList(pageNum, r_cate);
 		
 		return mv;
 	}
@@ -69,10 +69,10 @@ public class ReviewsController {
 	
 	//delete 삭제하기
 	@GetMapping("reviewsDelete")
-	public ModelAndView reviewsDelete(Integer pageNum, Integer r_no) {
+	public ModelAndView reviewsDelete(Integer pageNum, String r_cate, Integer r_no) {
 		logger.info("reviewsDelete()");
 		String msg = tServe.reviewsDelete(r_no);
-		mv = tServe.getReviewList(pageNum);
+		mv = tServe.getReviewList(pageNum, r_cate);
 		
 		mv.addObject("msg", msg);
 		return mv;

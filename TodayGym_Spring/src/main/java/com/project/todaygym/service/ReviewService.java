@@ -63,7 +63,7 @@ public class ReviewService {
 		return view;
 	}
 
-	public ModelAndView getReviewList(Integer pageNum) {	
+	public ModelAndView getReviewList(Integer pageNum, String r_cate) {	
 		mv = new ModelAndView();
 
 		//null 또는 페이지 번호가 pageNum 으로 넘어옴.
@@ -71,21 +71,31 @@ public class ReviewService {
 		//로그인 후에는 null 이 넘어옴
 
 		//게시글 목록 가져오기
-		Map<String, Integer> pmap=
-				new HashMap<String, Integer>();
-		pmap.put("num", num);
-		pmap.put("lcnt",listCnt);
+		Map<String, String> pmap=
+				new HashMap<String, String>();
+		
+		List<ReviewDto> rList = new ArrayList<ReviewDto>();
+		
+		if(r_cate == null || r_cate.equals("all")) {
+			pmap.put("num", String.valueOf(num));
+			pmap.put("lcnt",String.valueOf(listCnt));	
+			
+			rList = rdao.getList(pmap);
+		} else {
+			pmap.put("num", String.valueOf(num));
+			pmap.put("lcnt",String.valueOf(listCnt));
+			pmap.put("r_cate", r_cate);
+			
+			rList = rdao.getCateList(pmap);
+		}
 		//차후 view(jsp)에서 페이지 당 글 개수를 입력받아서
 		//설정하는 부분을 처리하여 10 대신 사용
-		List<ReviewDto> rList = new ArrayList<ReviewDto>();
-		System.out.println("rList : " + rList);
-		rList = rdao.getList(pmap);
 
 		//화면에 전송.
 		mv.addObject("rList", rList);
 		System.out.println("rList : " + rList);
 		//페이징처리
-		String pageHtml = rvgetPaging(num);
+		String pageHtml = rvgetPaging(num,r_cate);
 		mv.addObject("paging",pageHtml);
 
 
@@ -94,14 +104,21 @@ public class ReviewService {
 		return mv;
 
 	}
-	private String rvgetPaging(int num) {
+	private String rvgetPaging(int num, String r_cate) {
 		String pageHtml = null;
 		
 		//전체 글 개수 구하기(DAO)
 		int maxNum = rdao.reviewsCnt();
 		//한 페이지에 보여질 페이지 번호 개수
 		int pageCnt = 5;
-		String listName = "list";
+		String listName = "review?r_cate=";
+		if(r_cate == null)
+			r_cate = "all";
+		
+		if(!r_cate.equals("all"))
+			maxNum = rdao.rvCateCnt(r_cate);
+		
+		listName += r_cate;
 		
 		rvPagingUtill paging = new rvPagingUtill(maxNum, num, listCnt, pageCnt, listName);
 		
@@ -149,4 +166,5 @@ public class ReviewService {
 		mv.setViewName("updateFrm");
 		return mv;
 	}
+	
 }

@@ -12,10 +12,14 @@ public interface ReviewDao {
 	
 	//전체 리뷰 게시글 개수 구하기
 	public int reviewsCnt();
+	
+	public int rvCateCnt(String r_cate);
 	//게시글 저장 
 	public void WriteInsert(ReviewDto rdto);
 	//게시글 목록 가져오기
-	public List<ReviewDto> getList(Map<String , Integer> pmap);
+	public List<ReviewDto> getList(Map<String, String> pmap);
+	//게시글 Cate 목록 가져오
+	public List<ReviewDto> getCateList(Map<String, String> pmap);
 	//디테일 가져오기
 	public ReviewDto getDetail(String r_title);
 	//리뷰 게시글 삭제

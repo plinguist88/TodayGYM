@@ -8,10 +8,28 @@
 
 	<select id="getList" parameterType="HashMap"
 		resultType="com.project.todaygym.dto.ReviewDto">
-	<![CDATA[
-	SELECT * FROM RV_VIEW_1
-	WHERE RONUM >=(#{num} * #{lcnt}) - (#{lcnt} - 1)  
-			AND RONUM <= #{num} * #{lcnt} ORDER BY RONUM DESC
+		<![CDATA[
+		SELECT * FROM RV_VIEW_1
+		WHERE RONUM >=(${num} * ${lcnt}) - (${lcnt} - 1)  
+			AND RONUM <= ${num} * ${lcnt} 
+		ORDER BY RONUM DESC
+		]]>
+
+	</select>
+
+	<select id="getCateList" parameterType="HashMap"
+		resultType="com.project.todaygym.dto.ReviewDto">
+		<![CDATA[
+		SELECT *
+		FROM (
+		    SELECT ROWNUM AS ronum, a.*
+		    FROM (
+		        SELECT * FROM RV_VIEW
+		        WHERE r_cate = #{r_cate} ORDER BY R_DATE DESC
+		        ) a
+		)
+		WHERE ronum >= (${num} * ${lcnt}) - (${lcnt} - 1)
+			AND ronum <= ${num} * ${lcnt} 
 		]]>
 
 	</select>
@@ -19,6 +37,11 @@
 	<select id="reviewsCnt" resultType="Integer">
 		SELECT COUNT(*) FROM
 		RV_VIEW_1
+	</select>
+
+	<select id="rvCateCnt" resultType="Integer">
+		SELECT COUNT(*) FROM RV_VIEW
+		WHERE r_cate = #{r_cate}
 	</select>
 
 	<insert id="WriteInsert"

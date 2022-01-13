@@ -12,11 +12,10 @@ public class rvPagingUtill {
 	//생성자로 초기 데이터 입력
 	//@AllArgsConstructor 어노테이션 사용
 	
-	
 	//페이징용 html 코드 만드는 메소드
 		public String makePaging() {
 			String page = null;
-			listName= "review";
+			//listName= "review";
 			
 			//1. 전체 페이지 개수 구하기(페이지 당 10개 출력)
 			//전체 게시글 9개 : 1페이지
@@ -43,7 +42,7 @@ public class rvPagingUtill {
 			//이전 버튼 처리
 			if(start != 1) {
 				sb.append("<a class='pno' href='" + listName
-						+ "?pageNum=" + (start - 1) + "'>");
+						+ "&pageNum=" + (start - 1) + "'>");
 				sb.append("&nbsp;이전&nbsp;</a>");
 			}//<a class='pno' href='list?pageNum=4'> 이전 </a>
 			//현재 페이지 그룹의 시작번호가 5인 경우(페이지 당 번호 수: 4)
@@ -54,7 +53,7 @@ public class rvPagingUtill {
 				//현재 페이지 번호에는 링크를 걸지 않는다.
 				if(pageNum != i) {//다른 페이지 번호
 					sb.append("<a class='pno' href='" + listName
-							+ "?pageNum=" + i + "'>");
+							+ "&pageNum=" + i + "'>");
 					sb.append("&nbsp;" + i + "&nbsp;</a>");
 				}//<a class='pno' href='list?pageNum=3'> 3 </a>
 				else {//현재 페이지 번호
@@ -66,7 +65,7 @@ public class rvPagingUtill {
 			//다음 버튼 처리
 			if(end != totalPage) {
 				sb.append("<a class='pno' href='" + listName
-						+ "?pageNum=" + (end + 1) + "'>");
+						+ "&pageNum=" + (end + 1) + "'>");
 				sb.append("&nbsp;다음&nbsp;</a>");
 			}//<a class='pno' href='list?pageNum=5'> 다음 </a>
 			
