@@ -20,7 +20,7 @@
 
 
 		<section>
-			<form action="reviewWriteAct" method="post" name="rdto">
+			<form action="reviewWriteAct" method="post" name="rdto" enctype="multipart/form-data">
 				<div class="review_full">
 
 					<div class="review_title">
@@ -58,7 +58,7 @@
 						</div>
 						<div class="review_file">
 							<label style="display: block; border: 3px solid #5a5a5a;">업로드</label>
-							<input type="file" value="파일선택">
+							<input type="file" name="r_image" value="파일선택">
 						</div>
 						<div class="review_button">
 							<input id="ohgvva" type="submit" value="작성완료"> <input

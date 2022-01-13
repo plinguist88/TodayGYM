@@ -1,5 +1,7 @@
 package com.project.todaygym.service;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -17,6 +20,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.project.todaygym.dao.ReviewDao;
 import com.project.todaygym.dto.MemberDto;
 import com.project.todaygym.dto.ReviewDto;
+import com.project.todaygym.dto.ReviewImageDto;
 import com.project.todaygym.util.rvPagingUtill;
 
 import lombok.extern.java.Log;
@@ -24,6 +28,8 @@ import lombok.extern.java.Log;
 @Service
 @Log
 public class ReviewService {
+	
+	private ReviewImageDto reviewImageDto;
 
 	@Autowired
 	private ReviewDao rdao;
@@ -35,7 +41,7 @@ public class ReviewService {
 
 	private int listCnt = 10;  //페이지당 게시글 개수
 
-	public String WriteAct(ReviewDto rdto , RedirectAttributes rttr) {
+	public String WriteAct(ReviewDto rdto , RedirectAttributes rttr, MultipartHttpServletRequest mhr) {
 
 
 		String view = null;
@@ -45,9 +51,38 @@ public class ReviewService {
 		String getLoginId = getMember.getM_id();
 
 		rdto.setM_id(getLoginId);
-
+		
+		MultipartFile file = mhr.getFile("r_image");
+		
+		String savePath = "C:\\Spring-workspace\\TodayGym_Spring\\src\\main\\webapp\\resources\\img\\reviews\\";
+		
+		String simg_ori = file.getOriginalFilename();
+		String simg_sys = savePath + System.currentTimeMillis() + simg_ori;
+		
 		try {
 			rdao.WriteInsert(rdto);
+			
+			int r_no =  rdao.nextNum();
+			
+			try {
+				file.transferTo(new File(simg_sys));
+				
+				reviewImageDto = new ReviewImageDto();
+				
+				reviewImageDto.setR_no(r_no);
+				reviewImageDto.setRimg_ori(simg_ori);
+				reviewImageDto.setRimg_sys(simg_sys);
+				
+				System.out.println("reviewImageDto : " + reviewImageDto);
+				
+				rdao.reviewImageInsert(reviewImageDto);
+				
+			} catch (IllegalStateException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
 			msg = "글 작성 성공";
 			view = "redirect:review";
 

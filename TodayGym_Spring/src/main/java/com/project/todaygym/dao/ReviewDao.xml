@@ -56,6 +56,24 @@
 		(#{r_no},#{r_cate},#{r_title},#{r_contents}
 		,#{m_id},SYSDATE,#{r_score})
 	</insert>
+	<select id="nextNum" resultType="Integer">
+		SELECT max(r_no) FROM REVIEW_TB
+	</select>
+	
+	<insert id="reviewImageInsert"
+		parameterType="com.project.todaygym.dto.ReviewImageDto"
+		useGeneratedKeys="true" keyProperty="rimg_no">
+		<selectKey keyProperty="rimg_no" resultType="Integer"
+			order="BEFORE">
+			SELECT RIMG_SEQ.NEXTVAL FROM DUAL
+		</selectKey>
+		INSERT INTO RIMG_TB
+		VALUES
+		(#{rimg_no},#{r_no},#{rimg_ori},#{rimg_sys})
+	</insert>
+	
+	
+	
 	<select id="getDetail" parameterType="String"
 		resultType="com.project.todaygym.dto.ReviewDto">
 		SELECT * FROM REVIEW_TB WHERE r_title = #{r_title}
