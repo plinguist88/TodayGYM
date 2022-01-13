@@ -21,7 +21,9 @@
 					<h2>이용후기 상세</h2>
 				</div>
 				<div class="detailcontents">
-					<div class="detail_img">12</div>
+					<div class="detail_img">
+						<img src=${resourcePath } />
+					</div>
 					<div class="userbox">
 						<div class="detail_box">
 							<div class="user_box">

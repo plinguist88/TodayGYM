@@ -162,28 +162,35 @@ public class ReviewService {
 		return pageHtml;
 	}
 	
-	public ModelAndView getReviewDetail(String r_title) {
+	public ModelAndView getReviewDetail(int r_no) {
 		mv = new ModelAndView();
 
 		ReviewDto rDto = new ReviewDto();
-		rDto = rdao.getDetail(r_title);
-
+		rDto = rdao.getDetail(r_no);
+		
+		ReviewImageDto riDto = new ReviewImageDto();
+		riDto = rdao.getImage(r_no);
+		
+		if(riDto != null) {
+			String allPath = riDto.getRimg_sys();
+			String resourcePath = allPath.substring(allPath.lastIndexOf("webapp")+7);
+			mv.addObject("resourcePath", resourcePath);
+		}
+		
 		mv.addObject("rDto", rDto);
 		mv.setViewName("reviews/reviewsDetail");
-
-
 
 		return mv;
 	}
 	public String reviewsDelete(Integer r_no) {
 
-		Boolean result = rdao.reviewsDelete(r_no);
+		int result = rdao.reviewsDelete(r_no);
 
 		System.out.println(result);
 
 		String msg;
 
-		if(result) {
+		if(result < 0) {
 			msg = "삭제 성공!!";
 		} else {
 			msg = "삭제 실패!!";
@@ -193,9 +200,9 @@ public class ReviewService {
 	}
 	
 	
-	public ModelAndView updateFrm(String r_title, RedirectAttributes rttr) {
+	public ModelAndView updateFrm(int r_no, RedirectAttributes rttr) {
 		mv = new ModelAndView();
-		ReviewDto rdto = rdao.getDetail(r_title);
+		ReviewDto rdto = rdao.getDetail(r_no);
 		
 		mv.addObject("rdto", rdto);
 		mv.setViewName("updateFrm");

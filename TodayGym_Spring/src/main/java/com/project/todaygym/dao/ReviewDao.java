@@ -26,9 +26,11 @@ public interface ReviewDao {
 	//게시글 Cate 목록 가져오
 	public List<ReviewDto> getCateList(Map<String, String> pmap);
 	//디테일 가져오기
-	public ReviewDto getDetail(String r_title);
+	public ReviewDto getDetail(int r_no);
+	//디테일 이미지 가져오기
+	public ReviewImageDto getImage(int r_no);
 	//리뷰 게시글 삭제
-	public boolean reviewsDelete(Integer r_no);
+	public int reviewsDelete(Integer r_no);
 	//게시글 업데이트
 	public boolean reviewsUpdate(ReviewDto tdto);
 }

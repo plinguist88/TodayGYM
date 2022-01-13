@@ -62,10 +62,10 @@ public class ReviewsController {
 	
 	//detail 가져오기
 	@GetMapping("reviewsDetail")
-	public ModelAndView reviewsDetail(String r_title) {
+	public ModelAndView reviewsDetail(int r_no) {
 		logger.info("reviewsDetail()");
 	
-		mv = tServe.getReviewDetail(r_title);
+		mv = tServe.getReviewDetail(r_no);
 		
 		return mv;
 	}
