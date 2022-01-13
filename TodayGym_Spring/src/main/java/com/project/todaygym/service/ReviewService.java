@@ -54,7 +54,7 @@ public class ReviewService {
 		
 		MultipartFile file = mhr.getFile("r_image");
 		
-		String savePath = "C:\\Spring-workspace\\TodayGym_Spring\\src\\main\\webapp\\resources\\img\\reviews\\";
+		String savePath = "C:\\Project\\TodayGym\\TodayGym_Spring\\src\\main\\webapp\\resources\\img\\reviews\\";
 		
 		String simg_ori = file.getOriginalFilename();
 		String simg_sys = savePath + System.currentTimeMillis() + simg_ori;
