@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -38,13 +39,15 @@ public class ReviewsController {
 	
 	//글작성 한것을 리스트로 넘기기
 	@PostMapping("reviewWriteAct")
-	public String reviewWriteAct(ReviewDto rdto, RedirectAttributes rttr) {
+	public String reviewWriteAct(ReviewDto rdto,String r_score, RedirectAttributes rttr, MultipartHttpServletRequest mhr) {
 		logger.info("reviewWriteAct()");
-		System.out.println("=====================" + rdto);
-		String view = tServe.WriteAct(rdto , rttr);
+		int number = Integer.parseInt(r_score);
+		rdto.setR_score(number);
+		System.out.println(rdto);
+		
+		String view = tServe.WriteAct(rdto , rttr, mhr);
 		return view;		
 	}
-	
 	
 	//데이터베이스에 있는 목록을 가져오기  
 	@GetMapping("review")
