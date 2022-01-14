@@ -15,15 +15,12 @@
 		})
 	})
 </script>
-</script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">
 	$(function() {
 		//메시지 출력 부분
 		var msg = "${msg}";
-		
-		
 		if (msg != "") {
 			alert(msg);
 		}
