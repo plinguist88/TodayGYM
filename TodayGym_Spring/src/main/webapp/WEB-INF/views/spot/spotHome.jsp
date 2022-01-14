@@ -60,7 +60,7 @@
 										보기</a>
 								</div>
 								<div>
-									<a class=kakao_btn href="http://www.naver.com" target=""><i
+									<a class=kakao_btn href="https://open.kakao.com/o/s1xuUCRd" target=""><i
 										class="fas fa-comment"></i>문의하기</a>
 
 								</div>
