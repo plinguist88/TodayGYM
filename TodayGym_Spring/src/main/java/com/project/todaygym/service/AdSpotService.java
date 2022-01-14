@@ -121,7 +121,7 @@ public class AdSpotService {
 
 		//이미지 파일 처리 서비스
 		//저장 경로
-		String savePath = "C:\\Users\\pling\\Documents\\GitHub\\TodayGym\\TodayGym_Spring\\src\\main\\webapp\\resources\\img\\admin\\";
+		String savePath = "C:\\Users\\alstj\\git\\TodayGym\\TodayGym_Spring\\src\\main\\webapp\\resources\\img\\admin\\";
 
 		for(MultipartFile mf : fileList) {
 			String simg_ori = mf.getOriginalFilename();
