@@ -21,8 +21,6 @@
 	$(function() {
 		//메시지 출력 부분
 		var msg = "${msg}";
-		
-		
 		if (msg != "") {
 			alert(msg);
 		}

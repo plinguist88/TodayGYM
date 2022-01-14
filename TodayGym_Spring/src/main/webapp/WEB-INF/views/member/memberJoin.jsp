@@ -111,7 +111,7 @@ var code = ""; //이메일전송 인증번호 저장위한 코드
 					<input type="text" class="login-input" title="이름" name="m_name" placeholder="이름"> 
 					<input type="text" class="login-input" id="mail_input" title="이메일" name="m_email" placeholder="메일 ex)asd@gmail.com"> 
 					<div class="wrap">
-					<input type="button" class="mail_check_button" value="인증번호 전송">
+					<input type="button" class="mail_check_button" value="인증번호 전송" onclick="alert('인증번호 전송');">
 						<div class="mail_check_input_box">
 							<input class="mail_check_input" placeholder="인증번호 확인">
 						</div>
