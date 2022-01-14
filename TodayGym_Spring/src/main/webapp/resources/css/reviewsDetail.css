@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**************************************************************/
-body{
+body {
 	margin: 0;
 	padding: 0;
 }
@@ -12,99 +12,130 @@ body{
 	align-items: center;
 	margin-top: 60px;
 }
-.detailcontents{
-	display: flex;	
+
+.detailcontents {
+	display: flex;
 	width: 980px;
 	height: 400px;
 	background-color: #dcdcdc;
 }
-.detail_img{
-	width:500px;
-	height:300px;
+
+.detail_img {
+	width: 500px;
+	height: 300px;
 	background-color: orange;
 }
-.userbox{
-	height:300px;
-	width:390px;
+
+.userbox {
+	height: 300px;
+	width: 390px;
 	background-color: white;
 	margin-left: 50px;
 }
-.detail_box{
+
+.detail_box {
 	border-radius: 3px;
-	border: 2px solid ;
-	background-color:#009879; 
+	border: 2px solid;
+	background-color: #009879;
 }
-.detail_lower{
+
+.detail_lower {
 	display: flex;
-	width:980px;
-	height:100px;
+	width: 980px;
+	height: 100px;
 	background-color: white;
 }
 
-.user_box{
+.user_box {
 	display: flex;
-}
-.detail_user{
-	float: left;
-	width:150px; 
 }
 
-.detail_user2{
-	float: right;
-	width:150px;	
+.detail_user {
+	float: left;
+	width: 150px;
 }
-.select_box{
+
+.detail_user2 {
+	float: right;
+	width: 150px;
+}
+
+.select_box {
 	display: flex;
 }
-.detail_select{
+
+.detail_select {
 	float: left;
-	width:150px; 
+	width: 150px;
 }
-.detail_select2{
+
+.detail_select2 {
 	float: right;
-	width:150px; 
+	width: 150px;
 }
-.titile_box{
+
+.titile_box {
 	display: flex;
 }
-.detail_title{
+
+.detail_title {
 	float: left;
-	width:150px;
+	width: 150px;
 }
-.detail_title2{
+
+.detail_title2 {
 	float: right;
-	width:150px;
+	width: 150px;
 }
-.detail_content2{
-	width:100%;
+
+.detail_content2 {
+	width: 100%;
 	height: 100%;
 }
-.star_score{
-	width:300px;
+
+.star_score {
+	width: 300px;
 	text-align: left;
 }
-.button_R{
+
+.button_R {
 	display: flex;
-	justify-content:center;
+	justify-content: center;
 }
-.detail_modify button{
+
+.detail_modify button {
 	width: 130px;
 	height: 60px;
 }
-.detail_modify a{
+
+.detail_modify a {
 	color: white;
 }
-.detail_delete button{
+
+.detail_delete button {
 	width: 130px;
 	height: 60px;
-	margin-left: 10px;	
+	margin-left: 10px;
 }
-.detail_delete a{
+
+.detail_delete a {
 	color: white;
 }
-h1 span{
-	color:#FFD228;
+
+h1 span {
+	color: #FFD228;
 }
-.footer_box{
+
+.footer_box {
 	margin-top: 100px;
+}
+
+.detail_img {
+	width: 500px;
+	height: 400px;
+}
+
+.img_class {
+	width: 100%;
+	height: 100%;
 }

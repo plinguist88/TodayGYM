@@ -59,7 +59,7 @@
 	<select id="nextNum" resultType="Integer">
 		SELECT max(r_no) FROM REVIEW_TB
 	</select>
-	
+
 	<insert id="reviewImageInsert"
 		parameterType="com.project.todaygym.dto.ReviewImageDto"
 		useGeneratedKeys="true" keyProperty="rimg_no">
@@ -71,34 +71,36 @@
 		VALUES
 		(#{rimg_no},#{r_no},#{rimg_ori},#{rimg_sys})
 	</insert>
-	
-	
-	
+
+
+
 	<select id="getDetail" parameterType="Integer"
 		resultType="com.project.todaygym.dto.ReviewDto">
 		SELECT * FROM REVIEW_TB WHERE r_no = #{r_no}
 	</select>
-	
+
 	<select id="getImage" parameterType="Integer"
 		resultType="com.project.todaygym.dto.ReviewImageDto">
 		SELECT * FROM RIMG_TB WHERE r_no = #{r_no}
 	</select>
-	
-	
+
+	<update id="reviewsUpdateAct"
+		parameterType="com.project.todaygym.dto.ReviewDto">
+		UPDATE R SET
+		R_CATE=#{r_cate},R_TITLE=#{r_title},R_CONTENTS=#{r_contents},
+		R_SCORE=#{r_score}
+		WHERE R_NO=#{r_no}
+
+	</update>
 
 	<delete id="reviewsDelete" parameterType="Integer">
 		BEGIN
-		DELETE FROM RIMG_TB
+		DELETE FROM
+		RIMG_TB
 		WHERE r_no=#{r_no};
 		DELETE FROM REVIEW_TB WHERE r_no=#{r_no};
 		END;
 	</delete>
 
-	<update id="reviesUpdate"
-		parameterType="com.project.todaygym.dto.ReviewDto">
-		UPDATE R SET R_TITLE=#{r_title},R_CONTENTS=#{r_contents}
-		WHERE R_NO=#{r_no}
-
-	</update>
 
 </mapper>

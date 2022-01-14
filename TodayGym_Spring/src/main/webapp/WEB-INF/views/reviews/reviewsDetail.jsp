@@ -22,7 +22,7 @@
 				</div>
 				<div class="detailcontents">
 					<div class="detail_img">
-						<img src=${resourcePath } />
+						<img class="img_class" src=${resourcePath } />
 					</div>
 					<div class="userbox">
 						<div class="detail_box">

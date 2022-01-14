@@ -10,7 +10,7 @@ import com.project.todaygym.dto.ReviewImageDto;
 
 @Mapper
 public interface ReviewDao {
-	
+
 	//전체 리뷰 게시글 개수 구하기
 	public int reviewsCnt();
 	//리뷰 홈 페이지 카테고리 별 넘버
@@ -29,8 +29,11 @@ public interface ReviewDao {
 	public ReviewDto getDetail(int r_no);
 	//디테일 이미지 가져오기
 	public ReviewImageDto getImage(int r_no);
-	//리뷰 게시글 삭제
-	public int reviewsDelete(Integer r_no);
 	//게시글 업데이트
 	public boolean reviewsUpdate(ReviewDto tdto);
+	//게시글 수정 엑트
+	public int reviewsUpdateAct(ReviewDto rdto);
+	//리뷰 게시글 삭제
+	public int reviewsDelete(Integer r_no);
+
 }
