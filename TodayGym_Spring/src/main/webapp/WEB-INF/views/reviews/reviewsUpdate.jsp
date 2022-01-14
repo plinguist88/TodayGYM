@@ -5,9 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>reviewsUpdate</title>
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <link type="text/css" rel="stylesheet"
-	href="resources/css/reviewsDetail.css">
+	href="resources/css/reviewsWrite.css">
+
 </head>
 <body>
 	<div class="wrap">
@@ -15,42 +18,82 @@
 			<jsp:include page="../layout/header.jsp" />
 		</header>
 
+
 		<section>
-			<div class="detailfull">
-				<div class="detailname">
-					<h2>글 수정</h2>
-				</div>
-				<div class="detailcontents">
-					<div class="detail_img">12</div>
-					<div class="userbox">
-						<div class="detail_user">작성자<div class ="detail_user2">${rDto.m_id }</div></div>
-						<div class="detail_select">운동종목<div class ="detail_select2">${rDto.r_cate }</div></div>
-						<div class="detail_title">제목<div class ="detail_title2">${rDto.r_title }</div></div>
-						<div class="detail_content">내용</div>
-						<div class="detail_content2">${rDto.r_contents }</div>
+			<form action="reviewsUpdateAct" method="post" name="rdto">
+				<div class="review_full">
+
+					<div class="review_title"
+						style="background-image: url('resources/img/reviews/gray.jpg');">
+						<h1>글수정</h1>
+					</div>
+					<input type="hidden" name="r_no" value="${rdto.r_no }" />
+					<div class="review_event">
+						<select name="r_cate">
+							<option value=${rdto.r_cate }>${rdto.r_cate }</option>
+							<option value="헬스">헬스</option>
+							<option value="수영">수영</option>
+							<option value="클라이밍">클라이밍</option>
+							<option value="크로스핏">크로스핏</option>
+						</select>
+					</div>
+					<div class="review_container">
+						<div class="review_sub">
+							<input class="input_title" type="text" placeholder="제목을 입력하세요"
+								value="${rdto.r_title}" name="r_title">
+						</div>
+						<div class="review_content">
+							<textarea rows="15" cols=80 " placeholder="내용을적어주세요"
+								name="r_contents">${rdto.r_contents}</textarea>
+						</div>
+						<div class="review_star space-x-4 mx-auto" name="r_contents">
+							<input type="hidden" name="r_score" id="r_score"
+								value="${rdto.r_score}"> <input type="radio"
+								id="5-stars" name="rs" value="5" v-model="ratings" /> <label
+								for="5-stars" class="star pr-4">★</label> <input type="radio"
+								id="4-stars" name="rs" value="4" v-model="ratings" /> <label
+								for="4-stars" class="star">★</label> <input type="radio"
+								id="3-stars" name="rs" value="3" v-model="ratings" /> <label
+								for="3-stars" class="star">★</label> <input type="radio"
+								id="2-stars" name="rs" value="2" v-model="ratings" /> <label
+								for="2-stars" class="star">★</label> <input type="radio"
+								id="1-star" name="rs" value="1" v-model="ratings" /> <label
+								for="1-star" class="star">★</label>
+						</div>
+						<!-- <div class="review_file">
+							<label style="display: block; border: 3px solid #5a5a5a;">업로드</label>
+							<input type="file" name="r_image" value="파일선택">
+						</div> -->
+						<div class="review_button">
+							<input type="submit" value="작성완료"> <a href="review"><input
+								type="button" value="취소"></a>
+						</div>
 					</div>
 				</div>
-
-
-				<div class="detail_lower">
-				<div class="star_score">
-					<h3>별점</h3>
-				</div>
-					<div class="detail_modify">
-						<button>수정</button>
-					</div>
-					<div class="detail_delete">
-						<a href="reviewsDelete?r_no=${rDto.r_no}"><button class="delbtn" onclick="delCheck()">삭제</button></a>
-					</div>
-
-				</div>
-			</div>
+			</form>
 		</section>
 
 		<footer>
 			<jsp:include page="../layout/footer.jsp" />
 		</footer>
+
 	</div>
 </body>
+<script type="text/javascript">
+	var score = "${rdto.r_score}";
+	var rds = $("input[name='rs']");
+	//console.log(rds[0].value);
+	for (var i = 0; i < rds.length; i++) {
+		if (rds[i].value == score) {
+			rds[i].checked = true;
+			break;
+		}
+	}
 
+	$("input[name='rs']").on("click", function() {
+		var score = $("input[name='rs']:checked").val();
+		//alert(score);
+		$("#r_score").val(score);
+	});
+</script>
 </html>

@@ -17,6 +17,7 @@
 		if (msg != "") {
 			alert(msg);
 		}
+		
 	});
 </script>
 </head>
@@ -27,16 +28,16 @@
 	<div class="reivewfull">
 		<div class="board_name"
 			style="background-image: url('resources/img/reviews/gray.jpg');">
-			<h1>이용후기 게시판</h1>
+			<h1>이용후기 게시판 ${msg2 }</h1>
 		</div>
 
 		<div class="reviewmain">
 			<div class="review_menu">
-			
+
 				<button class="menu" value="전체"
 					style="background-image: url('resources/img/reviews/gray.jpg');">
 					<a href="review">전체</a>
-				
+
 				</button>
 				<button class="menu" value="헬스"
 					style="background-image: url('resources/img/reviews/gray.jpg');">
@@ -93,7 +94,8 @@
 			<div class="button_class">
 				<button class="pageing_menu"
 					style="background-image: url('resources/img/reviews/gray.jpg');">
-					<a href="reviewsWrite" style="font-size: 25px; border: 2px solid skyblue">글쓰기</a>
+					<a href="reviewsWrite" style="font-size: 25px"
+						border="2px solid skyblue">글쓰기</a>
 				</button>
 			</div>
 		</div>
