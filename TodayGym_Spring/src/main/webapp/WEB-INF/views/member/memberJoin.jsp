@@ -25,6 +25,12 @@ var code = ""; //이메일전송 인증번호 저장위한 코드
 	$(function() {
 		$(".mail_check_button").click(function() {
 			var email = $("#mail_input").val(); // 입력한 이메일
+			if(email == ""){
+				alert("이메일을 입력해 주세요.");
+				$("#mail_input").focus();
+				return;
+			}
+			console.log(email);
 			var cehckBox = $(".mail_check_input");        // 인증번호 입력란
 		    var boxWrap = $(".mail_check_input_box");    // 인증번호 입력란 박스
 
@@ -37,7 +43,7 @@ var code = ""; //이메일전송 인증번호 저장위한 코드
 					cehckBox.attr("disabled",false);
 		            boxWrap.attr("id", "mail_check_input_box_true");
 		            code = data;
-
+		            alert("인증번호를 전송했습니다.");
 				}
 
 			});
@@ -111,7 +117,7 @@ var code = ""; //이메일전송 인증번호 저장위한 코드
 					<input type="text" class="login-input" title="이름" name="m_name" placeholder="이름"> 
 					<input type="text" class="login-input" id="mail_input" title="이메일" name="m_email" placeholder="메일 ex)asd@gmail.com"> 
 					<div class="wrap">
-					<input type="button" class="mail_check_button" value="인증번호 전송" onclick="alert('인증번호 전송');">
+					<input type="button" class="mail_check_button" value="인증번호 전송">
 						<div class="mail_check_input_box">
 							<input class="mail_check_input" placeholder="인증번호 확인">
 						</div>
