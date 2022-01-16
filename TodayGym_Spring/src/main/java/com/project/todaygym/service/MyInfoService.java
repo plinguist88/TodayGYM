@@ -52,7 +52,7 @@ public class MyInfoService {
 		return mv;
 	} // getMyInfo end
 
-	//__________ 회원정보 수정 싫행
+	//__________ 회원정보 수정 실행
 	@Transactional
 	public String myInfoUpdate(MemberDto myInfo, RedirectAttributes rttr) {
 		
@@ -71,7 +71,7 @@ public class MyInfoService {
 		// JSP 페이지 데이터 전송
 		try {
 			mDao.myInfoUpdate(myInfo);
-			view = "redirect:home";
+			view = "redirect:myInfo";
 			alert = "회원정보를 업데이트 했습니다!";
 
 		} catch (Exception e) {
@@ -131,7 +131,7 @@ public class MyInfoService {
 		try {
 			
 			mDao.myPwdUpdate(myInfo);
-			view = "redirect:myInfo";
+			view = "redirect:myPassword";
 			alert = "비밀번호를 변경 했습니다.";
 			
 		} catch (Exception e) {

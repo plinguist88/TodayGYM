@@ -53,12 +53,22 @@
 	</div>
 </body>
 <script type="text/javascript">
+	//__________ 마이페이지 알람
+	$(function() {
+
+		var msg = "${alert}";
+
+		if (msg != "") {
+			alert(msg);
+		}
+
+	})
 
 	//__________ 현재 비밀번호 확인
 	var prePwdCheck = false;
 
 	function preCheck() {
-		
+
 		var prePwd = document.getElementById("prePwd").value;
 		//var prePwd = $("#prePwd").val();
 
@@ -82,7 +92,7 @@
 					$(".contents-prePwdCheck").text("현재 비밀번호가 일치 합니다.");
 					$(".contents-prePwdCheck").css("color", "blue");
 					$(".contents-prePwdCheck").css("display", "block");
-					
+
 					prePwdCheck = true;
 				} // if end
 
@@ -91,7 +101,7 @@
 					$(".contents-prePwdCheck").css("color", "red");
 					$(".contents-prePwdCheck").css("display", "block");
 					$("#prePwd").focus();
-					
+
 					prePwdCheck = false;
 				} // else end
 			},
@@ -106,9 +116,9 @@
 
 	//__________ 새 비밀번호 일치 확인
 	var updatePwdCheck = false;
-	
+
 	$("#newPwdCheck").focusout(function() {
-		
+
 		var newPwd = document.getElementById("newPwd").value;
 		var newPwdCheck = document.getElementById("newPwdCheck").value;
 		//var newPwd = $("#newPwd").val();
@@ -118,7 +128,7 @@
 			$(".contents-updatePwdCheck").text("새 비밀번호가 틀립니다.");
 			$(".contents-updatePwdCheck").css("color", "red");
 			$(".contents-updatePwdCheck").css("display", "block");
-			
+
 			updatePwdCheck = false;
 		} // if end
 
@@ -126,12 +136,12 @@
 			$(".contents-updatePwdCheck").text("새 비밀번호가 일치 합니다.");
 			$(".contents-updatePwdCheck").css("color", "blue");
 			$(".contents-updatePwdCheck").css("display", "block");
-			
+
 			updatePwdCheck = true;
 		} // else end
-		
+
 	});
-	
+
 	//__________ 비밀번호 변경 빈칸확인
 	function emptyCheck() {
 
@@ -153,7 +163,7 @@
 		for (var i = 0; i < length; i++) {
 			if (form[i].value == "" || form[i].value == null) {
 				alert("빈칸이 있습니다.");
-				
+
 				return false;
 			} // if end
 
