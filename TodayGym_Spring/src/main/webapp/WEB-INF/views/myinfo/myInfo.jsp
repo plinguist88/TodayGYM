@@ -51,6 +51,16 @@
 	</div>
 </body>
 <script type="text/javascript">
+	//__________ 마이페이지 알람
+	$(function() {
+
+		var msg = "${alert}";
+
+		if (msg != "") {
+			alert(msg);
+		}
+
+	})
 
 	//__________ 회원정보 변경 빈칸확인
 	function emptyCheck() {
@@ -62,7 +72,7 @@
 		for (var i = 0; i < length; i++) {
 			if (form[i].value == "" || form[i].value == null) {
 				alert("빈칸이 있습니다.");
-				
+
 				return false;
 			} // if end
 
