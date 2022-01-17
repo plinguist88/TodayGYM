@@ -36,7 +36,7 @@
 				<c:when test="${sessionScope.mb.m_id != null}">
 					<c:if test="${sessionScope.mb.m_level == 1}">
 						<li><a href="adMainMove.ad?side=0"><abbr title="관리자페이지"><span
-									class="navbar_icon"><ion-icon name="stats-chart-outline"></ion-icon>관리자페이지</span></abbr></a></li>
+									class="navbar_icon"><ion-icon name="stats-chart-outline"></ion-icon>관리자</span></abbr></a></li>
 					</c:if>
 					<c:if test="${sessionScope.mb.m_level == 0}">
 						<li><a href="myCart"><abbr title="장바구니"><span
