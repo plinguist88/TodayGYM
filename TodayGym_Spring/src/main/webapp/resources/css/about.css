@@ -31,8 +31,8 @@ li{
 	color: white;
 	font-size: 40px;
 }
-.section_info_title p{
-	font-size: 20px;	
+.section_info_title h1{
+	font-style: italic;	
 }
 .main_header{
 	width: 80%;
@@ -116,6 +116,7 @@ li{
 }
 .section2_main{
 	height: 600px;
+	margin-left: 5px;
 }
 .section2_main li{
 	float: left;
