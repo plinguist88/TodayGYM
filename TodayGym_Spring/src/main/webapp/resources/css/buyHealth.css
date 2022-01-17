@@ -32,6 +32,9 @@ li{
 	color: white;
 	font-size: 40px;
 }
+.section_info_title h1{
+	font-style: italic;
+}
 .section_info_title p{
 	font-size: 20px;	
 }
