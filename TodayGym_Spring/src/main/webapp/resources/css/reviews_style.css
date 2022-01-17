@@ -30,6 +30,7 @@ body {
 }
 
 .board_name h1 {
+	font-size: 60px;
 	margin: 0;
 	color: white;
 	text-align: center;
