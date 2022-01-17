@@ -25,7 +25,7 @@
 			<div class=spot_sub_content>
 				
 				<h1>
-					<i>지점안내</i>
+					<i>SPOT</i>
 				</h1>
 
 				<p>활력 있는 생활을 추구하는 당신을 위한 수준 높은 퍼블릭 스포츠센터</p>

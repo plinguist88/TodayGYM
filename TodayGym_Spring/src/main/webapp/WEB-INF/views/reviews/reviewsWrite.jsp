@@ -28,6 +28,7 @@
 						style="background-image: url('resources/img/reviews/gray.jpg');">
 						<h1>글쓰기</h1>
 					</div>
+					<div class="review_box">
 					<div class="review_event">
 						<select class="select_cate" name="r_cate">
 							<option value="">종목선택</option>
@@ -67,6 +68,7 @@
 							<input type="submit" value="작성완료"> <a href="review"><input
 								type="button" value="취소"></a>
 						</div>
+					</div>
 					</div>
 				</div>
 			</form>
