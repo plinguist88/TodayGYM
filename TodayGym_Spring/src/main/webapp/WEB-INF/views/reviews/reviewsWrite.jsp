@@ -29,7 +29,7 @@
 						<h1>글쓰기</h1>
 					</div>
 					<div class="review_event">
-						<select name="r_cate">
+						<select class="select_cate" name="r_cate">
 							<option value="">종목선택</option>
 							<option value="헬스">헬스</option>
 							<option value="수영">수영</option>
@@ -60,7 +60,7 @@
 								v-model="ratings" /> <label for="1-star" class="star">★</label>
 						</div>
 						<div class="review_file">
-							<label style="display: block; border: 3px solid #5a5a5a;">업로드</label>
+							
 							<input type="file" name="r_image" value="파일선택">
 						</div>
 						<div class="review_button">
