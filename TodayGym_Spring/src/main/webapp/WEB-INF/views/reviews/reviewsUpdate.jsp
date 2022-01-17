@@ -29,7 +29,7 @@
 					</div>
 					<input type="hidden" name="r_no" value="${rdto.r_no }" />
 					<div class="review_event">
-						<select name="r_cate">
+						<select class="select_cate" name="r_cate">
 							<option value=${rdto.r_cate }>${rdto.r_cate }</option>
 							<option value="헬스">헬스</option>
 							<option value="수영">수영</option>
