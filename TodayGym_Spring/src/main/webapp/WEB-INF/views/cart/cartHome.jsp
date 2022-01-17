@@ -90,7 +90,7 @@
 			 	<li>단순변심으로 인한 주문취소 및 변경 시 교환 환불이 어려울 수 있으니 꼭 다시 확인해 주시기 바랍니다.</li>
 			 </ul>
 			</div>
-			<form action="./cartOrder" method="get">
+			<form action="./cartOrder" method="get" onsubmit="return goPay()">
 			<div class="cart_info_table">
 				<table class="table_title">
 					<thead class="cart_head">
@@ -189,6 +189,17 @@
 		}
 	}
 	
+	function goPay(){
+		
+		var checkOK = $("input:checkbox[name=chk]:checked").length;
+		
+		if(checkOK != 0) {
+			return true;
+		}
+		
+		alert("선택된 회원권이 없습니다.");
+		return false;
+	}
 	
 </script>
 </html>
