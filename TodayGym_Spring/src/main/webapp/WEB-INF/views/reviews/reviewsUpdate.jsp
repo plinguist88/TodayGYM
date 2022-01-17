@@ -43,7 +43,7 @@
 								value="${rdto.r_title}" name="r_title">
 						</div>
 						<div class="review_content">
-							<textarea rows="15" cols=80 " placeholder="내용을적어주세요"
+							<textarea rows="15" cols=83.5 " placeholder="내용을적어주세요"
 								name="r_contents">${rdto.r_contents}</textarea>
 						</div>
 						<div class="review_star space-x-4 mx-auto" name="r_contents">
