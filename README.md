@@ -13,3 +13,7 @@
 - DB : OracleDB
 - WAS : Apache Tomcat 9.0
 - Version : Github
+
+## 담당
+- 관리자 파트 개발
+- 프로젝트 전반적인 오류 및 로직문제 해결
