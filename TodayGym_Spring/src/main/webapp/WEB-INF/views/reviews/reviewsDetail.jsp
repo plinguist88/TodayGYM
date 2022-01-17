@@ -17,8 +17,8 @@
 
 		<section>
 			<div class="detailfull">
-				<div class="detailname">
-					<h2>이용후기 상세</h2>
+				<div class="detailname" style="background-image: url('resources/img/reviews/gray.jpg');">
+					<h1 style = "font-style: italic;">REVIEWS DETAIL</h1>
 				</div>
 				<div class="detailcontents">
 					<div class="detail_img">

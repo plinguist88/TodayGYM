@@ -28,7 +28,7 @@
 	<div class="reivewfull">
 		<div class="board_name"
 			style="background-image: url('resources/img/reviews/gray.jpg');">
-			<h1>이용후기 게시판 ${msg2 }</h1>
+			<h1 style = "font-style: italic;">REVIEW ${msg2 }</h1>
 		</div>
 
 		<div class="reviewmain">
